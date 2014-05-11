@@ -1,11 +1,20 @@
+<div class="m-help animate-show" wng-detect="" ng-show="showHelp">
+	<button class="m-help-button" ng-click="toggleHelp()">{{getHelpButtonText()}}</button>
+	<p>Swipe right <span class="no-touch">or click Yes</span> if you think the image and the brand match. Swipe left  <span class="no-touch">or click No</span> if you think they don't</p>
+</div>
+
+
 <div class="m-message" ng-class="getMessageClass(message.status)" ng-show="message.copy">
 	<p>{{message.copy}}</p>
 </div>
 
-<h1 ng-show="products.length > 0">{{htmlEncode(question)}}</h1>
-<h2 class="m-score"><span class="m-score-current">{{score}}</span><span class="m-score-total">{{total}}</span></h2>
+<h1 class="m-question" ng-show="products.length > 0">{{htmlEncode(question)}}</h1>
+<h2 class="m-score">
+	<span class="m-score-current">{{score}}</span>
+	<span class="m-score-total">{{total}}</span>
+</h2>
 <div class="m-product-image" ng-show="products.length > 0">
-	<wnq-draggable ng-include="" ng-repeat="product in products" wnq-draggable-left-after="checkAnswer('', products[0].manufacturer, question, false)" wnq-draggable-right-after="checkAnswer('', products[0].manufacturer, question, true)" product="product.id"></wnq-draggable>
+	<wnq-draggable ng-repeat="product in products" wnq-draggable-left-after="checkAnswer('', products[0].manufacturer, question, false)" wnq-draggable-right-after="checkAnswer('', products[0].manufacturer, question, true)" product="product.id" message-status="message.status"></wnq-draggable>
 </div>
 <div class="m-buttons" ng-show="products.length > 0">
 	<button ng-click="checkAnswer('', products[0].manufacturer, question, false)" ui-keypress="{'65':'checkAnswer($event, products[0].manufacturer, question, false)'}">
@@ -18,8 +27,5 @@
 <div class="m-buttons" ng-show="products.length == 0">		
 	<button ng-click="restart()">
 		Play Again
-	</button>
-	<button ng-click="share()">
-		Share
 	</button>
 </div>
