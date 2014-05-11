@@ -3,9 +3,9 @@
 </div>
 
 <h1 ng-show="products.length > 0">{{htmlEncode(question)}}</h1>
-<h2 class="m-score">{{score}}/{{total}}</h2>
+<h2 class="m-score"><span class="m-score-current">{{score}}</span><span class="m-score-total">{{total}}</span></h2>
 <div class="m-product-image" ng-show="products.length > 0">
-	<wnq-draggable ng-include="" ng-repeat="product in products" wnq-draggable-left-after="checkAnswer('', products[0].manufacturer, question, false)" wnq-draggable-right-after="checkAnswer('', products[0].manufacturer, question, true)" product="product.id" alt="Product image"></wnq-draggable>
+	<wnq-draggable ng-include="" ng-repeat="product in products" wnq-draggable-left-after="checkAnswer('', products[0].manufacturer, question, false)" wnq-draggable-right-after="checkAnswer('', products[0].manufacturer, question, true)" product="product.id"></wnq-draggable>
 </div>
 <div class="m-buttons" ng-show="products.length > 0">
 	<button ng-click="checkAnswer('', products[0].manufacturer, question, false)" ui-keypress="{'65':'checkAnswer($event, products[0].manufacturer, question, false)'}">
