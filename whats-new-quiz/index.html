@@ -8,10 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <link rel="icon" sizes="196x196" href="meta/icon-196.png"> 
+    <link rel="icon" sizes="128x128" href="meta/icon-128.png">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/icon-128.png">
+    <link rel="apple-touch-startup-image" href="meta/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+    <link rel="apple-touch-startup-image" href="meta/image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/6e7db5fe.main.css">
+        <link rel="stylesheet" href="styles/6a500dfa.main.css">
 </head>
   <body ng-app="whatsNewQuizApp">
     <!--[if lt IE 7]>
@@ -24,7 +37,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="l-view" ng-view="" wng-detect=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -42,6 +55,6 @@
 
         <script src="scripts/21d641e3.modules.js"></script>
 
-        <script src="scripts/267a2cae.scripts.js"></script>
+        <script src="scripts/b7ac8855.scripts.js"></script>
 </body>
 </html>
