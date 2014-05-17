@@ -17,9 +17,9 @@
 </div>
 
 <div class="m-game-over" ng-if="isGameOver">
-	<h2>You scored {{score}}/{{total}}</h2>     
+	<h2>You scored {{score}} of {{total}}</h2>     
 	<button ng-click="restart()">Play again</button>
-	<a twitter="" data-text="Your text: {{score}}"></a>
+	<a twitter="" data-text="I just scored {{score}} {{pluralize(score)}} in the What's new Quiz"></a>
 </div>
 
 <div class="m-image-holder">
