@@ -15,6 +15,9 @@
 <div class="m-result" ng-class="getClass('result')">
 	{{getText('result')}}
 </div>
+<div class="m-lives">
+	<span ng-repeat="life in lives track by $index">&#10084;</span>
+</div>
 
 <div class="m-game-over" ng-if="isGameOver">
 	<h2>You scored {{score}} of {{total}}</h2>     
