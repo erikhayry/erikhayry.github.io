@@ -29,6 +29,6 @@
 <div class="m-image-holder">
 	<wnq-draggable ng-repeat="product in products" wnq-draggable-left-after="checkAnswer(products[0].manufacturer, question, false)" wnq-draggable-right-after="checkAnswer(products[0].manufacturer, question, true)" product="product.id" result="result" has-touch="$root.hasTouch"></wnq-draggable>
 </div>
-<div class="m-question">
+<div class="m-question" ng-show="products.length > 0">
 	{{htmlEncode(question)}}
 </div>
