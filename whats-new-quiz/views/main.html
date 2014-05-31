@@ -25,6 +25,7 @@
 <div class="m-game-over" ng-if="isGameOver">
 	<h2>You scored {{score}} of {{total}}</h2>     
 	<button ng-click="restart()">Play again</button>
+	<a href="#/products" class="m-button">View products</a>
 	<a twitter="" data-text="I just scored {{score}} {{pluralize(score)}} in the What's new Quiz"></a>
 </div>
 
@@ -34,6 +35,6 @@
 
 <div class="m-loader" ng-if="isLoading">Loading</div>
 
-<div class="m-question" ng-show="products.length > 0" ng-if="!isLoading">
+<div class="m-question" ng-if="!isLoading && !isGameOver">
 	{{htmlEncode(question)}}
 </div>

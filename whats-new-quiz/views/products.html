@@ -1,0 +1,8 @@
+<a href="/" class="m-button-back">&#60;</a>
+<ul class="m-products">
+	<li ng-repeat="product in products" class="m-product-item">
+		<a href="http://www.net-a-porter.com/product/{{product.id}}" target="_blank">
+			<img ng-if="product.id" ng-src="http://cache.net-a-porter.com/images/products/{{product.id}}/{{product.id}}_in_xl.jpg">
+		</a>
+	</li>	
+</ul>
