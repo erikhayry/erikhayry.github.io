@@ -1,0 +1,20 @@
+{
+  "name": "@app/bundler",
+  "scripts": {
+    "bundle": "bun src/bundler/bundle.ts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "24.7.2"
+  },
+  "dependencies": {
+    "@jest/globals": "30.2.0",
+    "@library/types": "workspace:*",
+    "node-ts": "^8.0.8"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

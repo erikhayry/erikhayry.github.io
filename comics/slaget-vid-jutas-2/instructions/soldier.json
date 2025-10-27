@@ -1,0 +1,41 @@
+{
+  "uniform": {
+    "era": "Finnish War (1808–1809)",
+    "regiment": "Björneborgs läns infanteriregemente",
+    "affiliation": "Swedish Army",
+    "primaryColors": {
+      "tunic": "dark blue",
+      "facings": "yellow",
+      "trousers": "white",
+      "shako": "black with yellow band and brass plate",
+      "equipmentLeather": "brown",
+      "gaiters": "black"
+    },
+    "clothingDetails": {
+      "tunic": {
+        "description": "Double-breasted dark blue tunic with standing yellow collar and yellow cuffs",
+        "buttons": "brass buttons arranged in two vertical rows"
+      },
+      "trousers": {
+        "description": "White or off-white trousers reaching to mid-calf, tucked into gaiters"
+      },
+      "headgear": {
+        "description": "Black shako with yellow band at base and front brass regimental plate",
+        "additional": "Small cockade or plume optional depending on rank"
+      },
+      "equipment": {
+        "crossBelts": "Two brown leather crossbelts crossing at the chest",
+        "cartridgeBox": "Black cartridge box worn on right hip",
+        "musket": "Flintlock musket with bayonet fixed or shouldered"
+      },
+      "footwear": {
+        "description": "Black leather gaiters over low shoes"
+      }
+    },
+    "appearanceNotes": {
+      "overallLook": "Neat and disciplined; practical field appearance with minor wear from campaign conditions",
+      "material": "Wool tunic, linen trousers, leather equipment",
+      "tone": "Swedish-Finnish uniform style typical of early 19th century"
+    }
+  }
+}

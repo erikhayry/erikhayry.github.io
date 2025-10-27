@@ -1,0 +1,26 @@
+{
+  "name": "the-jutas-project",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test:bundler": "cd apps/bundler && bun run test",
+    "test:web": "cd apps/web && bun run test",
+    "test": "bun run test:bundler && bun run test:web",
+    "bundle": "bun run index.ts"
+  },
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "library/*"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "@library/types": "workspace:*",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  }
+}

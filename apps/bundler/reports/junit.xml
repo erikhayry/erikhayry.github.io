@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="22" assertions="34" failures="0" skipped="0" time="0.066983">
+  <testsuite name="src/verify/tests/verifyPanel.test.ts" file="src/verify/tests/verifyPanel.test.ts" tests="3" assertions="3" failures="0" skipped="0" time="0.002" hostname="MAC-W50QG19PXN">
+    <testcase name="should return false if data not compliant" classname="" time="0.002172" file="src/verify/tests/verifyPanel.test.ts" line="5" assertions="1" />
+    <testcase name="should return true if data is compliant" classname="" time="0.000432" file="src/verify/tests/verifyPanel.test.ts" line="9" assertions="1" />
+    <testcase name="should return true if data is compliant" classname="" time="0.000028" file="src/verify/tests/verifyPanel.test.ts" line="24" assertions="1" />
+  </testsuite>
+  <testsuite name="src/files/tests/getFileNames.test.ts" file="src/files/tests/getFileNames.test.ts" tests="1" assertions="1" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+    <testcase name="getFileNames returns only files name of file type" classname="" time="0.000688" file="src/files/tests/getFileNames.test.ts" line="6" assertions="1" />
+  </testsuite>
+  <testsuite name="src/files/tests/readPath.test.ts" file="src/files/tests/readPath.test.ts" tests="3" assertions="3" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+    <testcase name="getPaths returns only files of file type json" classname="" time="0.000328" file="src/files/tests/readPath.test.ts" line="6" assertions="1" />
+    <testcase name="getPaths returns only files of file type txt" classname="" time="0.000029" file="src/files/tests/readPath.test.ts" line="12" assertions="1" />
+    <testcase name="reads files content" classname="" time="0.00005" file="src/files/tests/readPath.test.ts" line="7" assertions="1" />
+  </testsuite>
+  <testsuite name="src/files/tests/getFolder.test.ts" file="src/files/tests/getFolder.test.ts" tests="1" assertions="1" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+    <testcase name="returns all folders in path" classname="" time="0" file="src/files/tests/getFolder.test.ts" line="5" assertions="1" />
+  </testsuite>
+  <testsuite name="src/files/tests/readPaths.test.ts" file="src/files/tests/readPaths.test.ts" tests="1" assertions="1" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+    <testcase name="reads files content" classname="" time="0.000152" file="src/files/tests/readPaths.test.ts" line="6" assertions="1" />
+  </testsuite>
+  <testsuite name="src/files/tests/copy.test.ts" file="src/files/tests/copy.test.ts" tests="2" assertions="2" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+    <testsuite name="copyFiles" file="src/files/tests/copy.test.ts" line="11" tests="1" assertions="1" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+      <testcase name="copy files to target" classname="copyFiles" time="0.00092" file="src/files/tests/copy.test.ts" line="12" assertions="1" />
+    </testsuite>
+    <testsuite name="copyFile" file="src/files/tests/copy.test.ts" line="19" tests="1" assertions="1" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+      <testcase name="copy file to target" classname="copyFile" time="0.000509" file="src/files/tests/copy.test.ts" line="20" assertions="1" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="src/bundler/tests/getComicOutput.test.ts" file="src/bundler/tests/getComicOutput.test.ts" tests="3" assertions="6" failures="0" skipped="0" time="0.001" hostname="MAC-W50QG19PXN">
+    <testcase name="returns empty array when no folders" classname="" time="0.000109" file="src/bundler/tests/getComicOutput.test.ts" line="7" assertions="1" />
+    <testcase name="return array with comic valid paths" classname="" time="0.001977" file="src/bundler/tests/getComicOutput.test.ts" line="11" assertions="3" />
+    <testcase name="returns pages" classname="" time="0.000562" file="src/bundler/tests/getComicOutput.test.ts" line="20" assertions="2" />
+  </testsuite>
+  <testsuite name="src/bundler/tests/isValidComicOutput.ts.test.ts" file="src/bundler/tests/isValidComicOutput.ts.test.ts" tests="5" assertions="5" failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
+    <testcase name="should return true if valid comic output" classname="" time="0.00035" file="src/bundler/tests/isValidComicOutput.ts.test.ts" line="6" assertions="1" />
+    <testcase name="should return false if malformed panel file name" classname="" time="0.000205" file="src/bundler/tests/isValidComicOutput.ts.test.ts" line="10" assertions="1" />
+    <testcase name="should return false if malformed panel data" classname="" time="0.000077" file="src/bundler/tests/isValidComicOutput.ts.test.ts" line="16" assertions="1" />
+    <testcase name="should return false if no output files" classname="" time="0.000114" file="src/bundler/tests/isValidComicOutput.ts.test.ts" line="22" assertions="1" />
+    <testcase name="should return false if image is missing" classname="" time="0.000038" file="src/bundler/tests/isValidComicOutput.ts.test.ts" line="28" assertions="1" />
+  </testsuite>
+  <testsuite name="src/bundler/tests/getWebsiteFile.test.ts" file="src/bundler/tests/getWebsiteFile.test.ts" tests="1" assertions="9" failures="0" skipped="0" time="0.001" hostname="MAC-W50QG19PXN">
+    <testcase name="is should return website" classname="" time="0.001313" file="src/bundler/tests/getWebsiteFile.test.ts" line="7" assertions="9" />
+  </testsuite>
+  <testsuite name="src/bundler/tests/bundle.test.ts" file="src/bundler/tests/bundle.test.ts" tests="2" assertions="3" failures="0" skipped="0" time="0.007" hostname="MAC-W50QG19PXN">
+    <testcase name="should create website settings" classname="" time="0.004298" file="src/bundler/tests/bundle.test.ts" line="23" assertions="1" />
+    <testcase name="should copy images" classname="" time="0.003716" file="src/bundler/tests/bundle.test.ts" line="31" assertions="2" />
+  </testsuite>
+</testsuites>
