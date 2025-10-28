@@ -1,0 +1,300 @@
+[
+  {
+    "page": 1,
+    "title": "Introduction",
+    "description": "The Finnish War (1808–1809). Establish the historical context, the tensions between Sweden and the Russian Empire, and the situation in Finland.",
+    "location": "Finland, early September 1808",
+    "scene": "Map of Finnish War",
+    "pageType": "Hero (1 panel)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Wide map of the Finnish war"
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "title": "Scene – Slaget vid Jutas (13 September 1808)",
+    "description": "Introduction of the main commanders and opposing forces preparing for confrontation near Jutas, south of Nykarleby.",
+    "characters": {
+      "Sweden": [
+        "Georg Carl von Döbeln",
+        "Johan Fredrik Eek",
+        "Enoch Furuhjelm",
+        "Anders Gyllenbögel",
+        "Johan Petter Hesselius",
+        "Björneborgs regemente"
+      ],
+      "Russian_Empire": [
+        "Nikolaj Kamenskij",
+        "Kirill Kazatjkovskij",
+        "Russian Infantry Detachment"
+      ]
+    },
+    "scene": "Charchter gallery",
+    "pageType": "Hero (1 panel)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Character gallery montage: Swedish leaders on left, Russian on right; Jutas landscape faintly behind."
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "title": "Retreat from Vasa",
+    "description": "The Swedish army retreats from Vasa to Nykarleby under pressure from advancing Russian forces. The soldiers are exhausted but determined.",
+    "characters": [
+      "Swedish Soldiers",
+      "Georg Carl von Döbeln",
+      "Swedish Officers"
+    ],
+    "scene": "A column of weary soldiers marches through muddy roads bordered by autumnal fields. Wagons creak, smoke rises in the far distance. Döbeln rides beside the column, his expression set with resolve.",
+    "pageType": "Split Wide (2 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Top wide: Tired column trudging through mud; wagons and drifting smoke on horizon."
+      },
+      {
+        "id": "2",
+        "description": "Bottom wide: Döbeln on horseback alongside the ranks; officers confer briefly as rain spits."
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "title": "Döbeln Sick in Nykarleby",
+    "description": "Döbeln lies in bed, weakened by fever and a head wound. Despite illness, he continues to command and issue orders from his quarters in Nykarleby.",
+    "characters": [
+      "Georg Carl von Döbeln",
+      "Aide-de-camp",
+      "Messenger"
+    ],
+    "scene": "Interior of a dimly lit wooden house in Nykarleby. Döbeln lies in bed, pale and sweating, his black headband beside him. Papers and maps scatter the table as an aide and a young messenger await his orders.",
+    "pageType": "Quad (4 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Close on Döbeln in bed; bandage and black headband on table edge."
+      },
+      {
+        "id": "2",
+        "description": "Aide spreads maps and dispatches; candlelight pools on inked notes."
+      },
+      {
+        "id": "3",
+        "description": "Close up Döbelns face. Determined"
+      },
+      {
+        "id": "4",
+        "description": "Döbeln dictates orders, finger tracing a route toward Jutas on the map."
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "title": "March to Jutas",
+    "description": "The Swedish troops march toward Jutas. Döbeln, pale but resolute, rides before his soldiers on horseback, overseeing the preparation of defensive positions in Jutas.",
+    "characters": [
+      "Georg Carl von Döbeln",
+      "Björneborgs regemente",
+      "Anders Gyllenbögel",
+      "Enoch Furuhjelm"
+    ],
+    "scene": "Afternoon sunlight glints off bayonets as soldiers march through open countryside. Döbeln, back on horseback, raises his sword slightly in salute as his men cheer. In the distance, Jutas is visible.",
+    "pageType": "Split Wide (2 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Top wide: Jutas, river and road"
+      },
+      {
+        "id": "2",
+        "description": "Bottom wide: Döbeln salutes from horseback as men cheer; officers point out defensive ground."
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "title": "Battle Begins",
+    "description": "The Russian vanguard attacks the Swedish front line. The Swedes withdraw in good order toward the main force near Jutas.",
+    "characters": [
+      "Swedish Front Line",
+      "Russian Vanguard",
+      "Georg Carl von Döbeln"
+    ],
+    "scene": "Early afternoon. Musket fire flashes through drifting smoke. Swedish skirmishers fall back toward the main position. The Jutas road curves behind them, half-obscured by gunpowder haze.",
+    "pageType": "Quad (4 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Skirmishers fire from fence line; first puffs of white smoke."
+      },
+      {
+        "id": "2",
+        "description": "Signal to fall back; men peel off in pairs down the Jutas road."
+      },
+      {
+        "id": "3",
+        "description": "Russian vanguard pushes through gaps, bayonets low."
+      },
+      {
+        "id": "4",
+        "description": "Döbeln observed in the distance, steadying the line with a raised hand."
+      }
+    ]
+  },
+  {
+    "page": 7,
+    "title": "Russian Advance",
+    "description": "The Russian troops advance steadily toward the Swedish positions, their numbers pressing hard against the defenders.",
+    "characters": [
+      "Kirill Kazatjkovskij",
+      "Russian Infantry",
+      "Swedish Defenders"
+    ],
+    "scene": "Rows of Russian infantry march forward through smoke and broken fences. Their officers shout orders as musket balls strike the ground",
+    "pageType": "Split Wide (2 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Top wide: Dense Russian ranks moving through smoke and splintered fencing."
+      },
+      {
+        "id": "2",
+        "description": "Bottom wide: Swedish defenders brace behind a low ridge; earth spatters with impacts."
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "title": "Counterfire Ordered",
+    "description": "Von Döbeln orders concentrated artillery and musket fire. Swedish gunners and infantry respond with disciplined volleys.",
+    "characters": [
+      "Georg Carl von Döbeln",
+      "Swedish Artillery",
+      "Swedish Infantry",
+      "Russian Troops"
+    ],
+    "scene": "Döbeln raises his sword on horseback, the signal for counterfire. Cannons thunder in unison; flashes illuminate smoke clouds. A moment of controlled chaos — soldiers working in rhythm, faces lit by firelight.",
+    "pageType": "Horizontal Triptych (3 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Döbeln’s sword raised—the signal; aides relay the command."
+      },
+      {
+        "id": "2",
+        "description": "Artillery battery fires; recoil and flame tongues burst from muzzles."
+      },
+      {
+        "id": "3",
+        "description": "Infantry volley in line; synchronized smoke wall rolling forward."
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "title": "Exchange of Fire",
+    "description": "The Russians spread out and return heavy fire. Both sides suffer casualties amid cannon smoke and shouted commands.",
+    "characters": [
+      "Kirill Kazatjkovskij",
+      "Swedish Infantry",
+      "Russian Infantry",
+      "Artillery Crews"
+    ],
+    "scene": "Thick smoke covers the field. Soldiers reload under fire, gun barrels glowing. The air is filled with thunder and shouting.",
+    "pageType": "Quad (4 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Russian line returns fire; officers gesture for wider frontage."
+      },
+      {
+        "id": "2",
+        "description": "Swedish infantry reload hastily behind smoke; ramrods flash."
+      },
+      {
+        "id": "3",
+        "description": "Fallen and wounded between lines; stretcher men crouch low."
+      },
+      {
+        "id": "4",
+        "description": "Artillery crew swabs and rams; sparks shower from the vent."
+      }
+    ]
+  },
+  {
+    "page": 10,
+    "title": "Swedish Push Forward",
+    "description": "The Swedish line surges ahead amid loud cries of ‘Hurrah!’. Döbeln rallies his men from horseback as the Russians begin to falter and withdraw under pressure.",
+    "characters": [
+      "Georg Carl von Döbeln",
+      "Kirill Kazatjkovskij",
+      "Swedish Infantry",
+      "Russian Infantry"
+    ],
+    "scene": "Late afternoon golden light cuts through the smoke. Döbeln, sword raised, rides ahead as his men charge with loud hurrahs. The Russians begin to fall back, banners torn, smoke glowing orange.",
+    "pageType": "Quad (4 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Döbeln rallies the line; riders wheel along the front."
+      },
+      {
+        "id": "2",
+        "description": "Swedish charge—bayonets forward; ‘Hurrah!’ mouths open."
+      },
+      {
+        "id": "3",
+        "description": "Russian ranks buckle; officers try to steady a ragged line."
+      },
+      {
+        "id": "4",
+        "description": "Torn banner recedes into smoke as the retreat begins."
+      }
+    ]
+  },
+  {
+    "page": 11,
+    "title": "Aftermath",
+    "description": "Döbeln walks across the battlefield among the dead and wounded. The Swedish troops have held their ground, but at a heavy cost.",
+    "characters": [
+      "Georg Carl von Döbeln",
+      "Wounded Soldiers",
+      "Swedish Officers",
+      "Field Surgeons"
+    ],
+    "scene": "Evening dusk. The field is silent except for groans and the rustle of crows. Döbeln, dismounted, walks through the bodies, his uniform stained with smoke. Field surgeons kneel beside wounded men near small campfires.",
+    "pageType": "Split Wide (2 panels)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Top wide: Döbeln walks among bodies and abandoned gear at dusk."
+      },
+      {
+        "id": "2",
+        "description": "Bottom wide: Surgeons tend the wounded by low firelight; officers confer quietly."
+      }
+    ]
+  },
+  {
+    "page": 12,
+    "title": "Modern Time",
+    "description": "A high-school teacher stands before the Jutas monument with her students, recounting the events of 1808 and Döbeln’s leadership.",
+    "characters": [
+      "High-school Teacher",
+      "Students"
+    ],
+    "scene": "Present day. Bright daylight at the Jutas monument surrounded by birch trees. A teacher gestures toward the bronze relief of Döbeln, while students listen quietly — the past and present united in the same landscape.",
+    "pageType": "Hero (1 panel)",
+    "panels": [
+      {
+        "id": "1",
+        "description": "Wide shot of Jutas monument and birches; teacher addresses attentive students."
+      }
+    ]
+  }
+]

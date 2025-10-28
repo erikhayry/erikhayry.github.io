@@ -1,0 +1,11 @@
+{
+  "id": "INVALID",
+  "coords": {
+    "x": 4,
+    "y": 4,
+    "w": 92,
+    "h": 92
+  },
+  "description": "DESCRIPTION MOCK",
+  "info": "INVALID PANEL ID"
+}
