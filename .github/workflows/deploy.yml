@@ -17,6 +17,12 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Install web dependencies
+        run: bun install --cwd ./apps/web
+
+      - name: Install type dependencies
+        run: bun install --cwd ./library/types
+
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
