@@ -3,10 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "test:bundler": "cd apps/bundler && npm run test",
-    "test:web": "cd apps/web && npm run test",
-    "test": "npm run test:bundler && npm run test:web",
-    "bundle": "npm run index.ts",
+    "test:bundler": "cd apps/bundler && bun run test",
+    "test:web": "cd apps/web && bun run test",
+    "test": "bun run test:bundler && bun run test:web",
+    "bundle": "bun run index.ts",
     "prepare": "husky"
   },
   "private": true,
@@ -23,7 +23,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@rollup/rollup-darwin-x64": "^4.52.5",
     "zod": "^4.1.12"
   }
 }
