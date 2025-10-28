@@ -7,7 +7,8 @@
     "test:web": "cd apps/web && bun run test",
     "test": "bun run test:bundler && bun run test:web",
     "bundle": "bun run index.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:web": "cd apps/web && bun run build"
   },
   "private": true,
   "workspaces": [
