@@ -12,12 +12,14 @@ export default defineConfig({
         {
             name: 'Wide',
             use: {
+                headless: true,
                 ...devices['Desktop Chrome'],
             },
         },
         {
             name: 'Narrow',
             use: {
+                headless: true,
                 ...devices['iPhone 13'],
             },
         },
