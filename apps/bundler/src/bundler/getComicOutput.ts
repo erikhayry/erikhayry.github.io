@@ -1,7 +1,7 @@
 import {getFolders} from "../files/getFolders.ts";
 import {getPageRecord} from "./utils/getPageRecord.ts";
 import {isValidComicOutput as outInvalidComicOutput} from "./utils/isValidComicOutput.ts";
-import type {ComicOutput, PageOutput, PanelOutput} from "@library/types";
+import {type ComicOutput, PageLayoutType, type PageOutput, type PanelOutput} from "@library/types";
 import {error} from "../logger/log.ts";
 
 function byName(a: string, b: string) {
@@ -18,7 +18,10 @@ function toNumberedPageOutput([pageNumber, panels]: [string, PanelOutput[]]): Nu
 }
 
 function toPageOutput({panels}: NumberedPageOutput): PageOutput {
-    return {panels};
+    return {
+        layout: PageLayoutType.Hero,
+        panels
+    };
 }
 
 
