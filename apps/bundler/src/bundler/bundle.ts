@@ -1,12 +1,13 @@
 import {getWebsiteFile} from "./getWebsiteFile.ts";
 import {createJSON} from "../files/createJSON.ts";
 import {copyComicImages} from "./utils/copyComicImages.ts";
-import {createPanelSchema} from "../files/schemas.ts";
+import {createPanelOutputSchema, createPanelSchema} from "../files/schemas.ts";
 
 export interface TypeConfig {
     folder: string;
     schemas: {
         panel: string
+        panelOutput: string
     }
 }
 
@@ -34,4 +35,5 @@ export function bundle({
     createJSON(web.folder, web.file, getWebsiteFile(comics.folder));
     copyComicImages(comics.folder, web.folder);
     createPanelSchema(type.folder, type.schemas.panel)
+    createPanelOutputSchema(type.folder, type.schemas.panelOutput)
 }

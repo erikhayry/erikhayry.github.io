@@ -12,7 +12,7 @@ test("is should return comics", () => {
     const [comic1, comic2] = website as [Comic, Comic];
 
     expect(comic1.slug).toEqual("comic-1");
-    expect(comic1.pages).toHaveLength(3);
+    expect(comic1.pages).toHaveLength(4);
     expect(comic2.slug).toEqual("comic-2");
     expect(comic2.pages).toHaveLength(1);
 });
@@ -26,51 +26,31 @@ test("is should return pages", () => {
     expect(comic1.pages[0]).toEqual({
         panels: [{
             id: "1.1.1",
-            coords: {
-                "h": 92,
-                "w": 92,
-                "x": 4,
-                "y": 4,
-
-            }
         }, {
-            id: "1.1.2", coords: {
-                "h": 100,
-                "w": 100,
-                "x": 4,
-                "y": 4
-            }
+            id: "1.1.2"
         }],
     });
     expect(comic1.pages[1]).toEqual({
         panels: [{
-            id: "1.2.1", coords: {
-                "h": 92,
-                "w": 92,
-                "x": 4,
-                "y": 4,
-            }
+            id: "1.2.1",
         },],
     });
+
     expect(comic1.pages[2]).toEqual({
         panels: [{
-            id: "2.1.1", coords: {
-                "h": 92,
-                "w": 92,
-                "x": 4,
-                "y": 4,
-            }
+            id: "2.1.1",
         }],
+    });
+
+    expect(comic1.pages[3]).toEqual({
+        panels: [{
+            id: "10.1.1",
+        },],
     });
 
     expect(comic2.pages[0]).toEqual({
         panels: [{
-            id: "1.1.1", coords: {
-                "h": 92,
-                "w": 92,
-                "x": 4,
-                "y": 4,
-            }
+            id: "1.1.1",
         }],
     });
 });

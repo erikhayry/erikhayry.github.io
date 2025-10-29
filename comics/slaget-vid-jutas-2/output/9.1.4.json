@@ -1,0 +1,13 @@
+{
+  "id": "9.1.4",
+  "description": "Bottom-right panel of the Quad layout. Amid the dense smoke, Döbeln rides into view once more, rallying his men. His sword is raised, his black headband stark against the flashing light of battle. Around him, Swedish soldiers shout and reload with renewed determination.",
+  "narration": "Where courage falters, Döbeln’s presence reignites the line.",
+  "dialogs": [
+    {
+      "person": "Döbeln",
+      "text": "Stand firm, men of Björneborg! Jutas shall not fall!"
+    }
+  ],
+  "quotes": "",
+  "info": "Page 9 – Exchange of Fire. PageType: Quad (4 panels). Scene (panel 4): Döbeln rallies his troops through smoke and cannon fire."
+}

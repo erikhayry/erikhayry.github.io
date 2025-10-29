@@ -8,30 +8,24 @@
     }
 
     let {panels, slug}: Props = $props();
-    console.log(panels)
 </script>
 
 <style>
     .page {
         position: relative;
-        height: 400px;
-        width: 400px;
+        display: flex;
+        gap: 1rem;
     }
 
     .panel {
-        position: absolute;
-        overflow: hidden;
+        width: 100px;
+        height: auto;
     }
 </style>
 
 <div class="page">
     {#each panels as panel (panel)}
-        <div class="panel"
-             style:width={`${panel.coords.w}%`}
-             style:height={`${panel.coords.h}%`}
-             style:left={`${panel.coords.x}%`}
-             style:top={`${panel.coords.y}%`}
-        >
+        <div class="panel">
             <Img {slug} {panel}/>
         </div>
     {/each}

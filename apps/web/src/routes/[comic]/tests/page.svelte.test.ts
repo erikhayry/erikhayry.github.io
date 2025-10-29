@@ -6,8 +6,8 @@ import {renderPage} from "../../../test/renderPage";
 import {COMIC_MOCK} from "../../../test/mock";
 
 
-describe('Comic page', () => {
-    it('should render list comic', async () => {
+describe('Comics page', () => {
+    it('should render list of comics pages', async () => {
         renderPage(Page, getComic(COMIC_MOCK.slug));
 
         const heading = page.getByRole('heading', {name: COMIC_MOCK.slug});

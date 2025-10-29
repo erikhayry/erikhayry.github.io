@@ -22,7 +22,8 @@ const config: BundleConfig = {
     type: {
         folder: TYPE_FOLDER,
         schemas: {
-            panel: 'panelSchema.json'
+            panel: 'panelSchema.json',
+            panelOutput: 'panelOutputSchema.json'
         }
     }
 };
@@ -42,6 +43,7 @@ test("should copy images", () => {
         "1.1.1.png",
         "1.1.2.png",
         "1.2.1.png",
+        "10.1.1.png",
         "2.1.1.png"
     ]);
     expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual(["1.1.1.png"]);
@@ -52,6 +54,13 @@ test("should create json schema for panel", () => {
 
     expect(readPath(`${TYPE_FOLDER}/${config.type.schemas.panel}`)).toBeDefined()
 });
+
+test("should create json schema for panel output", () => {
+    bundle(config);
+
+    expect(readPath(`${TYPE_FOLDER}/${config.type.schemas.panelOutput}`)).toBeDefined()
+});
+
 
 afterEach(() => {
     fs.rmSync(WWW_FOLDER_DIR, {recursive: true, force: true});

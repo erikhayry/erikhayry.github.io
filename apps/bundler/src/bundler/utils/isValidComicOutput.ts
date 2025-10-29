@@ -32,15 +32,18 @@ function hasInvalidPanelFileNames(folderPath: string) {
 }
 
 function hasInvalidPanelIds(folderPath: string) {
-    const isInvalidPanelId = (fileName: string) =>
-        !verifyPanelOutput(getPanel(getOutputFilePath(folderPath, fileName)));
+    console.log(folderPath)
+    const isInvalidPanelId = (fileName: string) => {
+        return !verifyPanelOutput(getPanel(getOutputFilePath(folderPath, fileName)));
+    }
 
     return Boolean(getPanelDataFiles(folderPath).filter(isInvalidPanelId).length);
 }
 
 function hasPanelWithoutImage(folderPath: string) {
-    const isWithoutImage = (fileName: string) =>
-        !hasImage(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
+    const isWithoutImage = (fileName: string) => {
+        return !hasImage(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
+    }
 
     return Boolean(getPanelDataFiles(folderPath).filter(isWithoutImage).length);
 }

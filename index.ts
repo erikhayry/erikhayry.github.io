@@ -11,7 +11,8 @@ bundle({
     type: {
         folder: 'library/types/schemas',
         schemas: {
-            panel: 'panelSchema.json'
+            panel: 'panelSchema.json',
+            panelOutput: 'panelOutputSchema.json'
         }
     }
 });

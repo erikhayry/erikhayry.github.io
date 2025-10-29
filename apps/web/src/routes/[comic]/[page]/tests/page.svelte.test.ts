@@ -7,7 +7,7 @@ import {load} from "../+page";
 
 
 describe('Comic page', () => {
-    it('should render list comic', async () => {
+    it('should render comic page', async () => {
         const data = load({params: {comic: COMIC_MOCK.slug, page: PAGE_INDEX_MOCK.toString()}});
         renderPage(Page, data);
 

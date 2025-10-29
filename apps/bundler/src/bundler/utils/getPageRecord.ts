@@ -26,7 +26,7 @@ function addToPageRecord(
     return pageRecord;
 }
 
-export function getPageRecord(path: string) {
+export function getPageRecord(path: string): Record<string, PanelOutput[]> {
     const toPageRecord = (
         pageRecord: Record<number, PanelOutput[]>,
         fileName: string,

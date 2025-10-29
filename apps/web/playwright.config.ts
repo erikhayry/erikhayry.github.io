@@ -8,6 +8,7 @@ export default defineConfig({
         port: 4173
     },
     testDir: 'e2e',
+    workers: 10,
     projects: [
         {
             name: 'Wide',

@@ -8,12 +8,29 @@ function byName(a: string, b: string) {
     return a.localeCompare(b);
 }
 
-function toPageOutput(panels: PanelOutput[]): PageOutput {
+interface NumberedPageOutput {
+    pageNumber: string,
+    panels: PanelOutput[]
+}
+
+function toNumberedPageOutput([pageNumber, panels]: [string, PanelOutput[]]): NumberedPageOutput {
+    return {pageNumber, panels};
+}
+
+function toPageOutput({panels}: NumberedPageOutput): PageOutput {
     return {panels};
 }
 
+
+function byPageNumber(pageA: NumberedPageOutput, pageB: NumberedPageOutput) {
+    return parseFloat(pageA.pageNumber) - parseFloat(pageB.pageNumber)
+}
+
 function getPages(path: string): PageOutput[] {
-    return Object.values(getPageRecord(path)).map(toPageOutput);
+    return Object.entries(getPageRecord(path))
+        .map(toNumberedPageOutput)
+        .sort(byPageNumber)
+        .map(toPageOutput);
 }
 
 function toComicOutput(comics: ComicOutput[], path: string) {

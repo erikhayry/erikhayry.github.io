@@ -34,6 +34,9 @@ test("returns pages", () => {
         {
             panels: [getPanel(`${DIR}/comic-1/${OUTPUT_FOLDER}/2.1.1.json`)],
         },
+        {
+            panels: [getPanel(`${DIR}/comic-1/${OUTPUT_FOLDER}/10.1.1.json`)],
+        },
     ]);
     expect(comic2!.pages).toEqual([
         {

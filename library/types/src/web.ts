@@ -1,10 +1,8 @@
 import * as z from "zod";
-import {CoordsOutput, PanelId} from "./output.ts";
+import {PanelId} from "./output.ts";
 
-export const Coords = CoordsOutput
 export const Panel = z.object({
     id: PanelId,
-    coords: Coords
 });
 
 export const Page = z.object({
