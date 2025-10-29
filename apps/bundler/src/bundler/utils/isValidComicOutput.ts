@@ -25,27 +25,24 @@ function hasImage(path: string, panelId: string) {
     );
 }
 
-function hasInvalidPanelFileNames(folderPath: string) {
-    return Boolean(
-        getPanelDataFiles(folderPath).filter(isInvalidFilenames).length,
-    );
+function getInvalidFileNames(folderPath: string): string[] {
+    return getPanelDataFiles(folderPath).filter(isInvalidFilenames)
 }
 
-function hasInvalidPanelIds(folderPath: string) {
-    console.log(folderPath)
+function getInvalidPanelIds(folderPath: string): string[] {
     const isInvalidPanelId = (fileName: string) => {
         return !verifyPanelOutput(getPanel(getOutputFilePath(folderPath, fileName)));
     }
 
-    return Boolean(getPanelDataFiles(folderPath).filter(isInvalidPanelId).length);
+    return getPanelDataFiles(folderPath).filter(isInvalidPanelId)
 }
 
-function hasPanelWithoutImage(folderPath: string) {
+function getPanelWithoutImage(folderPath: string): string[] {
     const isWithoutImage = (fileName: string) => {
         return !hasImage(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
     }
 
-    return Boolean(getPanelDataFiles(folderPath).filter(isWithoutImage).length);
+    return getPanelDataFiles(folderPath).filter(isWithoutImage);
 }
 
 function hasNoFiles(folderPath: string) {
@@ -58,18 +55,18 @@ export function isValidComicOutput(folderPath: string) {
         return false;
     }
 
-    if (hasInvalidPanelFileNames(folderPath)) {
-        error(`${folderPath} has invalid panel file names`);
+    if (getInvalidFileNames(folderPath).length) {
+        error(`${folderPath} has invalid file names: ${getInvalidFileNames(folderPath)}`);
         return false;
     }
 
-    if (hasInvalidPanelIds(folderPath)) {
-        error(`${folderPath} has invalid panel ids`);
+    if (getInvalidPanelIds(folderPath).length) {
+        error(`${folderPath} has invalid panel ids: ${getInvalidPanelIds(folderPath)}`);
         return false;
     }
 
-    if (hasPanelWithoutImage(folderPath)) {
-        error(`${folderPath} has panels without images`);
+    if (getPanelWithoutImage(folderPath).length) {
+        error(`${folderPath} has panels without images: ${getPanelWithoutImage(folderPath)}`);
         return false;
     }
 
