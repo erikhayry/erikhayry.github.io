@@ -5,6 +5,11 @@ import {removeExtension} from "../../files/removeExtension.ts";
 import {PanelIdTuple, type PanelOutput} from "@library/types";
 import {verifyPanelOutput} from "../../verify/verifyPanelOutput.ts";
 
+interface NumberedPageRecord {
+    pageNumber: string,
+    panelOutput: PanelOutput
+}
+
 function getPageNumber(panelId: string) {
     const idTuplet = PanelIdTuple.parse(removeExtension(panelId).split("."));
 
@@ -13,7 +18,7 @@ function getPageNumber(panelId: string) {
 
 function addToPageRecord(
     pageRecord: Record<string, PanelOutput[]>,
-    {pageNumber, panelOutput}: { pageNumber: string, panelOutput: PanelOutput },
+    {pageNumber, panelOutput}: NumberedPageRecord,
 ): Record<string, PanelOutput[]> {
     if (pageRecord[pageNumber]) {
         pageRecord[pageNumber].push(panelOutput);
@@ -27,9 +32,8 @@ function addToPageRecord(
 export function getPageRecord(path: string): Record<string, PanelOutput[]> {
     const toPageRecord = (
         pageRecord: Record<number, PanelOutput[]>,
-        numberedPagePageRecord: { pageNumber: string, panelOutput: PanelOutput },
+        numberedPagePageRecord: NumberedPageRecord,
     ) => addToPageRecord(pageRecord, numberedPagePageRecord);
-
     const toFilePath = (fileName: string) => getOutputFilePath(path, fileName)
     const toJson = (filePath: string) => getJSON(filePath)
     const outOtherOutputFiles = (panelOutPutJson: any) => verifyPanelOutput(panelOutPutJson)
