@@ -1,7 +1,7 @@
 import {getImages, getJSONS} from "../../files/getFileNames.ts";
 import {PanelId} from "@library/types";
 import {verifyPanelOutput} from "../../verify/verifyPanelOutput.ts";
-import {getPanel} from "./getPanel.ts";
+import {getJSON} from "./getJSON.ts";
 import {getOutputFilePath} from "./getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
 import {IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
@@ -16,7 +16,7 @@ function getPanelDataFiles(folderPath: string) {
 }
 
 function getPanelId(filePath: string) {
-    return getPanel(filePath).id;
+    return getJSON(filePath).id;
 }
 
 function hasImage(path: string, panelId: string) {
@@ -31,7 +31,7 @@ function getInvalidFileNames(folderPath: string): string[] {
 
 function getInvalidPanelIds(folderPath: string): string[] {
     const isInvalidPanelId = (fileName: string) => {
-        return !verifyPanelOutput(getPanel(getOutputFilePath(folderPath, fileName)));
+        return !verifyPanelOutput(getJSON(getOutputFilePath(folderPath, fileName)));
     }
 
     return getPanelDataFiles(folderPath).filter(isInvalidPanelId)

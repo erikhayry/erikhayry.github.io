@@ -1,4 +1,4 @@
-import {getPanel} from "./getPanel.ts";
+import {getJSON} from "./getJSON.ts";
 import {getPanelOutputs} from "./getPanelOutputs.ts";
 import {getOutputFilePath} from "./getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
@@ -14,7 +14,7 @@ function addToPageRecord(
     pageRecord: Record<string, PanelOutput[]>,
     filePath: string,
 ): Record<string, PanelOutput[]> {
-    const panelOutput = getPanel(filePath);
+    const panelOutput = getJSON(filePath);
     const pageNumber = getPageNumber(panelOutput.id);
 
     if (pageRecord[pageNumber]) {
