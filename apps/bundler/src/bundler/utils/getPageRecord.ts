@@ -3,6 +3,7 @@ import {getPanelOutputs} from "./getPanelOutputs.ts";
 import {getOutputFilePath} from "./getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
 import {PanelIdTuple, type PanelOutput} from "@library/types";
+import {verifyPanelOutput} from "../../verify/verifyPanelOutput.ts";
 
 function getPageNumber(panelId: string) {
     const idTuplet = PanelIdTuple.parse(removeExtension(panelId).split("."));
@@ -12,25 +13,36 @@ function getPageNumber(panelId: string) {
 
 function addToPageRecord(
     pageRecord: Record<string, PanelOutput[]>,
-    filePath: string,
+    {pageNumber, panelOutput}: { pageNumber: string, panelOutput: PanelOutput },
 ): Record<string, PanelOutput[]> {
-    const panelOutput = getJSON(filePath);
-    const pageNumber = getPageNumber(panelOutput.id);
-
     if (pageRecord[pageNumber]) {
         pageRecord[pageNumber].push(panelOutput);
     } else {
         pageRecord[pageNumber] = [panelOutput];
     }
-
     return pageRecord;
 }
+
 
 export function getPageRecord(path: string): Record<string, PanelOutput[]> {
     const toPageRecord = (
         pageRecord: Record<number, PanelOutput[]>,
-        fileName: string,
-    ) => addToPageRecord(pageRecord, getOutputFilePath(path, fileName));
+        numberedPagePageRecord: { pageNumber: string, panelOutput: PanelOutput },
+    ) => addToPageRecord(pageRecord, numberedPagePageRecord);
 
-    return getPanelOutputs(path).reduce(toPageRecord, {});
+    const toFilePath = (fileName: string) => getOutputFilePath(path, fileName)
+    const toJson = (filePath: string) => getJSON(filePath)
+    const outOtherOutputFiles = (panelOutPutJson: any) => verifyPanelOutput(panelOutPutJson)
+    const toNumberedPageRecord = (panelOutput: PanelOutput) => ({
+        pageNumber: getPageNumber(panelOutput.id),
+        panelOutput
+    });
+
+
+    return getPanelOutputs(path)
+        .map(toFilePath)
+        .map(toJson)
+        .filter(outOtherOutputFiles)
+        .map(toNumberedPageRecord)
+        .reduce(toPageRecord, {});
 }
