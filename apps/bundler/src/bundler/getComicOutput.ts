@@ -1,8 +1,8 @@
 import {getFolders} from "../files/getFolders.ts";
 import {getPageRecord} from "./utils/getPageRecord.ts";
-import {isValidComicOutput as outInvalidComicOutput} from "./utils/isValidComicOutput.ts";
 import {type ComicOutput, PageLayout, type PageOutput, type PanelInfo} from "@library/types";
 import {error} from "../logger/log.ts";
+import {isValidComicOutput} from "./utils/isValidComicOutput.ts";
 
 function byName(a: string, b: string) {
     return a.localeCompare(b);
@@ -47,6 +47,8 @@ function toComicOutput(comics: ComicOutput[], path: string) {
 }
 
 export function getComicOutput(folderPath: string): ComicOutput[] {
+    const outInvalidComicOutput = (folderPath: string) => 'success' in isValidComicOutput(folderPath)
+    
     try {
         return getFolders(folderPath)
             .filter(outInvalidComicOutput)

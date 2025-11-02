@@ -7,6 +7,7 @@ import {removeExtension} from "../../files/removeExtension.ts";
 import {DATA_EXTENSION, IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
 import {error} from "../../logger/log.ts";
 import {verifyPageInfo} from "../../verify/verifyPageInfo.ts";
+import type {Validation} from "../../../types";
 
 function isPanelId(fileName: string) {
     return PanelId.safeParse(removeExtension(fileName)).success
@@ -90,31 +91,36 @@ function hasNoFiles(folderPath: string) {
     return getOutputFiles(folderPath).length === 0;
 }
 
-export function isValidComicOutput(folderPath: string) {
+function getError(message: string) {
+    error(message);
+
+    return {
+        error: message
+    };
+}
+
+export function isValidComicOutput(folderPath: string): Validation {
     if (hasNoFiles(folderPath)) {
-        error(`${folderPath} has no files`);
-        return false;
+        return getError(`${folderPath} has no files`)
     }
 
     if (getInvalidFileNames(folderPath).length) {
-        error(`${folderPath} has invalid file names: ${getInvalidFileNames(folderPath)}`);
-        return false;
+        return getError(`${folderPath} has invalid file names: ${getInvalidFileNames(folderPath)}`)
     }
 
     if (getInvalidIds(folderPath).length) {
-        error(`${folderPath} has invalid panel ids: ${getInvalidIds(folderPath)}`);
-        return false;
+        return getError(`${folderPath} has invalid panel ids: ${getInvalidIds(folderPath)}`)
     }
 
     if (getPanelsWithoutImage(folderPath).length) {
-        error(`${folderPath} has panels without images: ${getPanelsWithoutImage(folderPath)}`);
-        return false;
+        return getError(`${folderPath} has panels without images: ${getPanelsWithoutImage(folderPath)}`)
     }
 
     if (getPanelsWithoutPageInfo(folderPath).length) {
-        error(`${folderPath} has panels without page info: ${getPanelsWithoutPageInfo(folderPath)}`);
-        return false;
+        return getError(`${folderPath} has panels without page info: ${getPanelsWithoutPageInfo(folderPath)}`)
     }
 
-    return true;
+    return {
+        success: true
+    };
 }
