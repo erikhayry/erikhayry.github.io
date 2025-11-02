@@ -1,21 +1,30 @@
 import {getImages, getJSONS} from "../../files/getFileNames.ts";
 import {PageId, PanelId} from "@library/types";
-import {verifyPanelOutput} from "../../verify/verifyPanelOutput.ts";
+import {verifyPanelInfo} from "../../verify/verifyPanelInfo.ts";
 import {getJSON} from "./getJSON.ts";
 import {getOutputFilePath} from "./getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
-import {IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
+import {DATA_EXTENSION, IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
 import {error} from "../../logger/log.ts";
+import {verifyPageInfo} from "../../verify/verifyPageInfo.ts";
 
 function isPanelId(fileName: string) {
     return PanelId.safeParse(removeExtension(fileName)).success
 }
 
-function isInvalidFilenames(fileName: string): boolean {
-    return !isPanelId(fileName) && !PageId.safeParse(removeExtension(fileName)).success
+function isPageId(fileName: string) {
+    return PageId.safeParse(removeExtension(fileName)).success
 }
 
-function getPanelDataFiles(folderPath: string) {
+function isValidFileName(fileName: string) {
+    return isPanelId(fileName) || isPageId(fileName)
+}
+
+function outInvalidFileNames(fileName: string): boolean {
+    return !isValidFileName(fileName)
+}
+
+function getOutputFiles(folderPath: string) {
     return getJSONS(`${folderPath}/${OUTPUT_FOLDER}`);
 }
 
@@ -29,28 +38,56 @@ function hasImage(path: string, panelId: string) {
     );
 }
 
-function getInvalidFileNames(folderPath: string): string[] {
-    return getPanelDataFiles(folderPath).filter(isInvalidFilenames)
+function getPanelsPageId(panelId: string): PageId {
+    const [part1, part2] = panelId.split('.')
+
+    return PageId.parse(`${part1}.${part2}`)
 }
 
-function getInvalidPanelIds(folderPath: string): string[] {
-    const isInvalidPanelId = (fileName: string) => {
-        return isPanelId(fileName) && !verifyPanelOutput(getJSON(getOutputFilePath(folderPath, fileName)));
+function hasPageInfo(path: string, panelId: string) {
+    return getJSONS(`${path}/${OUTPUT_FOLDER}`).some(
+        (jsonFileName) => jsonFileName === `${getPanelsPageId(panelId)}${DATA_EXTENSION}`,
+    );
+}
+
+function getInvalidFileNames(folderPath: string): string[] {
+    return getOutputFiles(folderPath).filter(outInvalidFileNames)
+}
+
+function isValidPanelDataId(folderPath: string, fileName: string) {
+    return isPanelId(fileName) && verifyPanelInfo(getJSON(getOutputFilePath(folderPath, fileName)))
+}
+
+function isValidPageDataId(folderPath: string, fileName: string) {
+    return isPageId(fileName) && verifyPageInfo(getJSON(getOutputFilePath(folderPath, fileName)))
+}
+
+function getInvalidIds(folderPath: string): string[] {
+    const isInvalidId = (fileName: string) => {
+        return !isValidPanelDataId(folderPath, fileName) && !isValidPageDataId(folderPath, fileName);
     }
 
-    return getPanelDataFiles(folderPath).filter(isInvalidPanelId)
+    return getOutputFiles(folderPath).filter(isInvalidId)
 }
 
-function getPanelWithoutImage(folderPath: string): string[] {
+function getPanelsWithoutImage(folderPath: string): string[] {
     const isWithoutImage = (fileName: string) => {
         return isPanelId(fileName) && !hasImage(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
     }
 
-    return getPanelDataFiles(folderPath).filter(isWithoutImage);
+    return getOutputFiles(folderPath).filter(isWithoutImage);
+}
+
+function getPanelsWithoutPageInfo(folderPath: string): string[] {
+    const isWithoutPageInfo = (fileName: string) => {
+        return isPanelId(fileName) && !hasPageInfo(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
+    }
+
+    return getOutputFiles(folderPath).filter(isWithoutPageInfo);
 }
 
 function hasNoFiles(folderPath: string) {
-    return getPanelDataFiles(folderPath).length === 0;
+    return getOutputFiles(folderPath).length === 0;
 }
 
 export function isValidComicOutput(folderPath: string) {
@@ -64,13 +101,18 @@ export function isValidComicOutput(folderPath: string) {
         return false;
     }
 
-    if (getInvalidPanelIds(folderPath).length) {
-        error(`${folderPath} has invalid panel ids: ${getInvalidPanelIds(folderPath)}`);
+    if (getInvalidIds(folderPath).length) {
+        error(`${folderPath} has invalid panel ids: ${getInvalidIds(folderPath)}`);
         return false;
     }
 
-    if (getPanelWithoutImage(folderPath).length) {
-        error(`${folderPath} has panels without images: ${getPanelWithoutImage(folderPath)}`);
+    if (getPanelsWithoutImage(folderPath).length) {
+        error(`${folderPath} has panels without images: ${getPanelsWithoutImage(folderPath)}`);
+        return false;
+    }
+
+    if (getPanelsWithoutPageInfo(folderPath).length) {
+        error(`${folderPath} has panels without page info: ${getPanelsWithoutPageInfo(folderPath)}`);
         return false;
     }
 

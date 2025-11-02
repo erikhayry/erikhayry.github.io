@@ -1,22 +1,21 @@
 import * as z from "zod";
 
-export const PageLayoutType = {
+export const PageLayout = {
     Hero: "Hero (1 panel)",
     SplitWide: "Split Wide (2 panels)",
     HorizontalTriptych: "Horizontal Triptych (3 panels)",
     Quad: "Quad (4 panels)"
 } as const;
 
-export const PageLayoutTypeSchema = z.enum([
-    PageLayoutType.Hero,
-    PageLayoutType.SplitWide,
-    PageLayoutType.HorizontalTriptych,
-    PageLayoutType.Quad
+export const PageLayoutType = z.enum([
+    PageLayout.Hero,
+    PageLayout.SplitWide,
+    PageLayout.HorizontalTriptych,
+    PageLayout.Quad
 ]);
 
-export type PageLayoutType = z.infer<typeof PageLayoutTypeSchema>;
 
-export const DialogOutput = z.object({
+export const DialogInfo = z.object({
     text: z.string(),
     person: z.string(),
 });
@@ -38,23 +37,23 @@ export type PanelIdTuple = z.infer<typeof PanelIdTuple>;
 export type PanelId = z.infer<typeof PanelId>;
 
 
-export const PanelOutput = z.object({
+export const PanelInfo = z.object({
     id: PanelId,
     description: z.string(),
     narration: z.optional(z.string()),
-    dialogs: z.optional(z.array(DialogOutput)),
+    dialogs: z.optional(z.array(DialogInfo)),
     quotes: z.optional(z.string()),
     info: z.optional(z.string()),
 });
 
-export const PageInfoOutput = z.object({
+export const PageInfo = z.object({
     id: PageId,
     layout: PageLayoutType
 });
 
 export const PageOutput = z.object({
     layout: PageLayoutType,
-    panels: z.array(PanelOutput),
+    panels: z.array(PanelInfo),
 });
 
 export const ComicOutput = z.object({
@@ -62,7 +61,8 @@ export const ComicOutput = z.object({
     path: z.string(),
 });
 
-export type PageInfoOutput = z.infer<typeof PageInfoOutput>;
-export type PanelOutput = z.infer<typeof PanelOutput>;
+export type PanelInfo = z.infer<typeof PanelInfo>;
+export type PageInfo = z.infer<typeof PageInfo>;
+
 export type PageOutput = z.infer<typeof PageOutput>;
 export type ComicOutput = z.infer<typeof ComicOutput>;

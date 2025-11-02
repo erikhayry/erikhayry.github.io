@@ -5,7 +5,7 @@ import {
     type PageOutput,
     Panel,
     type Panel as PanelType,
-    PanelOutput,
+    PanelInfo,
     Website,
 } from "@library/types";
 import {getComicOutput} from "./getComicOutput.ts";
@@ -16,7 +16,7 @@ function getComicFolder(path: string): string {
     return folders[folders.length - 1] || "";
 }
 
-function toPanel(panelOutput: PanelOutput): PanelType {
+function toPanel(panelOutput: PanelInfo): PanelType {
     return Panel.parse(panelOutput);
 }
 

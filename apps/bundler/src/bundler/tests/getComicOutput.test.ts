@@ -2,7 +2,7 @@ import {expect, test} from "bun:test";
 import {getComicOutput} from "../getComicOutput.ts";
 import {OUTPUT_FOLDER} from "../../constants.ts";
 import {getJSON} from "../utils/getJSON.ts";
-import {PageLayoutType} from "@library/types";
+import {PageLayout} from "@library/types";
 
 const DIR = "src/bundler/tests/mocks";
 
@@ -24,28 +24,28 @@ test("returns pages", () => {
 
     expect(comic1!.pages).toEqual([
         {
-            layout: PageLayoutType.Hero,
+            layout: PageLayout.Hero,
             panels: [
                 getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/1.1.1.json`),
                 getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/1.1.2.json`),
             ],
         },
         {
-            layout: PageLayoutType.Hero,
+            layout: PageLayout.Hero,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/1.2.1.json`)],
         },
         {
-            layout: PageLayoutType.Hero,
+            layout: PageLayout.Hero,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/2.1.1.json`)],
         },
         {
-            layout: PageLayoutType.Hero,
+            layout: PageLayout.Hero,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/10.1.1.json`)],
         },
     ]);
     expect(comic2!.pages).toEqual([
         {
-            layout: PageLayoutType.Hero,
+            layout: PageLayout.Hero,
             panels: [getJSON(`${DIR}/comic-2/${OUTPUT_FOLDER}/1.1.1.json`)],
         },
     ]);

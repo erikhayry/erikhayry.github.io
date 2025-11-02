@@ -2,12 +2,12 @@ import {getJSON} from "./getJSON.ts";
 import {getPanelOutputs} from "./getPanelOutputs.ts";
 import {getOutputFilePath} from "./getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
-import {PanelIdTuple, type PanelOutput} from "@library/types";
-import {verifyPanelOutput} from "../../verify/verifyPanelOutput.ts";
+import {PanelIdTuple, type PanelInfo} from "@library/types";
+import {verifyPanelInfo} from "../../verify/verifyPanelInfo.ts";
 
 interface NumberedPageRecord {
     pageNumber: string,
-    panelOutput: PanelOutput
+    panelOutput: PanelInfo
 }
 
 function getPageNumber(panelId: string) {
@@ -17,9 +17,9 @@ function getPageNumber(panelId: string) {
 }
 
 function addToPageRecord(
-    pageRecord: Record<string, PanelOutput[]>,
+    pageRecord: Record<string, PanelInfo[]>,
     {pageNumber, panelOutput}: NumberedPageRecord,
-): Record<string, PanelOutput[]> {
+): Record<string, PanelInfo[]> {
     if (pageRecord[pageNumber]) {
         pageRecord[pageNumber].push(panelOutput);
     } else {
@@ -29,15 +29,15 @@ function addToPageRecord(
 }
 
 
-export function getPageRecord(path: string): Record<string, PanelOutput[]> {
+export function getPageRecord(path: string): Record<string, PanelInfo[]> {
     const toPageRecord = (
-        pageRecord: Record<number, PanelOutput[]>,
+        pageRecord: Record<number, PanelInfo[]>,
         numberedPagePageRecord: NumberedPageRecord,
     ) => addToPageRecord(pageRecord, numberedPagePageRecord);
     const toFilePath = (fileName: string) => getOutputFilePath(path, fileName)
     const toJson = (filePath: string) => getJSON(filePath)
-    const outOtherOutputFiles = (panelOutPutJson: any) => verifyPanelOutput(panelOutPutJson)
-    const toNumberedPageRecord = (panelOutput: PanelOutput) => ({
+    const outOtherOutputFiles = (panelOutPutJson: any) => verifyPanelInfo(panelOutPutJson)
+    const toNumberedPageRecord = (panelOutput: PanelInfo) => ({
         pageNumber: getPageNumber(panelOutput.id),
         panelOutput
     });
