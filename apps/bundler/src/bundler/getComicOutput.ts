@@ -1,35 +1,41 @@
 import {getFolders} from "../files/getFolders.ts";
 import {getPageRecord} from "./utils/getPageRecord.ts";
-import {type ComicOutput, PageLayout, type PageOutput, type PanelInfo} from "@library/types";
+import {type ComicOutput, type PageOutput, type PanelInfo} from "@library/types";
 import {error} from "../logger/log.ts";
 import {isValidComicOutput} from "./utils/isValidComicOutput.ts";
+import {DATA_EXTENSION, OUTPUT_FOLDER} from "../constants";
+import {getPageInfo} from "./utils/getPage";
 
 function byName(a: string, b: string) {
     return a.localeCompare(b);
 }
 
 interface NumberedPageOutput {
-    pageNumber: string,
+    pageId: string,
     panels: PanelInfo[]
 }
 
-function toNumberedPageOutput([pageNumber, panels]: [string, PanelInfo[]]): NumberedPageOutput {
-    return {pageNumber, panels};
+function toNumberedPageOutput([pageId, panels]: [string, PanelInfo[]]): NumberedPageOutput {
+    return {pageId, panels};
 }
 
-function toPageOutput({panels}: NumberedPageOutput): PageOutput {
+function getPageOutput({panels, pageId}: NumberedPageOutput, path: string): PageOutput {
+    const page = getPageInfo(`${path}/${OUTPUT_FOLDER}/${pageId}${DATA_EXTENSION}`)
+
     return {
-        layout: PageLayout.Hero,
+        layout: page.layout,
         panels
     };
 }
 
 
 function byPageNumber(pageA: NumberedPageOutput, pageB: NumberedPageOutput) {
-    return parseFloat(pageA.pageNumber) - parseFloat(pageB.pageNumber)
+    return Number.parseFloat(pageA.pageId) - Number.parseFloat(pageB.pageId)
 }
 
 function getPages(path: string): PageOutput[] {
+    const toPageOutput = (numberedPageLayout: NumberedPageOutput) => getPageOutput(numberedPageLayout, path)
+
     return Object.entries(getPageRecord(path))
         .map(toNumberedPageOutput)
         .sort(byPageNumber)

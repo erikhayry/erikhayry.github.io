@@ -31,15 +31,15 @@ test("returns pages", () => {
             ],
         },
         {
-            layout: PageLayout.Hero,
+            layout: PageLayout.SplitWide,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/1.2.1.json`)],
         },
         {
-            layout: PageLayout.Hero,
+            layout: PageLayout.HorizontalTriptych,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/2.1.1.json`)],
         },
         {
-            layout: PageLayout.Hero,
+            layout: PageLayout.Quad,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/10.1.1.json`)],
         },
     ]);
