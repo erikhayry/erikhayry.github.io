@@ -29,12 +29,12 @@ function addToPageRecord(
 }
 
 
-export function getPageRecord(path: string): Record<string, PanelInfo[]> {
+export function getPageRecord(folderPath: string): Record<string, PanelInfo[]> {
     const toPageRecord = (
         pageRecord: Record<number, PanelInfo[]>,
         numberedPagePageRecord: NumberedPageRecord,
     ) => addToPageRecord(pageRecord, numberedPagePageRecord);
-    const toFilePath = (fileName: string) => getOutputFilePath(path, fileName)
+    const toFilePath = (fileName: string) => getOutputFilePath(folderPath, fileName)
     const toJson = (filePath: string) => getJSON(filePath)
     const outOtherOutputFiles = (panelOutPutJson: any) => verifyPanelInfo(panelOutPutJson)
     const toNumberedPageRecord = (panelOutput: PanelInfo) => ({
@@ -43,7 +43,7 @@ export function getPageRecord(path: string): Record<string, PanelInfo[]> {
     });
 
 
-    return getPanelOutputs(path)
+    return getPanelOutputs(folderPath)
         .map(toFilePath)
         .map(toJson)
         .filter(outOtherOutputFiles)
