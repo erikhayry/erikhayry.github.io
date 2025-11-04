@@ -1,7 +1,7 @@
 import {expect, test} from "bun:test";
 import {getComicOutput} from "../getComicOutput.ts";
 import {OUTPUT_FOLDER} from "../../constants.ts";
-import {getJSON} from "../utils/getJSON.ts";
+import {getJSON} from "../../files/getJSON.ts";
 import {PageLayout} from "@library/types";
 
 const DIR = "src/bundler/tests/mocks";

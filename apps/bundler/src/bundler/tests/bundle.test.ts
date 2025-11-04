@@ -3,7 +3,7 @@ import {bundle, type BundleConfig} from "../bundle.ts";
 import fs from "node:fs";
 import {readPath} from "../../files/readPath.ts";
 import {Website} from "@library/types";
-import {getImages} from "../../files/getFileNames.ts";
+import {getImages} from "../../files/getImages.ts";
 
 const WWW_FOLDER_DIR = "src/bundler/tests/comicsOutput";
 const IMAGE_FOLDER = "src/bundler/tests/comicsOutput";

@@ -1,53 +1,30 @@
-import {getImages, getJSONS} from "../../files/getFileNames.ts";
-import {PageId, PanelId} from "@library/types";
-import {verifyPanelInfo} from "../../verify/verifyPanelInfo.ts";
-import {getJSON} from "./getJSON.ts";
-import {getOutputFilePath} from "./getOutputFilePath.ts";
-import {removeExtension} from "../../files/removeExtension.ts";
-import {DATA_EXTENSION, IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
+import {isPanelId, verifyPanelInfo} from "../../verify/verifyPanelInfo.ts";
+import {getJSON} from "../../files/getJSON.ts";
+import {getOutputFilePath} from "../../files/getOutputFilePath.ts";
+import {IMAGE_EXTENSION} from "../../constants.ts";
 import {error} from "../../logger/log.ts";
-import {verifyPageInfo} from "../../verify/verifyPageInfo.ts";
-import type {Validation} from "../../../types";
+import {isPageId, verifyPageInfo} from "../../verify/verifyPageInfo.ts";
+import type {Validation, ValidationError} from "../../../types";
+import {outInvalidFileNames} from "../../utils/filter.ts";
+import {getOutputFiles} from "../../files/getOutputFiles.ts";
+import {getOutputJSONS} from "../../files/getOutputJSONS.ts";
+import {hasNoFiles} from "../../files/hasNoFiles.ts";
+import {getPanelsPageInfo} from "./page.ts";
+import type {PanelId} from "@library/types";
+import {getPanelId} from "./panel.ts";
+import {getOutputImages} from "../../files/getOutputImages.ts";
 
-function isPanelId(fileName: string) {
-    return PanelId.safeParse(removeExtension(fileName)).success
-}
 
-function isPageId(fileName: string) {
-    return PageId.safeParse(removeExtension(fileName)).success
-}
-
-function isValidFileName(fileName: string) {
-    return isPanelId(fileName) || isPageId(fileName)
-}
-
-function outInvalidFileNames(fileName: string): boolean {
-    return !isValidFileName(fileName)
-}
-
-function getOutputFiles(folderPath: string) {
-    return getJSONS(`${folderPath}/${OUTPUT_FOLDER}`);
-}
-
-function getPanelId(filePath: string) {
-    return getJSON(filePath).id;
-}
-
-function hasImage(path: string, panelId: string) {
-    return getImages(`${path}/${OUTPUT_FOLDER}`).some(
+function hasImage(folderPath: string, panelId: string) {
+    return getOutputImages(folderPath).some(
         (imageFileName) => imageFileName === `${panelId}${IMAGE_EXTENSION}`,
     );
 }
 
-function getPanelsPageId(panelId: string): PageId {
-    const [part1, part2] = panelId.split('.')
 
-    return PageId.parse(`${part1}.${part2}`)
-}
-
-function hasPageInfo(path: string, panelId: string) {
-    return getJSONS(`${path}/${OUTPUT_FOLDER}`).some(
-        (jsonFileName) => jsonFileName === `${getPanelsPageId(panelId)}${DATA_EXTENSION}`,
+function hasPageInfo(folderPath: string, panelId: PanelId) {
+    return getOutputJSONS(folderPath).some(
+        (jsonFileName) => jsonFileName === getPanelsPageInfo(panelId),
     );
 }
 
@@ -73,7 +50,7 @@ function getInvalidData(folderPath: string): string[] {
 
 function getPanelsWithoutImage(folderPath: string): string[] {
     const isWithoutImage = (fileName: string) => {
-        return isPanelId(fileName) && !hasImage(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
+        return isPanelId(fileName) && !hasImage(folderPath, getPanelId(folderPath, fileName));
     }
 
     return getOutputFiles(folderPath).filter(isWithoutImage);
@@ -81,17 +58,14 @@ function getPanelsWithoutImage(folderPath: string): string[] {
 
 function getPanelsWithoutPageInfo(folderPath: string): string[] {
     const isWithoutPageInfo = (fileName: string) => {
-        return isPanelId(fileName) && !hasPageInfo(folderPath, getPanelId(getOutputFilePath(folderPath, fileName)));
+        return isPanelId(fileName) && !hasPageInfo(folderPath, getPanelId(folderPath, fileName));
     }
 
     return getOutputFiles(folderPath).filter(isWithoutPageInfo);
 }
 
-function hasNoFiles(folderPath: string) {
-    return getOutputFiles(folderPath).length === 0;
-}
 
-function getError(message: string) {
+function getError(message: string): ValidationError {
     error(message);
 
     return {

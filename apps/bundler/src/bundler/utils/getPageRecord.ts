@@ -1,9 +1,9 @@
-import {getJSON} from "./getJSON.ts";
 import {getPanelOutputs} from "./getPanelOutputs.ts";
-import {getOutputFilePath} from "./getOutputFilePath.ts";
+import {getOutputFilePath} from "../../files/getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
 import {PanelIdTuple, type PanelInfo} from "@library/types";
-import {verifyPanelInfo} from "../../verify/verifyPanelInfo.ts";
+import {toJson} from "../../utils/map.ts";
+import {outNonPanelOutputFiles} from "../../utils/filter.ts";
 
 interface NumberedPageRecord {
     pageNumber: string,
@@ -28,25 +28,28 @@ function addToPageRecord(
     return pageRecord;
 }
 
+function toPageRecord(
+    pageRecord: Record<number, PanelInfo[]>,
+    numberedPagePageRecord: NumberedPageRecord,
+) {
+    return addToPageRecord(pageRecord, numberedPagePageRecord)
+}
 
-export function getPageRecord(folderPath: string): Record<string, PanelInfo[]> {
-    const toPageRecord = (
-        pageRecord: Record<number, PanelInfo[]>,
-        numberedPagePageRecord: NumberedPageRecord,
-    ) => addToPageRecord(pageRecord, numberedPagePageRecord);
-    const toFilePath = (fileName: string) => getOutputFilePath(folderPath, fileName)
-    const toJson = (filePath: string) => getJSON(filePath)
-    const outOtherOutputFiles = (panelOutPutJson: any) => verifyPanelInfo(panelOutPutJson)
-    const toNumberedPageRecord = (panelOutput: PanelInfo) => ({
+function toNumberedPageRecord(panelOutput: PanelInfo) {
+    return {
         pageNumber: getPageNumber(panelOutput.id),
         panelOutput
-    });
+    }
+}
 
+
+export function getPageRecord(folderPath: string): Record<string, PanelInfo[]> {
+    const toFilePath = (fileName: string) => getOutputFilePath(folderPath, fileName)
 
     return getPanelOutputs(folderPath)
         .map(toFilePath)
         .map(toJson)
-        .filter(outOtherOutputFiles)
+        .filter(outNonPanelOutputFiles)
         .map(toNumberedPageRecord)
         .reduce(toPageRecord, {});
 }
