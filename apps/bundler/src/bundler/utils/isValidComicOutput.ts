@@ -9,9 +9,9 @@ import {outInvalidFileNames} from "../../utils/filter.ts";
 import {getOutputFiles} from "../../files/getOutputFiles.ts";
 import {getOutputJSONS} from "../../files/getOutputJSONS.ts";
 import {hasNoFiles} from "../../files/hasNoFiles.ts";
-import {getPanelsPageInfo} from "./page.ts";
+import {getPanelsPageInfo} from "../../utils/page.ts";
 import type {PanelId} from "@library/types";
-import {getPanelId} from "./panel.ts";
+import {getPanelId} from "../../utils/panel.ts";
 import {getOutputImages} from "../../files/getOutputImages.ts";
 
 

@@ -1,7 +1,7 @@
-import {readPath} from "../../files/readPath.ts";
+import {readPath} from "../files/readPath.ts";
 import type {PageInfo as PageInfoOutputType, PanelId} from "@library/types";
 import {PageId, PageInfo} from "@library/types";
-import {DATA_EXTENSION, OUTPUT_FOLDER} from "../../constants";
+import {DATA_EXTENSION, OUTPUT_FOLDER} from "../constants.ts";
 
 export function getPageInfo(filePath: string): PageInfoOutputType {
     return PageInfo.parse(JSON.parse(readPath(filePath)));

@@ -1,5 +1,5 @@
-import {getOutputFilePath} from "../../files/getOutputFilePath.ts";
-import {getJSON} from "../../files/getJSON.ts";
+import {getOutputFilePath} from "../files/getOutputFilePath.ts";
+import {getJSON} from "../files/getJSON.ts";
 import type {PanelId} from "@library/types";
 
 function getId(filePath: string) {

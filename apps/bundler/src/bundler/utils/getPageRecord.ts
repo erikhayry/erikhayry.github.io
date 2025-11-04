@@ -1,9 +1,9 @@
-import {getPanelOutputs} from "./getPanelOutputs.ts";
 import {getOutputFilePath} from "../../files/getOutputFilePath.ts";
 import {removeExtension} from "../../files/removeExtension.ts";
 import {PanelIdTuple, type PanelInfo} from "@library/types";
 import {toJson} from "../../utils/map.ts";
 import {outNonPanelOutputFiles} from "../../utils/filter.ts";
+import {getOutputJSONS} from "../../files/getOutputJSONS.ts";
 
 interface NumberedPageRecord {
     pageNumber: string,
@@ -46,7 +46,7 @@ function toNumberedPageRecord(panelOutput: PanelInfo) {
 export function getPageRecord(folderPath: string): Record<string, PanelInfo[]> {
     const toFilePath = (fileName: string) => getOutputFilePath(folderPath, fileName)
 
-    return getPanelOutputs(folderPath)
+    return getOutputJSONS(folderPath)
         .map(toFilePath)
         .map(toJson)
         .filter(outNonPanelOutputFiles)

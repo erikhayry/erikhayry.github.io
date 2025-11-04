@@ -2,7 +2,7 @@ import {getFolders} from "../files/getFolders.ts";
 import {getPageRecord} from "./utils/getPageRecord.ts";
 import {type ComicOutput, type PageOutput, type PanelInfo} from "@library/types";
 import {error} from "../logger/log.ts";
-import {getPageLayout} from "./utils/page.ts";
+import {getPageLayout} from "../utils/page.ts";
 import {byName, byPageNumber} from "../utils/sort.ts";
 import {outInvalidComicOutput} from "../utils/filter.ts";
 import type {NumberedPageOutput} from "../../types";
