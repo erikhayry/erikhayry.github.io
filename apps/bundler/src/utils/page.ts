@@ -1,13 +1,18 @@
 import {readPath} from "../files/readPath.ts";
-import type {PageInfo as PageInfoOutputType, PanelId} from "@library/types";
-import {PageId, PageInfo} from "@library/types";
+import {
+    PageId,
+    type PageInfo as PageInfoOutputType,
+    PageInfo,
+    type PageLayoutValue,
+    type PanelId
+} from "@library/types";
 import {DATA_EXTENSION, OUTPUT_FOLDER} from "../constants.ts";
 
 export function getPageInfo(filePath: string): PageInfoOutputType {
     return PageInfo.parse(JSON.parse(readPath(filePath)));
 }
 
-export function getPageLayout(folderPath: string, pageId: PageId) {
+export function getPageLayout(folderPath: string, pageId: PageId): PageLayoutValue {
     return getPageInfo(`${folderPath}/${OUTPUT_FOLDER}/${pageId}${DATA_EXTENSION}`).layout
 }
 
@@ -17,6 +22,6 @@ export function getPanelsPageId(panelId: string): PageId {
     return PageId.parse(`${part1}.${part2}`)
 }
 
-export function getPanelsPageInfo(panelId: PanelId) {
+export function getPanelsPageInfo(panelId: PanelId): string {
     return `${getPanelsPageId(panelId)}${DATA_EXTENSION}`
 }

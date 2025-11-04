@@ -13,6 +13,7 @@ export const PageLayoutType = z.enum([
     PageLayout.HorizontalTriptych,
     PageLayout.Quad
 ]);
+export type PageLayoutValue = z.infer<typeof PageLayoutType>
 
 
 export const DialogInfo = z.object({
