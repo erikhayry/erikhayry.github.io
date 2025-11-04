@@ -1,7 +1,7 @@
 {
   "pageTypes": [
     {
-      "id": "Hero (1 panel)",
+      "id": "1",
       "panelCount": 1,
       "gridSize": {
         "cols": 6,
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "id": "Split Wide (2 panels)",
+      "id": "2",
       "panelCount": 2,
       "gridSize": {
         "cols": 6,
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "id": "Horizontal Triptych (3 panels)",
+      "id": "3",
       "panelCount": 3,
       "gridSize": {
         "cols": 6,
@@ -175,7 +175,7 @@
       ]
     },
     {
-      "id": "Quad (4 panels)",
+      "id": "4)",
       "panelCount": 4,
       "gridSize": {
         "cols": 6,

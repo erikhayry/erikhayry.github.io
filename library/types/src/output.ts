@@ -1,10 +1,10 @@
 import * as z from "zod";
 
 export const PageLayout = {
-    Hero: "Hero (1 panel)",
-    SplitWide: "Split Wide (2 panels)",
-    HorizontalTriptych: "Horizontal Triptych (3 panels)",
-    Quad: "Quad (4 panels)"
+    Hero: "1",
+    SplitWide: "2",
+    HorizontalTriptych: "3",
+    Quad: "4"
 } as const;
 
 export const PageLayoutType = z.enum([
