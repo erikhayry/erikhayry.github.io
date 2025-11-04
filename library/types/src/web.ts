@@ -1,11 +1,12 @@
 import * as z from "zod";
-import {PanelId} from "./output.ts";
+import {PageLayoutType, PanelId} from "./output.ts";
 
 export const Panel = z.object({
     id: PanelId,
 });
 
 export const Page = z.object({
+    layout: PageLayoutType,
     panels: z.array(Panel),
 });
 

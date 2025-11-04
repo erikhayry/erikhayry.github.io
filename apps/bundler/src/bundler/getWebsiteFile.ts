@@ -20,8 +20,9 @@ function toPanel(panelOutput: PanelInfo): PanelType {
     return Panel.parse(panelOutput);
 }
 
-function toPages({panels}: PageOutput): Page {
+function toPages({panels, layout}: PageOutput): Page {
     return {
+        layout,
         panels: panels.map(toPanel),
     };
 }

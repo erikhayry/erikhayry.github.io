@@ -63,12 +63,12 @@ function isValidPageDataId(folderPath: string, fileName: string) {
     return isPageId(fileName) && verifyPageInfo(getJSON(getOutputFilePath(folderPath, fileName)))
 }
 
-function getInvalidIds(folderPath: string): string[] {
-    const isInvalidId = (fileName: string) => {
+function getInvalidData(folderPath: string): string[] {
+    const isInvalidData = (fileName: string) => {
         return !isValidPanelDataId(folderPath, fileName) && !isValidPageDataId(folderPath, fileName);
     }
 
-    return getOutputFiles(folderPath).filter(isInvalidId)
+    return getOutputFiles(folderPath).filter(isInvalidData)
 }
 
 function getPanelsWithoutImage(folderPath: string): string[] {
@@ -108,8 +108,8 @@ export function isValidComicOutput(folderPath: string): Validation {
         return getError(`${folderPath} has invalid file names: ${getInvalidFileNames(folderPath)}`)
     }
 
-    if (getInvalidIds(folderPath).length) {
-        return getError(`${folderPath} has invalid panel ids: ${getInvalidIds(folderPath)}`)
+    if (getInvalidData(folderPath).length) {
+        return getError(`${folderPath} has invalid data: ${getInvalidData(folderPath)}`)
     }
 
     if (getPanelsWithoutImage(folderPath).length) {

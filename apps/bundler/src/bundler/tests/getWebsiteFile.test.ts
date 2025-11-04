@@ -1,6 +1,6 @@
 import {expect, test} from "bun:test";
 import {getWebsiteFile} from "../getWebsiteFile.ts";
-import {Comic} from "@library/types";
+import {Comic, PageLayout} from "@library/types";
 
 const DIR = "src/bundler/tests/mocks";
 
@@ -24,6 +24,7 @@ test("is should return pages", () => {
 
     const [comic1, comic2] = website as [Comic, Comic];
     expect(comic1.pages[0]).toEqual({
+        layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
         }, {
@@ -31,24 +32,28 @@ test("is should return pages", () => {
         }],
     });
     expect(comic1.pages[1]).toEqual({
+        layout: PageLayout.SplitWide,
         panels: [{
             id: "1.2.1",
         },],
     });
 
     expect(comic1.pages[2]).toEqual({
+        layout: PageLayout.HorizontalTriptych,
         panels: [{
             id: "2.1.1",
         }],
     });
 
     expect(comic1.pages[3]).toEqual({
+        layout: PageLayout.Quad,
         panels: [{
             id: "10.1.1",
         },],
     });
 
     expect(comic2.pages[0]).toEqual({
+        layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
         }],

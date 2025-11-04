@@ -31,7 +31,7 @@ describe('invalid page data', () => {
         expect(
             isValidComicOutput(`${DIR}/comic-invalid-malformed-page-data`),
         ).toEqual({
-            error: `${DIR}/comic-invalid-malformed-page-data has invalid panel ids: 1.1.json`
+            error: `${DIR}/comic-invalid-malformed-page-data has invalid data: 1.1.json`
         })
     });
 });
@@ -49,7 +49,7 @@ describe('invalid panel data', () => {
         expect(
             isValidComicOutput(`${DIR}/comic-invalid-malformed-panel-data`),
         ).toEqual({
-            error: `${DIR}/comic-invalid-malformed-panel-data has invalid panel ids: 1.1.3.json`
+            error: `${DIR}/comic-invalid-malformed-panel-data has invalid data: 1.1.3.json`
         })
     });
 
