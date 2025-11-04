@@ -1,5 +1,5 @@
-import {getOutputFiles} from "./getOutputFiles.ts";
+import {getOutputJSONS} from "./getOutputJSONS.ts";
 
 export function hasNoFiles(folderPath: string) {
-    return getOutputFiles(folderPath).length === 0;
+    return getOutputJSONS(folderPath).length === 0;
 }

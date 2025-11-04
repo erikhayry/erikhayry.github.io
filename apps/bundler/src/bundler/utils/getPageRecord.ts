@@ -1,5 +1,5 @@
 import {getOutputFilePath} from "../../files/getOutputFilePath.ts";
-import {removeExtension} from "../../files/removeExtension.ts";
+import {removeDataExtension} from "../../files/removeDataExtension.ts";
 import {PanelIdTuple, type PanelInfo} from "@library/types";
 import {toJson} from "../../utils/map.ts";
 import {outNonPanelOutputFiles} from "../../utils/filter.ts";
@@ -11,7 +11,7 @@ interface NumberedPageRecord {
 }
 
 function getPageNumber(panelId: string) {
-    const idTuplet = PanelIdTuple.parse(removeExtension(panelId).split("."));
+    const idTuplet = PanelIdTuple.parse(removeDataExtension(panelId).split("."));
 
     return `${idTuplet[0]}.${idTuplet[1]}`;
 }

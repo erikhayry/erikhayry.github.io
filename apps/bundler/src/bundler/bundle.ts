@@ -1,6 +1,6 @@
 import {getWebsiteFile} from "./getWebsiteFile.ts";
 import {createJSON} from "../files/createJSON.ts";
-import {copyComicImages} from "../files/copyComicImages.ts";
+import {copyComicImages} from "./utils/copyComicImages.ts";
 import {createPanelOutputSchema, createPanelSchema} from "../files/schemas.ts";
 
 export interface TypeConfig {

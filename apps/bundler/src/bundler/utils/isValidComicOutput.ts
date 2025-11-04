@@ -6,7 +6,6 @@ import {error} from "../../logger/log.ts";
 import {isPageId, verifyPageInfo} from "../../verify/verifyPageInfo.ts";
 import type {Validation, ValidationError} from "../../../types";
 import {outInvalidFileNames} from "../../utils/filter.ts";
-import {getOutputFiles} from "../../files/getOutputFiles.ts";
 import {getOutputJSONS} from "../../files/getOutputJSONS.ts";
 import {hasNoFiles} from "../../files/hasNoFiles.ts";
 import {getPanelsPageInfo} from "../../utils/page.ts";
@@ -29,7 +28,7 @@ function hasPageInfo(folderPath: string, panelId: PanelId) {
 }
 
 function getInvalidFileNames(folderPath: string): string[] {
-    return getOutputFiles(folderPath).filter(outInvalidFileNames)
+    return getOutputJSONS(folderPath).filter(outInvalidFileNames)
 }
 
 function isValidPanelDataId(folderPath: string, fileName: string) {
@@ -45,7 +44,7 @@ function getInvalidData(folderPath: string): string[] {
         return !isValidPanelDataId(folderPath, fileName) && !isValidPageDataId(folderPath, fileName);
     }
 
-    return getOutputFiles(folderPath).filter(isInvalidData)
+    return getOutputJSONS(folderPath).filter(isInvalidData)
 }
 
 function getPanelsWithoutImage(folderPath: string): string[] {
@@ -53,7 +52,7 @@ function getPanelsWithoutImage(folderPath: string): string[] {
         return isPanelId(fileName) && !hasImage(folderPath, getPanelId(folderPath, fileName));
     }
 
-    return getOutputFiles(folderPath).filter(isWithoutImage);
+    return getOutputJSONS(folderPath).filter(isWithoutImage);
 }
 
 function getPanelsWithoutPageInfo(folderPath: string): string[] {
@@ -61,7 +60,7 @@ function getPanelsWithoutPageInfo(folderPath: string): string[] {
         return isPanelId(fileName) && !hasPageInfo(folderPath, getPanelId(folderPath, fileName));
     }
 
-    return getOutputFiles(folderPath).filter(isWithoutPageInfo);
+    return getOutputJSONS(folderPath).filter(isWithoutPageInfo);
 }
 
 
