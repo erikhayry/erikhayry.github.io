@@ -8,6 +8,6 @@
 
 <h1>{title}</h1>
 
-<Page panels={page.panels} slug={slug}/>
+<Page layout={page.layout} panels={page.panels} slug={slug}/>
 
 <a href={resolve(`/${slug}`)}>Back</a>

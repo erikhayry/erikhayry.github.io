@@ -1,6 +1,6 @@
 import website from '$lib/assets/website.json' with {type: 'json'};
-import type {Website} from "@library/types";
+import {Website, type Website as WebsiteType} from "@library/types";
 
-export function getComics(): Website {
-    return website
+export function getComics(): WebsiteType {
+    return Website.parse(website)
 }

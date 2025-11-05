@@ -1,6 +1,6 @@
 <script lang="ts">
     import {resolve} from '$app/paths';
-    import {getComics} from "../utils/getComics";
+    import {getComics} from "$core/getComics";
 </script>
 
 <ul>

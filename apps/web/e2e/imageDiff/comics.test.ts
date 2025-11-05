@@ -1,6 +1,7 @@
 import {expect, type Page, test} from '@playwright/test';
-import {getComics} from "../../src/utils/getComics.ts";
 import type {Comic} from "@library/types";
+import {Website} from "@library/types";
+import website from '../../src/lib/assets/website.json' with {type: 'json'};
 
 async function gotoComic(comic: Comic, page: Page) {
     await page.getByRole('link', {name: comic.slug, exact: true}).click();
@@ -21,7 +22,7 @@ async function gotoComic(comic: Comic, page: Page) {
 async function testComic(page: Page) {
     await page.goto('/');
     await expect(page).toHaveScreenshot('comics.png');
-    const comics = getComics()
+    const comics = Website.parse(website)
     let testedComic = 0;
 
     while (testedComic < comics.length) {

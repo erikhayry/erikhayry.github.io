@@ -6,7 +6,7 @@ import {
     startVirtualScreenReader,
     stopVirtualScreenReader
 } from "./utils/virtualScreenReader.ts";
-import {COMIC_MOCK} from "../../src/test/mock.ts";
+import {COMIC_MOCK} from "../../src/test/mocks/e2eMock.ts";
 
 test("should match expected screen reader output for page", async ({
                                                                        page,
