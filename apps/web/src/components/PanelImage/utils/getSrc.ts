@@ -8,5 +8,6 @@ function getKey(slug: string, id: PanelId) {
 }
 
 export function getSrc(slug: string, id: PanelId): string {
+    console.log(slug, id)
     return getImages()[getKey(slug, id)].default
 }

@@ -1,9 +1,17 @@
 import {vi} from "vitest";
 import {WEBSITE_MOCK} from "./src/test/mocks/websiteMock.ts";
 
-
 vi.mock("$core/getImages", () => ({
-    getImages: () => ({'comic-mock-1/1.1.1': {default: 'string'}}) //TODO map images from WEBSITE MOCK
+    getImages: () =>
+        import.meta.glob(
+            '$mock/assets/**/*.png',
+            {
+                eager: true,
+                query: {
+                    enhanced: true
+                }
+            }
+        )
 }))
 
 vi.mock("$core/getComics", () => ({

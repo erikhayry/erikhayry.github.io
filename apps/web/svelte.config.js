@@ -18,6 +18,7 @@ const config = {
         }),
         alias: {
             $core: "src/utils",
+            $mock: "src/mock",
         }
     }
 };
