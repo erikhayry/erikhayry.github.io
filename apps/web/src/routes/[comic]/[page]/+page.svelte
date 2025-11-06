@@ -7,7 +7,6 @@
 </script>
 
 <h1>{title}</h1>
-
 <Page layout={page.layout} panels={page.panels} slug={slug}/>
-
 <a href={resolve(`/${slug}`)}>Back</a>
+
