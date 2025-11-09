@@ -1,6 +1,6 @@
 <script lang="ts">
     import type {PageLayoutValue, Panel} from "@library/types";
-    import Img from "../PanelImage/PanelImage.svelte";
+    import Img from "./components/PanelImage/PanelImage.svelte";
     import {PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID} from "./constants";
     import {getLayoutClassName} from "./utils/getLayoutClassName";
 
@@ -16,9 +16,22 @@
 
 <style>
     .page {
-        position: relative;
-        gap: 1rem;
         display: grid;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        gap: 8px;
+    }
+
+    .panel {
+        overflow: hidden;
+        border-color: #fff;
+        border-width: 8px;
+        border-style: solid;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: relative;
     }
 
     .layout-1 {
@@ -45,11 +58,6 @@
             "c d"
     }
 
-    .panel {
-        width: 100%;
-        height: auto;
-    }
-
     .panel-a {
         grid-area: a;
     }
@@ -70,7 +78,7 @@
 <div class={`page ${classes.page}`} data-testid={PAGE_CONTAINER_TEST_ID}>
     {#each panels as panel, index (panel)}
         <div class={`panel ${classes.panel[index]}`} data-testid={PANEL_CONTAINER_TEST_ID}>
-            <Img {slug} {panel}/>
+            <Img {slug} {panel} alt="TODO"/>
         </div>
     {/each}
 </div>

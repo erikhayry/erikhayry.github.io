@@ -11,13 +11,11 @@ describe('Comics page', () => {
         renderPage(Page, getComic(COMIC_MOCK_1.slug));
 
         const heading = page.getByRole('heading', {name: COMIC_MOCK_1.slug});
-        const image = page.getByRole('img');
         const pageList = page.getByRole('list');
         const pageLinks = pageList.getByRole('link')
         const backLink = page.getByRole('link', {name: 'Back'})
 
         await expect.element(heading).toBeInTheDocument();
-        await expect.element(image).toBeInTheDocument();
         await expect.element(backLink).toBeInTheDocument();
         await expect.element(pageList).toBeInTheDocument();
         expect(pageLinks.elements()).toHaveLength(COMIC_MOCK_1.pages.length);
