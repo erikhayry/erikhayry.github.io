@@ -9,7 +9,7 @@ export default defineConfig({
         coverage: {
             provider: 'istanbul',
             include: ['**/*.{ts,svelte}'],
-            exclude: ['**/*.js', '**/*.config.ts', '**/*.d.ts', '.svelte-kit/generated', 'root.svelte', '**/*/routes/+layout.*', '**/e2e/**/*.ts', '**/test/**/*.ts', 'src/utils/getComics.ts', 'src/utils/getImages.ts', 'src/mock**/*.ts']
+            exclude: ['**/*.js', '**/*.config.ts', '**/*.d.ts', '.svelte-kit/generated', 'root.svelte', '**/*/routes/+layout.*', '**/e2e/**/*.ts', '**/test/**/*.ts', 'src/utils/getComics.ts', 'src/utils/getImages.ts', 'src/mock/$app/**/*.ts']
         },
         projects: [
             {
