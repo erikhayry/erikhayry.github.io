@@ -5,12 +5,12 @@ import Page from '../+page.svelte';
 import {COMIC_MOCK_1} from "../../test/mocks/comicMock";
 
 describe('comics page', () => {
-    it('should render list of comics', async () => {
+    it('should render list of comics links', async () => {
         render(Page);
 
-        const listItem = page.getByRole('link', {name: COMIC_MOCK_1.slug, exact: true});
+        const link = page.getByRole('link', {name: COMIC_MOCK_1.slug, exact: true});
 
-        expect(listItem.elements()).toHaveLength(1);
-        await expect.element(listItem).toBeInTheDocument();
+        expect(link.elements()).toHaveLength(1);
+        await expect.element(link).toHaveAttribute('href', `/${COMIC_MOCK_1.slug}/0`);
     });
 });

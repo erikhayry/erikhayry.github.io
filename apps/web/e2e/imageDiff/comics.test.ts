@@ -1,34 +1,34 @@
 import {expect, type Page, test} from '@playwright/test';
-import website from '../../src/lib/assets/website.json' with {type: 'json'};
+import type {Comic} from "@library/types";
+import {getComics} from "../../src/utils/getComics.ts";
+import {getPagination} from "../../src/routes/[comic]/[page]/utils/getPagination.ts";
 
-async function gotoComic(comic: any, page: Page) {
+async function testComic(comic: Comic, page: Page) {
     await page.getByRole('link', {name: comic.slug, exact: true}).click();
-    await expect(page).toHaveScreenshot(`${comic.slug}/landing.png`);
 
     let testedPage = 0;
 
     while (testedPage < comic.pages.length) {
-        await page.getByRole('link', {name: testedPage.toString(), exact: true}).click();
+        await page.getByRole('link', {name: getPagination(comic.slug, testedPage).forward.title, exact: true}).click();
         await expect(page).toHaveScreenshot(`${comic.slug}/${testedPage.toString()}.png`);
-        await page.getByRole('link', {name: 'Back', exact: true}).click();
         testedPage++
     }
 
     await page.goto('/');
 }
 
-async function testComic(page: Page) {
+async function testComics(page: Page) {
     await page.goto('/');
     await expect(page).toHaveScreenshot('comics.png');
-    const comics = website
+    const comics = getComics()
     let testedComic = 0;
 
     while (testedComic < comics.length) {
-        await gotoComic(comics[testedComic]!, page)
+        await testComic(comics[testedComic]!, page)
         testedComic++
     }
 }
 
 test('comics', async ({page}) => {
-    await testComic(page)
+    await testComics(page)
 });

@@ -1,0 +1,23 @@
+{
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "$core/*": [
+        "./src/utils/*"
+      ],
+      "$app/*": [
+        "./src/mock/$app/*"
+      ],
+      "@library/types": [
+        "../../library/types/index.ts"
+      ],
+      "$lib": [
+        "src/lib"
+      ],
+      "$lib/*": [
+        "src/lib/*"
+      ]
+    }
+  }
+}

@@ -9,7 +9,18 @@ describe('Comic page load', () => {
         expect(load({params: {comic: COMIC_MOCK_1.slug, page: '0'}})).toEqual({
             page: PAGE_1_MOCK,
             slug: COMIC_MOCK_1.slug,
-            title: `${COMIC_MOCK_1.slug} | ${1}`
+            title: `${COMIC_MOCK_1.slug} | ${1}`,
+            pagination: {
+                back: {
+                    href: "/",
+                    title: "Back",
+                },
+                forward: {
+                    href: "/comic-mock-1/1",
+                    title: "Page 2",
+                },
+            },
+
         })
     });
 

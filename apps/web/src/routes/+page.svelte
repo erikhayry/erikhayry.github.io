@@ -6,7 +6,7 @@
 <ul>
     {#each getComics() as comic (comic)}
         <li>
-            <a href={resolve(`/${comic.slug}`)}>{comic.slug}</a>
+            <a href={resolve(`/${comic.slug}/0`)}>{comic.slug}</a>
         </li>
     {/each}
 </ul>

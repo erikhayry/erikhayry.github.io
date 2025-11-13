@@ -1,6 +1,6 @@
-import {getComic} from "$core/getComic";
 import type {Page} from "@library/types";
+import {getPages} from "./getPages";
 
 export function getPage(slug: string, index: number): Page | undefined {
-    return getComic(slug)?.pages[index]
+    return getPages(slug)?.[index]
 }

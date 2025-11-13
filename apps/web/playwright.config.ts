@@ -25,4 +25,5 @@ export default defineConfig({
             },
         },
     ],
+    tsconfig: './tsconfig.e2e.json',
 });
