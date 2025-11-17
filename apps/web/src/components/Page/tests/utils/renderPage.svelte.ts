@@ -12,9 +12,12 @@ export function renderPageSvelte({layout, panels}: { layout?: PageLayoutValue, p
         layout: layout || PageLayout.Hero
     })
 
+    const getAllPanelContainers = () => renderResult.getByTestId(PANEL_CONTAINER_TEST_ID).all();
+
+
     return {
         getImages: () => renderResult.getByRole('img').all(),
         getPageContainer: () => renderResult.getByTestId(PAGE_CONTAINER_TEST_ID),
-        getAllPanelContainers: () => renderResult.getByTestId(PANEL_CONTAINER_TEST_ID).all()
+        getAllPanelContainers,
     }
 }

@@ -1,10 +1,15 @@
 import {type Page, PageLayout} from "@library/types";
 
+
+export const PAGE_1_PANEL_1_NARRATION_1 = 'NARRATION MOCK 1'
+export const PAGE_1_PANEL_1_NARRATION_2 = 'NARRATION MOCK 2'
+export const PAGE_1_PANEL_1_NARRATIONS = [PAGE_1_PANEL_1_NARRATION_1, PAGE_1_PANEL_1_NARRATION_2]
 export const PAGE_1_MOCK: Page = {
     "layout": PageLayout.Hero,
     "panels": [
         {
-            "id": "1.1.1"
+            "id": "1.1.1",
+            "narrations": PAGE_1_PANEL_1_NARRATIONS
         }
     ]
 }

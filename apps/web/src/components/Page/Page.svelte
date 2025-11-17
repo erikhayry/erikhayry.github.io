@@ -1,6 +1,6 @@
 <script lang="ts">
     import type {PageLayoutValue, Panel} from "@library/types";
-    import Img from "./components/PanelImage/PanelImage.svelte";
+    import PanelImage from "./components/PanelImage/PanelImage.svelte";
     import {PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID} from "./constants";
     import {getLayoutClassName} from "./utils/getLayoutClassName";
 
@@ -78,7 +78,7 @@
 <div class={`page ${classes.page}`} data-testid={PAGE_CONTAINER_TEST_ID}>
     {#each panels as panel, index (panel)}
         <div class={`panel ${classes.panel[index]}`} data-testid={PANEL_CONTAINER_TEST_ID}>
-            <Img {slug} {panel} alt="TODO"/>
+            <PanelImage {slug} {panel} alt="TODO"/>
         </div>
     {/each}
 </div>

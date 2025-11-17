@@ -22,4 +22,12 @@
     }
 </style>
 
-<img {alt} class="panel-image" height="auto" {src} width="100%"/>
+
+<img {alt} aria-describedby={panel.id} class="panel-image" height="auto" {src} width="100%"/>
+{#if panel.narrations?.[0]}
+    <div id={panel.id}>
+        {#each panel.narrations as narration (narration)}
+            <p>{narration}</p>
+        {/each}
+    </div>
+{/if}

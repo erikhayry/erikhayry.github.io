@@ -1,6 +1,13 @@
 import {describe, expect, test} from "vitest";
 import {renderPageSvelte} from "./utils/renderPage.svelte";
-import {PAGE_1_MOCK, PAGE_2_MOCK, PAGE_3_MOCK, PAGE_4_MOCK} from "../../../test/mocks/pageMock";
+import {
+    PAGE_1_MOCK,
+    PAGE_1_PANEL_1_NARRATION_1,
+    PAGE_1_PANEL_1_NARRATION_2,
+    PAGE_2_MOCK,
+    PAGE_3_MOCK,
+    PAGE_4_MOCK
+} from "../../../test/mocks/pageMock";
 
 
 describe('<Page />', () => {
@@ -8,6 +15,20 @@ describe('<Page />', () => {
         const {getImages} = renderPageSvelte()
 
         expect(getImages()).toHaveLength(PAGE_1_MOCK.panels.length)
+    })
+
+    describe('narrations', () => {
+        test('should show narrations', () => {
+            const {getImages} = renderPageSvelte(PAGE_1_MOCK)
+
+            expect(getImages().at(0)).toHaveAccessibleDescription(`${PAGE_1_PANEL_1_NARRATION_1} ${PAGE_1_PANEL_1_NARRATION_2}`)
+        })
+
+        test('should not show narrations', () => {
+            const {getImages} = renderPageSvelte(PAGE_2_MOCK)
+
+            expect(getImages().at(1)).not.toHaveAccessibleDescription()
+        })
     })
 
     describe('layouts', () => {

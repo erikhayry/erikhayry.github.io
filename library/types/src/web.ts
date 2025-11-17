@@ -3,6 +3,7 @@ import {PageLayoutType, PanelId} from "./output.ts";
 
 export const Panel = z.object({
     id: PanelId,
+    narrations: z.optional(z.array(z.string()))
 });
 
 export const Page = z.object({
