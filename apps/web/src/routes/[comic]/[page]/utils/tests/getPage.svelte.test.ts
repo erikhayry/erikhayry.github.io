@@ -1,6 +1,6 @@
 import {describe, expect, test} from "vitest";
 import {getPage} from "../getPage";
-import {COMIC_MOCK_1} from "../../../../../test/mocks/comicMock";
+import {COMIC_MOCK_1} from "$mock/data/comicMock";
 
 
 describe('getPanel', () => {

@@ -7,7 +7,7 @@ import {
     PAGE_2_MOCK,
     PAGE_3_MOCK,
     PAGE_4_MOCK
-} from "../../../test/mocks/pageMock";
+} from "$mock/data/pageMock";
 
 
 describe('<Page />', () => {

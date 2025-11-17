@@ -1,7 +1,7 @@
 import {describe, expect, it} from 'vitest';
 import {load} from "../+page";
-import {PAGE_1_MOCK} from "../../../../test/mocks/pageMock";
-import {COMIC_MOCK_1} from "../../../../test/mocks/comicMock";
+import {PAGE_1_MOCK} from "$mock/data/pageMock";
+import {COMIC_MOCK_1} from "$mock/data/comicMock";
 
 
 describe('Comic page load', () => {

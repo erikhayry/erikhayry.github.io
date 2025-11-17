@@ -1,7 +1,7 @@
 import {render} from "vitest-browser-svelte";
-import {PAGE_1_MOCK} from "../../../../test/mocks/pageMock";
+import {PAGE_1_MOCK} from "$mock/data/pageMock";
 import {PageLayout, type PageLayoutValue, type Panel} from "@library/types";
-import {COMIC_SLUG_MOCK_1} from "../../../../test/mocks/comicMock";
+import {COMIC_SLUG_MOCK_1} from "$mock/data/comicMock";
 import Page from "../../Page.svelte";
 import {PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID} from "../../constants";
 

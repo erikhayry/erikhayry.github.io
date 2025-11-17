@@ -1,5 +1,5 @@
 import {vi} from "vitest";
-import {WEBSITE_MOCK} from "./src/test/mocks/websiteMock.ts";
+import {WEBSITE_MOCK} from "./src/mock/data/websiteMock.ts";
 
 vi.mock("$core/getImages", () => ({
     getImages: () =>

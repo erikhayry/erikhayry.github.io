@@ -3,7 +3,7 @@ import {describe, expect, it} from 'vitest';
 import Page from '../+page.svelte';
 import {renderPage} from "../../../../test/renderPage";
 import {load} from "../+page";
-import {COMIC_MOCK_1} from "../../../../test/mocks/comicMock";
+import {COMIC_MOCK_1} from "$mock/data/comicMock";
 
 
 describe('Comic page', () => {
