@@ -8,6 +8,25 @@
     },
     "narration": {
       "type": "string"
+    },
+    "dialogs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "person": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "person"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

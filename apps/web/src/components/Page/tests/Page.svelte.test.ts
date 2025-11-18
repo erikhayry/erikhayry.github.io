@@ -1,6 +1,14 @@
 import {describe, expect, test} from "vitest";
 import {renderPageSvelte} from "./utils/renderPage.svelte";
-import {PAGE_1_MOCK, PAGE_1_PANEL_1_NARRATION_1, PAGE_2_MOCK, PAGE_3_MOCK, PAGE_4_MOCK,} from "$mock/data/pageMock";
+import {
+    PAGE_1_MOCK,
+    PAGE_1_PANEL_1_DIALOG_2,
+    PAGE_1_PANEL_1_NARRATION_1,
+    PAGE_2_MOCK,
+    PAGE_2_PANEL_1_DIALOG_1,
+    PAGE_3_MOCK,
+    PAGE_4_MOCK,
+} from "$mock/data/pageMock";
 
 describe("<Page />", () => {
     test("should render panel images", () => {
@@ -19,6 +27,22 @@ describe("<Page />", () => {
         });
 
         test("should not show narrations", () => {
+            const {getImages} = renderPageSvelte(PAGE_2_MOCK);
+
+            expect(getImages().at(1)).not.toHaveAccessibleDescription();
+        });
+    });
+
+    describe("narrations", () => {
+        test("should show dialog", () => {
+            const {getImages} = renderPageSvelte(PAGE_2_MOCK);
+
+            expect(getImages().at(0)).toHaveAccessibleDescription(
+                `${PAGE_2_PANEL_1_DIALOG_1.person}: ${PAGE_2_PANEL_1_DIALOG_1.text} ${PAGE_1_PANEL_1_DIALOG_2.person}: ${PAGE_1_PANEL_1_DIALOG_2.text}`,
+            );
+        });
+
+        test("should not show dialogs", () => {
             const {getImages} = renderPageSvelte(PAGE_2_MOCK);
 
             expect(getImages().at(1)).not.toHaveAccessibleDescription();

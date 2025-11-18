@@ -23,7 +23,13 @@
             "narration": "Swedish-Finnish forces, under Colonel Cronstedt, await the Russians advancing from the south."
           },
           {
-            "id": "2.1.3"
+            "id": "2.1.3",
+            "dialogs": [
+              {
+                "text": "Von Döbeln is coming — but he is ill!",
+                "person": "Messenger"
+              }
+            ]
           }
         ]
       },
@@ -39,10 +45,22 @@
             "narration": "Major General Georg Carl von Döbeln — feverish, wounded, yet commanding."
           },
           {
-            "id": "3.1.3"
+            "id": "3.1.3",
+            "dialogs": [
+              {
+                "text": "I may lie sick — but my place is in battle.",
+                "person": "Von Döbeln"
+              }
+            ]
           },
           {
-            "id": "3.1.4"
+            "id": "3.1.4",
+            "dialogs": [
+              {
+                "text": "We strike first. The Russians must not gain the upper hand.",
+                "person": "Von Döbeln"
+              }
+            ]
           }
         ]
       },
@@ -59,7 +77,13 @@
           },
           {
             "id": "4.1.3",
-            "narration": "The enemy had twice their number."
+            "narration": "The enemy had twice their number.",
+            "dialogs": [
+              {
+                "text": "Advance! Push them back!",
+                "person": "Russian officer"
+              }
+            ]
           }
         ]
       },
@@ -71,7 +95,13 @@
             "narration": "At noon, the first volleys burst. The air thick with powder."
           },
           {
-            "id": "5.1.2"
+            "id": "5.1.2",
+            "dialogs": [
+              {
+                "text": "Forward! For Finland and for honor!",
+                "person": "Von Döbeln"
+              }
+            ]
           },
           {
             "id": "5.1.3",
@@ -87,7 +117,13 @@
         "panels": [
           {
             "id": "6.1.1",
-            "narration": "The Russian left flank falters. Döbeln sees the moment."
+            "narration": "The Russian left flank falters. Döbeln sees the moment.",
+            "dialogs": [
+              {
+                "text": "Now — drive them back!",
+                "person": "Von Döbeln"
+              }
+            ]
           },
           {
             "id": "6.1.2"
@@ -107,7 +143,13 @@
           },
           {
             "id": "7.1.2",
-            "narration": "The sick general had led one of the last Swedish victories of the war."
+            "narration": "The sick general had led one of the last Swedish victories of the war.",
+            "dialogs": [
+              {
+                "text": "They fought like lions. Finland will remember.",
+                "person": "Von Döbeln"
+              }
+            ]
           }
         ]
       },
@@ -119,7 +161,13 @@
             "narration": "Over two centuries later — the story lives on."
           },
           {
-            "id": "8.1.2"
+            "id": "8.1.2",
+            "dialogs": [
+              {
+                "text": "At Jutas, courage outweighed strength. That is why we still speak of Döbeln.",
+                "person": "Teacher"
+              }
+            ]
           },
           {
             "id": "8.1.3",
@@ -137,7 +185,8 @@
         "panels": [
           {
             "id": "1.1.1",
-            "narration": "In 1808, war reached the Finnish provinces. Sweden and the Russian Empire clashed over control of Finland, marking the beginning of a decisive campaign that would reshape the North."
+            "narration": "In 1808, war reached the Finnish provinces. Sweden and the Russian Empire clashed over control of Finland, marking the beginning of a decisive campaign that would reshape the North.",
+            "dialogs": []
           }
         ]
       },
@@ -146,7 +195,8 @@
         "panels": [
           {
             "id": "2.1.1",
-            "narration": "September 1808. Near Nykarleby, two armies prepare to meet at Jutas — Sweden’s last hope of halting the Russian advance."
+            "narration": "September 1808. Near Nykarleby, two armies prepare to meet at Jutas — Sweden’s last hope of halting the Russian advance.",
+            "dialogs": []
           }
         ]
       },
@@ -155,11 +205,13 @@
         "panels": [
           {
             "id": "3.1.1",
-            "narration": "Retreat from Vasa — tired boots, steady resolve."
+            "narration": "Retreat from Vasa — tired boots, steady resolve.",
+            "dialogs": []
           },
           {
             "id": "3.1.2",
-            "narration": "Toward Nykarleby — night draws near, but duty drives them on."
+            "narration": "Toward Nykarleby — night draws near, but duty drives them on.",
+            "dialogs": []
           }
         ]
       },
@@ -168,19 +220,28 @@
         "panels": [
           {
             "id": "4.1.1",
-            "narration": "Wounded and feverish, Döbeln refuses rest — the battle must still be commanded."
+            "narration": "Wounded and feverish, Döbeln refuses rest — the battle must still be commanded.",
+            "dialogs": []
           },
           {
             "id": "4.1.2",
-            "narration": "Messages from the front — every word from Döbeln carries the weight of command."
+            "narration": "Messages from the front — every word from Döbeln carries the weight of command.",
+            "dialogs": []
           },
           {
             "id": "4.1.3",
-            "narration": "‘We march at dawn… Jutas will be our stand.’"
+            "narration": "‘We march at dawn… Jutas will be our stand.’",
+            "dialogs": [
+              {
+                "text": "Mark Jutas. Tell Gyllenbögel to prepare the men — we march at first light.",
+                "person": "Döbeln"
+              }
+            ]
           },
           {
             "id": "4.1.4",
-            "narration": "Through fever and night, command rides onward."
+            "narration": "Through fever and night, command rides onward.",
+            "dialogs": []
           }
         ]
       },
@@ -189,11 +250,13 @@
         "panels": [
           {
             "id": "5.1.1",
-            "narration": "The march to Jutas begins — discipline over weakness, purpose over pain."
+            "narration": "The march to Jutas begins — discipline over weakness, purpose over pain.",
+            "dialogs": []
           },
           {
             "id": "5.1.2",
-            "narration": "Courage stirs along the line — Jutas lies ahead."
+            "narration": "Courage stirs along the line — Jutas lies ahead.",
+            "dialogs": []
           }
         ]
       },
@@ -202,19 +265,28 @@
         "panels": [
           {
             "id": "6.1.1",
-            "narration": "The battle begins — the Russians strike first."
+            "narration": "The battle begins — the Russians strike first.",
+            "dialogs": []
           },
           {
             "id": "6.1.2",
-            "narration": "Step by step, the Swedes yield ground — not disorder, but discipline."
+            "narration": "Step by step, the Swedes yield ground — not disorder, but discipline.",
+            "dialogs": []
           },
           {
             "id": "6.1.3",
-            "narration": "Amid smoke and thunder, leadership steels the wavering line."
+            "narration": "Amid smoke and thunder, leadership steels the wavering line.",
+            "dialogs": [
+              {
+                "text": "Hold the line! Fall back by sections — no man breaks rank!",
+                "person": "Döbeln"
+              }
+            ]
           },
           {
             "id": "6.1.4",
-            "narration": "The first clash fades — the field now belongs to Jutas."
+            "narration": "The first clash fades — the field now belongs to Jutas.",
+            "dialogs": []
           }
         ]
       },
@@ -223,11 +295,13 @@
         "panels": [
           {
             "id": "7.1.1",
-            "narration": "Wave after wave, the Russian advance presses on."
+            "narration": "Wave after wave, the Russian advance presses on.",
+            "dialogs": []
           },
           {
             "id": "7.1.2",
-            "narration": "The air thickens with smoke and iron — the struggle for Jutas tightens."
+            "narration": "The air thickens with smoke and iron — the struggle for Jutas tightens.",
+            "dialogs": []
           }
         ]
       },
@@ -236,15 +310,23 @@
         "panels": [
           {
             "id": "8.1.1",
-            "narration": "At Döbeln’s command, the field erupts in thunder."
+            "narration": "At Döbeln’s command, the field erupts in thunder.",
+            "dialogs": [
+              {
+                "text": "Fire — all batteries!",
+                "person": "Döbeln"
+              }
+            ]
           },
           {
             "id": "8.1.2",
-            "narration": "Cannon and musket — a single, deafening heartbeat of defiance."
+            "narration": "Cannon and musket — a single, deafening heartbeat of defiance.",
+            "dialogs": []
           },
           {
             "id": "8.1.3",
-            "narration": "In the chaos, order — the Swedish line holds firm."
+            "narration": "In the chaos, order — the Swedish line holds firm.",
+            "dialogs": []
           }
         ]
       },
@@ -253,19 +335,28 @@
         "panels": [
           {
             "id": "9.1.1",
-            "narration": "Neither side yields — fire answers fire."
+            "narration": "Neither side yields — fire answers fire.",
+            "dialogs": []
           },
           {
             "id": "9.1.2",
-            "narration": "Every man a cog in the thunder — precision amid chaos."
+            "narration": "Every man a cog in the thunder — precision amid chaos.",
+            "dialogs": []
           },
           {
             "id": "9.1.3",
-            "narration": "The Russians press on, seeking the weak points through smoke and blood."
+            "narration": "The Russians press on, seeking the weak points through smoke and blood.",
+            "dialogs": []
           },
           {
             "id": "9.1.4",
-            "narration": "Where courage falters, Döbeln’s presence reignites the line."
+            "narration": "Where courage falters, Döbeln’s presence reignites the line.",
+            "dialogs": [
+              {
+                "text": "Stand firm, men of Björneborg! Jutas shall not fall!",
+                "person": "Döbeln"
+              }
+            ]
           }
         ]
       },
@@ -274,19 +365,28 @@
         "panels": [
           {
             "id": "10.1.1",
-            "narration": "With renewed fury, the Swedes push forward — courage turned to motion."
+            "narration": "With renewed fury, the Swedes push forward — courage turned to motion.",
+            "dialogs": [
+              {
+                "text": "Forward! Let them feel the steel of Finland!",
+                "person": "Döbeln"
+              }
+            ]
           },
           {
             "id": "10.1.2",
-            "narration": "The tide turns — momentum now in Swedish hands."
+            "narration": "The tide turns — momentum now in Swedish hands.",
+            "dialogs": []
           },
           {
             "id": "10.1.3",
-            "narration": "Retreat turns to rout — the enemy breaks before the Swedish advance."
+            "narration": "Retreat turns to rout — the enemy breaks before the Swedish advance.",
+            "dialogs": []
           },
           {
             "id": "10.1.4",
-            "narration": "Amid triumph’s glare, Döbeln measures the price of victory."
+            "narration": "Amid triumph’s glare, Döbeln measures the price of victory.",
+            "dialogs": []
           }
         ]
       },
@@ -295,11 +395,13 @@
         "panels": [
           {
             "id": "11.1.1",
-            "narration": "Silence returns — the cost of courage lies in the grass."
+            "narration": "Silence returns — the cost of courage lies in the grass.",
+            "dialogs": []
           },
           {
             "id": "11.1.2",
-            "narration": "The field is theirs — but so is the sorrow."
+            "narration": "The field is theirs — but so is the sorrow.",
+            "dialogs": []
           }
         ]
       },
@@ -308,7 +410,8 @@
         "panels": [
           {
             "id": "12.1.1",
-            "narration": "More than two centuries later, Jutas still speaks — of resolve, of sacrifice, of Finland’s turning point."
+            "narration": "More than two centuries later, Jutas still speaks — of resolve, of sacrifice, of Finland’s turning point.",
+            "dialogs": []
           }
         ]
       }

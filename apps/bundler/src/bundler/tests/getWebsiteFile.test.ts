@@ -57,6 +57,10 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
+            dialogs: [{
+                text: 'DIALOG 1.1.1 TEXT',
+                person: 'DIALOG 1.1.1 PERSON'
+            }]
         }],
     });
 });
