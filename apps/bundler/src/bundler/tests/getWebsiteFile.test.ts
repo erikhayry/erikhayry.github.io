@@ -27,6 +27,7 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
+            narration: "NARRATION_1.1.1_1"
         }, {
             id: "1.1.2"
         }],

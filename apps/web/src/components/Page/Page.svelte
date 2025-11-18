@@ -11,7 +11,7 @@
     }
 
     let {panels, slug, layout}: Props = $props();
-    const classes = getLayoutClassName(layout)
+    let classes = $derived(getLayoutClassName(layout))
 </script>
 
 <style>

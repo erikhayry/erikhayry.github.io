@@ -6,7 +6,8 @@
         "layout": "1",
         "panels": [
           {
-            "id": "1.1.1"
+            "id": "1.1.1",
+            "narration": "In 1808, war broke out between Sweden and Russia. The struggle for Finland had begun. Villages burned, armies marched through snow and forest. What was once Swedish Finland stood alone against the Empire of the Tsar. This is the story of courage and defiance — at Jutas."
           }
         ]
       },
@@ -14,10 +15,12 @@
         "layout": "1",
         "panels": [
           {
-            "id": "2.1.1"
+            "id": "2.1.1",
+            "narration": "September 13, 1808. The small village of Jutas near Nykarleby becomes the stage for a decisive encounter."
           },
           {
-            "id": "2.1.2"
+            "id": "2.1.2",
+            "narration": "Swedish-Finnish forces, under Colonel Cronstedt, await the Russians advancing from the south."
           },
           {
             "id": "2.1.3"
@@ -28,10 +31,12 @@
         "layout": "4",
         "panels": [
           {
-            "id": "3.1.1"
+            "id": "3.1.1",
+            "narration": "In a modest house in Nykarleby, the commander lies ill but unyielding."
           },
           {
-            "id": "3.1.2"
+            "id": "3.1.2",
+            "narration": "Major General Georg Carl von Döbeln — feverish, wounded, yet commanding."
           },
           {
             "id": "3.1.3"
@@ -45,13 +50,16 @@
         "layout": "3",
         "panels": [
           {
-            "id": "4.1.1"
+            "id": "4.1.1",
+            "narration": "Jutas — a quiet settlement, soon to echo with musket fire."
           },
           {
-            "id": "4.1.2"
+            "id": "4.1.2",
+            "narration": "Cronstedt’s men secure their ground, while Döbeln’s detachment moves to outflank."
           },
           {
-            "id": "4.1.3"
+            "id": "4.1.3",
+            "narration": "The enemy had twice their number."
           }
         ]
       },
@@ -59,13 +67,15 @@
         "layout": "4",
         "panels": [
           {
-            "id": "5.1.1"
+            "id": "5.1.1",
+            "narration": "At noon, the first volleys burst. The air thick with powder."
           },
           {
             "id": "5.1.2"
           },
           {
-            "id": "5.1.3"
+            "id": "5.1.3",
+            "narration": "They met the Russians head-on — steel against steel."
           },
           {
             "id": "5.1.4"
@@ -76,13 +86,15 @@
         "layout": "3",
         "panels": [
           {
-            "id": "6.1.1"
+            "id": "6.1.1",
+            "narration": "The Russian left flank falters. Döbeln sees the moment."
           },
           {
             "id": "6.1.2"
           },
           {
-            "id": "6.1.3"
+            "id": "6.1.3",
+            "narration": "By dusk, Jutas was theirs. The victory saved the army’s retreat toward Vasa."
           }
         ]
       },
@@ -90,10 +102,12 @@
         "layout": "2",
         "panels": [
           {
-            "id": "7.1.1"
+            "id": "7.1.1",
+            "narration": "Night fell over Jutas. The victory was costly."
           },
           {
-            "id": "7.1.2"
+            "id": "7.1.2",
+            "narration": "The sick general had led one of the last Swedish victories of the war."
           }
         ]
       },
@@ -101,13 +115,15 @@
         "layout": "3",
         "panels": [
           {
-            "id": "8.1.1"
+            "id": "8.1.1",
+            "narration": "Over two centuries later — the story lives on."
           },
           {
             "id": "8.1.2"
           },
           {
-            "id": "8.1.3"
+            "id": "8.1.3",
+            "narration": "‘Det var en gång en hjälte, och han hette Döbeln vid Jutas.’"
           }
         ]
       }
@@ -120,7 +136,8 @@
         "layout": "1",
         "panels": [
           {
-            "id": "1.1.1"
+            "id": "1.1.1",
+            "narration": "In 1808, war reached the Finnish provinces. Sweden and the Russian Empire clashed over control of Finland, marking the beginning of a decisive campaign that would reshape the North."
           }
         ]
       },
@@ -128,7 +145,8 @@
         "layout": "1",
         "panels": [
           {
-            "id": "2.1.1"
+            "id": "2.1.1",
+            "narration": "September 1808. Near Nykarleby, two armies prepare to meet at Jutas — Sweden’s last hope of halting the Russian advance."
           }
         ]
       },
@@ -136,10 +154,12 @@
         "layout": "2",
         "panels": [
           {
-            "id": "3.1.1"
+            "id": "3.1.1",
+            "narration": "Retreat from Vasa — tired boots, steady resolve."
           },
           {
-            "id": "3.1.2"
+            "id": "3.1.2",
+            "narration": "Toward Nykarleby — night draws near, but duty drives them on."
           }
         ]
       },
@@ -147,16 +167,20 @@
         "layout": "4",
         "panels": [
           {
-            "id": "4.1.1"
+            "id": "4.1.1",
+            "narration": "Wounded and feverish, Döbeln refuses rest — the battle must still be commanded."
           },
           {
-            "id": "4.1.2"
+            "id": "4.1.2",
+            "narration": "Messages from the front — every word from Döbeln carries the weight of command."
           },
           {
-            "id": "4.1.3"
+            "id": "4.1.3",
+            "narration": "‘We march at dawn… Jutas will be our stand.’"
           },
           {
-            "id": "4.1.4"
+            "id": "4.1.4",
+            "narration": "Through fever and night, command rides onward."
           }
         ]
       },
@@ -164,10 +188,12 @@
         "layout": "2",
         "panels": [
           {
-            "id": "5.1.1"
+            "id": "5.1.1",
+            "narration": "The march to Jutas begins — discipline over weakness, purpose over pain."
           },
           {
-            "id": "5.1.2"
+            "id": "5.1.2",
+            "narration": "Courage stirs along the line — Jutas lies ahead."
           }
         ]
       },
@@ -175,16 +201,20 @@
         "layout": "4",
         "panels": [
           {
-            "id": "6.1.1"
+            "id": "6.1.1",
+            "narration": "The battle begins — the Russians strike first."
           },
           {
-            "id": "6.1.2"
+            "id": "6.1.2",
+            "narration": "Step by step, the Swedes yield ground — not disorder, but discipline."
           },
           {
-            "id": "6.1.3"
+            "id": "6.1.3",
+            "narration": "Amid smoke and thunder, leadership steels the wavering line."
           },
           {
-            "id": "6.1.4"
+            "id": "6.1.4",
+            "narration": "The first clash fades — the field now belongs to Jutas."
           }
         ]
       },
@@ -192,10 +222,12 @@
         "layout": "2",
         "panels": [
           {
-            "id": "7.1.1"
+            "id": "7.1.1",
+            "narration": "Wave after wave, the Russian advance presses on."
           },
           {
-            "id": "7.1.2"
+            "id": "7.1.2",
+            "narration": "The air thickens with smoke and iron — the struggle for Jutas tightens."
           }
         ]
       },
@@ -203,13 +235,16 @@
         "layout": "3",
         "panels": [
           {
-            "id": "8.1.1"
+            "id": "8.1.1",
+            "narration": "At Döbeln’s command, the field erupts in thunder."
           },
           {
-            "id": "8.1.2"
+            "id": "8.1.2",
+            "narration": "Cannon and musket — a single, deafening heartbeat of defiance."
           },
           {
-            "id": "8.1.3"
+            "id": "8.1.3",
+            "narration": "In the chaos, order — the Swedish line holds firm."
           }
         ]
       },
@@ -217,16 +252,20 @@
         "layout": "4",
         "panels": [
           {
-            "id": "9.1.1"
+            "id": "9.1.1",
+            "narration": "Neither side yields — fire answers fire."
           },
           {
-            "id": "9.1.2"
+            "id": "9.1.2",
+            "narration": "Every man a cog in the thunder — precision amid chaos."
           },
           {
-            "id": "9.1.3"
+            "id": "9.1.3",
+            "narration": "The Russians press on, seeking the weak points through smoke and blood."
           },
           {
-            "id": "9.1.4"
+            "id": "9.1.4",
+            "narration": "Where courage falters, Döbeln’s presence reignites the line."
           }
         ]
       },
@@ -234,16 +273,20 @@
         "layout": "4",
         "panels": [
           {
-            "id": "10.1.1"
+            "id": "10.1.1",
+            "narration": "With renewed fury, the Swedes push forward — courage turned to motion."
           },
           {
-            "id": "10.1.2"
+            "id": "10.1.2",
+            "narration": "The tide turns — momentum now in Swedish hands."
           },
           {
-            "id": "10.1.3"
+            "id": "10.1.3",
+            "narration": "Retreat turns to rout — the enemy breaks before the Swedish advance."
           },
           {
-            "id": "10.1.4"
+            "id": "10.1.4",
+            "narration": "Amid triumph’s glare, Döbeln measures the price of victory."
           }
         ]
       },
@@ -251,10 +294,12 @@
         "layout": "2",
         "panels": [
           {
-            "id": "11.1.1"
+            "id": "11.1.1",
+            "narration": "Silence returns — the cost of courage lies in the grass."
           },
           {
-            "id": "11.1.2"
+            "id": "11.1.2",
+            "narration": "The field is theirs — but so is the sorrow."
           }
         ]
       },
@@ -262,7 +307,8 @@
         "layout": "1",
         "panels": [
           {
-            "id": "12.1.1"
+            "id": "12.1.1",
+            "narration": "More than two centuries later, Jutas still speaks — of resolve, of sacrifice, of Finland’s turning point."
           }
         ]
       }

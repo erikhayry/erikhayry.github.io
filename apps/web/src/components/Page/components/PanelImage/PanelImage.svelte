@@ -20,14 +20,20 @@
         object-fit: cover;
         object-position: center;
     }
+
+    .narration {
+        position: absolute;
+        width: fit-content;
+        background-color: white;
+        padding: 4px;
+        bottom: 4px;
+        left: 4px;
+        border: 2px solid black
+    }
 </style>
 
 
 <img {alt} aria-describedby={panel.id} class="panel-image" height="auto" {src} width="100%"/>
-{#if panel.narrations?.[0]}
-    <div id={panel.id}>
-        {#each panel.narrations as narration (narration)}
-            <p>{narration}</p>
-        {/each}
-    </div>
+{#if panel.narration}
+    <p id={panel.id} class="narration">{panel.narration}</p>
 {/if}

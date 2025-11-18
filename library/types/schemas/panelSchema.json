@@ -5,6 +5,9 @@
     "id": {
       "type": "string",
       "pattern": "^[1-9]\\d*\\.[1-9]\\d*\\.[1-9]\\d*$"
+    },
+    "narration": {
+      "type": "string"
     }
   },
   "required": [
