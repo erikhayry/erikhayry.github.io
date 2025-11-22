@@ -27,15 +27,18 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
+            description: "DESCRIPTION MOCK",
             narration: "NARRATION_1.1.1_1"
         }, {
-            id: "1.1.2"
+            id: "1.1.2",
+            description: "DESCRIPTION MOCK",
         }],
     });
     expect(comic1.pages[1]).toEqual({
         layout: PageLayout.SplitWide,
         panels: [{
             id: "1.2.1",
+            description: "DESCRIPTION MOCK",
         },],
     });
 
@@ -43,6 +46,7 @@ test("is should return pages", () => {
         layout: PageLayout.HorizontalTriptych,
         panels: [{
             id: "2.1.1",
+            description: "DESCRIPTION MOCK",
         }],
     });
 
@@ -50,6 +54,7 @@ test("is should return pages", () => {
         layout: PageLayout.Quad,
         panels: [{
             id: "10.1.1",
+            description: "DESCRIPTION MOCK",
         },],
     });
 
@@ -57,6 +62,7 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
+            description: "DESCRIPTION MOCK",
             dialogs: [{
                 text: 'DIALOG 1.1.1 TEXT',
                 person: 'DIALOG 1.1.1 PERSON'

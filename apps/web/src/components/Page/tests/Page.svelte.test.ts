@@ -3,18 +3,21 @@ import {renderPageSvelte} from "./utils/renderPage.svelte";
 import {
     PAGE_1_MOCK,
     PAGE_1_PANEL_1_DIALOG_2,
+    PAGE_1_PANEL_1_MOCK,
     PAGE_1_PANEL_1_NARRATION_1,
     PAGE_2_MOCK,
     PAGE_2_PANEL_1_DIALOG_1,
     PAGE_3_MOCK,
     PAGE_4_MOCK,
 } from "$mock/data/pageMock";
+import {getDialog} from "../components/PanelImage/components/utils/getDialog";
 
 describe("<Page />", () => {
     test("should render panel images", () => {
         const {getImages} = renderPageSvelte();
 
         expect(getImages()).toHaveLength(PAGE_1_MOCK.panels.length);
+        expect(getImages().at(0)).toHaveAccessibleName(PAGE_1_PANEL_1_MOCK.description)
     });
 
     describe("narrations", () => {
@@ -38,7 +41,7 @@ describe("<Page />", () => {
             const {getImages} = renderPageSvelte(PAGE_2_MOCK);
 
             expect(getImages().at(0)).toHaveAccessibleDescription(
-                `${PAGE_2_PANEL_1_DIALOG_1.person}: ${PAGE_2_PANEL_1_DIALOG_1.text} ${PAGE_1_PANEL_1_DIALOG_2.person}: ${PAGE_1_PANEL_1_DIALOG_2.text}`,
+                `${getDialog(PAGE_2_PANEL_1_DIALOG_1)} ${getDialog(PAGE_1_PANEL_1_DIALOG_2)}`,
             );
         });
 

@@ -5,6 +5,7 @@ export const Dialog = DialogInfo
 
 export const Panel = z.object({
     id: PanelId,
+    description: z.string(),
     narration: z.optional(z.string()),
     dialogs: z.optional(z.array(Dialog))
 });

@@ -78,7 +78,7 @@
 <div class={`page ${classes.page}`} data-testid={PAGE_CONTAINER_TEST_ID}>
     {#each panels as panel, index (panel)}
         <div class={`panel ${classes.panel[index]}`} data-testid={PANEL_CONTAINER_TEST_ID}>
-            <PanelImage {slug} {panel} alt="TODO"/>
+            <PanelImage {slug} {panel}/>
         </div>
     {/each}
 </div>
