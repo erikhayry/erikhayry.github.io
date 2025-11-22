@@ -1,5 +1,7 @@
 {
   "id": "1.2.1",
-  "description": "DESCRIPTION MOCK",
+  "description": {
+    "en": "DESCRIPTION MOCK"
+  },
   "info": "VALID WITH IMAGE"
 }

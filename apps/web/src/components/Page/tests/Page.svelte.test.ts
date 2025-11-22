@@ -11,13 +11,14 @@ import {
     PAGE_4_MOCK,
 } from "$mock/data/pageMock";
 import {getDialog} from "../components/PanelImage/components/utils/getDialog";
+import {i18n} from "../../../i18n/i18n";
 
 describe("<Page />", () => {
     test("should render panel images", () => {
         const {getImages} = renderPageSvelte();
 
         expect(getImages()).toHaveLength(PAGE_1_MOCK.panels.length);
-        expect(getImages().at(0)).toHaveAccessibleName(PAGE_1_PANEL_1_MOCK.description)
+        expect(getImages().at(0)).toHaveAccessibleName(i18n(PAGE_1_PANEL_1_MOCK.description))
     });
 
     describe("narrations", () => {

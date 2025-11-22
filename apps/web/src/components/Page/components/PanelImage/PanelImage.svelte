@@ -2,6 +2,7 @@
     import {getSrc} from "./utils/getSrc";
     import type {Panel} from "@library/types";
     import Dialogs from "./components/Dialogs.svelte";
+    import {i18n} from "../../../../i18n/i18n";
 
     interface Props {
         slug: string;
@@ -33,11 +34,11 @@
 </style>
 
 
-<img alt={panel.description} aria-describedby={`${panel.id}-narration ${panel.id}-dialog`} class="panel-image"
+<img alt={i18n(panel.description)} aria-describedby={`${panel.id}-narration ${panel.id}-dialog`} class="panel-image"
      height="auto" {src}
      width="100%"/>
 {#if panel.narration}
-    <p id={`${panel.id}-narration`} class="narration">{panel.narration}</p>
+    <p id={`${panel.id}-narration`} class="narration">{i18n(panel.narration)}</p>
 {/if}
 
 {#if panel.dialogs}

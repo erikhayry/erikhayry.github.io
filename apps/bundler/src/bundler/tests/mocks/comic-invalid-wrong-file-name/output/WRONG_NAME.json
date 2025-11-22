@@ -6,6 +6,8 @@
     "w": 92,
     "h": 92
   },
-  "description": "DESCRIPTION MOCK",
+  "description": {
+    "en": "DESCRIPTION MOCK"
+  },
   "info": "VALID WITH IMAGE"
 }

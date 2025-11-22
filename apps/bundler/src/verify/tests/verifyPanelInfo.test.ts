@@ -5,13 +5,13 @@ test("should return false if data not compliant", () => {
     expect(verifyPanelInfo({})).toBeFalse();
     expect(verifyPanelInfo({
         id: "INVALID ID",
-        description: "description mock",
+        description: {"en": "description mock"},
     })).toBeFalse();
 });
 
 test("should return true if data is compliant", () => {
     expect(verifyPanelInfo({
         id: "1.1.1",
-        description: "description mock",
+        description: {"en": "description mock"},
     })).toBeTruthy();
 });

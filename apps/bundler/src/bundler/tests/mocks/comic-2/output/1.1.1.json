@@ -6,12 +6,16 @@
     "w": 92,
     "h": 92
   },
-  "description": "DESCRIPTION MOCK",
+  "description": {
+    "en": "DESCRIPTION MOCK"
+  },
   "info": "VALID WITH IMAGE",
   "dialogs": [
     {
-      "text": "DIALOG 1.1.1 TEXT",
-      "person": "DIALOG 1.1.1 PERSON"
+      "en": {
+        "text": "DIALOG 1.1.1 TEXT",
+        "person": "DIALOG 1.1.1 PERSON"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 import * as z from "zod";
-import {DialogInfo, PageLayoutType, PanelId} from "./output.ts";
+import {DialogInfo, PageLayoutType, PanelId, Text} from "./output.ts";
 
 export const Dialog = DialogInfo
 
 export const Panel = z.object({
     id: PanelId,
-    description: z.string(),
-    narration: z.optional(z.string()),
+    description: Text,
+    narration: z.optional(Text),
     dialogs: z.optional(z.array(Dialog))
 });
 

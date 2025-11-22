@@ -1,6 +1,6 @@
 import {expect, test} from "bun:test";
 import {getWebsiteFile} from "../getWebsiteFile.ts";
-import {Comic, PageLayout} from "@library/types";
+import {Comic, Language, PageLayout} from "@library/types";
 
 const DIR = "src/bundler/tests/mocks";
 
@@ -27,18 +27,18 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
-            description: "DESCRIPTION MOCK",
-            narration: "NARRATION_1.1.1_1"
+            description: {[Language.EN]: "DESCRIPTION MOCK"},
+            narration: {[Language.EN]: "NARRATION_1.1.1_1"}
         }, {
             id: "1.1.2",
-            description: "DESCRIPTION MOCK",
+            description: {[Language.EN]: "DESCRIPTION MOCK"},
         }],
     });
     expect(comic1.pages[1]).toEqual({
         layout: PageLayout.SplitWide,
         panels: [{
             id: "1.2.1",
-            description: "DESCRIPTION MOCK",
+            description: {[Language.EN]: "DESCRIPTION MOCK"},
         },],
     });
 
@@ -46,7 +46,7 @@ test("is should return pages", () => {
         layout: PageLayout.HorizontalTriptych,
         panels: [{
             id: "2.1.1",
-            description: "DESCRIPTION MOCK",
+            description: {[Language.EN]: "DESCRIPTION MOCK"},
         }],
     });
 
@@ -54,7 +54,7 @@ test("is should return pages", () => {
         layout: PageLayout.Quad,
         panels: [{
             id: "10.1.1",
-            description: "DESCRIPTION MOCK",
+            description: {[Language.EN]: "DESCRIPTION MOCK"},
         },],
     });
 
@@ -62,10 +62,12 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
-            description: "DESCRIPTION MOCK",
+            description: {[Language.EN]: "DESCRIPTION MOCK"},
             dialogs: [{
-                text: 'DIALOG 1.1.1 TEXT',
-                person: 'DIALOG 1.1.1 PERSON'
+                [Language.EN]: {
+                    text: 'DIALOG 1.1.1 TEXT',
+                    person: 'DIALOG 1.1.1 PERSON'
+                }
             }]
         }],
     });

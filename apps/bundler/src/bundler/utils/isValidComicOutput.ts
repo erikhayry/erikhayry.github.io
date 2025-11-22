@@ -20,7 +20,6 @@ function hasImage(folderPath: string, panelId: string) {
     );
 }
 
-
 function hasPageInfo(folderPath: string, panelId: PanelId) {
     return getOutputJSONS(folderPath).some(
         (jsonFileName) => jsonFileName === getPanelsPageInfo(panelId),

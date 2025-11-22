@@ -1,5 +1,15 @@
 import * as z from "zod";
 
+export const Language = {
+    EN: "en",
+    SE: "se",
+} as const;
+export const LanguageType = z.enum([
+    Language.EN,
+]);
+export const Text = z.record(LanguageType, z.string())
+export type Text = z.infer<typeof Text>;
+
 export const PageLayout = {
     Hero: "1",
     SplitWide: "2",
@@ -16,10 +26,10 @@ export const PageLayoutType = z.enum([
 export type PageLayoutValue = z.infer<typeof PageLayoutType>
 
 
-export const DialogInfo = z.object({
+export const DialogInfo = z.record(LanguageType, z.object({
     text: z.string(),
     person: z.string(),
-});
+}));
 
 export const PageId = z.string().regex(/^[1-9]\d*\.[1-9]\d*$/, {
     message:
@@ -40,11 +50,11 @@ export type PanelId = z.infer<typeof PanelId>;
 
 export const PanelInfo = z.object({
     id: PanelId,
-    description: z.string(),
-    narration: z.optional(z.string()),
+    description: Text,
+    narration: z.optional(Text),
     dialogs: z.optional(z.array(DialogInfo)),
-    quotes: z.optional(z.string()),
-    info: z.optional(z.string()),
+    quotes: z.optional(Text),
+    info: z.optional(z.string())
 });
 
 export const PageInfo = z.object({
