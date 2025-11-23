@@ -292,6 +292,9 @@
           }
         ]
       }
+    ],
+    "styles": [
+      "Simplified Line Drawing"
     ]
   },
   {
@@ -667,6 +670,9 @@
           }
         ]
       }
+    ],
+    "styles": [
+      "Simplified Line Drawing"
     ]
   }
 ]

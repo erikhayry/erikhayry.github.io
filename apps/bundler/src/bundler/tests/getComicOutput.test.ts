@@ -2,12 +2,21 @@ import {expect, test} from "bun:test";
 import {getComicOutput} from "../getComicOutput.ts";
 import {OUTPUT_FOLDER} from "../../constants.ts";
 import {getJSON} from "../../files/getJSON.ts";
-import {PageLayout} from "@library/types";
+import {ComicStyle, PageLayout} from "@library/types";
 
 const DIR = "src/bundler/tests/mocks";
 
 test("returns empty array when no folders", () => {
     expect(getComicOutput("/NOOP")).toEqual([]);
+});
+
+test("return array with comic styles", () => {
+    const comics = getComicOutput(DIR);
+    const [comic1, comic2] = comics;
+
+    expect(comics).toHaveLength(2);
+    expect(comic1!.styles).toEqual([ComicStyle.SIMPLIFIED_LINE_DRAWING]);
+    expect(comic2!.styles).toEqual([ComicStyle.SIMPLIFIED_LINE_DRAWING]);
 });
 
 test("return array with comic valid paths", () => {

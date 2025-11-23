@@ -1,5 +1,5 @@
 import * as z from "zod";
-import {DialogInfo, PageLayoutType, PanelId, Text} from "./output.ts";
+import {ComicStyleType, DialogInfo, PageLayoutType, PanelId, Text} from "./output.ts";
 
 export const Dialog = DialogInfo
 
@@ -18,12 +18,13 @@ export const Page = z.object({
 export const Comic = z.object({
     slug: z.string(),
     pages: z.array(Page),
+    styles: z.optional(z.array(ComicStyleType))
 });
 export const Website = z.array(Comic);
 export const Key = z.string()
 
-export type Dialog = z.infer<typeof Dialog>;
+export type Website = z.infer<typeof Website>;
 export type Comic = z.infer<typeof Comic>;
 export type Page = z.infer<typeof Page>;
 export type Panel = z.infer<typeof Panel>;
-export type Website = z.infer<typeof Website>;
+export type Dialog = z.infer<typeof Dialog>;

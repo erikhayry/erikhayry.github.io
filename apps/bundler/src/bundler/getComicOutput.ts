@@ -1,6 +1,6 @@
 import {getFolders} from "../files/getFolders.ts";
 import {getPageRecord} from "./utils/getPageRecord.ts";
-import {type ComicOutput, type PageOutput, type PanelInfo} from "@library/types";
+import {type ComicOutput, ComicStyle, type PageOutput, type PanelInfo} from "@library/types";
 import {error} from "../logger/log.ts";
 import {getPageLayout} from "../utils/page.ts";
 import {byName, byPageNumber} from "../utils/sort.ts";
@@ -34,7 +34,8 @@ function toComicOutput(comics: ComicOutput[], path: string): ComicOutput[] {
         ...comics,
         {
             path,
-            pages: getPages(path)
+            pages: getPages(path),
+            styles: [ComicStyle.SIMPLIFIED_LINE_DRAWING]
         }
     ];
 }

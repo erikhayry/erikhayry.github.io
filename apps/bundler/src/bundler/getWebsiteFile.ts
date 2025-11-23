@@ -27,10 +27,11 @@ function toPages({panels, layout}: PageOutput): Page {
     };
 }
 
-function toComic({path: filePath, pages}: ComicOutput): Comic {
+function toComic({path: filePath, pages, styles}: ComicOutput): Comic {
     return {
         slug: getComicFolder(filePath),
         pages: pages.map(toPages),
+        styles,
     };
 }
 
