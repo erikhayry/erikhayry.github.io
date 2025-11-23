@@ -1,7 +1,11 @@
 {
   "id": "6.1.3",
-  "description": "Bottom-left panel of the Quad layout. Döbeln rides along the line, his black headband stark against the white smoke. He shouts commands above the musket fire as messengers hurry beside him. The men’s resolve hardens at the sight of their commander in the thick of battle.",
-  "narration": "Amid smoke and thunder, leadership steels the wavering line.",
+  "description": {
+    "en": "Bottom-left panel of the Quad layout. Döbeln rides along the line, his black headband stark against the white smoke. He shouts commands above the musket fire as messengers hurry beside him. The men’s resolve hardens at the sight of their commander in the thick of battle."
+  },
+  "narration": {
+    "en": "Amid smoke and thunder, leadership steels the wavering line."
+  },
   "dialogs": [
     {
       "person": "Döbeln",

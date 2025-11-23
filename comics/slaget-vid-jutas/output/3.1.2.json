@@ -7,6 +7,10 @@
     "w": 44,
     "h": 44
   },
-  "description": "Interior of the small Nykarleby house. Von Döbeln lies in bed, pale and feverish, yet alert. Papers, maps, and a candle flicker on a nearby table. Shadows stretch across the wooden walls. The mood is tense but focused — classic DC chiaroscuro lighting, warm highlights against cold blue-grey tones.",
-  "narration": "Major General Georg Carl von Döbeln — feverish, wounded, yet commanding."
+  "description": {
+    "en": "Interior of the small Nykarleby house. Von Döbeln lies in bed, pale and feverish, yet alert. Papers, maps, and a candle flicker on a nearby table. Shadows stretch across the wooden walls. The mood is tense but focused — classic DC chiaroscuro lighting, warm highlights against cold blue-grey tones."
+  },
+  "narration": {
+    "en": "Major General Georg Carl von Döbeln — feverish, wounded, yet commanding."
+  }
 }

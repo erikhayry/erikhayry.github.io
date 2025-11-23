@@ -7,6 +7,10 @@
     "w": 92,
     "h": 29
   },
-  "description": "Finnish troops prepare defensive positions along a rural road and river near Nykarleby. Soldiers in blue-gray coats and brass buttons take cover behind fences and rocks. Mist lingers over the field. The tone is calm but tense — chiaroscuro lighting with golden sunrise through fog. DC Comics realism with layered depth and dynamic posture.",
-  "narration": "Swedish-Finnish forces, under Colonel Cronstedt, await the Russians advancing from the south."
+  "description": {
+    "en": "Finnish troops prepare defensive positions along a rural road and river near Nykarleby. Soldiers in blue-gray coats and brass buttons take cover behind fences and rocks. Mist lingers over the field. The tone is calm but tense — chiaroscuro lighting with golden sunrise through fog. DC Comics realism with layered depth and dynamic posture."
+  },
+  "narration": {
+    "en": "Swedish-Finnish forces, under Colonel Cronstedt, await the Russians advancing from the south."
+  }
 }

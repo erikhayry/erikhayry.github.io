@@ -7,6 +7,10 @@
     "w": 92,
     "h": 40
   },
-  "description": "Modern day — a teacher stands beside the Jutas memorial stone in an autumn field. Tall grass moves gently in the breeze under warm afternoon light. The stone monument bears traces of age. Scene rendered in DC Comics modern realism — clear lines, soft light, and golden-orange tones symbolizing remembrance and peace.",
-  "narration": "Over two centuries later — the story lives on."
+  "description": {
+    "en": "Modern day — a teacher stands beside the Jutas memorial stone in an autumn field. Tall grass moves gently in the breeze under warm afternoon light. The stone monument bears traces of age. Scene rendered in DC Comics modern realism — clear lines, soft light, and golden-orange tones symbolizing remembrance and peace."
+  },
+  "narration": {
+    "en": "Over two centuries later — the story lives on."
+  }
 }

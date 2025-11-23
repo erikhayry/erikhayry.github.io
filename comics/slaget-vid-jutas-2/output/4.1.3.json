@@ -1,7 +1,11 @@
 {
   "id": "4.1.3",
-  "description": "The aide spreads a campaign map on the table. Candlelight glints off brass buttons and ink bottles. Döbeln, struggling to rise, points weakly toward Jutas marked on the map. His expression hardens — fever or not, orders must be given.",
-  "narration": "‘We march at dawn… Jutas will be our stand.’",
+  "description": {
+    "en": "The aide spreads a campaign map on the table. Candlelight glints off brass buttons and ink bottles. Döbeln, struggling to rise, points weakly toward Jutas marked on the map. His expression hardens — fever or not, orders must be given."
+  },
+  "narration": {
+    "en": "‘We march at dawn… Jutas will be our stand.’"
+  },
   "dialogs": [
     {
       "person": "Döbeln",

@@ -1,7 +1,11 @@
 {
   "id": "1.1.1",
-  "description": "A single full-page panel depicting a historical map of the Finnish War (1808–1809). The map shows Sweden, Finland, and the Russian Empire with troop movements indicated by arrows. The Baltic Sea and key towns such as Nykarleby, Vasa, and Jutas are marked clearly. Artistic framing evokes an old parchment map style while maintaining clarity for readers.",
-  "narration": "In 1808, war reached the Finnish provinces. Sweden and the Russian Empire clashed over control of Finland, marking the beginning of a decisive campaign that would reshape the North.",
+  "description": {
+    "en": "A single full-page panel depicting a historical map of the Finnish War (1808–1809). The map shows Sweden, Finland, and the Russian Empire with troop movements indicated by arrows. The Baltic Sea and key towns such as Nykarleby, Vasa, and Jutas are marked clearly. Artistic framing evokes an old parchment map style while maintaining clarity for readers."
+  },
+  "narration": {
+    "en": "In 1808, war reached the Finnish provinces. Sweden and the Russian Empire clashed over control of Finland, marking the beginning of a decisive campaign that would reshape the North."
+  },
   "dialogs": [],
   "quotes": "",
   "info": "Page 1 – Introduction. Location: Finland, early September 1808. PageType: 1. Scene: Map of Finnish War."

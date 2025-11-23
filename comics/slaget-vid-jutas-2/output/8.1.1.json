@@ -1,7 +1,11 @@
 {
   "id": "8.1.1",
-  "description": "Top third of a Horizontal Triptych layout. Döbeln on horseback raises his sword high, the signal for counterfire. His black headband is sharply lit against the smoke-filled sky. Swedish artillery crews stand ready, linstocks glowing at cannon mouths.",
-  "narration": "At Döbeln’s command, the field erupts in thunder.",
+  "description": {
+    "en": "Top third of a Horizontal Triptych layout. Döbeln on horseback raises his sword high, the signal for counterfire. His black headband is sharply lit against the smoke-filled sky. Swedish artillery crews stand ready, linstocks glowing at cannon mouths."
+  },
+  "narration": {
+    "en": "At Döbeln’s command, the field erupts in thunder."
+  },
   "dialogs": [
     {
       "person": "Döbeln",

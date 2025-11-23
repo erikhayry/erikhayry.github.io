@@ -1,7 +1,11 @@
 {
   "id": "9.1.1",
-  "description": "Top-left panel of a Quad layout. Thick gun smoke drifts over the battlefield as both sides exchange fire. Swedish soldiers reload behind low cover while Russian muskets flash through the haze. The sound of battle drowns all else.",
-  "narration": "Neither side yields — fire answers fire.",
+  "description": {
+    "en": "Top-left panel of a Quad layout. Thick gun smoke drifts over the battlefield as both sides exchange fire. Swedish soldiers reload behind low cover while Russian muskets flash through the haze. The sound of battle drowns all else."
+  },
+  "narration": {
+    "en": "Neither side yields — fire answers fire."
+  },
   "dialogs": [],
   "quotes": "",
   "info": "Page 9 – Exchange of Fire. PageType: 4). Scene (panel 1): both armies firing through heavy smoke, battlefield engulfed in noise and confusion."

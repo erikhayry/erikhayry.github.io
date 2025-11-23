@@ -7,7 +7,9 @@
     "w": 92,
     "h": 28
   },
-  "description": "A messenger gallops into the Finnish camp on a rearing horse, scattering mud and mist. Soldiers turn toward him in surprise. The scene is dynamic and diagonal in composition — strong DC Comics energy with bold outlines, chiaroscuro shading, and golden-blue highlights cutting through the morning fog.",
+  "description": {
+    "en": "A messenger gallops into the Finnish camp on a rearing horse, scattering mud and mist. Soldiers turn toward him in surprise. The scene is dynamic and diagonal in composition — strong DC Comics energy with bold outlines, chiaroscuro shading, and golden-blue highlights cutting through the morning fog."
+  },
   "dialogs": [
     {
       "text": "Von Döbeln is coming — but he is ill!",

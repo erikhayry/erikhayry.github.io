@@ -1,7 +1,11 @@
 {
   "id": "10.1.4",
-  "description": "Bottom-right panel of the Quad layout. Döbeln reins in his horse atop a small rise, surveying the battlefield. The sun sinks low, bathing the smoke and chaos in a golden glow. His expression is fierce yet composed — victory within grasp, but at heavy cost.",
-  "narration": "Amid triumph’s glare, Döbeln measures the price of victory.",
+  "description": {
+    "en": "Bottom-right panel of the Quad layout. Döbeln reins in his horse atop a small rise, surveying the battlefield. The sun sinks low, bathing the smoke and chaos in a golden glow. His expression is fierce yet composed — victory within grasp, but at heavy cost."
+  },
+  "narration": {
+    "en": "Amid triumph’s glare, Döbeln measures the price of victory."
+  },
   "dialogs": [],
   "quotes": "",
   "info": "Page 10 – Swedish Push Forward. PageType: 4). Scene (panel 4): Döbeln observes the retreating Russians, sunset over the battlefield."

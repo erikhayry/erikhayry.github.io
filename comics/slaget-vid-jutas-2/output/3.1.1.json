@@ -1,7 +1,11 @@
 {
   "id": "3.1.1",
-  "description": "Top half of a Split Wide layout. A weary Swedish column retreats along a muddy road bordered by early-autumn fields. Wagons creak, a few soldiers glance back over their shoulders; smoke smudges the distant horizon toward Vasa. Döbeln rides beside the marching line, posture resolute despite visible fatigue.",
-  "narration": "Retreat from Vasa — tired boots, steady resolve.",
+  "description": {
+    "en": "Top half of a Split Wide layout. A weary Swedish column retreats along a muddy road bordered by early-autumn fields. Wagons creak, a few soldiers glance back over their shoulders; smoke smudges the distant horizon toward Vasa. Döbeln rides beside the marching line, posture resolute despite visible fatigue."
+  },
+  "narration": {
+    "en": "Retreat from Vasa — tired boots, steady resolve."
+  },
   "dialogs": [],
   "quotes": "",
   "info": "Page 3 – Retreat from Vasa. PageType: 2. Scene focus (panel 1): marching column, wagons, distant smoke, Döbeln riding alongside."

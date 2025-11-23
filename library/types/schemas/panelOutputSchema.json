@@ -7,32 +7,68 @@
       "pattern": "^[1-9]\\d*\\.[1-9]\\d*\\.[1-9]\\d*$"
     },
     "description": {
-      "type": "string"
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "en"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "narration": {
-      "type": "string"
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "en"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "dialogs": {
       "type": "array",
       "items": {
         "type": "object",
-        "properties": {
-          "text": {
-            "type": "string"
-          },
-          "person": {
-            "type": "string"
-          }
+        "propertyNames": {
+          "type": "string",
+          "enum": [
+            "en"
+          ]
         },
-        "required": [
-          "text",
-          "person"
-        ],
-        "additionalProperties": false
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "person": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "person"
+          ],
+          "additionalProperties": false
+        }
       }
     },
     "quotes": {
-      "type": "string"
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "en"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "info": {
       "type": "string"

@@ -1,7 +1,11 @@
 {
   "id": "10.1.1",
-  "description": "Top-left panel of a Quad layout. The Swedish line begins to surge forward. Döbeln, mounted and sword raised, leads the charge through golden afternoon light. Musket smoke trails behind the advancing troops as the cry of 'Hurrah!' rings across the field.",
-  "narration": "With renewed fury, the Swedes push forward — courage turned to motion.",
+  "description": {
+    "en": "Top-left panel of a Quad layout. The Swedish line begins to surge forward. Döbeln, mounted and sword raised, leads the charge through golden afternoon light. Musket smoke trails behind the advancing troops as the cry of 'Hurrah!' rings across the field."
+  },
+  "narration": {
+    "en": "With renewed fury, the Swedes push forward — courage turned to motion."
+  },
   "dialogs": [
     {
       "person": "Döbeln",

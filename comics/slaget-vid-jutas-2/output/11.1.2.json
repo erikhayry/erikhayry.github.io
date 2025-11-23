@@ -1,7 +1,11 @@
 {
   "id": "11.1.2",
-  "description": "Lower half of the Split Wide layout. Near small campfires, exhausted soldiers sit in silence while surgeons work in the background. Döbeln pauses beside a wounded man who weakly salutes. In the distance, crows circle above the quiet field.",
-  "narration": "The field is theirs — but so is the sorrow.",
+  "description": {
+    "en": "Lower half of the Split Wide layout. Near small campfires, exhausted soldiers sit in silence while surgeons work in the background. Döbeln pauses beside a wounded man who weakly salutes. In the distance, crows circle above the quiet field."
+  },
+  "narration": {
+    "en": "The field is theirs — but so is the sorrow."
+  },
   "dialogs": [],
   "quotes": "",
   "info": "Page 11 – Aftermath. PageType: 2. Scene (panel 2): night falls, campfires burn low, wounded tended amid silence and loss."

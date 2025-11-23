@@ -1,7 +1,11 @@
 {
   "id": "8.1.3",
-  "description": "Bottom third of the Horizontal Triptych layout. The smoke clears slightly to reveal Russian troops struck by the volleys — men stumble, banners dip, formations waver. Through the haze, Döbeln’s silhouette remains steady on horseback, the embodiment of resolve.",
-  "narration": "In the chaos, order — the Swedish line holds firm.",
+  "description": {
+    "en": "Bottom third of the Horizontal Triptych layout. The smoke clears slightly to reveal Russian troops struck by the volleys — men stumble, banners dip, formations waver. Through the haze, Döbeln’s silhouette remains steady on horseback, the embodiment of resolve."
+  },
+  "narration": {
+    "en": "In the chaos, order — the Swedish line holds firm."
+  },
   "dialogs": [],
   "quotes": "",
   "info": "Page 8 – Counterfire Ordered. PageType: 3. Scene (panel 3): aftermath of the volley, Russians falter as Döbeln oversees the line."

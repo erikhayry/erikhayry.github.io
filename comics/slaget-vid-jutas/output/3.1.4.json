@@ -7,7 +7,9 @@
     "w": 44,
     "h": 44
   },
-  "description": "Von Döbeln, now seated at his bed’s edge, points toward a map spread on the table as two aides listen attentively. His black headscarf and coat create a dark focal point against the warm candlelight. The atmosphere is intense and resolute — DC Comics chiaroscuro realism with golden light against deep shadows.",
+  "description": {
+    "en": "Von Döbeln, now seated at his bed’s edge, points toward a map spread on the table as two aides listen attentively. His black headscarf and coat create a dark focal point against the warm candlelight. The atmosphere is intense and resolute — DC Comics chiaroscuro realism with golden light against deep shadows."
+  },
   "dialogs": [
     {
       "text": "We strike first. The Russians must not gain the upper hand.",

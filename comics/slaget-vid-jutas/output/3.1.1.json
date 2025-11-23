@@ -7,6 +7,10 @@
     "w": 44,
     "h": 44
   },
-  "description": "Exterior of a small wooden house in Nykarleby under pale grey morning light. A soldier stands guard outside while a horse waits tethered by the fence. The setting is quiet, with mist lifting from the ground. Rendered in DC Comics realism — crisp ink lines, muted cool palette, chiaroscuro shadows conveying resolve and stillness.",
-  "narration": "In a modest house in Nykarleby, the commander lies ill but unyielding."
+  "description": {
+    "en": "Exterior of a small wooden house in Nykarleby under pale grey morning light. A soldier stands guard outside while a horse waits tethered by the fence. The setting is quiet, with mist lifting from the ground. Rendered in DC Comics realism — crisp ink lines, muted cool palette, chiaroscuro shadows conveying resolve and stillness."
+  },
+  "narration": {
+    "en": "In a modest house in Nykarleby, the commander lies ill but unyielding."
+  }
 }

@@ -7,6 +7,10 @@
     "w": 92,
     "h": 40
   },
-  "description": "Wide panoramic view of Jutas village — open fields, river, and distant forest lines under soft morning light. The calm before the storm. Style follows DC Comics realism: detailed environment, subtle chiaroscuro, muted cold blues and greys with golden edge lighting to suggest approaching conflict.",
-  "narration": "Jutas — a quiet settlement, soon to echo with musket fire."
+  "description": {
+    "en": "Wide panoramic view of Jutas village — open fields, river, and distant forest lines under soft morning light. The calm before the storm. Style follows DC Comics realism: detailed environment, subtle chiaroscuro, muted cold blues and greys with golden edge lighting to suggest approaching conflict."
+  },
+  "narration": {
+    "en": "Jutas — a quiet settlement, soon to echo with musket fire."
+  }
 }
