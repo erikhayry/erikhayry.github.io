@@ -12,9 +12,13 @@
   },
   "dialogs": [
     {
-      "text": "We strike first. The Russians must not gain the upper hand.",
-      "person": "Von Döbeln"
+      "en": {
+        "text": "We strike first. The Russians must not gain the upper hand.",
+        "person": "Von Döbeln"
+      }
     }
   ],
-  "quotes": "‘Och Döbeln låg sjuk i sitt tält, men eld i hans blickar brann.’"
+  "quotes": {
+    "en": "‘Och Döbeln låg sjuk i sitt tält, men eld i hans blickar brann.’"
+  }
 }

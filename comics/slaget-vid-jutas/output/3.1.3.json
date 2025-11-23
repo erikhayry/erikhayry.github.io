@@ -12,8 +12,10 @@
   },
   "dialogs": [
     {
-      "text": "I may lie sick — but my place is in battle.",
-      "person": "Von Döbeln"
+      "en": {
+        "text": "I may lie sick — but my place is in battle.",
+        "person": "Von Döbeln"
+      }
     }
   ]
 }

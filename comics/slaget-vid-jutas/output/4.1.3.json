@@ -12,8 +12,10 @@
   },
   "dialogs": [
     {
-      "text": "Advance! Push them back!",
-      "person": "Russian officer"
+      "en": {
+        "text": "Advance! Push them back!",
+        "person": "Russian officer"
+      }
     }
   ],
   "narration": {

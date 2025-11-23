@@ -8,10 +8,11 @@
   },
   "dialogs": [
     {
-      "person": "Döbeln",
-      "text": "Mark Jutas. Tell Gyllenbögel to prepare the men — we march at first light."
+      "en": {
+        "person": "Döbeln",
+        "text": "Mark Jutas. Tell Gyllenbögel to prepare the men — we march at first light."
+      }
     }
   ],
-  "quotes": "",
   "info": "Page 4 – Döbeln Sick in Nykarleby. PageType: 4). Scene (panel 3): Döbeln issuing orders from bed, map illuminated by candlelight."
 }

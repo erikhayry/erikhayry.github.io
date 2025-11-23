@@ -12,8 +12,10 @@
   },
   "dialogs": [
     {
-      "text": "At Jutas, courage outweighed strength. That is why we still speak of Döbeln.",
-      "person": "Teacher"
+      "en": {
+        "text": "At Jutas, courage outweighed strength. That is why we still speak of Döbeln.",
+        "person": "Teacher"
+      }
     }
   ]
 }

@@ -8,10 +8,11 @@
   },
   "dialogs": [
     {
-      "person": "Döbeln",
-      "text": "Stand firm, men of Björneborg! Jutas shall not fall!"
+      "en": {
+        "person": "Döbeln",
+        "text": "Stand firm, men of Björneborg! Jutas shall not fall!"
+      }
     }
   ],
-  "quotes": "",
   "info": "Page 9 – Exchange of Fire. PageType: 4). Scene (panel 4): Döbeln rallies his troops through smoke and cannon fire."
 }

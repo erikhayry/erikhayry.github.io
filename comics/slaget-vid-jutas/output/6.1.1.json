@@ -15,8 +15,10 @@
   },
   "dialogs": [
     {
-      "text": "Now — drive them back!",
-      "person": "Von Döbeln"
+      "en": {
+        "text": "Now — drive them back!",
+        "person": "Von Döbeln"
+      }
     }
   ]
 }

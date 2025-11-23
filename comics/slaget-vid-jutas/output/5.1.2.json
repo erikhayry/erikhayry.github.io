@@ -12,8 +12,10 @@
   },
   "dialogs": [
     {
-      "text": "Forward! For Finland and for honor!",
-      "person": "Von Döbeln"
+      "en": {
+        "text": "Forward! For Finland and for honor!",
+        "person": "Von Döbeln"
+      }
     }
   ]
 }

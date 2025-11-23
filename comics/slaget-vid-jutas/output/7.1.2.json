@@ -12,8 +12,10 @@
   },
   "dialogs": [
     {
-      "text": "They fought like lions. Finland will remember.",
-      "person": "Von Döbeln"
+      "en": {
+        "text": "They fought like lions. Finland will remember.",
+        "person": "Von Döbeln"
+      }
     }
   ],
   "narration": {

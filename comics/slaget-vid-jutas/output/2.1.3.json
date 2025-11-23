@@ -12,8 +12,10 @@
   },
   "dialogs": [
     {
-      "text": "Von Döbeln is coming — but he is ill!",
-      "person": "Messenger"
+      "en": {
+        "text": "Von Döbeln is coming — but he is ill!",
+        "person": "Messenger"
+      }
     }
   ]
 }

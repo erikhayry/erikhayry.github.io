@@ -1,1 +1,672 @@
-[]
+[
+  {
+    "slug": "slaget-vid-jutas",
+    "pages": [
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "1.1.1",
+            "description": {
+              "en": "Overhead map of Northern Europe (1808–1809) showing Sweden, Finland, and Russia. Red and blue troop arrows mark movement on parchment texture with frost overlay and candlelight glow from one corner. Classic DC Comics realism — bold inks, chiaroscuro lighting, muted cold blues, greys, and golden accents. Full-page splash without characters; title 'SLAGET VID JUTAS' in golden serif lettering."
+            },
+            "narration": {
+              "en": "In 1808, war broke out between Sweden and Russia. The struggle for Finland had begun. Villages burned, armies marched through snow and forest. What was once Swedish Finland stood alone against the Empire of the Tsar. This is the story of courage and defiance — at Jutas."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "2.1.1",
+            "description": {
+              "en": "Calm rural landscape near Nykarleby at dawn. Fields and a faint river stretch under a thin layer of mist. Early morning light reveals soft blue and golden hues. Style follows classic DC Comics realism — clean composition, muted tones, subtle chiaroscuro. No visible figures; atmosphere of quiet anticipation."
+            },
+            "narration": {
+              "en": "September 13, 1808. The small village of Jutas near Nykarleby becomes the stage for a decisive encounter."
+            }
+          },
+          {
+            "id": "2.1.2",
+            "description": {
+              "en": "Finnish troops prepare defensive positions along a rural road and river near Nykarleby. Soldiers in blue-gray coats and brass buttons take cover behind fences and rocks. Mist lingers over the field. The tone is calm but tense — chiaroscuro lighting with golden sunrise through fog. DC Comics realism with layered depth and dynamic posture."
+            },
+            "narration": {
+              "en": "Swedish-Finnish forces, under Colonel Cronstedt, await the Russians advancing from the south."
+            }
+          },
+          {
+            "id": "2.1.3",
+            "description": {
+              "en": "A messenger gallops into the Finnish camp on a rearing horse, scattering mud and mist. Soldiers turn toward him in surprise. The scene is dynamic and diagonal in composition — strong DC Comics energy with bold outlines, chiaroscuro shading, and golden-blue highlights cutting through the morning fog."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Von Döbeln is coming — but he is ill!",
+                  "person": "Messenger"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "3.1.1",
+            "description": {
+              "en": "Exterior of a small wooden house in Nykarleby under pale grey morning light. A soldier stands guard outside while a horse waits tethered by the fence. The setting is quiet, with mist lifting from the ground. Rendered in DC Comics realism — crisp ink lines, muted cool palette, chiaroscuro shadows conveying resolve and stillness."
+            },
+            "narration": {
+              "en": "In a modest house in Nykarleby, the commander lies ill but unyielding."
+            }
+          },
+          {
+            "id": "3.1.2",
+            "description": {
+              "en": "Interior of the small Nykarleby house. Von Döbeln lies in bed, pale and feverish, yet alert. Papers, maps, and a candle flicker on a nearby table. Shadows stretch across the wooden walls. The mood is tense but focused — classic DC chiaroscuro lighting, warm highlights against cold blue-grey tones."
+            },
+            "narration": {
+              "en": "Major General Georg Carl von Döbeln — feverish, wounded, yet commanding."
+            }
+          },
+          {
+            "id": "3.1.3",
+            "description": {
+              "en": "Close-up of von Döbeln’s face — eyes burning with determination beneath his black headscarf. Candlelight reflects in his pupils while deep shadows cut across his cheekbones. Bold DC Comics linework emphasizes resolve and tension; the color palette mixes cold blues with warm golden highlights."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "I may lie sick — but my place is in battle.",
+                  "person": "Von Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "3.1.4",
+            "description": {
+              "en": "Von Döbeln, now seated at his bed’s edge, points toward a map spread on the table as two aides listen attentively. His black headscarf and coat create a dark focal point against the warm candlelight. The atmosphere is intense and resolute — DC Comics chiaroscuro realism with golden light against deep shadows."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "We strike first. The Russians must not gain the upper hand.",
+                  "person": "Von Döbeln"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "4.1.1",
+            "description": {
+              "en": "Wide panoramic view of Jutas village — open fields, river, and distant forest lines under soft morning light. The calm before the storm. Style follows DC Comics realism: detailed environment, subtle chiaroscuro, muted cold blues and greys with golden edge lighting to suggest approaching conflict."
+            },
+            "narration": {
+              "en": "Jutas — a quiet settlement, soon to echo with musket fire."
+            }
+          },
+          {
+            "id": "4.1.2",
+            "description": {
+              "en": "Finnish troops take defensive positions behind fences and ridges. Soldiers crouch with muskets ready, faces focused under the dim morning light. Layered composition shows fence in foreground, troops mid-ground, and misty trees beyond. Strong DC Comics realism with chiaroscuro depth and muted cold hues."
+            },
+            "narration": {
+              "en": "Cronstedt’s men secure their ground, while Döbeln’s detachment moves to outflank."
+            }
+          },
+          {
+            "id": "4.1.3",
+            "description": {
+              "en": "Russian troops appear on the far side of the open field, partially obscured by smoke and rising mist. An officer in a dark green coat stands forward, shouting orders with a raised sword. Composition emphasizes contrast between cold blue-grey Russian ranks and the warmer tones of the Finnish side. DC Comics realism with dynamic light cutting through smoke."
+            },
+            "narration": {
+              "en": "The enemy had twice their number."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Advance! Push them back!",
+                  "person": "Russian officer"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "5.1.1",
+            "description": {
+              "en": "The battle ignites — musket fire erupts across the Jutas field. Thick smoke clouds the air as sparks flash from the barrels. Soldiers fire from behind cover; motion lines and debris add intensity. Classic DC Comics battle realism with chiaroscuro light and swirling powder smoke, cold blues and fiery oranges clashing in the frame."
+            },
+            "narration": {
+              "en": "At noon, the first volleys burst. The air thick with powder."
+            }
+          },
+          {
+            "id": "5.1.2",
+            "description": {
+              "en": "Von Döbeln charges forward on horseback through the smoke, sword raised high. His black headscarf and flowing coat create a dark silhouette framed by a glowing halo of battle light. Soldiers follow behind him, partially obscured by smoke. Dramatic DC Comics composition — diagonal motion, bold inks, and chiaroscuro lighting emphasizing leadership and resolve."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Forward! For Finland and for honor!",
+                  "person": "Von Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "5.1.3",
+            "description": {
+              "en": "Finnish troops surge forward through dense battle smoke. Muskets and bayonets glint in flashes of light as soldiers charge toward the Russian line. Figures blur with motion lines and swirling powder. DC Comics realism — strong anatomical poses, chiaroscuro lighting, cold blues cut by fiery orange bursts."
+            },
+            "narration": {
+              "en": "They met the Russians head-on — steel against steel."
+            }
+          },
+          {
+            "id": "5.1.4",
+            "description": {
+              "en": "A young Finnish soldier raises the fallen flag amid the chaos of battle. Smoke and fire fill the background as light breaks through to highlight the flag’s movement. Composition centers on the soldier’s determined expression — a symbolic DC Comics moment of courage with strong chiaroscuro contrast and golden-blue tones."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "6.1.1",
+            "description": {
+              "en": "Von Döbeln on horseback commands the field amid swirling smoke and firelight. His black scarf and coat catch the glow of the flames behind him. The horse rears slightly, emphasizing leadership and power. DC Comics realism with bold inks, chiaroscuro lighting, and strong diagonal composition for energy and authority."
+            },
+            "narration": {
+              "en": "The Russian left flank falters. Döbeln sees the moment."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Now — drive them back!",
+                  "person": "Von Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "6.1.2",
+            "description": {
+              "en": "Finnish troops rush forward in a coordinated bayonet charge. Motion lines and angled perspective heighten the sense of speed and force. Smoke swirls around the soldiers’ silhouettes, their faces lit by flashes of gunfire. DC Comics action realism — muscular poses, bold contrasts, and dramatic forward momentum."
+            }
+          },
+          {
+            "id": "6.1.3",
+            "description": {
+              "en": "Russian soldiers retreat through the smoke-filled field as the sun sets in the hazy sky. Silhouettes fade into the distance, weapons dropped and flags lowered. The atmosphere is thick with dust and gunpowder residue. DC Comics realism — deep shadows, glowing orange horizon, and cold blue-gray contrast symbolizing victory and exhaustion."
+            },
+            "narration": {
+              "en": "By dusk, Jutas was theirs. The victory saved the army’s retreat toward Vasa."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "7.1.1",
+            "description": {
+              "en": "The battlefield at dusk lies silent. Smoke drifts across fallen soldiers and broken weapons. The light fades into cold blue and grey hues, with long shadows stretching over the ground. DC Comics somber realism — subdued palette, soft chiaroscuro, and a tone of heavy stillness after the clash."
+            },
+            "narration": {
+              "en": "Night fell over Jutas. The victory was costly."
+            }
+          },
+          {
+            "id": "7.1.2",
+            "description": {
+              "en": "Von Döbeln stands among the fallen, leaning on his sword as smoke drifts through the fading light. His black scarf and headband catch the last glow of sunset. The scene is quiet and reflective — DC Comics chiaroscuro realism with warm orange highlights fading into cold blue dusk."
+            },
+            "narration": {
+              "en": "The sick general had led one of the last Swedish victories of the war."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "They fought like lions. Finland will remember.",
+                  "person": "Von Döbeln"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "8.1.1",
+            "description": {
+              "en": "Modern day — a teacher stands beside the Jutas memorial stone in an autumn field. Tall grass moves gently in the breeze under warm afternoon light. The stone monument bears traces of age. Scene rendered in DC Comics modern realism — clear lines, soft light, and golden-orange tones symbolizing remembrance and peace."
+            },
+            "narration": {
+              "en": "Over two centuries later — the story lives on."
+            }
+          },
+          {
+            "id": "8.1.2",
+            "description": {
+              "en": "A group of students listens attentively to the teacher near the Jutas memorial. Autumn leaves fall around them, and warm orange sunlight filters through the trees. The tone is calm and respectful — DC Comics modern realism with clean lines, soft color palette, and gentle chiaroscuro light across faces."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "At Jutas, courage outweighed strength. That is why we still speak of Döbeln.",
+                  "person": "Teacher"
+                }
+              }
+            ]
+          },
+          {
+            "id": "8.1.3",
+            "description": {
+              "en": "Close-up of the Jutas memorial stone engraved with the words 'Slaget vid Jutas — 13 september 1808'. The surface is rough granite, catching warm late-day sunlight. Fallen leaves rest at its base. DC Comics realism — high detail, textured shading, and soft glowing highlights emphasizing remembrance and legacy."
+            },
+            "narration": {
+              "en": "‘Det var en gång en hjälte, och han hette Döbeln vid Jutas.’"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "slaget-vid-jutas-2",
+    "pages": [
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "1.1.1",
+            "description": {
+              "en": "A single full-page panel depicting a historical map of the Finnish War (1808–1809). The map shows Sweden, Finland, and the Russian Empire with troop movements indicated by arrows. The Baltic Sea and key towns such as Nykarleby, Vasa, and Jutas are marked clearly. Artistic framing evokes an old parchment map style while maintaining clarity for readers."
+            },
+            "narration": {
+              "en": "In 1808, war reached the Finnish provinces. Sweden and the Russian Empire clashed over control of Finland, marking the beginning of a decisive campaign that would reshape the North."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "2.1.1",
+            "description": {
+              "en": "A single full-page character gallery introducing the opposing commanders. On the left stands Georg Carl von Döbeln of the Swedish forces, wearing his dark blue uniform with a black headband instead of a hat. Opposite him, the Russian commanders Nikolaj Kamenskij and Kirill Kazatjkovskij stand in formal poses. Background kept minimal — soft neutral tone or faint suggestion of field or camp — focusing on the three figures and their contrast in bearing."
+            },
+            "narration": {
+              "en": "September 1808. Near Nykarleby, two armies prepare to meet at Jutas — Sweden’s last hope of halting the Russian advance."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "3.1.1",
+            "description": {
+              "en": "Top half of a Split Wide layout. A weary Swedish column retreats along a muddy road bordered by early-autumn fields. Wagons creak, a few soldiers glance back over their shoulders; smoke smudges the distant horizon toward Vasa. Döbeln rides beside the marching line, posture resolute despite visible fatigue."
+            },
+            "narration": {
+              "en": "Retreat from Vasa — tired boots, steady resolve."
+            }
+          },
+          {
+            "id": "3.1.2",
+            "description": {
+              "en": "Lower half of the Split Wide layout. The column nears Nykarleby; the landscape opens toward low farmhouses and scattered birch trees. Evening light catches the soldiers’ bayonets and the ruts of the muddy road. Döbeln looks ahead, expression grim but calm, as officers exchange brief words nearby — the march continues without rest."
+            },
+            "narration": {
+              "en": "Toward Nykarleby — night draws near, but duty drives them on."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "4.1.1",
+            "description": {
+              "en": "Interior of a dimly lit wooden room in Nykarleby. Döbeln lies in bed, face pale, his black headband placed on the table beside him. A candle flickers, casting long shadows over scattered maps and papers. The atmosphere is heavy with illness and determination."
+            },
+            "narration": {
+              "en": "Wounded and feverish, Döbeln refuses rest — the battle must still be commanded."
+            }
+          },
+          {
+            "id": "4.1.2",
+            "description": {
+              "en": "Close view of Döbeln’s aide-de-camp standing beside the bed, awaiting orders. His uniform is neat but dusted from travel. Behind him, the young messenger hesitates at the doorway, holding a sealed letter. The air feels tense, as if the war itself presses into the small room."
+            },
+            "narration": {
+              "en": "Messages from the front — every word from Döbeln carries the weight of command."
+            }
+          },
+          {
+            "id": "4.1.3",
+            "description": {
+              "en": "The aide spreads a campaign map on the table. Candlelight glints off brass buttons and ink bottles. Döbeln, struggling to rise, points weakly toward Jutas marked on the map. His expression hardens — fever or not, orders must be given."
+            },
+            "narration": {
+              "en": "‘We march at dawn… Jutas will be our stand.’"
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Mark Jutas. Tell Gyllenbögel to prepare the men — we march at first light.",
+                  "person": "Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "4.1.4",
+            "description": {
+              "en": "Night outside the wooden house in Nykarleby. A lone lantern glows through a window while rain begins to fall softly. The messenger departs into the darkness on horseback, carrying Döbeln’s orders toward the waiting regiments."
+            },
+            "narration": {
+              "en": "Through fever and night, command rides onward."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "5.1.1",
+            "description": {
+              "en": "Top half of a Split Wide layout. Morning mist lifts over the countryside as Swedish troops begin their march toward Jutas. Döbeln rides at the front, pale but upright in the saddle, black headband tied firmly. His sword rests across his lap as soldiers fall into formation behind him."
+            },
+            "narration": {
+              "en": "The march to Jutas begins — discipline over weakness, purpose over pain."
+            }
+          },
+          {
+            "id": "5.1.2",
+            "description": {
+              "en": "Lower half of the Split Wide layout. Afternoon sunlight glints off bayonets as the Swedish column advances across open fields. Soldiers cheer as Döbeln raises his sword slightly in salute. In the distance, the small village of Jutas and scattered farm buildings come into view."
+            },
+            "narration": {
+              "en": "Courage stirs along the line — Jutas lies ahead."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "6.1.1",
+            "description": {
+              "en": "Top-left panel of a Quad layout. Early afternoon light cuts through thin smoke as the Russian vanguard opens fire on the Swedish front line. Swedish skirmishers in blue and yellow uniforms fall back in good order, muskets firing measured volleys along the roadside."
+            },
+            "narration": {
+              "en": "The battle begins — the Russians strike first."
+            }
+          },
+          {
+            "id": "6.1.2",
+            "description": {
+              "en": "Top-right panel of the Quad layout. Smoke drifts between birch trees as the Swedish soldiers regroup behind a low ridge. An officer signals retreat with his sword while others reload rapidly. Musket flashes strobe through the haze, turning the calm countryside into chaos."
+            },
+            "narration": {
+              "en": "Step by step, the Swedes yield ground — not disorder, but discipline."
+            }
+          },
+          {
+            "id": "6.1.3",
+            "description": {
+              "en": "Bottom-left panel of the Quad layout. Döbeln rides along the line, his black headband stark against the white smoke. He shouts commands above the musket fire as messengers hurry beside him. The men’s resolve hardens at the sight of their commander in the thick of battle."
+            },
+            "narration": {
+              "en": "Amid smoke and thunder, leadership steels the wavering line."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Hold the line! Fall back by sections — no man breaks rank!",
+                  "person": "Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "6.1.4",
+            "description": {
+              "en": "Bottom-right panel of the Quad layout. The Swedish front merges with the main defensive line near Jutas. Soldiers kneel to reload as officers shout new positions. The Russian vanguard advances through smoke and trampled crops, the sound of drums faint under cannon thunder."
+            },
+            "narration": {
+              "en": "The first clash fades — the field now belongs to Jutas."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "7.1.1",
+            "description": {
+              "en": "Top half of a Split Wide layout. The Russian troops advance in dense ranks across broken farmland. Officers on horseback urge them forward, sabres raised, as musket smoke curls around the formation. In the foreground, Swedish defenders take cover behind a low fence, preparing to fire."
+            },
+            "narration": {
+              "en": "Wave after wave, the Russian advance presses on."
+            }
+          },
+          {
+            "id": "7.1.2",
+            "description": {
+              "en": "Lower half of the Split Wide layout. The Russians close in through musket smoke. Fallen soldiers lie scattered as the Swedish line braces behind hastily built defenses. A Russian officer points his sword toward the Swedish position, shouting an order as cannon fire rumbles in the distance."
+            },
+            "narration": {
+              "en": "The air thickens with smoke and iron — the struggle for Jutas tightens."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "8.1.1",
+            "description": {
+              "en": "Top third of a Horizontal Triptych layout. Döbeln on horseback raises his sword high, the signal for counterfire. His black headband is sharply lit against the smoke-filled sky. Swedish artillery crews stand ready, linstocks glowing at cannon mouths."
+            },
+            "narration": {
+              "en": "At Döbeln’s command, the field erupts in thunder."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Fire — all batteries!",
+                  "person": "Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "8.1.2",
+            "description": {
+              "en": "Middle third of the Horizontal Triptych layout. Swedish cannons discharge in unison, flames and smoke bursting outward. Gunners cover their ears or brace against the recoil. Musket volleys follow from the infantry line beyond, creating a wall of light and sound."
+            },
+            "narration": {
+              "en": "Cannon and musket — a single, deafening heartbeat of defiance."
+            }
+          },
+          {
+            "id": "8.1.3",
+            "description": {
+              "en": "Bottom third of the Horizontal Triptych layout. The smoke clears slightly to reveal Russian troops struck by the volleys — men stumble, banners dip, formations waver. Through the haze, Döbeln’s silhouette remains steady on horseback, the embodiment of resolve."
+            },
+            "narration": {
+              "en": "In the chaos, order — the Swedish line holds firm."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "9.1.1",
+            "description": {
+              "en": "Top-left panel of a Quad layout. Thick gun smoke drifts over the battlefield as both sides exchange fire. Swedish soldiers reload behind low cover while Russian muskets flash through the haze. The sound of battle drowns all else."
+            },
+            "narration": {
+              "en": "Neither side yields — fire answers fire."
+            }
+          },
+          {
+            "id": "9.1.2",
+            "description": {
+              "en": "Top-right panel of the Quad layout. A Swedish artillery crew works frantically beside their cannon, faces lit by orange flashes. One gunner wipes soot from his eyes while another rams the charge home. Behind them, Döbeln’s orders echo faintly through the roar."
+            },
+            "narration": {
+              "en": "Every man a cog in the thunder — precision amid chaos."
+            }
+          },
+          {
+            "id": "9.1.3",
+            "description": {
+              "en": "Bottom-left panel of the Quad layout. Russian infantry spreads out to flank the Swedish line. Officers shout commands as the men wade through churned mud and smoke. A fallen flag-bearer lies half-buried in the foreground, his banner trampled but still visible."
+            },
+            "narration": {
+              "en": "The Russians press on, seeking the weak points through smoke and blood."
+            }
+          },
+          {
+            "id": "9.1.4",
+            "description": {
+              "en": "Bottom-right panel of the Quad layout. Amid the dense smoke, Döbeln rides into view once more, rallying his men. His sword is raised, his black headband stark against the flashing light of battle. Around him, Swedish soldiers shout and reload with renewed determination."
+            },
+            "narration": {
+              "en": "Where courage falters, Döbeln’s presence reignites the line."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Stand firm, men of Björneborg! Jutas shall not fall!",
+                  "person": "Döbeln"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "10.1.1",
+            "description": {
+              "en": "Top-left panel of a Quad layout. The Swedish line begins to surge forward. Döbeln, mounted and sword raised, leads the charge through golden afternoon light. Musket smoke trails behind the advancing troops as the cry of 'Hurrah!' rings across the field."
+            },
+            "narration": {
+              "en": "With renewed fury, the Swedes push forward — courage turned to motion."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Forward! Let them feel the steel of Finland!",
+                  "person": "Döbeln"
+                }
+              }
+            ]
+          },
+          {
+            "id": "10.1.2",
+            "description": {
+              "en": "Top-right panel of the Quad layout. The Swedish infantry charges with bayonets fixed, faces grim with determination. Russian soldiers recoil under the assault, their line buckling amid torn banners and drifting smoke. The clash of steel fills the air."
+            },
+            "narration": {
+              "en": "The tide turns — momentum now in Swedish hands."
+            }
+          },
+          {
+            "id": "10.1.3",
+            "description": {
+              "en": "Bottom-left panel of the Quad layout. Russian troops begin to fall back through churned fields, abandoning cannon and wounded comrades. Smoke drifts low over the ground. Swedish flags rise above the advancing line as officers rally the men to keep formation."
+            },
+            "narration": {
+              "en": "Retreat turns to rout — the enemy breaks before the Swedish advance."
+            }
+          },
+          {
+            "id": "10.1.4",
+            "description": {
+              "en": "Bottom-right panel of the Quad layout. Döbeln reins in his horse atop a small rise, surveying the battlefield. The sun sinks low, bathing the smoke and chaos in a golden glow. His expression is fierce yet composed — victory within grasp, but at heavy cost."
+            },
+            "narration": {
+              "en": "Amid triumph’s glare, Döbeln measures the price of victory."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "11.1.1",
+            "description": {
+              "en": "Top half of a Split Wide layout. Evening dusk settles over the battlefield. Döbeln, dismounted, walks slowly among the fallen. His uniform is torn and stained with smoke. Around him, Swedish soldiers assist the wounded while field surgeons kneel beside makeshift stretchers."
+            },
+            "narration": {
+              "en": "Silence returns — the cost of courage lies in the grass."
+            }
+          },
+          {
+            "id": "11.1.2",
+            "description": {
+              "en": "Lower half of the Split Wide layout. Near small campfires, exhausted soldiers sit in silence while surgeons work in the background. Döbeln pauses beside a wounded man who weakly salutes. In the distance, crows circle above the quiet field."
+            },
+            "narration": {
+              "en": "The field is theirs — but so is the sorrow."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "12.1.1",
+            "description": {
+              "en": "A single full-page panel. Present day at the Jutas monument surrounded by birch trees. A high-school teacher gestures toward the bronze relief of Döbeln while students listen attentively. Sunlight filters through the leaves, uniting past and present in the same quiet landscape."
+            },
+            "narration": {
+              "en": "More than two centuries later, Jutas still speaks — of resolve, of sacrifice, of Finland’s turning point."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

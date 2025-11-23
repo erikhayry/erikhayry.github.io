@@ -8,10 +8,11 @@
   },
   "dialogs": [
     {
-      "person": "Döbeln",
-      "text": "Fire — all batteries!"
+      "en": {
+        "person": "Döbeln",
+        "text": "Fire — all batteries!"
+      }
     }
   ],
-  "quotes": "",
   "info": "Page 8 – Counterfire Ordered. PageType: 3. Scene (panel 1): Döbeln gives the signal for counterfire."
 }

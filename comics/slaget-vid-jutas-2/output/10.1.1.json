@@ -8,10 +8,11 @@
   },
   "dialogs": [
     {
-      "person": "Döbeln",
-      "text": "Forward! Let them feel the steel of Finland!"
+      "en": {
+        "person": "Döbeln",
+        "text": "Forward! Let them feel the steel of Finland!"
+      }
     }
   ],
-  "quotes": "",
   "info": "Page 10 – Swedish Push Forward. PageType: 4). Scene (panel 1): Döbeln leads the Swedish counterattack, golden light and rising smoke."
 }

@@ -8,10 +8,11 @@
   },
   "dialogs": [
     {
-      "person": "Döbeln",
-      "text": "Hold the line! Fall back by sections — no man breaks rank!"
+      "en": {
+        "person": "Döbeln",
+        "text": "Hold the line! Fall back by sections — no man breaks rank!"
+      }
     }
   ],
-  "quotes": "",
   "info": "Page 6 – Battle Begins. PageType: 4). Scene (panel 3): Döbeln rallying troops under fire, mounted amid battle smoke."
 }

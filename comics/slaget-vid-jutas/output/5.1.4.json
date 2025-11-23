@@ -10,5 +10,7 @@
   "description": {
     "en": "A young Finnish soldier raises the fallen flag amid the chaos of battle. Smoke and fire fill the background as light breaks through to highlight the flag’s movement. Composition centers on the soldier’s determined expression — a symbolic DC Comics moment of courage with strong chiaroscuro contrast and golden-blue tones."
   },
-  "quotes": "‘Då steg ur ledet en yngling fram, och höjde fanan på nytt.’"
+  "quotes": {
+    "en": "‘Då steg ur ledet en yngling fram, och höjde fanan på nytt.’"
+  }
 }
