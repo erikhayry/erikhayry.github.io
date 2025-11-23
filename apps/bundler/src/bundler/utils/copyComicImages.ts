@@ -1,5 +1,5 @@
 import {copyFile} from "../../files/copy.ts";
-import {IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
+import {COMIC_STYLE_EXTENSION, IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
 import {getWebsiteFile} from "../getWebsiteFile.ts";
 
 export function copyComicImages(comicsFolder: string, wwwFolder: string): void {
@@ -7,7 +7,7 @@ export function copyComicImages(comicsFolder: string, wwwFolder: string): void {
         pages.forEach(({panels}) => {
             panels.forEach(({id}) => {
                 copyFile(
-                    `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/${id}${IMAGE_EXTENSION}`,
+                    `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/${id}${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
                     `${wwwFolder}/${slug}`,
                 );
             });

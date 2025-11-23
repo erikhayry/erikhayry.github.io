@@ -1,7 +1,7 @@
 import {isPanelId, verifyPanelInfo} from "../../verify/verifyPanelInfo.ts";
 import {getJSON} from "../../files/getJSON.ts";
 import {getOutputFilePath} from "../../files/getOutputFilePath.ts";
-import {IMAGE_EXTENSION} from "../../constants.ts";
+import {COMIC_STYLE_EXTENSION, IMAGE_EXTENSION} from "../../constants.ts";
 import {error} from "../../logger/log.ts";
 import {isPageId, verifyPageInfo} from "../../verify/verifyPageInfo.ts";
 import type {Validation, ValidationError} from "../../../types";
@@ -9,14 +9,14 @@ import {outInvalidFileNames} from "../../utils/filter.ts";
 import {getOutputJSONS} from "../../files/getOutputJSONS.ts";
 import {hasNoFiles} from "../../files/hasNoFiles.ts";
 import {getPanelsPageInfo} from "../../utils/page.ts";
-import type {PanelId} from "@library/types";
+import {type PanelId} from "@library/types";
 import {getPanelId} from "../../utils/panel.ts";
 import {getOutputImages} from "../../files/getOutputImages.ts";
 
 
 function hasImage(folderPath: string, panelId: string) {
     return getOutputImages(folderPath).some(
-        (imageFileName) => imageFileName === `${panelId}${IMAGE_EXTENSION}`,
+        (imageFileName) => imageFileName === `${panelId}${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
     );
 }
 
@@ -50,7 +50,7 @@ function getPanelsWithoutImage(folderPath: string): string[] {
     const isWithoutImage = (fileName: string) => {
         return isPanelId(fileName) && !hasImage(folderPath, getPanelId(folderPath, fileName));
     }
-
+    
     return getOutputJSONS(folderPath).filter(isWithoutImage);
 }
 

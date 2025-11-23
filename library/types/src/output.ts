@@ -1,17 +1,23 @@
 import * as z from "zod";
 
-export const ComicStyle = {
-    "BELGIAN_COMIC": "Belgian Comic",
-    "BLUEBERRY": "Blueberry",
-    "THE_BLUECOATS": "The Bluecoats",
-    "CLASSIC_DC_COMICS": "Classic DC Comics",
-    "MODERN_DC_COMICS": "Modern DC Comics",
-    "ANIME": "Anime",
-    "SIMPLIFIED_LINE_DRAWING": "Simplified Line Drawing",
+export const ComicStyleTypeKey = z.enum([
+    'SI', 'BE', 'BL', 'TH', 'CL', 'MO', 'AN',
+]);
+const ComicStyleRecord = z.record(ComicStyleTypeKey, z.string())
+export type ComicStyleRecord = z.infer<typeof ComicStyleRecord>;
+
+export const ComicStyle: ComicStyleRecord = {
+    BE: "Belgian Comic",
+    BL: "Blueberry",
+    TH: "The Bluecoats",
+    CL: "Classic DC Comics",
+    MO: "Modern DC Comics",
+    AN: "Anime",
+    SI: "Simplified Line Drawing",
 } as const
 
 export const ComicStyleType = z.enum([
-    ComicStyle.SIMPLIFIED_LINE_DRAWING
+    ComicStyle.SI
 ]);
 
 export const ComicStyles = z.array(ComicStyleType);

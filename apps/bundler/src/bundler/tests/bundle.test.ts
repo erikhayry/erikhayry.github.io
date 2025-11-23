@@ -4,6 +4,7 @@ import fs from "node:fs";
 import {readPath} from "../../files/readPath.ts";
 import {Website} from "@library/types";
 import {getImages} from "../../files/getImages.ts";
+import {COMIC_STYLE_EXTENSION, IMAGE_EXTENSION} from "../../constants.ts";
 
 const WWW_FOLDER_DIR = "src/bundler/tests/comicsOutput";
 const IMAGE_FOLDER = "src/bundler/tests/comicsOutput";
@@ -40,13 +41,13 @@ test("should copy images", () => {
     bundle(config);
 
     expect(getImages(`${IMAGE_FOLDER}/comic-1`)).toEqual([
-        "1.1.1.png",
-        "1.1.2.png",
-        "1.2.1.png",
-        "10.1.1.png",
-        "2.1.1.png"
+        `1.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
+        `1.1.2${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
+        `1.2.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
+        `10.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
+        `2.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`
     ]);
-    expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual(["1.1.1.png"]);
+    expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual([`1.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`]);
 });
 
 test("should create json schema for panel", () => {
