@@ -1,26 +1,22 @@
 import * as z from "zod";
 
-export const ComicStyleTypeKey = z.enum([
-    'SI', 'BE', 'BL', 'TH', 'CL', 'MO', 'AN',
-]);
-const ComicStyleRecord = z.record(ComicStyleTypeKey, z.string())
-export type ComicStyleRecord = z.infer<typeof ComicStyleRecord>;
 
-export const ComicStyle: ComicStyleRecord = {
-    BE: "Belgian Comic",
-    BL: "Blueberry",
-    TH: "The Bluecoats",
-    CL: "Classic DC Comics",
-    MO: "Modern DC Comics",
-    AN: "Anime",
-    SI: "Simplified Line Drawing",
+export const ComicStyle = {
+    BELGIAN_COMIC: 'BE',
+    BLUEBERRY: 'BL',
+    THE_BLUECOATS: 'TH',
+    CLASSIC_DC_COMICS: 'CL',
+    MODERN_DC_COMICS: 'MO',
+    ANIME: 'AN',
+    SIMPLIFIED_LINE_DRAWING: 'SI',
 } as const
 
 export const ComicStyleType = z.enum([
-    ComicStyle.SI
+    ComicStyle.SIMPLIFIED_LINE_DRAWING
 ]);
+export type ComicStyleType = z.infer<typeof ComicStyleType>;
 
-export const ComicStyles = z.array(ComicStyleType);
+export const ComicStyleTypes = z.array(ComicStyleType)
 
 export const Language = {
     EN: "en",
@@ -85,7 +81,7 @@ export const PageInfo = z.object({
 });
 
 export const ComicInfo = z.object({
-    styles: ComicStyles
+    styles: ComicStyleTypes
 })
 
 export const PageOutput = z.object({
@@ -96,7 +92,7 @@ export const PageOutput = z.object({
 export const ComicOutput = z.object({
     pages: z.array(PageOutput),
     path: z.string(),
-    styles: ComicStyles
+    styles: ComicStyleTypes
 });
 
 export type PanelInfo = z.infer<typeof PanelInfo>;

@@ -35,7 +35,7 @@ function toComicOutput(comics: ComicOutput[], path: string): ComicOutput[] {
         {
             path,
             pages: getPages(path),
-            styles: [ComicStyle.SI]
+            styles: [ComicStyle.SIMPLIFIED_LINE_DRAWING]
         }
     ];
 }

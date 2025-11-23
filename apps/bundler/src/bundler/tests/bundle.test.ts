@@ -2,9 +2,9 @@ import {afterEach, expect, test} from "bun:test";
 import {bundle, type BundleConfig} from "../bundle.ts";
 import fs from "node:fs";
 import {readPath} from "../../files/readPath.ts";
-import {Website} from "@library/types";
+import {ComicStyle, Website} from "@library/types";
 import {getImages} from "../../files/getImages.ts";
-import {COMIC_STYLE_EXTENSION, IMAGE_EXTENSION} from "../../constants.ts";
+import {getImageName} from "../../utils/image.ts";
 
 const WWW_FOLDER_DIR = "src/bundler/tests/comicsOutput";
 const IMAGE_FOLDER = "src/bundler/tests/comicsOutput";
@@ -41,13 +41,13 @@ test("should copy images", () => {
     bundle(config);
 
     expect(getImages(`${IMAGE_FOLDER}/comic-1`)).toEqual([
-        `1.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
-        `1.1.2${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
-        `1.2.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
-        `10.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`,
-        `2.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`
+        getImageName('1.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
+        getImageName('1.1.2', ComicStyle.SIMPLIFIED_LINE_DRAWING),
+        getImageName('1.2.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
+        getImageName('10.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
+        getImageName('2.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
     ]);
-    expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual([`1.1.1${COMIC_STYLE_EXTENSION}${IMAGE_EXTENSION}`]);
+    expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual([getImageName('1.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING)]);
 });
 
 test("should create json schema for panel", () => {
