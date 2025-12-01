@@ -26,9 +26,9 @@
         position: absolute;
         width: fit-content;
         background-color: white;
-        padding: 4px;
-        bottom: 4px;
-        left: 4px;
+        padding: var(--spacing);
+        bottom: var(--spacing);
+        left: var(--spacing);
         border: 2px solid black
     }
 </style>

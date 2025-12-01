@@ -20,13 +20,13 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        gap: 8px;
+        gap: var(--spacing-2x);
     }
 
     .panel {
         overflow: hidden;
         border-color: #fff;
-        border-width: 8px;
+        border-width: var(--spacing-2x);
         border-style: solid;
         box-sizing: border-box;
         width: 100%;

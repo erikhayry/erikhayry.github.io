@@ -13,7 +13,7 @@
   "paragraph",
   "Messenger: Von Döbeln is coming — but he is ill!",
   "end of paragraph",
-  "navigation",
+  "navigation, Pagination",
   "list",
   "listitem, level 1, position 1, set size 2",
   "link, Page 1",
@@ -22,6 +22,6 @@
   "link, Page 3",
   "end of listitem, level 1, position 2, set size 2",
   "end of list",
-  "end of navigation",
+  "end of navigation, Pagination",
   "end of document"
 ]

@@ -1,5 +1,7 @@
 <script lang="ts">
     import Page from "../../../components/Page/Page.svelte";
+    import {i18n} from "../../../i18n/i18n";
+    import {TEXT} from "../../../i18n/ui";
 
 
     let {data} = $props();
@@ -8,20 +10,12 @@
 </script>
 
 <style>
-    .title {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
     .nav {
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: var(--spacing);
+        right: var(--spacing);
         z-index: 1;
-        width: 100%;
-        padding: 4px;
+        padding: var(--spacing);
         box-sizing: border-box;
     }
 
@@ -37,22 +31,22 @@
 
     .nav a {
         color: white;
-        padding: 4px;
+        padding: var(--spacing);
         display: inline-block;
     }
 </style>
 
-<h1 class="title">{title}</h1>
+<h1 class="visually-hidden">{title}</h1>
 
 <Page layout={page.layout} panels={page.panels} slug={slug}/>
 
-<nav class="nav">
+<nav aria-label={i18n(TEXT.paginationLabel)} class="nav">
     <ul>
         <li>
-            <a class="back-link" href={pagination.back.href}>{pagination.back.title}</a>
+            <a href={pagination.back.href} rel="prev">{pagination.back.title}</a>
         </li>
         <li>
-            <a class="back-link" href={pagination.forward.href}>{pagination.forward.title}</a>
+            <a href={pagination.forward.href} rel="next">{pagination.forward.title}</a>
         </li>
     </ul>
 </nav>
