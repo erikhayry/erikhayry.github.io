@@ -15,21 +15,27 @@
 
 <style>
     .panel-image {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
+        @media (min-width: 1250px) {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 
     .narration {
-        position: absolute;
         width: fit-content;
         background-color: white;
+        border: 2px solid black;
         padding: var(--spacing);
-        bottom: var(--spacing);
-        left: var(--spacing);
-        border: 2px solid black
+        margin: var(--spacing) 0;
+
+        @media (min-width: 1250px) {
+            position: absolute;
+            bottom: var(--spacing);
+            left: var(--spacing);
+        }
     }
 </style>
 

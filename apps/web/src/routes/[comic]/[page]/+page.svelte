@@ -11,28 +11,33 @@
 
 <style>
     .nav {
-        position: absolute;
-        bottom: var(--spacing);
-        right: var(--spacing);
-        z-index: 1;
         padding: var(--spacing);
-        box-sizing: border-box;
+
+        @media (min-width: 1250px) {
+            position: absolute;
+            bottom: var(--spacing);
+            right: var(--spacing);
+            z-index: 1;
+        }
     }
 
     .nav ul {
         display: flex;
         justify-content: space-between;
-        background-color: black;
-        list-style: none;
-        padding: 0;
-        margin: 0;
 
+        @media (min-width: 1250px) {
+            background-color: black;
+        }
     }
 
     .nav a {
-        color: white;
         padding: var(--spacing);
         display: inline-block;
+        color: black;
+
+        @media (min-width: 1250px) {
+            color: white;
+        }
     }
 </style>
 

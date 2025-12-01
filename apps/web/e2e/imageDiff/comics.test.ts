@@ -1,41 +1,41 @@
-import { expect, type Page, test } from "@playwright/test";
-import type { Comic } from "@library/types";
-import { getComics } from "../../src/utils/getComics.ts";
-import { getPagination } from "../../src/routes/[comic]/[page]/utils/getPagination.ts";
+import {expect, type Page, test} from "@playwright/test";
+import type {Comic} from "@library/types";
+import {getComics} from "../../src/utils/getComics.ts";
+import {getPagination} from "../../src/routes/[comic]/[page]/utils/getPagination.ts";
 
 async function testComic(comic: Comic, page: Page) {
-  await page.getByRole("link", { name: comic.slug, exact: true }).click();
+    await page.getByRole("link", {name: comic.slug, exact: true}).click();
 
-  let testedPage = 0;
+    let testedPage = 0;
 
-  while (testedPage < comic.pages.length) {
-    await page
-      .getByRole("link", {
-        name: getPagination(comic.slug, testedPage).forward.title,
-        exact: true,
-      })
-      .click();
-    await expect(page).toHaveScreenshot(
-      `${comic.slug}/${testedPage.toString()}.png`,
-    );
-    testedPage++;
-  }
+    while (testedPage < comic.pages.length) {
+        await page
+            .getByRole("link", {
+                name: getPagination(comic.slug, testedPage).forward.title,
+                exact: true,
+            })
+            .click();
+        await expect(page).toHaveScreenshot(
+            `${comic.slug}/${testedPage.toString()}.png`, {fullPage: true}
+        );
+        testedPage++;
+    }
 
-  await page.goto("/");
+    await page.goto("/");
 }
 
 async function testComics(page: Page) {
-  await page.goto("/");
-  await expect(page).toHaveScreenshot("comics.png");
-  const comics = getComics();
-  let testedComic = 0;
+    await page.goto("/");
+    await expect(page).toHaveScreenshot("comics.png", {fullPage: true});
+    const comics = getComics();
+    let testedComic = 0;
 
-  while (testedComic < comics.length) {
-    await testComic(comics[testedComic]!, page);
-    testedComic++;
-  }
+    while (testedComic < comics.length) {
+        await testComic(comics[testedComic]!, page);
+        testedComic++;
+    }
 }
 
-test("comics", async ({ page }) => {
-  await testComics(page);
+test("comics", async ({page}) => {
+    await testComics(page);
 });

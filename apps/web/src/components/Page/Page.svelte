@@ -16,22 +16,29 @@
 
 <style>
     .page {
-        display: grid;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
         gap: var(--spacing-2x);
+
+        @media (min-width: 1250px) {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
     }
 
     .panel {
-        overflow: hidden;
         border-color: #fff;
         border-width: var(--spacing-2x);
         border-style: solid;
-        box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-        position: relative;
+        overflow: hidden;
+
+        @media (min-width: 1250px) {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .layout-1 {

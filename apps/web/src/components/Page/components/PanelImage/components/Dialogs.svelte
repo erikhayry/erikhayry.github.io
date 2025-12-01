@@ -11,13 +11,16 @@
 
 <style>
     .dialog {
-        position: absolute;
+        padding: var(--spacing);
+        border: 2px solid black;
         width: fit-content;
-        background-color: white;
-        padding: 4px;
-        top: 4px;
-        left: 4px;
-        border: 2px solid black
+        
+        @media (min-width: 1250px) {
+            position: absolute;
+            background-color: white;
+            top: var(--spacing);
+            left: var(--spacing);
+        }
     }
 </style>
 
