@@ -34,13 +34,12 @@
 </style>
 
 
-<img alt={i18n(panel.description)} aria-describedby={`${panel.id}-narration ${panel.id}-dialog`} class="panel-image"
-     height="auto" {src}
-     width="100%"/>
+<img alt={i18n(panel.description)} class="panel-image" height="auto" {src} width="100%"/>
+
 {#if panel.narration}
-    <p id={`${panel.id}-narration`} class="narration">{i18n(panel.narration)}</p>
+    <p class="narration">{i18n(panel.narration)}</p>
 {/if}
 
 {#if panel.dialogs}
-    <Dialogs dialogs={panel.dialogs} id={panel.id}/>
+    <Dialogs dialogs={panel.dialogs}/>
 {/if}

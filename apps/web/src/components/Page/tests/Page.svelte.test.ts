@@ -23,27 +23,18 @@ describe("<Page />", () => {
 
     describe("narrations", () => {
         test("should show narrations", () => {
-            const {getImages} = renderPageSvelte(PAGE_1_MOCK);
+            const {getByText} = renderPageSvelte(PAGE_1_MOCK);
 
-            expect(getImages().at(0)).toHaveAccessibleDescription(
-                PAGE_1_PANEL_1_NARRATION_1,
-            );
-        });
-
-        test("should not show narrations", () => {
-            const {getImages} = renderPageSvelte(PAGE_2_MOCK);
-
-            expect(getImages().at(1)).not.toHaveAccessibleDescription();
+            expect(getByText(PAGE_1_PANEL_1_NARRATION_1)).toBeInTheDocument()
         });
     });
 
-    describe("narrations", () => {
+    describe("dialogs", () => {
         test("should show dialog", () => {
-            const {getImages} = renderPageSvelte(PAGE_2_MOCK);
+            const {getByText} = renderPageSvelte(PAGE_2_MOCK);
 
-            expect(getImages().at(0)).toHaveAccessibleDescription(
-                `${getDialog(PAGE_2_PANEL_1_DIALOG_1)} ${getDialog(PAGE_1_PANEL_1_DIALOG_2)}`,
-            );
+            expect(getByText(getDialog(PAGE_2_PANEL_1_DIALOG_1))).toBeInTheDocument()
+            expect(getByText(getDialog(PAGE_1_PANEL_1_DIALOG_2))).toBeInTheDocument()
         });
 
         test("should not show dialogs", () => {

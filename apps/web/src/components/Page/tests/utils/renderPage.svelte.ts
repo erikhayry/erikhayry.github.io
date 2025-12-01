@@ -22,5 +22,6 @@ export function renderPageSvelte({
         getImages: () => renderResult.getByRole("img").all(),
         getPageContainer: () => renderResult.getByTestId(PAGE_CONTAINER_TEST_ID),
         getAllPanelContainers,
+        getByText: renderResult.getByText
     };
 }

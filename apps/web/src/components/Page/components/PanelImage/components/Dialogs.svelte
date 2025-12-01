@@ -3,11 +3,10 @@
     import {getDialog} from "./utils/getDialog";
 
     interface Props {
-        id: string
         dialogs: Dialog[];
     }
 
-    let {id, dialogs}: Props = $props();
+    let {dialogs}: Props = $props();
 </script>
 
 <style>
@@ -22,8 +21,8 @@
     }
 </style>
 
-<div id={`${id}-dialog`}>
-    {#each dialogs as dialog (dialog)}
-        <p class="dialog">{getDialog(dialog)}</p>
-    {/each}
-</div>
+
+{#each dialogs as dialog (dialog)}
+    <p class="dialog">{getDialog(dialog)}</p>
+{/each}
+

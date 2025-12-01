@@ -6,8 +6,8 @@ A monorepo for the Jutas comic and web app, built with Bun, TypeScript, and Svel
 
 - **index.ts**: Main entry point for bundling and orchestration.
 - **apps/**: Contains subprojects:
-  - **bundler/**: Handles code bundling and related logic.
-  - **web/**: Svelte-based web application, with tests and build scripts.
+    - **bundler/**: Handles comic bundling.
+    - **web/**: Svelte-based web application, with tests and build scripts.
 - **comics/**: Data, images, instructions, and output for comic projects.
 - **library/**: Shared types and schemas for use across apps.
 
@@ -56,6 +56,7 @@ bun run build:web
 - `prepare`: Sets up git hooks with Husky
 
 ## Technologies
+
 - Bun (JavaScript runtime)
 - TypeScript
 - Svelte (web app)
@@ -63,11 +64,14 @@ bun run build:web
 - Zod (validation)
 
 ## Workspaces
+
 This repo uses Bun workspaces for modular development:
+
 - `apps/*`
 - `library/*`
 
 ## License
+
 See individual app folders for license details.
 
 ---
