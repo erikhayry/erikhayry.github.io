@@ -31,26 +31,26 @@
       },
       "imageSizes": {
         "canvasSize_1x": {
-          "width": 4096,
-          "height": 3072
+          "width": 2048,
+          "height": 1536
         },
         "canvasSize_2x": {
-          "width": 8192,
-          "height": 6144
-        },
-        "recommendedExport_1x": {
           "width": 4096,
           "height": 3072
         },
+        "recommendedExport_1x": {
+          "width": 2048,
+          "height": 1536
+        },
         "recommendedExport_2x": {
-          "width": 8192,
-          "height": 6144
+          "width": 4096,
+          "height": 3072
         }
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 2000,
-        "size_2x": 4000,
+        "size_1x": 1000,
+        "size_2x": 2000,
         "placement": "centered",
         "notes": "Center the most important subject or group inside this square so any square crop will keep story-critical content."
       },
@@ -93,36 +93,35 @@
       },
       "imageSizes": {
         "pageCanvas_1x": {
-          "width": 4096,
-          "height": 3072
+          "width": 2048,
+          "height": 1536
         },
         "pageCanvas_2x": {
-          "width": 8192,
-          "height": 6144
+          "width": 4096,
+          "height": 3072
         },
         "panelSize_1x": {
-          "width": 4096,
-          "height": 1536
+          "width": 2048,
+          "height": 768
         },
         "panelSize_2x": {
-          "width": 8192,
-          "height": 3072
-        },
-        "recommendedExportPanel_1x": {
           "width": 4096,
           "height": 1536
         },
+        "recommendedExportPanel_1x": {
+          "width": 2048,
+          "height": 768
+        },
         "recommendedExportPanel_2x": {
-          "width": 8192,
-          "height": 3072
+          "width": 4096,
+          "height": 1536
         }
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 2000,
-        "size_2x": 4000,
-        "placement": "centered-in-each-panel",
-        "notes": "Place primary subject inside the ActionSquare of its panel. For very wide subjects, ensure the critical portion sits within the square."
+        "size_1x": 1000,
+        "size_2x": 2000,
+        "placement": "centered-in-each-panel"
       },
       "layoutRules": {
         "internalGutterPx": 0,
@@ -171,36 +170,35 @@
       },
       "imageSizes": {
         "pageCanvas_1x": {
+          "width": 2048,
+          "height": 1536
+        },
+        "pageCanvas_2x": {
           "width": 4096,
           "height": 3072
         },
-        "pageCanvas_2x": {
-          "width": 8192,
-          "height": 6144
-        },
         "panelSize_1x": {
-          "width": 4096,
-          "height": 1024
+          "width": 2048,
+          "height": 512
         },
         "panelSize_2x": {
-          "width": 8192,
-          "height": 2048
-        },
-        "recommendedExportPanel_1x": {
           "width": 4096,
           "height": 1024
         },
+        "recommendedExportPanel_1x": {
+          "width": 2048,
+          "height": 512
+        },
         "recommendedExportPanel_2x": {
-          "width": 8192,
-          "height": 2048
+          "width": 4096,
+          "height": 1024
         }
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 1600,
-        "size_2x": 3200,
-        "placement": "centered-in-each-panel",
-        "notes": "Because panels are shorter vertically, the ActionSquare is smaller; always center the most important subject/action in that square."
+        "size_1x": 800,
+        "size_2x": 1600,
+        "placement": "centered-in-each-panel"
       },
       "layoutRules": {
         "internalGutterPx": 0,
@@ -254,36 +252,35 @@
       },
       "imageSizes": {
         "pageCanvas_1x": {
-          "width": 4096,
-          "height": 3072
+          "width": 2048,
+          "height": 1536
         },
         "pageCanvas_2x": {
-          "width": 8192,
-          "height": 6144
+          "width": 4096,
+          "height": 3072
         },
         "panelSize_1x": {
-          "width": 2048,
-          "height": 1536
+          "width": 1024,
+          "height": 768
         },
         "panelSize_2x": {
-          "width": 4096,
-          "height": 3072
-        },
-        "recommendedExportPanel_1x": {
           "width": 2048,
           "height": 1536
         },
+        "recommendedExportPanel_1x": {
+          "width": 1024,
+          "height": 768
+        },
         "recommendedExportPanel_2x": {
-          "width": 4096,
-          "height": 3072
+          "width": 2048,
+          "height": 1536
         }
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 1400,
-        "size_2x": 2800,
-        "placement": "centered-in-each-panel",
-        "notes": "Smaller ActionSquare per panel — use close-ups or single focal actions inside each square."
+        "size_1x": 700,
+        "size_2x": 1400,
+        "placement": "centered-in-each-panel"
       },
       "layoutRules": {
         "internalGutterPx": 0,
