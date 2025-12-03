@@ -1,0 +1,50 @@
+{
+  "masterInstructions": {
+    "sources": {
+      "pageLayout": {
+        "file": "page-layout.json",
+        "reference": "Use this file for all page layouts, panel structures, canvas sizes, ActionSquare definitions, and no-gutter/no-margin rules."
+      },
+      "soldierData": {
+        "file": "soldier.json",
+        "reference": "Use this file for all Swedish and Russian uniforms, equipment details, and historical appearance rules."
+      },
+      "mainCharacters": {
+        "file": "main-characters.json",
+        "reference": "Use this file for all main characters"
+      },
+      "comicStyles": {
+        "file": "comic-styles.json",
+        "reference": "Use this file to determine the visual rendering style, line treatment, color rules, shading logic, and stylistic constraints."
+      },
+      "storyboard": {
+        "file": "storyboard.json",
+        "reference": "Use this file for page order, scenes, panel descriptions, character presence, and narrative progression."
+      },
+      "currentStyle": {
+        "file": "current-style.json",
+        "reference": "Use this file for current style for the comic"
+      }
+    },
+    "globalRules": {
+      "imageConfirmationRequired": true,
+      "imageConfirmationInstruction": "Always ask the user for confirmation before generating any image. Never create an image without explicit approval.",
+      "fileAuthority": "All four source files are authoritative. This master file never overrides their contents but orchestrates how they should be used together.",
+      "noCopying": "Do not copy text from the source files. Only reference and apply their instructions."
+    },
+    "productionFlow": {
+      "step1_storyboard": "Identify the page and panel content from storyboard.json.",
+      "step2_layout": "Load the matching page layout from page-layout.json and apply its rules.",
+      "step3_uniforms": "Load all required character and uniform information from soldier.json.",
+      "step4_style": "Apply the selected rendering style as defined in comic-styles.json.",
+      "step5_confirmation": "Ask the user if they want the image generated. Proceed only if they confirm.",
+      "step6_generation": "Generate images only after confirmation and only in compliance with the four referenced files."
+    },
+    "consistencyRequirements": {
+      "layoutConsistency": "All panel counts, sizes, ActionSquare behavior, and layout structures must match page-layout.json.",
+      "visualConsistency": "Uniform colors, equipment, and era details must match soldier.json.",
+      "styleConsistency": "Rendering must follow the chosen style from comic-styles.json without mixing styles unless the user requests it.",
+      "narrativeConsistency": "Scenes must match storyboard.json exactly; do not add or remove scenes or characters."
+    }
+  }
+}

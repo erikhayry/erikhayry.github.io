@@ -1,0 +1,84 @@
+{
+  "panelPromptGenerator": {
+    "version": "1.0",
+    "purpose": "Defines how to generate a complete, production-ready prompt for any specific panel in the Slaget vid Jutas comic project.",
+    "trigger": "When the user says: 'Generate prompt for Page X, Panel Y'.",
+    "dataSources": {
+      "storyboard": {
+        "file": "storyboard.json",
+        "usage": "Extract page-level descriptions, panel descriptions, characters, scenes, and weather."
+      },
+      "pageLayout": {
+        "file": "page-layout.json",
+        "usage": "Determine layout rules, panel count, panel sizes, ActionSquare definition, no-gutter rules."
+      },
+      "mainCharacters": {
+        "file": "main-characters.json",
+        "usage": "Enforce character visual identity and continuity."
+      },
+      "soldierData": {
+        "file": "soldier.json",
+        "usage": "Load accurate Swedish and Russian uniform and equipment rules."
+      },
+      "currentStyle": {
+        "file": "current-style.json",
+        "usage": "Select active comic style."
+      },
+      "comicStyles": {
+        "file": "comic-styles.json",
+        "usage": "Load aiInstructions for the active style."
+      }
+    },
+    "generationSteps": [
+      {
+        "id": 1,
+        "name": "Load Data",
+        "instructions": [
+          "Read the requested page from storyboard.json.",
+          "Read the specified panel from that page.",
+          "Retrieve that page's pageType and match it to page-layout.json.",
+          "Fetch all characters listed for that page.",
+          "For each character: load visual identity from main-characters.json.",
+          "Load uniform rules from soldier.json as required.",
+          "Load the current style from current-style.json and the full aiInstructions from comic-styles.json.",
+          "If outdoor: apply weather and lighting rules from storyboard.json."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Assemble Prompt Structure",
+        "promptFormat": {
+          "Page": "<pageNumber>",
+          "Panel": "<panelId>",
+          "Layout": "<layoutName and layoutNumber>",
+          "CanvasSize": "<panel-size from page-layout.json>",
+          "ActionSquare": "<size + centered placement>",
+          "SceneFromStoryboard": "<panel.description>",
+          "ExpandedScene": "<environment, weather, mood, depth, historical detail>",
+          "Characters": "<list of characters from storyboard>",
+          "CharacterDetails": "For each: apply visual identity rules, uniforms, consistency requirements.",
+          "Style": "<active style + all aiInstructions>",
+          "CameraAndComposition": "<camera angle, distance, framing>",
+          "Lighting": "<based on weather/time-of-day from storyboard>",
+          "NoGuttersNoMargins": "Never add gutters or margins. Panel fills its entire canvas.",
+          "ActionSquareRule": "Place main action inside centered ActionSquare unless intentionally off-center."
+        }
+      },
+      {
+        "id": 3,
+        "name": "Final Output to User",
+        "instructions": [
+          "Output the full panel prompt using the structure above.",
+          "DO NOT generate any image automatically.",
+          "Ask explicitly: 'Do you want me to generate this image?'",
+          "Only generate after explicit user confirmation."
+        ]
+      }
+    ],
+    "notes": {
+      "overrideRules": "This JSON does not override any authoritative file. It documents process only.",
+      "recommendedProjectPlacement": "Store this file as panel-prompt-generator.json in the project root.",
+      "integration": "master.json may reference this file for clarity, but should not depend on it."
+    }
+  }
+}
