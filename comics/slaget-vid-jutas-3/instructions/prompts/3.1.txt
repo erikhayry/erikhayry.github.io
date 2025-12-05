@@ -1,0 +1,33 @@
+Page: 3
+Panel: 1
+Layout: SplitWide (2)
+Panel Size: 4096×1536 (1x)
+
+Scene Description:
+Top wide panel showing the tired Swedish column trudging through muddy roads.
+Autumn fields on both sides. Wagons creaking behind the line. Smoke drifting from
+the distant horizon.
+
+Characters:
+- Björneborgs regemente (use Swedish infantry uniforms from soldier.json)
+- Georg Carl von Döbeln (if visible in the distance, obey main-characters.json)
+- Swedish Soldiers group (fallback to Swedish uniform rules)
+
+Style:
+Use style from current-style.json with full aiInstructions from comic-styles.json.
+
+Weather & Lighting:
+Late-summer Finland. Soft afternoon light. Light showers earlier created
+mud patches and darker soil. Mild breeze — grass and birch leaves moving subtly.
+Smoke drifts horizontally (storyboard weather rules).
+
+ActionSquare:
+Center the most important action: front portion of the marching column.
+Ensure the ActionSquare remains readable even in wide composition.
+
+Camera / Composition:
+High, slightly angled wide shot. Deep perspective along the muddy road.
+Foreground soldiers larger; background fades into mist.
+
+No-Gutter / No-Margins Rule:
+No gutter. No outer margins. Panel fills entire canvas.

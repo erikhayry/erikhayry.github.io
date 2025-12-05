@@ -1,0 +1,24 @@
+{
+  "id": "5.1.4",
+  "description": {
+    "en": "Döbeln, pale and bandaged, points at a map in candlelit quarters while lying in bed."
+  },
+  "narration": {
+    "en": "Despite fever and wounds, Döbeln traces the route to Jutas, issuing orders from his dimly lit quarters."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "person": "Georg Carl von Döbeln",
+        "text": "Here... toward Jutas. They must move at once."
+      }
+    },
+    {
+      "en": {
+        "person": "Aide-de-camp",
+        "text": "I will have the dispatch sent immediately, sir."
+      }
+    }
+  ],
+  "info": "ActionSquare centered on Döbeln’s face and pointing hand; candlelit interior; bandage visible instead of headband."
+}

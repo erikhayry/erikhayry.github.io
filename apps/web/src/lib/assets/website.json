@@ -486,5 +486,136 @@
     "styles": [
       "SI"
     ]
+  },
+  {
+    "slug": "slaget-vid-jutas-3",
+    "pages": [
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "3.1.1",
+            "description": {
+              "en": "Panoramic late-summer view of Nykarleby with river bend, church steeple, wooden houses, and a distant small marching Swedish column."
+            },
+            "narration": {
+              "en": "Nykarleby lies quiet under late-summer light as a distant Swedish column approaches along the river road, townsfolk moving about the quays beneath the wide northern sky."
+            },
+            "dialogs": []
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "4.1.1",
+            "description": {
+              "en": "A weary Swedish column marches through muddy late-summer roads with wagons trailing and distant smoke drifting on the horizon."
+            },
+            "narration": {
+              "en": "Through mud and fading summer light, the Swedish column trudges onward from Vasa—wagons creaking as smoke rises far ahead."
+            },
+            "dialogs": []
+          },
+          {
+            "id": "4.1.2",
+            "description": {
+              "en": "Döbeln rides beside weary Swedish soldiers marching through muddy autumn fields as light rain falls."
+            },
+            "narration": {
+              "en": "Along the sodden road, Döbeln rides at the column’s flank while his officers confer amid the spitting rain."
+            },
+            "dialogs": []
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "5.1.1",
+            "description": {
+              "en": "Evening exterior of a modest wooden house in Nykarleby, with a warm candle-glow shining from one window."
+            },
+            "narration": {
+              "en": "Evening settles over Nykarleby as a faint candlelight glimmers from the house where Döbeln lies sick within."
+            },
+            "dialogs": []
+          },
+          {
+            "id": "5.1.2",
+            "description": {
+              "en": "Aide-de-camp arranging maps and dispatches on a wooden table lit by warm candlelight."
+            },
+            "narration": {
+              "en": "In the dim quarters, the aide spreads maps and dispatches as candlelight pools across inked notes."
+            },
+            "dialogs": []
+          },
+          {
+            "id": "5.1.3",
+            "description": {
+              "en": "Döbeln sits half-upright in his sickbed, gesturing firmly toward an aide who stands beside a table in the dim candlelit room."
+            },
+            "narration": {
+              "en": "Though weakened by fever and wounds, Döbeln commands from his bed with unwavering resolve."
+            },
+            "dialogs": []
+          },
+          {
+            "id": "5.1.4",
+            "description": {
+              "en": "Döbeln, pale and bandaged, points at a map in candlelit quarters while lying in bed."
+            },
+            "narration": {
+              "en": "Despite fever and wounds, Döbeln traces the route to Jutas, issuing orders from his dimly lit quarters."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Here... toward Jutas. They must move at once.",
+                  "person": "Georg Carl von Döbeln"
+                }
+              },
+              {
+                "en": {
+                  "text": "I will have the dispatch sent immediately, sir.",
+                  "person": "Aide-de-camp"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "6.1.1",
+            "description": {
+              "en": "Wide establishing view of the Jutas landscape with the river and road under clear late-summer daylight, based on the reference image without its bottom border or text."
+            },
+            "narration": {
+              "en": "The river winds through the quiet fields toward Jutas as the afternoon light settles over the road ahead."
+            },
+            "dialogs": []
+          },
+          {
+            "id": "6.1.2",
+            "description": {
+              "en": "Döbeln salutes from horseback before cheering Swedish infantry in the afternoon light near Jutas."
+            },
+            "narration": {
+              "en": "Afternoon light washes over the marching column as Döbeln lifts his hand in salute. The ranks of Björneborgs regemente answer with cheers, their bayonets catching the sun while nearby officers point toward the ground where the defenses will soon be formed."
+            },
+            "dialogs": []
+          }
+        ]
+      }
+    ],
+    "styles": [
+      "SI"
+    ]
   }
 ]

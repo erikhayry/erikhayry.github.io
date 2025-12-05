@@ -1,0 +1,81 @@
+{
+  "swedish_uniform": {
+    "era": "Finnish War (1808–1809)",
+    "regiment": "Björneborgs läns infanteriregemente",
+    "affiliation": "Swedish Army",
+    "primaryColors": {
+      "tunic": "dark blue",
+      "facings": "yellow",
+      "trousers": "white",
+      "shako": "black with yellow band and brass plate",
+      "equipmentLeather": "brown",
+      "gaiters": "black"
+    },
+    "clothingDetails": {
+      "tunic": {
+        "description": "Double-breasted dark blue tunic with standing yellow collar and yellow cuffs",
+        "buttons": "brass buttons arranged in two vertical rows"
+      },
+      "trousers": {
+        "description": "White or off-white trousers reaching to mid-calf, tucked into gaiters"
+      },
+      "headgear": {
+        "description": "Black shako with yellow band at base and front brass regimental plate",
+        "additional": "Small cockade or plume optional depending on rank"
+      },
+      "equipment": {
+        "crossBelts": "Two brown leather crossbelts crossing at the chest",
+        "cartridgeBox": "Black cartridge box worn on right hip",
+        "musket": "Flintlock musket with bayonet fixed or shouldered"
+      },
+      "footwear": {
+        "description": "Black leather gaiters over low shoes"
+      }
+    },
+    "appearanceNotes": {
+      "overallLook": "Neat and disciplined; practical field appearance with minor wear from campaign conditions",
+      "material": "Wool tunic, linen trousers, leather equipment",
+      "tone": "Swedish-Finnish uniform style typical of early 19th century"
+    }
+  },
+  "russian_uniform": {
+    "era": "Finnish War (1808–1809)",
+    "regiment": "Line Infantry, Russian Empire",
+    "affiliation": "Imperial Russian Army",
+    "primaryColors": {
+      "tunic": "dark green",
+      "facings": "red (collar, cuffs)",
+      "trousers": "white or light grey",
+      "shako": "black kiwer with brass plate",
+      "equipmentLeather": "black",
+      "gaiters": "black"
+    },
+    "clothingDetails": {
+      "tunic": {
+        "description": "Dark green single-breasted coat (dolman/kaftan variant depending on supply) with red collar and cuffs",
+        "buttons": "brass buttons spaced down the front"
+      },
+      "trousers": {
+        "description": "White or light grey trousers, sometimes reinforced with patches or mud-stained from campaign use"
+      },
+      "headgear": {
+        "description": "Early-war Russian kiwer shako (or pre-kiwer bicorn in some units), black with brass front plate",
+        "additional": "Small plume or pompon, usually in company color"
+      },
+      "equipment": {
+        "crossBelts": "Black leather crossbelt for cartridge box; bayonet scabbard on left side",
+        "cartridgeBox": "Black leather with brass badge depending on regiment",
+        "musket": "Flintlock musket (M1798 or similar), bayonet fixed in battle",
+        "backpack": "Brown or black leather pack with rolled greatcoat on top"
+      },
+      "footwear": {
+        "description": "Black leather gaiters over low shoes; boots possible for NCOs"
+      }
+    },
+    "appearanceNotes": {
+      "overallLook": "Sturdy, campaign-worn appearance; Russian infantry often appeared slightly more rugged due to long marches and supply delays",
+      "material": "Wool tunic, linen trousers, leather equipment",
+      "tone": "Characteristic early 19th-century Russian infantry look: dark green massed ranks with red facings and tall shakos"
+    }
+  }
+}
