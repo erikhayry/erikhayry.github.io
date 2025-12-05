@@ -44,6 +44,42 @@
     },
     {
       "page": 3,
+      "title": "Nykarleby — Hero",
+      "description": "A single full-page hero panel establishing Nykarleby: panoramic view of the town, river and surrounding farmland at late-summer light. Small figures of marching troops and a few townsfolk give scale; Döbeln's quarters visible as a modest house near the waterfront.",
+      "location": "Nykarleby, early September 1808",
+      "scene": "Panoramic establishing shot of Nykarleby: church steeple, cluster of wooden houses, river bend with small boats; distant column of Swedish soldiers on the road approaching the town. Wide skies with light cloud and soft late-summer light.",
+      "pageType": "1",
+      "panels": [
+        {
+          "id": "1",
+          "description": "Hero full-page panel: sweeping panorama of Nykarleby. Place the ActionSquare centered on the town cluster so that any square crop retains the town and approach road. Atmosphere: neutral Nordic daylight, slight haze near river, ground with patches of mud after intermittent shower.",
+          "notes": {
+            "layout": "Hero (1) — full page single panel (use Hero layout canvas and ActionSquare).",
+            "canvas_recommendation": {
+              "canvasSize_1x": {
+                "width": 2048,
+                "height": 1536
+              },
+              "canvasSize_2x": {
+                "width": 4096,
+                "height": 3072
+              },
+              "ActionSquare_size_1x": 1000,
+              "ActionSquare_size_2x": 2000,
+              "ActionSquare_placement": "centered on town cluster"
+            },
+            "characters_present": [
+              "Distant: Björneborgs regemente (marching column, very small scale)",
+              "Townsfolk: 3–5 figures on quays/streets (background scale only)"
+            ],
+            "style_hint": "Render in the project's current style and respect character/uniform rules before image creation.",
+            "weather_hint": "Apply storyboard weather rules (late summer, intermittent light showers) for lighting and ground texture."
+          }
+        }
+      ]
+    },
+    {
+      "page": 4,
       "title": "Retreat from Vasa",
       "description": "The Swedish army retreats from Vasa to Nykarleby under pressure from advancing Russian forces. The soldiers are exhausted but determined.",
       "characters": [
@@ -65,7 +101,7 @@
       ]
     },
     {
-      "page": 4,
+      "page": 5,
       "title": "Döbeln Sick in Nykarleby",
       "description": "Döbeln lies in bed, weakened by fever and a head wound. Despite illness, he continues to command and issue orders from his quarters in Nykarleby.",
       "characters": [
@@ -78,7 +114,7 @@
       "panels": [
         {
           "id": "1",
-          "description": "Close on Döbeln in bed; bandage and black headband on table edge."
+          "description": "Exterior of the modest wooden house in Nykarleby where Döbeln lies sick. Evening light and a faint warm candle-glow from a window hint at activity inside; an aide or messenger stands near the door preparing to enter."
         },
         {
           "id": "2",
@@ -86,7 +122,7 @@
         },
         {
           "id": "3",
-          "description": "Close up Döbelns face. Determined"
+          "description": "Döbeln lies half-upright in his sickbed, addressing an aide who stands beside a small table with papers and bottles. His expression is determined despite fever and bandaged wounds. Candlelight illuminates the dim wooden room."
         },
         {
           "id": "4",
@@ -95,7 +131,7 @@
       ]
     },
     {
-      "page": 5,
+      "page": 6,
       "title": "March to Jutas",
       "description": "The Swedish troops march toward Jutas. Döbeln, pale but resolute, rides before his soldiers on horseback, overseeing the preparation of defensive positions in Jutas.",
       "characters": [
@@ -118,7 +154,7 @@
       ]
     },
     {
-      "page": 6,
+      "page": 7,
       "title": "Battle Begins",
       "description": "The Russian vanguard attacks the Swedish front line. The Swedes withdraw in good order toward the main force near Jutas.",
       "characters": [
@@ -148,7 +184,7 @@
       ]
     },
     {
-      "page": 7,
+      "page": 8,
       "title": "Russian Advance",
       "description": "The Russian troops advance steadily toward the Swedish positions, their numbers pressing hard against the defenders.",
       "characters": [
@@ -170,7 +206,7 @@
       ]
     },
     {
-      "page": 8,
+      "page": 9,
       "title": "Counterfire Ordered",
       "description": "Von Döbeln orders concentrated artillery and musket fire. Swedish gunners and infantry respond with disciplined volleys.",
       "characters": [
@@ -197,7 +233,7 @@
       ]
     },
     {
-      "page": 9,
+      "page": 10,
       "title": "Exchange of Fire",
       "description": "The Russians spread out and return heavy fire. Both sides suffer casualties amid cannon smoke and shouted commands.",
       "characters": [
@@ -228,7 +264,7 @@
       ]
     },
     {
-      "page": 10,
+      "page": 11,
       "title": "Swedish Push Forward",
       "description": "The Swedish line surges ahead amid loud cries of ‘Hurrah!’. Döbeln rallies his men from horseback as the Russians begin to falter and withdraw under pressure.",
       "characters": [
@@ -259,7 +295,7 @@
       ]
     },
     {
-      "page": 11,
+      "page": 12,
       "title": "Aftermath",
       "description": "Döbeln walks across the battlefield among the dead and wounded. The Swedish troops have held their ground, but at a heavy cost.",
       "characters": [
@@ -282,7 +318,7 @@
       ]
     },
     {
-      "page": 12,
+      "page": 13,
       "title": "Modern Time",
       "description": "A high-school teacher stands before the Jutas monument with her students, recounting the events of 1808 and Döbeln’s leadership.",
       "characters": [

@@ -24,11 +24,13 @@
       "currentStyle": {
         "file": "current-style.json",
         "reference": "Use this file for current style for the comic"
+      },
+      "outputFile": {
+        "file": "panelOutputSchema.json",
+        "reference": "Use this file to output panel data. Description will used as alt text for image. Narration and Dialog will be visible as part of story"
       }
     },
     "globalRules": {
-      "imageConfirmationRequired": true,
-      "imageConfirmationInstruction": "Always ask the user for confirmation before generating any image. Never create an image without explicit approval.",
       "fileAuthority": "All four source files are authoritative. This master file never overrides their contents but orchestrates how they should be used together.",
       "noCopying": "Do not copy text from the source files. Only reference and apply their instructions."
     },
@@ -37,8 +39,8 @@
       "step2_layout": "Load the matching page layout from page-layout.json and apply its rules.",
       "step3_uniforms": "Load all required character and uniform information from soldier.json.",
       "step4_style": "Apply the selected rendering style as defined in comic-styles.json.",
-      "step5_confirmation": "Ask the user if they want the image generated. Proceed only if they confirm.",
-      "step6_generation": "Generate images only after confirmation and only in compliance with the four referenced files."
+      "step5_confirmation": "Ask the user if they want the image generated.",
+      "step6_generation": "Generate images in compliance with the four referenced files."
     },
     "consistencyRequirements": {
       "layoutConsistency": "All panel counts, sizes, ActionSquare behavior, and layout structures must match page-layout.json.",

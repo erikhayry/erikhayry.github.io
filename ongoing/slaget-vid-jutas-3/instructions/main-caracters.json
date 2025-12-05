@@ -20,9 +20,10 @@
       "visualIdentity": {
         "face": {
           "shape": "Long, angular face",
+          "age": "40+",
           "eyes": "Sharp dark eyes, intense expression",
           "eyebrows": "High and pronounced, slightly arched",
-          "mustache": "Short dark moustache",
+          "mustache": "no mustache",
           "hair": "Dark hair, tied back; slightly unkempt during battle"
         },
         "iconicFeatures": {

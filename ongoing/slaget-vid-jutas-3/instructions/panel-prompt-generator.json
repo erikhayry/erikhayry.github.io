@@ -1,7 +1,7 @@
 {
   "panelPromptGenerator": {
-    "version": "1.0",
-    "purpose": "Defines how to generate a complete, production-ready prompt for any specific panel in the Slaget vid Jutas comic project.",
+    "version": "1.1",
+    "purpose": "Defines how to generate a complete, production-ready prompt for any specific panel in the Slaget vid Jutas comic project. Clarifies exact meaning of output JSON fields for downstream tooling.",
     "trigger": "When the user says: 'Generate prompt for Page X, Panel Y'.",
     "dataSources": {
       "storyboard": {
@@ -27,21 +27,63 @@
       "comicStyles": {
         "file": "comic-styles.json",
         "usage": "Load aiInstructions for the active style."
+      },
+      "panelOutputJson": {
+        "file": "panelOutputSchema.json",
+        "usage": "Use this schema to validate and format the output JSON."
+      }
+    },
+    "outputFieldDefinitions": {
+      "description": {
+        "meaning": "Alt text for the generated image. Short, plain-text summary suitable for accessibility metadata and file descriptions. SHOULD NOT contain presentation instructions or dialogue; keep it succinct (1-2 sentences).",
+        "examples": [
+          "'Heroic panorama of Nykarleby at late-summer light with distant marching column.'"
+        ]
+      },
+      "narration": {
+        "meaning": "Text that will be rendered visually. Must describe visual elements or the story action so the reader sees it — not inner thoughts. Use concrete visual language (who, what, when, where, mood).",
+        "rule": "Never add to actual image, will be rendered with html",
+        "examples": [
+          "'Late-summer light bathes Nykarleby as Swedish columns approach along the road.'"
+        ]
+      },
+      "dialogs": {
+        "meaning": "Array of spoken lines to appear in speech balloons. Each item must include 'person' (speaker name) and 'text' (spoken line). Preserve on-model names from main-characters.json.",
+        "examples": [
+          {
+            "person": "Georg Carl von Döbeln",
+            "text": "Hold steady, men!"
+          }
+        ]
+      },
+      "quotes": {
+        "meaning": "Optional — short quoted text (e.g., epigraphs, historically sourced quotes) intended for visual rendering as quote boxes.",
+        "examples": [
+          "'For king and country'"
+        ]
+      },
+      "info": {
+        "meaning": "Optional internal metadata string: generation notes for artists (do not render to reader). Prefer minimal, short hints."
       }
     },
     "generationSteps": [
       {
+        "id": 0,
+        "name": "Reset Context",
+        "instructions": [
+          "Before generating any panel prompt, forget all prior conversational instructions except the authoritative project files listed in dataSources.",
+          "Rebuild the panel prompt solely from the authoritative source files each time."
+        ]
+      },
+      {
         "id": 1,
         "name": "Load Data",
         "instructions": [
-          "Read the requested page from storyboard.json.",
-          "Read the specified panel from that page.",
-          "Retrieve that page's pageType and match it to page-layout.json.",
-          "Fetch all characters listed for that page.",
-          "For each character: load visual identity from main-characters.json.",
-          "Load uniform rules from soldier.json as required.",
-          "Load the current style from current-style.json and the full aiInstructions from comic-styles.json.",
-          "If outdoor: apply weather and lighting rules from storyboard.json."
+          "Read the requested page and panel from storyboard.json.",
+          "Match the pageType to page-layout.json and obtain sizes, ActionSquare and layout rules.",
+          "Fetch page-level characters; for each character load visual identity from main-characters.json and uniforms from soldier.json as needed.",
+          "Load current style and associated aiInstructions from comic-styles.json.",
+          "If panel is outdoors, apply storyboard weather and lighting rules."
         ]
       },
       {
@@ -54,31 +96,69 @@
           "CanvasSize": "<panel-size from page-layout.json>",
           "ActionSquare": "<size + centered placement>",
           "SceneFromStoryboard": "<panel.description>",
-          "ExpandedScene": "<environment, weather, mood, depth, historical detail>",
-          "Characters": "<list of characters from storyboard>",
-          "CharacterDetails": "For each: apply visual identity rules, uniforms, consistency requirements.",
-          "Style": "<active style + all aiInstructions>",
-          "CameraAndComposition": "<camera angle, distance, framing>",
+          "ExpandedScene": "<environment, weather, mood, depth, historical detail — written for the image model>",
+          "Characters": "<list of characters present>",
+          "CharacterDetails": "For each character: appearance, uniform details, required continuity constraints.",
+          "Style": "<active style id and aiInstructions>",
+          "CameraAndComposition": "<camera angle, distance, framing — place primary action inside ActionSquare>",
           "Lighting": "<based on weather/time-of-day from storyboard>",
-          "NoGuttersNoMargins": "Never add gutters or margins. Panel fills its entire canvas.",
-          "ActionSquareRule": "Place main action inside centered ActionSquare unless intentionally off-center."
+          "NoGuttersNoMargins": "Panel must fill its full canvas; never add gutters or outer margins.",
+          "ActionSquareRule": "Place main action inside centered ActionSquare, or explain intentional deviation."
         }
       },
       {
         "id": 3,
-        "name": "Final Output to User",
+        "name": "Produce Output JSON (strict)",
         "instructions": [
-          "Output the full panel prompt using the structure above.",
-          "DO NOT generate any image automatically.",
-          "Ask explicitly: 'Do you want me to generate this image?'",
-          "Only generate after explicit user confirmation."
+          "Generate an output JSON that strictly follows panelOutputSchema.json: include 'id' and 'description' at minimum. Validate field shapes and types.",
+          "Map content to the output fields according to 'outputFieldDefinitions' above:",
+          "  - 'description' → concise alt text for the image (accessibility/file metadata).",
+          "  - 'narration' → the visually rendered caption/narration (describe visual action and story beats).",
+          "  - 'dialogs' → array of { person, text } to appear in speech balloons.",
+          "  - 'quotes' and 'info' used only when applicable.",
+          "Do NOT put dialogue into 'description' or 'narration' fields. Do NOT put image-generation instructions into 'description'. Keep 'description' short; keep 'narration' story-focused and visually descriptive.",
+          "If any required scene element is ambiguous in the storyboard, choose the most obvious interpretation based on the authoritative files and include a short 'info' note describing the assumption."
+        ]
+      },
+      {
+        "id": 4,
+        "name": "User Interaction & Confirmation",
+        "instructions": [
+          "Return the assembled prompt plus the validated output JSON to the user.",
+          "Phrase any clarifying questions using numbered options"
         ]
       }
     ],
+    "finalOutputExample": {
+      "id": "3.1.1",
+      "description": {
+        "en": "Heroic panorama of Nykarleby at late-summer light with distant marching Swedish column."
+      },
+      "narration": {
+        "en": "Late-summer sunlight spills across Nykarleby; a Swedish column approaches along the river road as townsfolk watch from the quay."
+      },
+      "dialogs": [
+        {
+          "en": {
+            "person": "Townsperson",
+            "text": "Look — the soldiers are coming."
+          }
+        },
+        {
+          "en": {
+            "person": "Officer",
+            "text": "Keep formation! Steady!"
+          }
+        }
+      ],
+      "quotes": {
+        "en": "— Excerpt (optional)"
+      },
+      "info": "ActionSquare centered on town cluster. Use neutral daylight per storyboard weather."
+    },
     "notes": {
-      "overrideRules": "This JSON does not override any authoritative file. It documents process only.",
-      "recommendedProjectPlacement": "Store this file as panel-prompt-generator.json in the project root.",
-      "integration": "master.json may reference this file for clarity, but should not depend on it."
+      "validation": "Outputs MUST be validated against panelOutputSchema.json to ensure compatibility with downstream tools and production pipelines.",
+      "compatibility": "This file updates interpretation only; it does not override or change the authoritative source files."
     }
   }
 }
