@@ -43,7 +43,6 @@ export const PageLayoutType = z.enum([
 ]);
 export type PageLayoutValue = z.infer<typeof PageLayoutType>
 
-
 export const DialogInfo = z.record(LanguageType, z.object({
     text: z.string(),
     person: z.string(),
@@ -97,6 +96,7 @@ export const ComicOutput = z.object({
 
 export type PanelInfo = z.infer<typeof PanelInfo>;
 export type PageInfo = z.infer<typeof PageInfo>;
+export type ComicInfo = z.infer<typeof ComicInfo>;
 
 export type PageOutput = z.infer<typeof PageOutput>;
 export type ComicOutput = z.infer<typeof ComicOutput>;

@@ -12,6 +12,7 @@ import {ComicStyle, ComicStyleType, type PanelId} from "@library/types";
 import {getPanelId} from "../../utils/panel.ts";
 import {getOutputImages} from "../../files/getOutputImages.ts";
 import {getImageName} from "../../utils/image.ts";
+import {isComicInfoFile, verifyComicInfo} from "../../verify/verifyComicInfo.ts";
 
 
 function hasImage(folderPath: string, panelId: string, comicStyle: ComicStyleType) {
@@ -38,9 +39,13 @@ function isValidPageDataId(folderPath: string, fileName: string) {
     return isPageId(fileName) && verifyPageInfo(getJSON(getOutputFilePath(folderPath, fileName)))
 }
 
+function isValidComicData(folderPath: string, fileName: string) {
+    return isComicInfoFile(fileName) && verifyComicInfo(getJSON(getOutputFilePath(folderPath, fileName)))
+}
+
 function getInvalidData(folderPath: string): string[] {
     const isInvalidData = (fileName: string) => {
-        return !isValidPanelDataId(folderPath, fileName) && !isValidPageDataId(folderPath, fileName);
+        return !isValidPanelDataId(folderPath, fileName) && !isValidPageDataId(folderPath, fileName) && !isValidComicData(folderPath, fileName);
     }
 
     return getOutputJSONS(folderPath).filter(isInvalidData)
