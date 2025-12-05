@@ -9,6 +9,14 @@ test("should return success if valid comic output", () => {
     });
 });
 
+test("should return error if no comic data", () => {
+    expect(
+        isValidComicOutput(`${DIR}/comic-invalid-no-comic-data`),
+    ).toEqual({
+        error: `${DIR}/comic-invalid-no-comic-data has no comic output file`
+    })
+});
+
 test("should return error if malformed file name", () => {
     expect(
         isValidComicOutput(`${DIR}/comic-invalid-wrong-file-name`),

@@ -51,6 +51,12 @@ function getInvalidData(folderPath: string): string[] {
     return getOutputJSONS(folderPath).filter(isInvalidData)
 }
 
+function hasNoComicData(folderPath: string) {
+    return !getOutputJSONS(folderPath).some(
+        isComicInfoFile,
+    );
+}
+
 function getPanelsWithoutImage(folderPath: string): string[] {
     const isWithoutImage = (fileName: string) => {
         return isPanelId(fileName) && !hasImage(folderPath, getPanelId(folderPath, fileName), ComicStyle.SIMPLIFIED_LINE_DRAWING);
@@ -87,6 +93,10 @@ export function isValidComicOutput(folderPath: string): Validation {
 
     if (getInvalidData(folderPath).length) {
         return getError(`${folderPath} has invalid data: ${getInvalidData(folderPath)}`)
+    }
+
+    if (hasNoComicData(folderPath)) {
+        return getError(`${folderPath} has no comic output file`)
     }
 
     if (getPanelsWithoutImage(folderPath).length) {
