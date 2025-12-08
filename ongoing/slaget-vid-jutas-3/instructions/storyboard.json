@@ -1,7 +1,6 @@
 {
   "pages": [
     {
-      "page": 1,
       "title": "Introduction",
       "description": "The Finnish War (1808–1809). Establish the historical context, the tensions between Sweden and the Russian Empire, and the situation in Finland.",
       "location": "Finland, early September 1808",
@@ -15,22 +14,14 @@
       ]
     },
     {
-      "page": 2,
       "title": "Scene – Slaget vid Jutas (13 September 1808)",
       "description": "Introduction of the main commanders and opposing forces preparing for confrontation near Jutas, south of Nykarleby.",
       "characters": {
         "Sweden": [
-          "Georg Carl von Döbeln",
-          "Johan Fredrik Eek",
-          "Enoch Furuhjelm",
-          "Anders Gyllenbögel",
-          "Johan Petter Hesselius",
-          "Björneborgs regemente"
+          "Georg Carl von Döbeln"
         ],
         "Russian_Empire": [
-          "Nikolaj Kamenskij",
-          "Kirill Kazatjkovskij",
-          "Russian Infantry Detachment"
+          "Nikolaj Kamenskij"
         ]
       },
       "scene": "Charchter gallery",
@@ -38,12 +29,11 @@
       "panels": [
         {
           "id": "1",
-          "description": "Character gallery montage: Swedish leaders on left, Russian on right; Jutas landscape faintly behind."
+          "description": "Character gallery montage: Swedish leader on left, Russian on right; Jutas landscape faintly behind."
         }
       ]
     },
     {
-      "page": 3,
       "title": "Nykarleby — Hero",
       "description": "A single full-page hero panel establishing Nykarleby: panoramic view of the town, river and surrounding farmland at late-summer light. Small figures of marching troops and a few townsfolk give scale; Döbeln's quarters visible as a modest house near the waterfront.",
       "location": "Nykarleby, early September 1808",
@@ -79,7 +69,6 @@
       ]
     },
     {
-      "page": 4,
       "title": "Retreat from Vasa",
       "description": "The Swedish army retreats from Vasa to Nykarleby under pressure from advancing Russian forces. The soldiers are exhausted but determined.",
       "characters": [
@@ -101,7 +90,6 @@
       ]
     },
     {
-      "page": 5,
       "title": "Döbeln Sick in Nykarleby",
       "description": "Döbeln lies in bed, weakened by fever and a head wound. Despite illness, he continues to command and issue orders from his quarters in Nykarleby.",
       "characters": [
@@ -131,7 +119,6 @@
       ]
     },
     {
-      "page": 6,
       "title": "March to Jutas",
       "description": "The Swedish troops march toward Jutas. Döbeln, pale but resolute, rides before his soldiers on horseback, overseeing the preparation of defensive positions in Jutas.",
       "characters": [
@@ -154,7 +141,6 @@
       ]
     },
     {
-      "page": 7,
       "title": "Battle Begins",
       "description": "The Russian vanguard attacks the Swedish front line. The Swedes withdraw in good order toward the main force near Jutas.",
       "characters": [
@@ -184,7 +170,6 @@
       ]
     },
     {
-      "page": 8,
       "title": "Russian Advance",
       "description": "The Russian troops advance steadily toward the Swedish positions, their numbers pressing hard against the defenders.",
       "characters": [
@@ -206,7 +191,6 @@
       ]
     },
     {
-      "page": 9,
       "title": "Counterfire Ordered",
       "description": "Von Döbeln orders concentrated artillery and musket fire. Swedish gunners and infantry respond with disciplined volleys.",
       "characters": [
@@ -233,7 +217,6 @@
       ]
     },
     {
-      "page": 10,
       "title": "Exchange of Fire",
       "description": "The Russians spread out and return heavy fire. Both sides suffer casualties amid cannon smoke and shouted commands.",
       "characters": [
@@ -264,7 +247,6 @@
       ]
     },
     {
-      "page": 11,
       "title": "Swedish Push Forward",
       "description": "The Swedish line surges ahead amid loud cries of ‘Hurrah!’. Döbeln rallies his men from horseback as the Russians begin to falter and withdraw under pressure.",
       "characters": [
@@ -295,7 +277,6 @@
       ]
     },
     {
-      "page": 12,
       "title": "Aftermath",
       "description": "Döbeln walks across the battlefield among the dead and wounded. The Swedish troops have held their ground, but at a heavy cost.",
       "characters": [
@@ -318,7 +299,6 @@
       ]
     },
     {
-      "page": 13,
       "title": "Modern Time",
       "description": "A high-school teacher stands before the Jutas monument with her students, recounting the events of 1808 and Döbeln’s leadership.",
       "characters": [

@@ -41,13 +41,13 @@ test("should copy images", () => {
     bundle(config);
 
     expect(getImages(`${IMAGE_FOLDER}/comic-1`)).toEqual([
-        getImageName('1.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
-        getImageName('1.1.2', ComicStyle.SIMPLIFIED_LINE_DRAWING),
-        getImageName('1.2.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
-        getImageName('10.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
-        getImageName('2.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING),
+        getImageName('1.1.1', ComicStyle.ANIME),
+        getImageName('1.1.2', ComicStyle.ANIME),
+        getImageName('1.2.1', ComicStyle.ANIME),
+        getImageName('10.1.1', ComicStyle.ANIME),
+        getImageName('2.1.1', ComicStyle.ANIME),
     ]);
-    expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual([getImageName('1.1.1', ComicStyle.SIMPLIFIED_LINE_DRAWING)]);
+    expect(getImages(`${IMAGE_FOLDER}/comic-2`)).toEqual([getImageName('1.1.1', ComicStyle.ANIME)]);
 });
 
 test("should create json schema for panel", () => {

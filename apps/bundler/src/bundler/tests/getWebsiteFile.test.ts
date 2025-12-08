@@ -13,10 +13,10 @@ test("is should return comics", () => {
 
     expect(comic1.slug).toEqual("comic-1");
     expect(comic1.pages).toHaveLength(4);
-    expect(comic1.styles).toEqual([ComicStyle.SIMPLIFIED_LINE_DRAWING]);
+    expect(comic1.styles).toEqual([ComicStyle.ANIME]);
     expect(comic2.slug).toEqual("comic-2");
     expect(comic2.pages).toHaveLength(1);
-    expect(comic2.styles).toEqual([ComicStyle.SIMPLIFIED_LINE_DRAWING]);
+    expect(comic2.styles).toEqual([ComicStyle.ANIME]);
 });
 
 test("is should return pages", () => {

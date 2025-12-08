@@ -2,15 +2,9 @@
   "document",
   "heading, Comics, level 1",
   "list",
-  "listitem, level 1, position 1, set size 3",
+  "listitem, level 1, position 1, set size 1",
   "link, slaget-vid-jutas",
-  "end of listitem, level 1, position 1, set size 3",
-  "listitem, level 1, position 2, set size 3",
-  "link, slaget-vid-jutas-2",
-  "end of listitem, level 1, position 2, set size 3",
-  "listitem, level 1, position 3, set size 3",
-  "link, slaget-vid-jutas-3",
-  "end of listitem, level 1, position 3, set size 3",
+  "end of listitem, level 1, position 1, set size 1",
   "end of list",
   "end of document"
 ]

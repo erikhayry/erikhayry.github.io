@@ -9,7 +9,7 @@ export function copyComicImages(comicsFolder: string, wwwFolder: string): void {
         pages.forEach(({panels}) => {
             panels.forEach(({id}) => {
                 copyFile(
-                    `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/${getImageName(id, ComicStyle.SIMPLIFIED_LINE_DRAWING)}`,
+                    `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/${getImageName(id, ComicStyle.ANIME)}`,
                     `${wwwFolder}/${slug}`,
                 );
             });

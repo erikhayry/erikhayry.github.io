@@ -59,7 +59,7 @@ function hasNoComicData(folderPath: string) {
 
 function getPanelsWithoutImage(folderPath: string): string[] {
     const isWithoutImage = (fileName: string) => {
-        return isPanelId(fileName) && !hasImage(folderPath, getPanelId(folderPath, fileName), ComicStyle.SIMPLIFIED_LINE_DRAWING);
+        return isPanelId(fileName) && !hasImage(folderPath, getPanelId(folderPath, fileName), ComicStyle.ANIME);
     }
 
     return getOutputJSONS(folderPath).filter(isWithoutImage);

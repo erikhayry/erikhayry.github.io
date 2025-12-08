@@ -1,0 +1,18 @@
+{
+  "id": "11.1.2",
+  "description": {
+    "en": "Swedish infantry charge forward with bayonets leveled through golden smoke."
+  },
+  "narration": {
+    "en": "With a unified cry, the Swedish line surges ahead, bayonets gleaming in the late-afternoon haze."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "person": "Swedish Soldiers",
+        "text": "Hurraaah!"
+      }
+    }
+  ],
+  "info": "Panel 2 of Quad layout. ActionSquare centered; use late-afternoon golden backlight per storyboard."
+}

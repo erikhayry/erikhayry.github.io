@@ -15,8 +15,8 @@ test("return array with comic styles", () => {
     const [comic1, comic2] = comics;
 
     expect(comics).toHaveLength(2);
-    expect(comic1!.styles).toEqual([ComicStyle.SIMPLIFIED_LINE_DRAWING]);
-    expect(comic2!.styles).toEqual([ComicStyle.SIMPLIFIED_LINE_DRAWING]);
+    expect(comic1!.styles).toEqual([ComicStyle.ANIME]);
+    expect(comic2!.styles).toEqual([ComicStyle.ANIME]);
 });
 
 test("return array with comic valid paths", () => {

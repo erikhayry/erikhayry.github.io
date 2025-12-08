@@ -12,7 +12,7 @@ export const ComicStyle = {
 } as const
 
 export const ComicStyleType = z.enum([
-    ComicStyle.SIMPLIFIED_LINE_DRAWING
+    ComicStyle.ANIME
 ]);
 export type ComicStyleType = z.infer<typeof ComicStyleType>;
 
