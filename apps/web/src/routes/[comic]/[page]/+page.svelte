@@ -10,6 +10,15 @@
 </script>
 
 <style>
+    .container {
+        @media (min-width: 1250px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    }
+
     .nav {
         padding: var(--spacing);
 
@@ -33,7 +42,7 @@
     .nav a {
         padding: var(--spacing);
         display: inline-block;
-        color: black;
+        color: white;
 
         @media (min-width: 1250px) {
             color: white;
@@ -41,18 +50,21 @@
     }
 </style>
 
-<h1 class="visually-hidden">{title}</h1>
+<div class="container">
 
-<Page layout={page.layout} panels={page.panels} slug={slug}/>
+    <h1 class="visually-hidden">{title}</h1>
 
-<nav aria-label={i18n(TEXT.paginationLabel)} class="nav">
-    <ul>
-        <li>
-            <a href={pagination.back.href} rel="prev">{pagination.back.title}</a>
-        </li>
-        <li>
-            <a href={pagination.forward.href} rel="next">{pagination.forward.title}</a>
-        </li>
-    </ul>
-</nav>
+    <Page layout={page.layout} panels={page.panels} slug={slug}/>
+
+    <nav aria-label={i18n(TEXT.paginationLabel)} class="nav">
+        <ul>
+            <li>
+                <a href={pagination.back.href} rel="prev">{pagination.back.title}</a>
+            </li>
+            <li>
+                <a href={pagination.forward.href} rel="next">{pagination.forward.title}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
 

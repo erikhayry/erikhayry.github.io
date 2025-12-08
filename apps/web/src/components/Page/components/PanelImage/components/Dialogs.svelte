@@ -10,22 +10,29 @@
 </script>
 
 <style>
-    .dialog {
-        padding: var(--spacing);
-        border: 2px solid black;
-        width: fit-content;
-        
+    .container {
         @media (min-width: 1250px) {
             position: absolute;
-            background-color: white;
             top: var(--spacing);
             left: var(--spacing);
+        }
+    }
+
+    .dialog {
+        color: black;
+        padding: var(--spacing);
+        width: fit-content;
+        background-color: white;
+        @media (min-width: 1250px) {
+            border: 2px solid black;
         }
     }
 </style>
 
 
-{#each dialogs as dialog (dialog)}
-    <p class="dialog">{getDialog(dialog)}</p>
-{/each}
+<div class="container">
+    {#each dialogs as dialog (dialog)}
+        <p class="dialog">{getDialog(dialog)}</p>
+    {/each}
+</div>
 

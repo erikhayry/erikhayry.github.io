@@ -18,20 +18,19 @@
     .page {
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-2x);
 
         @media (min-width: 1250px) {
+            gap: var(--panel-border);
+            padding: var(--panel-border);
             display: grid;
-            width: 100%;
-            height: 100%;
             overflow: hidden;
+            width: auto;
+            height: 100%;
+            aspect-ratio: 4 / 3;
         }
     }
 
     .panel {
-        border-color: #fff;
-        border-width: var(--spacing-2x);
-        border-style: solid;
         overflow: hidden;
 
         @media (min-width: 1250px) {

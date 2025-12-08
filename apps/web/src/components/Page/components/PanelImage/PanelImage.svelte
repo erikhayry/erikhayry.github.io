@@ -15,21 +15,24 @@
 
 <style>
     .panel-image {
+        display: block;
+
         @media (min-width: 1250px) {
             position: absolute;
             height: 100%;
             width: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: top;
         }
     }
 
     .narration {
         width: fit-content;
         background-color: white;
-        border: 2px solid black;
+        color: black;
         padding: var(--spacing);
-        margin: var(--spacing) 0;
+        margin-top: var(--spacing);
+        margin-bottom: var(--spacing);
 
         @media (min-width: 1250px) {
             position: absolute;
