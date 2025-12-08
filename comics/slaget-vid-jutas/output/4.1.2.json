@@ -4,8 +4,15 @@
     "en": "Döbeln rides beside weary Swedish soldiers marching through muddy autumn fields as light rain falls."
   },
   "narration": {
-    "en": "Along the sodden road, Döbeln rides at the column’s flank while his officers confer amid the spitting rain."
+    "en": "Döbeln forces himself to remain with the troops, masking his illness as he pushes his officers to maintain order through the worsening march."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "person": "Döbeln",
+        "text": "We keep moving. No hesitation."
+      }
+    }
+  ],
   "info": "Scene from storyboard page 4 panel 2: bottom wide. No dialogue specified in storyboard."
 }

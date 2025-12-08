@@ -4,13 +4,10 @@
       "safeSquareName": "ActionSquare",
       "safeSquarePurpose": "Square crop area guaranteed to contain the important action/subject. Centered inside each panel so any square crop retains story-critical content.",
       "exportFormatsRecommended": [
-        "png",
-        "webp",
-        "jpg (quality=90)"
+        "png"
       ],
       "assetScaleFactors": {
-        "1x": 1,
-        "2x": 2
+        "1x": 1
       },
       "neverAddGutter": true,
       "noOuterMargins": true,
@@ -29,23 +26,9 @@
           }
         ]
       },
-      "imageSizes": {
-        "canvasSize_1x": {
-          "width": 2048,
-          "height": 1536
-        },
-        "canvasSize_2x": {
-          "width": 4096,
-          "height": 3072
-        },
-        "recommendedExport_1x": {
-          "width": 2048,
-          "height": 1536
-        },
-        "recommendedExport_2x": {
-          "width": 4096,
-          "height": 3072
-        }
+      "imageSize": {
+        "width": 2048,
+        "height": 1536
       },
       "safeSquare": {
         "name": "ActionSquare",
@@ -91,36 +74,14 @@
           }
         ]
       },
-      "imageSizes": {
-        "pageCanvas_1x": {
-          "width": 2048,
-          "height": 1536
-        },
-        "pageCanvas_2x": {
-          "width": 4096,
-          "height": 3072
-        },
-        "panelSize_1x": {
-          "width": 2048,
-          "height": 768
-        },
-        "panelSize_2x": {
-          "width": 4096,
-          "height": 1536
-        },
-        "recommendedExportPanel_1x": {
-          "width": 2048,
-          "height": 768
-        },
-        "recommendedExportPanel_2x": {
-          "width": 4096,
-          "height": 1536
-        }
+      "imageSize": {
+        "width": 2048,
+        "height": 768
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 1000,
-        "size_2x": 2000,
+        "size_1x": 768,
+        "size_2x": 768,
         "placement": "centered-in-each-panel"
       },
       "layoutRules": {
@@ -168,36 +129,14 @@
           }
         ]
       },
-      "imageSizes": {
-        "pageCanvas_1x": {
-          "width": 2048,
-          "height": 1536
-        },
-        "pageCanvas_2x": {
-          "width": 4096,
-          "height": 3072
-        },
-        "panelSize_1x": {
-          "width": 2048,
-          "height": 512
-        },
-        "panelSize_2x": {
-          "width": 4096,
-          "height": 1024
-        },
-        "recommendedExportPanel_1x": {
-          "width": 2048,
-          "height": 512
-        },
-        "recommendedExportPanel_2x": {
-          "width": 4096,
-          "height": 1024
-        }
+      "imageSize": {
+        "width": 2048,
+        "height": 512
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 800,
-        "size_2x": 1600,
+        "size_1x": 512,
+        "size_2x": 512,
         "placement": "centered-in-each-panel"
       },
       "layoutRules": {
@@ -250,36 +189,14 @@
           }
         ]
       },
-      "imageSizes": {
-        "pageCanvas_1x": {
-          "width": 2048,
-          "height": 1536
-        },
-        "pageCanvas_2x": {
-          "width": 4096,
-          "height": 3072
-        },
-        "panelSize_1x": {
-          "width": 1024,
-          "height": 768
-        },
-        "panelSize_2x": {
-          "width": 2048,
-          "height": 1536
-        },
-        "recommendedExportPanel_1x": {
-          "width": 1024,
-          "height": 768
-        },
-        "recommendedExportPanel_2x": {
-          "width": 2048,
-          "height": 1536
-        }
+      "imageSize": {
+        "width": 1024,
+        "height": 384
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 700,
-        "size_2x": 1400,
+        "size_1x": 384,
+        "size_2x": 384,
         "placement": "centered-in-each-panel"
       },
       "layoutRules": {

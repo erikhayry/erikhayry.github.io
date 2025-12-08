@@ -4,8 +4,15 @@
     "en": "Swedish defenders crouch behind a low ridge as musket impacts spatter earth around them through drifting smoke."
   },
   "narration": {
-    "en": "Behind the low earthen ridge, the Swedish line braces as musket shots punch the soil in bursts of flying dirt."
+    "en": "But the Swedes brace themselves behind the ridge, prepared to endure the storm and answer with disciplined fire."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "person": "Swedish Officer",
+        "text": "Hold until my mark!"
+      }
+    }
+  ],
   "info": "ActionSquare centered on defenders at the ridge; anime cel-shaded style; apply early-afternoon Nordic daylight and lateral smoke drift."
 }

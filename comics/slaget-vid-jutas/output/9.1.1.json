@@ -4,8 +4,15 @@
     "en": "Döbeln raises his sword from horseback to signal the attack, aides beside him relaying the command through drifting battlefield smoke."
   },
   "narration": {
-    "en": "From the saddle, Döbeln lifts his sword high, and his aides rush to carry the order down the line."
+    "en": "With a decisive gesture, Döbeln unleashes the moment he has prepared for: concentrated counterfire to halt the Russian advance."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "person": "Döbeln",
+        "text": "Now—let them feel our answer!"
+      }
+    }
+  ],
   "info": "ActionSquare centers on Döbeln and raised sword; anime cel-shading; early-afternoon Nordic light with lateral smoke drift."
 }

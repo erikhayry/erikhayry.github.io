@@ -4,8 +4,15 @@
     "en": "Swedish skirmishers fall back in pairs along a smoke-covered road after receiving the signal to withdraw."
   },
   "narration": {
-    "en": "At the signal, the skirmishers peel away from the fence line, retreating in pairs down the winding Jutas road through drifting white smoke."
+    "en": "Orders ripple down the line as the forward troops fall back with discipline, refusing to break despite the pressure."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "person": "Officer",
+        "text": "Pull back — pair by pair!"
+      }
+    }
+  ],
   "info": "ActionSquare centered on retreating pair; Anime style; Swedish uniforms accurate; smoke drifting sideways per weather rules."
 }

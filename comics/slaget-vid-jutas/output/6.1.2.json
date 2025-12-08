@@ -4,7 +4,21 @@
     "en": "Döbeln salutes from horseback before cheering Swedish infantry in the afternoon light near Jutas."
   },
   "narration": {
-    "en": "Afternoon light washes over the marching column as Döbeln lifts his hand in salute. The ranks of Björneborgs regemente answer with cheers, their bayonets catching the sun while nearby officers point toward the ground where the defenses will soon be formed."
+    "en": "Rallying himself, Döbeln greets his men, inspiring confidence as officers prepare the defensive positions ahead."
   },
+  "dialogs": [
+    {
+      "en": {
+        "person": "Troops (shouting)",
+        "text": "Hurrah for Döbeln!"
+      }
+    },
+    {
+      "en": {
+        "person": "Döbeln",
+        "text": "Steady now—Jutas will be our stand."
+      }
+    }
+  ],
   "info": "Scene follows storyboard: bottom-wide panel, SplitWide layout. Döbeln centered in ActionSquare."
 }

@@ -4,8 +4,21 @@
     "en": "Wide modern scene of the Jutas monument exactly as in the provided reference, five meters tall, with a teacher resembling the provided photo and students gathered beneath it among birch trees."
   },
   "narration": {
-    "en": "A teacher stands before the towering granite Jutas monument, guiding his students through the echoes of 1808 in the bright summer light."
+    "en": "Generations later, the memory of Jutas endures as new voices retell the courage and sacrifice that shaped Finland’s history."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "person": "Teacher",
+        "text": "Here, Döbeln’s stand changed the course of the campaign."
+      }
+    },
+    {
+      "en": {
+        "person": "Student",
+        "text": "It feels different hearing it here, where it happened."
+      }
+    }
+  ],
   "info": "Generation instructions (for image model / artists):\n- Page & Panel: Page 13, Panel 1 (Hero layout). Use Hero canvas size 2048×1536 px (1x) and place main subject inside the centered ActionSquare sized 1000×1000 px. :contentReference[oaicite:7]{index=7}\n- Style: Render in the project's active style: Anime (clean outlines, cel shading, variable line weight, cinematic composition). :contentReference[oaicite:8]{index=8} :contentReference[oaicite:9]{index=9}\n- Scene: Present-day Jutas monument site in clear summer daylight per storyboard page 13. No historical soldiers or battle haze — this is contemporary. :contentReference[oaicite:10]{index=10}\n- Monument (must match the user-supplied photo exactly):\n  * Tall, sharply tapering granite monolith with rough natural texture and pointed top.\n  * Bronze circular medallion embedded on the front showing a profile relief and labeled area as in reference.\n  * Bronze laurel/branch + sword relief beneath the medallion.\n  * Base formed from a mound of large rounded boulders supporting the monolith.\n  * Two shield-shaped stone plaques inset in the boulders (dark engraved text fields with pale borders).\n  * Four concrete flower pots at the monument base with white and purple flowers.\n  * Surrounding birch/spruce trees and trimmed grass; clear summer sky.\n  * Maintain correct scale: monument = 5 meters tall relative to human figures (teacher and students).\n- Teacher appearance (based on provided teacher photo):\n  * Older adult with short light-gray hair; white goatee and mustache (do not render any identifying metadata). \n  * Rounder facial shape, warm and approachable expression, gentle smile.\n  * Modern, neutral educator clothing (unless otherwise specified — optionally specify red plaid shirt if you want exact clothing match).\n  * Pose: standing near the monument, gesturing toward it while speaking to students; place teacher inside ActionSquare with monument so both are primary focus.\n- Students: 10–12 modern-clothed high-school students arranged in a semicircle around the teacher; attentive posture.\n- Camera & Composition: Wide establishing shot, slightly low eye-level to emphasize monument height. Monument and teacher fully inside the ActionSquare; students may extend beyond but remain compositionally balanced.\n- Lighting: Bright Nordic daylight; soft, short shadows; no battle smoke or atmospheric haze.\n- Layout rules: No gutters, no outer margins; panel must fill full canvas exactly. :contentReference[oaicite:11]{index=11}\n- Continuity & character rules: Respect main-characters and soldier/uniform rules for any historical references elsewhere; this panel contains no historical characters. :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13}\n- Accessibility & metadata: Use description field above as alt text for generated file. Ensure ActionSquare placement is centered so safe square crops retain the monument and teacher. :contentReference[oaicite:14]{index=14}\n- Note for artists: Reproduce monument texture, plaque shapes, medallion relief details, and boulder arrangement exactly as in the supplied monument photograph. Ensure the teacher resembles the supplied portrait photo (short gray hair, white goatee, warm smile) while avoiding any textual identification.\n\nValidation: This output follows the panel output schema and uses authoritative storyboard and layout instructions. :contentReference[oaicite:15]{index=15}"
 }

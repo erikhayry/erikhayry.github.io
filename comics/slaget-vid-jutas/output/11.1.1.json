@@ -4,8 +4,15 @@
     "en": "Döbeln rallies the Swedish line from horseback, sword raised, as infantry and riders advance through glowing battlefield smoke."
   },
   "narration": {
-    "en": "Late-afternoon light cuts through drifting smoke as von Döbeln rides the front line, rallying his men to push forward."
+    "en": "Sensing the enemy’s hesitation, Döbeln rallies his troops forward, turning defense into a decisive counterstroke."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "person": "Döbeln",
+        "text": "Forward! Drive them back!"
+      }
+    }
+  ],
   "info": "Scene composition based on attached reference artwork; Swedish uniforms corrected per soldier.json. ActionSquare centered on Döbeln."
 }

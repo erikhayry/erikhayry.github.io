@@ -4,19 +4,13 @@
     "en": "Döbeln, pale and bandaged, points at a map in candlelit quarters while lying in bed."
   },
   "narration": {
-    "en": "Despite fever and wounds, Döbeln traces the route to Jutas, issuing orders from his dimly lit quarters."
+    "en": "He dictates the movement of brigades with precise intent, shaping the battlefield from memory and instinct."
   },
   "dialogs": [
     {
       "en": {
-        "person": "Georg Carl von Döbeln",
-        "text": "Here... toward Jutas. They must move at once."
-      }
-    },
-    {
-      "en": {
-        "person": "Aide-de-camp",
-        "text": "I will have the dispatch sent immediately, sir."
+        "person": "Döbeln",
+        "text": "They must hold the road - Jutas cannot be lost."
       }
     }
   ],
