@@ -2,6 +2,7 @@
     --spacing: 4px;
     --spacing-2x: calc(2 * var(--spacing));
     --panel-border: 12px;
+    --bubble-border: 2px solid black;
 }
 
 

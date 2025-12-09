@@ -18,6 +18,7 @@
     .page {
         display: flex;
         flex-direction: column;
+        gap: var(--spacing-2x);
 
         @media (min-width: 1250px) {
             gap: var(--panel-border);

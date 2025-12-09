@@ -35,6 +35,7 @@
         margin-bottom: var(--spacing);
 
         @media (min-width: 1250px) {
+            border: var(--bubble-border);
             position: absolute;
             bottom: var(--spacing);
             left: var(--spacing);

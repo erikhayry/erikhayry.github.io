@@ -11,6 +11,10 @@
 
 <style>
     .container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+        
         @media (min-width: 1250px) {
             position: absolute;
             top: var(--spacing);
@@ -23,8 +27,9 @@
         padding: var(--spacing);
         width: fit-content;
         background-color: white;
+
         @media (min-width: 1250px) {
-            border: 2px solid black;
+            border: var(--bubble-border);
         }
     }
 </style>

@@ -27,13 +27,13 @@
         ]
       },
       "imageSize": {
-        "width": 2048,
-        "height": 1536
+        "width": 1536,
+        "height": 1024
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 1000,
-        "size_2x": 2000,
+        "size_1x": 1024,
+        "size_2x": 1024,
         "placement": "centered",
         "notes": "Center the most important subject or group inside this square so any square crop will keep story-critical content."
       },
@@ -75,13 +75,13 @@
         ]
       },
       "imageSize": {
-        "width": 2048,
-        "height": 768
+        "width": 1536,
+        "height": 512
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 768,
-        "size_2x": 768,
+        "size_1x": 512,
+        "size_2x": 512,
         "placement": "centered-in-each-panel"
       },
       "layoutRules": {
@@ -130,13 +130,13 @@
         ]
       },
       "imageSize": {
-        "width": 2048,
-        "height": 512
+        "width": 1536,
+        "height": 341
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 512,
-        "size_2x": 512,
+        "size_1x": 341,
+        "size_2x": 341,
         "placement": "centered-in-each-panel"
       },
       "layoutRules": {
@@ -190,13 +190,13 @@
         ]
       },
       "imageSize": {
-        "width": 1024,
-        "height": 384
+        "width": 768,
+        "height": 512
       },
       "safeSquare": {
         "name": "ActionSquare",
-        "size_1x": 384,
-        "size_2x": 384,
+        "size_1x": 512,
+        "size_2x": 512,
         "placement": "centered-in-each-panel"
       },
       "layoutRules": {
