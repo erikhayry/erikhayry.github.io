@@ -1,0 +1,7 @@
+//
+Generate prompt for Page X, Panel Y
+
+
+
+//Reference image
+Generate prompt for Page X, Panel Y — use attached painting for composition and lighting only, not replication

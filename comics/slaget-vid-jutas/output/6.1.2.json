@@ -1,24 +1,11 @@
 {
-  "id": "6.1.2",
+  "id": "6.2.1",
   "description": {
-    "en": "Döbeln salutes from horseback before cheering Swedish infantry in the afternoon light near Jutas."
+    "en": "Russian infantry vanguard advances cautiously through low wooden fences and dense brush on the outskirts of Jutas. The foremost soldier moves carefully with musket in hand while his backpack carries only standard gear and a rolled greatcoat — no spare weapon attached. Other soldiers follow in loose formation, partially obscured by foliage and light gun smoke, their posture tense and alert as the battle begins.",
+    "se": "Den ryska infanteriförtruppen avancerar försiktigt genom låga trästängsel och tät sly i Jutas utkanter. Den främste soldaten rör sig varsamt med musköten i händerna, medan ryggsäcken endast bär standardutrustning och en rullad rock — inget extra vapen är fäst. Övriga soldater följer i lös formation, delvis skymda av vegetation och lätt krutrök, med spända och vaksamma kroppshållningar när striden tar sin början."
   },
   "narration": {
-    "en": "Rallying himself, Döbeln greets his men, inspiring confidence as officers prepare the defensive positions ahead."
-  },
-  "dialogs": [
-    {
-      "en": {
-        "person": "Troops (shouting)",
-        "text": "Hurrah for Döbeln!"
-      }
-    },
-    {
-      "en": {
-        "person": "Döbeln",
-        "text": "Steady now—Jutas will be our stand."
-      }
-    }
-  ],
-  "info": "Scene follows storyboard: bottom-wide panel, SplitWide layout. Döbeln centered in ActionSquare."
+    "en": "From the tree line, the Russian advance presses forward, testing the ground and the enemy’s resolve.",
+    "se": "Från skogsbrynet pressar den ryska framryckningen vidare, prövar marken och fiendens beslutsamhet."
+  }
 }

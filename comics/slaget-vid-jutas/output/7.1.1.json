@@ -1,11 +1,11 @@
 {
   "id": "7.1.1",
   "description": {
-    "en": "Swedish skirmishers fire from a fence line as thin white musket smoke drifts across the field."
+    "en": "Swedish infantry of the Björneborgs regemente fires a disciplined volley through thick gunpowder smoke. The firing line holds steady under command, muskets discharging in near-unison amid the chaos of battle.",
+    "se": "Svenskt infanteri ur Björneborgs regemente avfyrar en disciplinerad salva genom tät krutrök. Eldlinjen står fast under befäl, musköterna brinner av nästan samtidigt mitt i stridens kaos."
   },
   "narration": {
-    "en": "The first shots erupt as Swedish skirmishers delay the Russian approach, buying precious time for the main force to form."
-  },
-  "dialogs": [],
-  "info": "ActionSquare centered on firing skirmishers; apply Anime style with correct Swedish uniforms and early-afternoon smoke behavior."
+    "en": "At Jutas, discipline answers chaos. The Swedish line fires as one.",
+    "se": "Vid Jutas möter disciplinen kaoset. Den svenska linjen avfyrar som en enda kropp."
+  }
 }

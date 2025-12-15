@@ -1,11 +1,15 @@
 {
-  "id": "1.1.1",
+  "id": "1.1",
   "description": {
-    "en": "Full-page historical map of Finland during the 1808 war, drawn in clean anime-style lines and based on the attached reference."
+    "en": "Georg Carl von Döbeln stands in the left foreground, his black headband clearly visible, calm and resolute. Opposite him, a Russian commander faces him from the right, rigid and formal in dark green uniform with red facings. Behind each man, their armies wait across the open countryside under late-summer light.",
+    "sv": "Georg Carl von Döbeln står i förgrunden till vänster, med sitt svarta pannband tydligt synligt, lugn och beslutsam. Mittemot honom står en rysk befälhavare i förgrunden till höger, stel och formell i mörkgrön uniform med röda uppslag. Bakom dem väntar deras arméer utspridda över det öppna landskapet i sensommarens ljus."
   },
   "narration": {
-    "en": "The war ignites across Finland as Swedish and Russian forces maneuver for control, each preparing for the decisive struggles ahead."
+    "en": "After months of retreat, the fate of western Finland will soon be decided.",
+    "sv": "Efter månader av reträtt står västra Finlands öde snart på spel."
   },
   "dialogs": [],
-  "info": "Use attached map as geographic and compositional reference; preserve coastlines and town positions. ActionSquare centered on Finland region."
+  "quotes": {},
+  "info": "Establishing page introducing the opposing commanders and the strategic tension before the Battle of Jutas."
 }
+

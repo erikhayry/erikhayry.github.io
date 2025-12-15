@@ -1,11 +1,13 @@
 {
   "id": "5.1.2",
   "description": {
-    "en": "Aide-de-camp arranging maps and dispatches on a wooden table lit by warm candlelight."
+    "en": "Georg Carl von Döbeln rides forward on horseback, saluting his soldiers as they line the road to Jutas. Swedish infantry of the Björneborgs regemente stand in formation with bayonets raised, cheering as morale visibly rises.",
+    "se": "Georg Carl von Döbeln rider fram till häst och hälsar sina soldater längs vägen mot Jutas. Svenska infanterister ur Björneborgs regemente står uppställda med höjda bajonetter och jublar när moralen tydligt stärks."
   },
   "narration": {
-    "en": "The staff gathers intelligence and maps, knowing that every decision Döbeln makes from this bed will determine the army’s survival."
+    "en": "Döbeln’s return to the saddle spreads renewed confidence through the ranks.",
+    "se": "Döbelns återkomst till sadeln sprider förnyat mod genom leden."
   },
   "dialogs": [],
-  "info": "ActionSquare centered on aide’s hands and candlelit documents; anime style with warm evening interior lighting."
+  "info": "Page 5, Panel 2 — March to Jutas. Morale shift moment. Reference painting: 5.1.2.jpg. Anime (Studio Ghibli–inspired) style."
 }

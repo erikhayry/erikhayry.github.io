@@ -3,7 +3,7 @@
     "sources": {
       "pageLayout": {
         "file": "page-layout.json",
-        "reference": "Use this file for all page layouts, panel structures, canvas sizes, ActionSquare definitions, and no-gutter/no-margin rules."
+        "reference": "Use this file for all page layouts, panel structures, canvas sizes, and no-gutter/no-margin rules."
       },
       "soldierData": {
         "file": "soldier.json",
@@ -43,7 +43,7 @@
       "step6_generation": "Generate images in compliance with the four referenced files."
     },
     "consistencyRequirements": {
-      "layoutConsistency": "All panel counts, sizes, ActionSquare behavior, and layout structures must match page-layout.json.",
+      "layoutConsistency": "All panel counts, sizes, and layout structures must match page-layout.json.",
       "visualConsistency": "Uniform colors, equipment, and era details must match soldier.json.",
       "styleConsistency": "Rendering must follow the chosen style from comic-styles.json without mixing styles unless the user requests it.",
       "narrativeConsistency": "Scenes must match storyboard.json exactly; do not add or remove scenes or characters."

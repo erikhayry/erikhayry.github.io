@@ -1,18 +1,11 @@
 {
   "id": "4.1.2",
   "description": {
-    "en": "Döbeln rides beside weary Swedish soldiers marching through muddy autumn fields as light rain falls."
+    "en": "Interior of Döbeln’s quarters. Döbeln lies in bed, pale and weakened, a head wound visible beneath the black headband as soft daylight enters through a small window.",
+    "se": "Interiör av Döbelns rum. Döbeln ligger i sängen, blek och försvagad, med en huvudskada synlig under det svarta pannbandet medan mjukt dagsljus faller in genom ett litet fönster."
   },
   "narration": {
-    "en": "Döbeln forces himself to remain with the troops, masking his illness as he pushes his officers to maintain order through the worsening march."
-  },
-  "dialogs": [
-    {
-      "en": {
-        "person": "Döbeln",
-        "text": "We keep moving. No hesitation."
-      }
-    }
-  ],
-  "info": "Scene from storyboard page 4 panel 2: bottom wide. No dialogue specified in storyboard."
+    "en": "Fever and pain confine Döbeln to his bed, yet the weight of command does not leave him.",
+    "se": "Feber och smärta binder Döbeln vid sängen, men befälets tyngd lämnar honom inte."
+  }
 }

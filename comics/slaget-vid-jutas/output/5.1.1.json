@@ -1,18 +1,11 @@
 {
   "id": "5.1.1",
   "description": {
-    "en": "Evening exterior of a modest wooden house in Nykarleby, with a warm candle-glow shining from one window."
+    "en": "A calm, expansive view of the road toward Jutas. A winding dirt road leads through open fields toward a broad river bend in the distance, with wooden fences following the terrain and patches of forest framing the landscape under soft late-summer skies.",
+    "se": "En lugn och vidsträckt vy över vägen mot Jutas. En slingrande landsväg löper genom öppna fält mot en bred älvkrök i fjärran, med gärdsgårdar som följer terrängen och skogsdungar som ramar in landskapet under mjukt sensommarljus."
   },
   "narration": {
-    "en": "Inside Döbeln’s temporary quarters, the burden of command presses heavily as he fights both fever and the urgency of the coming battle."
-  },
-  "dialogs": [
-    {
-      "en": {
-        "person": "Aide",
-        "text": "Sir, the latest reports from the outposts have arrived."
-      }
-    }
-  ],
-  "info": "Architecture based on historical reference; all modern elements removed. ActionSquare centered on façade and glowing window."
+    "en": "The road ahead opens toward Jutas.",
+    "se": "Vägen framåt öppnar sig mot Jutas."
+  }
 }

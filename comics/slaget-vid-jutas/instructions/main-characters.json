@@ -4,7 +4,6 @@
     "rules": {
       "alwaysAskBeforeImageCreation": true,
       "respectCurrentStyle": true,
-      "useActionSquareForCharacterFraming": true,
       "neverChangeRecognizableFeatures": true,
       "uniformsMustFollowSoldierJson": true,
       "noAddedPropsUnlessScripted": true,

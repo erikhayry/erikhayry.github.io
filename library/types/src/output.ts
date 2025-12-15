@@ -70,7 +70,6 @@ export const PanelInfo = z.object({
     description: Text,
     narration: z.optional(Text),
     dialogs: z.optional(z.array(DialogInfo)),
-    quotes: z.optional(Text),
     info: z.optional(z.string())
 });
 

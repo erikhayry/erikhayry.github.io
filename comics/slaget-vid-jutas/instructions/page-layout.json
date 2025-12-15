@@ -1,226 +1,102 @@
 {
   "PageLayoutInstructions": {
     "meta": {
-      "safeSquareName": "ActionSquare",
-      "safeSquarePurpose": "Square crop area guaranteed to contain the important action/subject. Centered inside each panel so any square crop retains story-critical content.",
-      "exportFormatsRecommended": [
-        "png"
-      ],
-      "assetScaleFactors": {
-        "1x": 1
-      },
-      "neverAddGutter": true,
-      "noOuterMargins": true,
-      "gutterExplanation": "Panels must have zero internal gutters. Panels may touch; no outer page margins are allowed. Do not insert gutters or margins in production exports."
-    },
-    "1": {
-      "name": "Hero",
-      "description": "Single full-page panel used for establishing shots, character montages, or iconic scenes.",
-      "structure": {
-        "panelCount": 1,
-        "panels": [
-          {
-            "id": "1",
-            "position": "full-page",
-            "description": "One large panel occupying the entire page."
-          }
-        ]
-      },
-      "imageSize": {
+      "baseLandscape": {
         "width": 1536,
-        "height": 1024
+        "height": 1024,
+        "aspectRatio": "3:2"
       },
-      "safeSquare": {
-        "name": "ActionSquare",
-        "size_1x": 1024,
-        "size_2x": 1024,
-        "placement": "centered",
-        "notes": "Center the most important subject or group inside this square so any square crop will keep story-critical content."
+      "basePortrait": {
+        "width": 1024,
+        "height": 1536,
+        "aspectRatio": "2:3"
       },
-      "usage": {
-        "bestFor": [
-          "Large scenic views",
-          "Character galleries",
-          "Monuments",
-          "Key emotional or historical moments"
-        ],
-        "composition": [
-          "Cinematic framing",
-          "Subject centered or rule-of-thirds",
-          "Background readable but not cluttered"
-        ],
-        "promptRequirements": [
-          "Specify page layout: Hero (1)",
-          "Describe single panel subject and style",
-          "Confirm ActionSquare placement if subject intentionally off-center"
-        ]
-      }
+      "globalRules": [
+        "Images must be generated either as 1536×1024 (landscape) or 1024×1536 (portrait).",
+        "All important characters and story information must be clearly visible in the final image.",
+        "No gutters, borders, or margins are ever allowed."
+      ]
     },
-    "2": {
-      "name": "SplitWide",
-      "description": "Two wide horizontal panels stacked vertically, ideal for contrast or progression.",
-      "structure": {
-        "panelCount": 2,
+    "layouts": {
+      "1": {
+        "name": "Hero",
+        "orientation": "landscape",
+        "description": "Single full-page panel for establishing shots or iconic moments.",
+        "canvas": {
+          "width": 1536,
+          "height": 1024
+        }
+      },
+      "2": {
+        "name": "VerticalDiptych",
+        "orientation": "portrait",
+        "description": "Two stacked portrait panels. Suitable for dialogue, reaction, or progression.",
+        "canvas": {
+          "width": 1536,
+          "height": 1024
+        },
         "panels": [
           {
-            "id": "1",
-            "position": "top-wide",
-            "description": "Top wide panel."
+            "width": 1536,
+            "height": 768
           },
           {
-            "id": "2",
-            "position": "bottom-wide",
-            "description": "Bottom wide panel."
+            "width": 1536,
+            "height": 768
           }
         ]
       },
-      "imageSize": {
-        "width": 1536,
-        "height": 512
-      },
-      "safeSquare": {
-        "name": "ActionSquare",
-        "size_1x": 512,
-        "size_2x": 512,
-        "placement": "centered-in-each-panel"
-      },
-      "layoutRules": {
-        "internalGutterPx": 0,
-        "neverAddGutter": true,
-        "noOuterMargins": true
-      },
-      "usage": {
-        "bestFor": [
-          "Establishing shot + detail",
-          "Marching sequences",
-          "Before/after storytelling"
-        ],
-        "composition": [
-          "Top: landscape/context",
-          "Bottom: character/detail",
-          "Keep horizon and narrative clarity strong"
-        ],
-        "promptRequirements": [
-          "Specify: SplitWide (2). Describe top and bottom panels independently",
-          "Confirm subject placement relative to ActionSquare"
-        ]
-      }
-    },
-    "3": {
-      "name": "HorizontalTriptych",
-      "description": "Three horizontal panels arranged vertically for rhythmic storytelling or sequential action.",
-      "structure": {
-        "panelCount": 3,
+      "3": {
+        "name": "LandscapeDiptych",
+        "orientation": "landscape",
+        "description": "Two equal panels side-by-side. Useful for opposing forces or cause/effect.",
+        "canvas": {
+          "width": 1024,
+          "height": 1536
+        },
         "panels": [
           {
-            "id": "1",
-            "position": "top",
-            "description": "Top horizontal panel."
+            "width": 512,
+            "height": 1024
           },
           {
-            "id": "2",
-            "position": "middle",
-            "description": "Middle horizontal panel."
-          },
-          {
-            "id": "3",
-            "position": "bottom",
-            "description": "Bottom horizontal panel."
+            "width": 512,
+            "height": 1024
           }
         ]
       },
-      "imageSize": {
-        "width": 1536,
-        "height": 341
-      },
-      "safeSquare": {
-        "name": "ActionSquare",
-        "size_1x": 341,
-        "size_2x": 341,
-        "placement": "centered-in-each-panel"
-      },
-      "layoutRules": {
-        "internalGutterPx": 0,
-        "neverAddGutter": true,
-        "noOuterMargins": true
-      },
-      "usage": {
-        "bestFor": [
-          "Action progression",
-          "Orders → execution → result",
-          "Three-step storytelling"
-        ],
-        "composition": [
-          "Each panel = single clear action",
-          "Camera distances may vary intentionally",
-          "Maintain readable cause-effect"
-        ],
-        "promptRequirements": [
-          "Specify: HorizontalTriptych (3). Describe all three actions",
-          "Define tempo (fast/rising/steady) and ActionSquare placement"
+      "4": {
+        "name": "Quad",
+        "orientation": "landscape",
+        "description": "Four-panel grid (2×2) for rapid beats or multiple viewpoints.",
+        "canvas": {
+          "width": 1536,
+          "height": 1024
+        },
+        "panels": [
+          {
+            "width": 768,
+            "height": 512
+          },
+          {
+            "width": 768,
+            "height": 512
+          },
+          {
+            "width": 768,
+            "height": 512
+          },
+          {
+            "width": 768,
+            "height": 512
+          }
         ]
       }
     },
-    "4": {
-      "name": "Quad",
-      "description": "Four equal panels in a 2×2 grid for fast alternation, parallel storytelling, or simultaneous details.",
-      "structure": {
-        "panelCount": 4,
-        "panels": [
-          {
-            "id": "1",
-            "position": "top-left",
-            "description": "Top-left panel."
-          },
-          {
-            "id": "2",
-            "position": "top-right",
-            "description": "Top-right panel."
-          },
-          {
-            "id": "3",
-            "position": "bottom-left",
-            "description": "Bottom-left panel."
-          },
-          {
-            "id": "4",
-            "position": "bottom-right",
-            "description": "Bottom-right panel."
-          }
-        ]
-      },
-      "imageSize": {
-        "width": 768,
-        "height": 512
-      },
-      "safeSquare": {
-        "name": "ActionSquare",
-        "size_1x": 512,
-        "size_2x": 512,
-        "placement": "centered-in-each-panel"
-      },
-      "layoutRules": {
-        "internalGutterPx": 0,
-        "neverAddGutter": true,
-        "noOuterMargins": true
-      },
-      "usage": {
-        "bestFor": [
-          "Intense battle cuts",
-          "Close-up sequences",
-          "Contrasting perspectives",
-          "Multi-character action"
-        ],
-        "composition": [
-          "One clear focal point per panel",
-          "Mix close and medium shots intentionally",
-          "Avoid visual clutter"
-        ],
-        "promptRequirements": [
-          "Specify: Quad (4). Describe each panel independently",
-          "Indicate viewpoint: close / medium / wide per panel"
-        ]
-      }
-    }
+    "compositionChecklist": [
+      "Are all characters clearly visible within the panel?",
+      "Are faces, gestures, and interactions readable at panel size?",
+      "Does the layout choice serve the narrative purpose of the page?"
+    ]
   }
 }

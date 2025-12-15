@@ -1,69 +1,103 @@
 {
   "panelPromptGenerator": {
-    "version": "1.1",
-    "purpose": "Defines how to generate a complete, production-ready prompt for any specific panel in the Slaget vid Jutas comic project. Clarifies exact meaning of output JSON fields for downstream tooling.",
+    "version": "3.4",
+    "purpose": "Generate production-ready image prompts for the Slaget vid Jutas comic project. Enforces strict layout geometry, character continuity, historical accuracy, style consistency, and mandatory reference-image attachment.",
     "trigger": "When the user says: 'Generate prompt for Page X, Panel Y'.",
     "dataSources": {
       "storyboard": {
         "file": "storyboard.json",
-        "usage": "Extract page-level descriptions, panel descriptions, characters, scenes, and weather."
+        "usage": "Authoritative source for page order, panels, scenes, characters present, actions, and optional reference assets."
       },
       "pageLayout": {
         "file": "page-layout.json",
-        "usage": "Determine layout rules, panel count, panel sizes, ActionSquare definition, no-gutter rules."
+        "usage": "Authoritative source for layout type, canvas size, panel geometry, and no-gutter rules."
       },
       "mainCharacters": {
         "file": "main-characters.json",
-        "usage": "Enforce character visual identity and continuity."
+        "usage": "Authoritative source for character identity, facial features, posture, iconic elements, and continuity."
       },
       "soldierData": {
         "file": "soldier.json",
-        "usage": "Load accurate Swedish and Russian uniform and equipment rules."
+        "usage": "Authoritative source for uniforms, equipment, colors, and historical appearance."
       },
       "currentStyle": {
         "file": "current-style.json",
-        "usage": "Select active comic style."
+        "usage": "Defines the single active rendering style for the entire project."
       },
       "comicStyles": {
         "file": "comic-styles.json",
-        "usage": "Load aiInstructions for the active style."
-      },
-      "panelOutputJson": {
-        "file": "panelOutputSchema.json",
-        "usage": "Use this schema to validate and format the output JSON."
+        "usage": "Provides detailed AI rendering constraints for each supported style."
       }
     },
-    "outputFieldDefinitions": {
-      "description": {
-        "meaning": "Alt text for the generated image. Short, plain-text summary suitable for accessibility metadata and file descriptions. SHOULD NOT contain presentation instructions or dialogue; keep it succinct (1-2 sentences).",
-        "examples": [
-          "'Heroic panorama of Nykarleby at late-summer light with distant marching column.'"
+    "globalRules": [
+      "All images must exactly match the canvas size defined by the selected layout.",
+      "All named characters from the storyboard panel must appear in the image.",
+      "Uniforms, equipment, and appearance must strictly follow soldier.json.",
+      "Character faces, bodies, and iconic features must strictly follow main-characters.json.",
+      "Rendering style must strictly follow current-style.json and comic-styles.json.",
+      "Do not add props, characters, scenery, symbols, or actions not specified by the storyboard.",
+      "Do not add text, captions, speech bubbles, borders, gutters, frames, labels, plaques, signatures, watermarks, or UI elements.",
+      "Never reproduce or imitate any text, lettering, inscriptions, borders, frames, margins, signatures, or decorative elements originating from a reference image."
+    ],
+    "referenceImageEnforcement": {
+      "rule": "If a panel defines a referencePainting or referenceImage, the image file MUST be attached to the image generation request.",
+      "attachmentMechanism": "Use referenced_image_ids with the exact filename listed in storyboard.json.",
+      "hardFailureIfMissing": true,
+      "failureMessage": "Reference image declared but not attached. Abort generation.",
+      "notes": [
+        "Project files alone are not visible to the image model.",
+        "The image must be explicitly passed as pixels at generation time.",
+        "Textual description is insufficient for near-exact composition matching."
+      ]
+    },
+    "referenceImageRules": {
+      "activationCondition": "The current panel in storyboard.json contains a referencePainting or referenceImage field.",
+      "referenceFieldContract": {
+        "location": "storyboard.json → pages[].panels[].referencePainting",
+        "requiredFields": [
+          "type",
+          "source"
+        ],
+        "allowedTypes": [
+          "painting",
+          "photo"
+        ],
+        "sourceConstraint": "source must reference a resolvable image file within the project assets."
+      },
+      "sharedRules": {
+        "priorityOrder": [
+          "storyboard.json",
+          "main-characters.json",
+          "soldier.json",
+          "current-style.json + comic-styles.json",
+          "reference image asset"
+        ],
+        "absoluteProhibitions": [
+          "Never copy or recreate any text, inscriptions, captions, dates, signatures, or lettering from the reference",
+          "Never copy borders, frames, canvas edges, mounting artifacts, or decorative margins",
+          "Never override character identity, uniforms, equipment, or story events defined by project files",
+          "Never mix rendering styles or imitate painterly techniques incompatible with the active comic style"
         ]
       },
-      "narration": {
-        "meaning": "Text that will be rendered visually. Must describe visual elements or the story action so the reader sees it — not inner thoughts. Use concrete visual language (who, what, when, where, mood).",
-        "rule": "Never add to actual image, will be rendered with html",
-        "examples": [
-          "'Late-summer light bathes Nykarleby as Swedish columns approach along the road.'"
-        ]
+      "paintingSpecificRules": {
+        "appliesWhen": "referencePainting.type === 'painting'",
+        "intent": "Near-exact visual translation",
+        "requiredBehavior": [
+          "Recreate the composition as closely as possible: camera angle, horizon, framing, and spatial balance",
+          "Match relative placement of figures, formations, and major environmental elements",
+          "Match lighting direction, contrast hierarchy, time of day, and atmosphere",
+          "Match environmental structure such as terrain layout, roads, rivers, buildings, and vegetation",
+          "Rebuild the scene from scratch without tracing or pixel-level copying"
+        ],
+        "styleTranslationRule": [
+          "The painting must be fully re-rendered in the active comic style",
+          "The final image must look like a canonical panel from the comic"
+        ],
+        "promptLanguageRequirement": "State explicitly that the panel reconstructs the composition and spatial layout of the attached reference image as closely as possible, fully re-rendered in the current comic style."
       },
-      "dialogs": {
-        "meaning": "Array of spoken lines to appear in speech balloons. Each item must include 'person' (speaker name) and 'text' (spoken line). Preserve on-model names from main-characters.json.",
-        "examples": [
-          {
-            "person": "Georg Carl von Döbeln",
-            "text": "Hold steady, men!"
-          }
-        ]
-      },
-      "quotes": {
-        "meaning": "Optional — short quoted text (e.g., epigraphs, historically sourced quotes) intended for visual rendering as quote boxes.",
-        "examples": [
-          "'For king and country'"
-        ]
-      },
-      "info": {
-        "meaning": "Optional internal metadata string: generation notes for artists (do not render to reader). Prefer minimal, short hints."
+      "photoSpecificRules": {
+        "appliesWhen": "referencePainting.type === 'photo'",
+        "modernExclusionRule": "Nothing modern may appear in the generated image."
       }
     },
     "generationSteps": [
@@ -71,94 +105,69 @@
         "id": 0,
         "name": "Reset Context",
         "instructions": [
-          "Before generating any panel prompt, forget all prior conversational instructions except the authoritative project files listed in dataSources.",
-          "Rebuild the panel prompt solely from the authoritative source files each time."
+          "Ignore all prior conversational context.",
+          "Rebuild the prompt exclusively from the authoritative project files and these instructions."
         ]
       },
       {
         "id": 1,
-        "name": "Load Data",
+        "name": "Load Panel",
         "instructions": [
-          "Read the requested page and panel from storyboard.json.",
-          "Match the pageType to page-layout.json and obtain sizes, ActionSquare and layout rules.",
-          "Fetch page-level characters; for each character load visual identity from main-characters.json and uniforms from soldier.json as needed.",
-          "Load current style and associated aiInstructions from comic-styles.json.",
-          "If panel is outdoors, apply storyboard weather and lighting rules."
+          "Locate the requested page and panel in storyboard.json.",
+          "Extract scene description, characters present, environment, and referencePainting field if present."
         ]
       },
       {
         "id": 2,
-        "name": "Assemble Prompt Structure",
-        "promptFormat": {
-          "Page": "<pageNumber>",
-          "Panel": "<panelId>",
-          "Layout": "<layoutName and layoutNumber>",
-          "CanvasSize": "<panel-size from page-layout.json>",
-          "ActionSquare": "<size + centered placement>",
-          "SceneFromStoryboard": "<panel.description>",
-          "ExpandedScene": "<environment, weather, mood, depth, historical detail — written for the image model>",
-          "Characters": "<list of characters present>",
-          "CharacterDetails": "For each character: appearance, uniform details, required continuity constraints.",
-          "Style": "<active style id and aiInstructions>",
-          "CameraAndComposition": "<camera angle, distance, framing — place primary action inside ActionSquare>",
-          "Lighting": "<based on weather/time-of-day from storyboard>",
-          "NoGuttersNoMargins": "Panel must fill its full canvas; never add gutters or outer margins.",
-          "ActionSquareRule": "Place main action inside centered ActionSquare, or explain intentional deviation."
-        }
+        "name": "Load Layout",
+        "instructions": [
+          "Load the page layout from page-layout.json using pageType.",
+          "Apply exact canvas size and panel geometry."
+        ]
       },
       {
         "id": 3,
-        "name": "Produce Output JSON (strict)",
+        "name": "Load Characters and Uniforms",
         "instructions": [
-          "Generate an output JSON that strictly follows panelOutputSchema.json: include 'id' and 'description' at minimum. Validate field shapes and types.",
-          "Map content to the output fields according to 'outputFieldDefinitions' above:",
-          "  - 'description' → concise alt text for the image (accessibility/file metadata).",
-          "  - 'narration' → the visually rendered caption/narration (describe visual action and story beats).",
-          "  - 'dialogs' → array of { person, text } to appear in speech balloons.",
-          "  - 'quotes' and 'info' used only when applicable.",
-          "Do NOT put dialogue into 'description' or 'narration' fields. Do NOT put image-generation instructions into 'description'. Keep 'description' short; keep 'narration' story-focused and visually descriptive.",
-          "If any required scene element is ambiguous in the storyboard, choose the most obvious interpretation based on the authoritative files and include a short 'info' note describing the assumption."
+          "Load all named characters from main-characters.json.",
+          "Apply mandatory facial features, posture, and iconic elements.",
+          "Apply uniforms and equipment from soldier.json."
         ]
       },
       {
         "id": 4,
-        "name": "User Interaction & Confirmation",
+        "name": "Load Style",
         "instructions": [
-          "Return the assembled prompt plus the validated output JSON to the user.",
-          "Phrase any clarifying questions using numbered options"
+          "Load the active style from current-style.json.",
+          "Apply all constraints from comic-styles.json without dilution."
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Apply Reference Image (Mandatory Upload)",
+        "condition": "panel.referencePainting exists",
+        "instructions": [
+          "Verify that the referenced image file exists in project assets.",
+          "Attach the image to the generation call using referenced_image_ids.",
+          "If the image is not attached, abort generation immediately.",
+          "Apply painting or photo rules depending on reference type."
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Assemble Image Prompt",
+        "instructions": [
+          "Assemble the final image prompt including scene, composition, reference note, style enforcement, and hard constraints."
         ]
       }
     ],
-    "finalOutputExample": {
-      "id": "3.1.1",
-      "description": {
-        "en": "Heroic panorama of Nykarleby at late-summer light with distant marching Swedish column."
-      },
-      "narration": {
-        "en": "Late-summer sunlight spills across Nykarleby; a Swedish column approaches along the river road as townsfolk watch from the quay."
-      },
-      "dialogs": [
-        {
-          "en": {
-            "person": "Townsperson",
-            "text": "Look — the soldiers are coming."
-          }
-        },
-        {
-          "en": {
-            "person": "Officer",
-            "text": "Keep formation! Steady!"
-          }
-        }
-      ],
-      "quotes": {
-        "en": "— Excerpt (optional)"
-      },
-      "info": "ActionSquare centered on town cluster. Use neutral daylight per storyboard weather."
-    },
-    "notes": {
-      "validation": "Outputs MUST be validated against panelOutputSchema.json to ensure compatibility with downstream tools and production pipelines.",
-      "compatibility": "This file updates interpretation only; it does not override or change the authoritative source files."
-    }
+    "failureConditions": [
+      "Reference image declared but not attached",
+      "Composition deviates significantly from a reference painting when one is provided",
+      "Any text or border appears in the image",
+      "Canvas size does not match layout",
+      "Modern elements appear in a historically reconstructed scene"
+    ],
+    "designPrinciple": "Reference images define HOW a scene is staged. Project files define WHAT the scene is."
   }
 }

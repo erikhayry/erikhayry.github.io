@@ -1,11 +1,11 @@
 {
   "id": "4.1.1",
   "description": {
-    "en": "A weary Swedish column marches through muddy late-summer roads with wagons trailing and distant smoke drifting on the horizon."
+    "en": "Exterior view of Döbeln’s house in Nykarleby. A modest wooden house under calm late-summer light, the yard quiet and still.",
+    "se": "Exteriör vy av Döbelns hus i Nykarleby. Ett anspråkslöst trähus i lugnt sensommarljus, gården stilla och tyst."
   },
   "narration": {
-    "en": "Driven back from Vasa, the weary Swedish column presses southward, holding discipline despite exhaustion and the shadow of Russian pursuit."
-  },
-  "dialogs": [],
-  "info": "Top-wide SplitWide panel. Weather: late-summer Nordic daylight with intermittent showers; road visibly muddy."
+    "en": "In Nykarleby, far from the front line yet bound to it by fate, the commander is struck down by illness.",
+    "se": "I Nykarleby, långt från frontlinjen men oskiljaktigt bunden till den, slås befälhavaren ned av sjukdom."
+  }
 }

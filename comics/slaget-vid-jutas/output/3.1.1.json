@@ -1,11 +1,11 @@
 {
   "id": "3.1.1",
   "description": {
-    "en": "Panoramic late-summer view of Nykarleby with river bend, church steeple, wooden houses, and a distant small marching Swedish column."
+    "en": "A long Swedish column withdraws along a muddy road. Infantry march in silence while wagons creak behind them.",
+    "se": "En lång svensk kolonn drar sig tillbaka längs en lerig väg. Infanteriet marscherar i tystnad medan vagnarna knarrar bakom dem."
   },
   "narration": {
-    "en": "Nykarleby stands calm for now, unaware that its quiet streets will soon witness the movements of armies and the burden of war."
-  },
-  "dialogs": [],
-  "info": "ActionSquare centered on the town cluster per layout rules; weather: neutral Nordic daylight with light haze and damp ground."
+    "en": "After weeks of pressure, the Swedish army retreats south from Vasa—worn, but not yet broken.",
+    "se": "Efter veckor av hårt tryck drar den svenska armén sig tillbaka söderut från Vasa – sliten, men ännu inte bruten."
+  }
 }
