@@ -11,7 +11,8 @@
       "propertyNames": {
         "type": "string",
         "enum": [
-          "en"
+          "en",
+          "se"
         ]
       },
       "additionalProperties": {
@@ -23,7 +24,8 @@
       "propertyNames": {
         "type": "string",
         "enum": [
-          "en"
+          "en",
+          "se"
         ]
       },
       "additionalProperties": {
@@ -37,7 +39,8 @@
         "propertyNames": {
           "type": "string",
           "enum": [
-            "en"
+            "en",
+            "se"
           ]
         },
         "additionalProperties": {
@@ -56,18 +59,6 @@
           ],
           "additionalProperties": false
         }
-      }
-    },
-    "quotes": {
-      "type": "object",
-      "propertyNames": {
-        "type": "string",
-        "enum": [
-          "en"
-        ]
-      },
-      "additionalProperties": {
-        "type": "string"
       }
     },
     "info": {

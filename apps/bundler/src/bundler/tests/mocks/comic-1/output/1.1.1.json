@@ -1,10 +1,12 @@
 {
   "id": "1.1.1",
   "description": {
-    "en": "DESCRIPTION MOCK"
+    "en": "DESCRIPTION EN MOCK",
+    "se": "DESCRIPTION SE MOCK"
   },
   "info": "VALID WITH IMAGE",
   "narration": {
-    "en": "NARRATION_1.1.1_1"
+    "en": "NARRATION_1.1.1_1",
+    "se": "NARRATION_1.1.1_1"
   }
 }

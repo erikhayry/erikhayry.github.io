@@ -7,12 +7,17 @@
     "h": 92
   },
   "description": {
-    "en": "DESCRIPTION MOCK"
+    "en": "DESCRIPTION EN MOCK",
+    "se": "DESCRIPTION SE MOCK"
   },
   "info": "VALID WITH IMAGE",
   "dialogs": [
     {
       "en": {
+        "text": "DIALOG 1.1.1 TEXT",
+        "person": "DIALOG 1.1.1 PERSON"
+      },
+      "se": {
         "text": "DIALOG 1.1.1 TEXT",
         "person": "DIALOG 1.1.1 PERSON"
       }

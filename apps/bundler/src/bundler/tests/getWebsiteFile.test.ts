@@ -29,26 +29,26 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
-            description: {[Language.EN]: "DESCRIPTION MOCK"},
-            narration: {[Language.EN]: "NARRATION_1.1.1_1"}
+            description: {[Language.EN]: "DESCRIPTION EN MOCK", [Language.SE]: "DESCRIPTION SE MOCK"},
+            narration: {[Language.EN]: "NARRATION_1.1.1_1", [Language.SE]: "NARRATION_1.1.1_1"}
         }, {
             id: "1.1.2",
-            description: {[Language.EN]: "DESCRIPTION MOCK"},
+            description: {[Language.EN]: "DESCRIPTION EN MOCK", [Language.SE]: "DESCRIPTION SE MOCK"},
         }],
     });
     expect(comic1.pages[1]).toEqual({
-        layout: PageLayout.SplitWide,
+        layout: PageLayout.VerticalDiptych,
         panels: [{
             id: "1.2.1",
-            description: {[Language.EN]: "DESCRIPTION MOCK"},
+            description: {[Language.EN]: "DESCRIPTION EN MOCK", [Language.SE]: "DESCRIPTION SE MOCK"},
         },],
     });
 
     expect(comic1.pages[2]).toEqual({
-        layout: PageLayout.HorizontalTriptych,
+        layout: PageLayout.LandscapeDiptych,
         panels: [{
             id: "2.1.1",
-            description: {[Language.EN]: "DESCRIPTION MOCK"},
+            description: {[Language.EN]: "DESCRIPTION EN MOCK", [Language.SE]: "DESCRIPTION SE MOCK"},
         }],
     });
 
@@ -56,7 +56,7 @@ test("is should return pages", () => {
         layout: PageLayout.Quad,
         panels: [{
             id: "10.1.1",
-            description: {[Language.EN]: "DESCRIPTION MOCK"},
+            description: {[Language.EN]: "DESCRIPTION EN MOCK", [Language.SE]: "DESCRIPTION SE MOCK"},
         },],
     });
 
@@ -64,9 +64,13 @@ test("is should return pages", () => {
         layout: PageLayout.Hero,
         panels: [{
             id: "1.1.1",
-            description: {[Language.EN]: "DESCRIPTION MOCK"},
+            description: {[Language.EN]: "DESCRIPTION EN MOCK", [Language.SE]: "DESCRIPTION SE MOCK"},
             dialogs: [{
                 [Language.EN]: {
+                    text: 'DIALOG 1.1.1 TEXT',
+                    person: 'DIALOG 1.1.1 PERSON'
+                },
+                [Language.SE]: {
                     text: 'DIALOG 1.1.1 TEXT',
                     person: 'DIALOG 1.1.1 PERSON'
                 }

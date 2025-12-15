@@ -40,11 +40,11 @@ test("returns pages", () => {
             ],
         },
         {
-            layout: PageLayout.SplitWide,
+            layout: PageLayout.VerticalDiptych,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/1.2.1.json`)],
         },
         {
-            layout: PageLayout.HorizontalTriptych,
+            layout: PageLayout.LandscapeDiptych,
             panels: [getJSON(`${DIR}/comic-1/${OUTPUT_FOLDER}/2.1.1.json`)],
         },
         {

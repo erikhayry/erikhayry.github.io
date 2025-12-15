@@ -8,10 +8,12 @@
           {
             "id": "1.1.1",
             "description": {
-              "en": "Full-page historical map of Finland during the 1808 war, drawn in clean anime-style lines and based on the attached reference."
+              "en": "Georg Carl von Döbeln stands in the left foreground, his black headband clearly visible, calm and resolute. Opposite him, a Russian commander faces him from the right, rigid and formal in dark green uniform with red facings. Behind each man, their armies wait across the open countryside under late-summer light.",
+              "se": "Georg Carl von Döbeln står i förgrunden till vänster, med sitt svarta pannband tydligt synligt, lugn och beslutsam. Mittemot honom står en rysk befälhavare i förgrunden till höger, stel och formell i mörkgrön uniform med röda uppslag. Bakom dem väntar deras arméer utspridda över det öppna landskapet i sensommarens ljus."
             },
             "narration": {
-              "en": "The war ignites across Finland as Swedish and Russian forces maneuver for control, each preparing for the decisive struggles ahead."
+              "en": "After months of retreat, the fate of western Finland will soon be decided.",
+              "se": "Efter månader av reträtt står västra Finlands öde snart på spel."
             },
             "dialogs": []
           }
@@ -23,240 +25,14 @@
           {
             "id": "2.1.1",
             "description": {
-              "en": "Portrait-style confrontation of Georg Carl von Döbeln and Russian commander Nikolaj Kamenskij, with the two armies forming distant background masses."
+              "en": "A calm panoramic view of Nykarleby with a winding river, wooden town buildings, and open fields under late-summer light.",
+              "se": "En lugn panoramavy över Nykarleby med en slingrande å, träbebyggelse och öppna fält i sensommarljus."
             },
             "narration": {
-              "en": "Two armies, backed by rival empires, ready themselves for the clash at Jutas, where decisions made by their commanders will shape the fate of the campaign."
+              "en": "Nykarleby lies quiet in the late summer of 1808. The river bends slowly past the town, fields stand undisturbed, and no sign yet reveals that war is drawing near.",
+              "se": "Nykarleby ligger stilla sensommaren 1808. Ån slingrar sig långsamt förbi staden, fälten är orörda, och ännu finns inga tecken på att kriget närmar sig."
             },
             "dialogs": []
-          }
-        ]
-      },
-      {
-        "layout": "1",
-        "panels": [
-          {
-            "id": "3.1.1",
-            "description": {
-              "en": "Panoramic late-summer view of Nykarleby with river bend, church steeple, wooden houses, and a distant small marching Swedish column."
-            },
-            "narration": {
-              "en": "Nykarleby stands calm for now, unaware that its quiet streets will soon witness the movements of armies and the burden of war."
-            },
-            "dialogs": []
-          }
-        ]
-      },
-      {
-        "layout": "2",
-        "panels": [
-          {
-            "id": "4.1.1",
-            "description": {
-              "en": "A weary Swedish column marches through muddy late-summer roads with wagons trailing and distant smoke drifting on the horizon."
-            },
-            "narration": {
-              "en": "Driven back from Vasa, the weary Swedish column presses southward, holding discipline despite exhaustion and the shadow of Russian pursuit."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "4.1.2",
-            "description": {
-              "en": "Döbeln rides beside weary Swedish soldiers marching through muddy autumn fields as light rain falls."
-            },
-            "narration": {
-              "en": "Döbeln forces himself to remain with the troops, masking his illness as he pushes his officers to maintain order through the worsening march."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "We keep moving. No hesitation.",
-                  "person": "Döbeln"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layout": "4",
-        "panels": [
-          {
-            "id": "5.1.1",
-            "description": {
-              "en": "Evening exterior of a modest wooden house in Nykarleby, with a warm candle-glow shining from one window."
-            },
-            "narration": {
-              "en": "Inside Döbeln’s temporary quarters, the burden of command presses heavily as he fights both fever and the urgency of the coming battle."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Sir, the latest reports from the outposts have arrived.",
-                  "person": "Aide"
-                }
-              }
-            ]
-          },
-          {
-            "id": "5.1.2",
-            "description": {
-              "en": "Aide-de-camp arranging maps and dispatches on a wooden table lit by warm candlelight."
-            },
-            "narration": {
-              "en": "The staff gathers intelligence and maps, knowing that every decision Döbeln makes from this bed will determine the army’s survival."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "5.1.3",
-            "description": {
-              "en": "Döbeln sits half-upright in his sickbed, gesturing firmly toward an aide who stands beside a table in the dim candlelit room."
-            },
-            "narration": {
-              "en": "Though weakened, Döbeln’s resolve hardens; the fate of Jutas will not be decided without his direction."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "5.1.4",
-            "description": {
-              "en": "Döbeln, pale and bandaged, points at a map in candlelit quarters while lying in bed."
-            },
-            "narration": {
-              "en": "He dictates the movement of brigades with precise intent, shaping the battlefield from memory and instinct."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "They must hold the road - Jutas cannot be lost.",
-                  "person": "Döbeln"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layout": "2",
-        "panels": [
-          {
-            "id": "6.1.1",
-            "description": {
-              "en": "Wide establishing view of the Jutas landscape with the river and road under clear late-summer daylight, based on the reference image without its bottom border or text."
-            },
-            "narration": {
-              "en": "The march toward Jutas unfolds under afternoon light as the Swedish force closes in on the ground where they must stand and fight."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "6.1.2",
-            "description": {
-              "en": "Döbeln salutes from horseback before cheering Swedish infantry in the afternoon light near Jutas."
-            },
-            "narration": {
-              "en": "Rallying himself, Döbeln greets his men, inspiring confidence as officers prepare the defensive positions ahead."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Hurrah for Döbeln!",
-                  "person": "Troops (shouting)"
-                }
-              },
-              {
-                "en": {
-                  "text": "Steady now—Jutas will be our stand.",
-                  "person": "Döbeln"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layout": "4",
-        "panels": [
-          {
-            "id": "7.1.1",
-            "description": {
-              "en": "Swedish skirmishers fire from a fence line as thin white musket smoke drifts across the field."
-            },
-            "narration": {
-              "en": "The first shots erupt as Swedish skirmishers delay the Russian approach, buying precious time for the main force to form."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "7.1.2",
-            "description": {
-              "en": "Swedish skirmishers fall back in pairs along a smoke-covered road after receiving the signal to withdraw."
-            },
-            "narration": {
-              "en": "Orders ripple down the line as the forward troops fall back with discipline, refusing to break despite the pressure."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Pull back — pair by pair!",
-                  "person": "Officer"
-                }
-              }
-            ]
-          },
-          {
-            "id": "7.1.3",
-            "description": {
-              "en": "Russian infantry vanguard pushes forward through gaps in the fence line with bayonets held low amid drifting smoke."
-            },
-            "narration": {
-              "en": "The Russian vanguard surges ahead, confident that momentum is turning in their favor."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "7.1.4",
-            "description": {
-              "en": "Von Döbeln is seen at a distance through drifting smoke, raising his hand to steady the Swedish line."
-            },
-            "narration": {
-              "en": "From afar, Döbeln steadies his troops with calm precision, the sight of him preventing panic along the line."
-            },
-            "dialogs": []
-          }
-        ]
-      },
-      {
-        "layout": "2",
-        "panels": [
-          {
-            "id": "8.1.1",
-            "description": {
-              "en": "Wide view of dense Russian infantry ranks advancing through drifting smoke and splintered fencing."
-            },
-            "narration": {
-              "en": "Russian ranks press forward relentlessly, convinced that sheer weight will break the Swedish defense."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "8.1.2",
-            "description": {
-              "en": "Swedish defenders crouch behind a low ridge as musket impacts spatter earth around them through drifting smoke."
-            },
-            "narration": {
-              "en": "But the Swedes brace themselves behind the ridge, prepared to endure the storm and answer with disciplined fire."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Hold until my mark!",
-                  "person": "Swedish Officer"
-                }
-              }
-            ]
           }
         ]
       },
@@ -264,41 +40,26 @@
         "layout": "3",
         "panels": [
           {
-            "id": "9.1.1",
+            "id": "3.1.1",
             "description": {
-              "en": "Döbeln raises his sword from horseback to signal the attack, aides beside him relaying the command through drifting battlefield smoke."
+              "en": "A long Swedish column withdraws along a muddy road. Infantry march in silence while wagons creak behind them.",
+              "se": "En lång svensk kolonn drar sig tillbaka längs en lerig väg. Infanteriet marscherar i tystnad medan vagnarna knarrar bakom dem."
             },
             "narration": {
-              "en": "With a decisive gesture, Döbeln unleashes the moment he has prepared for: concentrated counterfire to halt the Russian advance."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Now—let them feel our answer!",
-                  "person": "Döbeln"
-                }
-              }
-            ]
+              "en": "After weeks of pressure, the Swedish army retreats south from Vasa—worn, but not yet broken.",
+              "se": "Efter veckor av hårt tryck drar den svenska armén sig tillbaka söderut från Vasa – sliten, men ännu inte bruten."
+            }
           },
           {
-            "id": "9.1.2",
+            "id": "3.1.2",
             "description": {
-              "en": "Swedish artillery battery fires in unison, cannons recoiling as bright muzzle flames erupt through drifting smoke."
+              "en": "Döbeln rides alongside the retreating column, his posture firm despite exhaustion. Horses and men move together over rain-darkened ground.",
+              "se": "Döbeln rider längs den retirerande kolonnen, med fast hållning trots utmattningen. Hästar och män rör sig tillsammans över regnmörk mark."
             },
             "narration": {
-              "en": "Swedish artillery roars in synchronized force, shaking the field as gunners work with fierce precision."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "9.1.3",
-            "description": {
-              "en": "Swedish infantry fires a coordinated volley, a bright line of muzzle flashes casting a rolling wall of smoke forward."
-            },
-            "narration": {
-              "en": "Infantry volleys follow, rolling across the line in disciplined waves that force the attackers to recoil."
-            },
-            "dialogs": []
+              "en": "Beside his men, Döbeln maintains the discipline of the retreat, turning withdrawal into resolve.",
+              "se": "Vid sina män upprätthåller Döbeln ordningen under reträtten och förvandlar tillbakagång till beslutsamhet."
+            }
           }
         ]
       },
@@ -306,103 +67,105 @@
         "layout": "4",
         "panels": [
           {
-            "id": "10.1.1",
+            "id": "4.1.1",
             "description": {
-              "en": "Russian infantry returns fire in a dense line as officers gesture for the formation to widen through drifting battlefield smoke."
+              "en": "Exterior view of Döbeln’s house in Nykarleby. A modest wooden house under calm late-summer light, the yard quiet and still.",
+              "se": "Exteriör vy av Döbelns hus i Nykarleby. Ett anspråkslöst trähus i lugnt sensommarljus, gården stilla och tyst."
             },
             "narration": {
-              "en": "The Russians widen their formation, firing back with desperate intensity to regain the initiative."
+              "en": "In Nykarleby, far from the front line yet bound to it by fate, the commander is struck down by illness.",
+              "se": "I Nykarleby, långt från frontlinjen men oskiljaktigt bunden till den, slås befälhavaren ned av sjukdom."
+            }
+          },
+          {
+            "id": "4.1.2",
+            "description": {
+              "en": "Interior of Döbeln’s quarters. Döbeln lies in bed, pale and weakened, a head wound visible beneath the black headband as soft daylight enters through a small window.",
+              "se": "Interiör av Döbelns rum. Döbeln ligger i sängen, blek och försvagad, med en huvudskada synlig under det svarta pannbandet medan mjukt dagsljus faller in genom ett litet fönster."
+            },
+            "narration": {
+              "en": "Fever and pain confine Döbeln to his bed, yet the weight of command does not leave him.",
+              "se": "Feber och smärta binder Döbeln vid sängen, men befälets tyngd lämnar honom inte."
+            }
+          },
+          {
+            "id": "4.1.3",
+            "description": {
+              "en": "Inside a modest wooden house in Nykarleby, a Swedish aide stands bent over a rough table, studying a hand-drawn military map. His finger traces the roads and rivers with focused precision as soft daylight falls across the room.",
+              "se": "Inne i ett anspråkslöst trähus i Nykarleby står en svensk adjutant böjd över ett grovt träbord och studerar en handritad militärkarta. Med koncentrerad noggrannhet följer hans finger vägar och vattendrag medan mjukt dagsljus faller in i rummet."
+            },
+            "narration": {
+              "en": "Even as Döbeln lies ill, the machinery of command continues its quiet work.",
+              "se": "Även medan Döbeln ligger sjuk fortsätter befälets maskineri sitt stillsamma arbete."
             },
             "dialogs": []
           },
           {
-            "id": "10.1.2",
+            "id": "4.1.4",
             "description": {
-              "en": "Swedish infantry hastily reload behind thick smoke, ramrods flashing as they prepare their next volley."
+              "en": "Döbeln, still weakened, sits upright and issues orders over a map while aides stand close and listen attentively.",
+              "se": "Döbeln, fortfarande försvagad, sitter upprätt och ger order över en karta medan adjutanter står nära och lyssnar uppmärksamt."
             },
             "narration": {
-              "en": "Swedish soldiers reload under constant danger, grit and training sustaining them through the chaos."
+              "en": "Illness halts his body, but not his command.",
+              "se": "Sjukdomen hejdar hans kropp, men inte hans befäl."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "5.1.1",
+            "description": {
+              "en": "A calm, expansive view of the road toward Jutas. A winding dirt road leads through open fields toward a broad river bend in the distance, with wooden fences following the terrain and patches of forest framing the landscape under soft late-summer skies.",
+              "se": "En lugn och vidsträckt vy över vägen mot Jutas. En slingrande landsväg löper genom öppna fält mot en bred älvkrök i fjärran, med gärdsgårdar som följer terrängen och skogsdungar som ramar in landskapet under mjukt sensommarljus."
             },
-            "dialogs": []
+            "narration": {
+              "en": "The road ahead opens toward Jutas.",
+              "se": "Vägen framåt öppnar sig mot Jutas."
+            }
           },
           {
-            "id": "10.1.3",
+            "id": "5.1.2",
             "description": {
-              "en": "Wounded soldiers lie between the lines as stretcher men crouch low through drifting smoke."
+              "en": "Georg Carl von Döbeln rides forward on horseback, saluting his soldiers as they line the road to Jutas. Swedish infantry of the Björneborgs regemente stand in formation with bayonets raised, cheering as morale visibly rises.",
+              "se": "Georg Carl von Döbeln rider fram till häst och hälsar sina soldater längs vägen mot Jutas. Svenska infanterister ur Björneborgs regemente står uppställda med höjda bajonetter och jublar när moralen tydligt stärks."
             },
             "narration": {
-              "en": "Casualties mount between the lines as stretcher-bearers attempt rescues under relentless fire."
-            },
-            "dialogs": []
-          },
-          {
-            "id": "10.1.4",
-            "description": {
-              "en": "Swedish artillery crew swabs and rams the cannon as sparks flicker from the vent amid drifting smoke."
-            },
-            "narration": {
-              "en": "The artillery crews maintain their deadly rhythm, each blast shaping the outcome of the battle."
+              "en": "Döbeln’s return to the saddle spreads renewed confidence through the ranks.",
+              "se": "Döbelns återkomst till sadeln sprider förnyat mod genom leden."
             },
             "dialogs": []
           }
         ]
       },
       {
-        "layout": "4",
+        "layout": "3",
         "panels": [
           {
-            "id": "11.1.1",
+            "id": "6.1.1",
             "description": {
-              "en": "Döbeln rallies the Swedish line from horseback, sword raised, as infantry and riders advance through glowing battlefield smoke."
+              "en": "Two Swedish infantry soldiers from Björneborgs läns infanteriregemente crouch behind low natural cover at the outskirts of Jutas. One soldier aims a flintlock musket forward with calm focus, while the second stays close beside him, alert and ready. The air is clear with no weapons smoke, and the surrounding late-summer landscape is quiet and tense, marking the very first controlled moments of the battle.",
+              "se": "Två svenska infanterisoldater ur Björneborgs läns infanteriregemente hukar bakom lågt naturligt skydd i utkanten av Jutas. Den ene soldaten siktar framåt med sin flintlåsmusköt med lugn koncentration, medan den andre håller sig tätt intill, vaksam och redo. Luften är klar utan krutrök, och det sena sommarlandskapet är stilla och spänt – stridens allra första, kontrollerade ögonblick."
             },
             "narration": {
-              "en": "Sensing the enemy’s hesitation, Döbeln rallies his troops forward, turning defense into a decisive counterstroke."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Forward! Drive them back!",
-                  "person": "Döbeln"
-                }
-              }
-            ]
-          },
-          {
-            "id": "11.1.2",
-            "description": {
-              "en": "Swedish infantry charge forward with bayonets leveled through golden smoke."
-            },
-            "narration": {
-              "en": "With cries of determination, the Swedish line charges, overwhelming the shaken Russians."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Hurraaah!",
-                  "person": "Swedish Soldiers"
-                }
-              }
-            ]
-          },
-          {
-            "id": "11.1.3",
-            "description": {
-              "en": "Russian infantry line buckling under pressure as an officer gestures urgently through drifting smoke."
-            },
-            "narration": {
-              "en": "Russian units falter as officers attempt—vainly—to restore cohesion."
+              "en": "The first shots are taken—measured, deliberate, and without yet plunging the field into chaos.",
+              "se": "De första skotten avlossas – avvägda och kontrollerade, innan slagfältet ännu kastas in i kaos."
             },
             "dialogs": []
           },
           {
-            "id": "11.1.4",
+            "id": "6.1.2",
             "description": {
-              "en": "A torn Russian banner fades into thick orange-lit smoke as the retreat begins."
+              "en": "Russian infantry vanguard advances cautiously through low wooden fences and dense brush on the outskirts of Jutas. The foremost soldier moves carefully with musket in hand while his backpack carries only standard gear and a rolled greatcoat — no spare weapon attached. Other soldiers follow in loose formation, partially obscured by foliage and light gun smoke, their posture tense and alert as the battle begins.",
+              "se": "Den ryska infanteriförtruppen avancerar försiktigt genom låga trästängsel och tät sly i Jutas utkanter. Den främste soldaten rör sig varsamt med musköten i händerna, medan ryggsäcken endast bär standardutrustning och en rullad rock — inget extra vapen är fäst. Övriga soldater följer i lös formation, delvis skymda av vegetation och lätt krutrök, med spända och vaksamma kroppshållningar när striden tar sin början."
             },
             "narration": {
-              "en": "The retreat begins in earnest, marked by abandoned banners and the chaos of a broken line."
-            },
-            "dialogs": []
+              "en": "From the tree line, the Russian advance presses forward, testing the ground and the enemy’s resolve.",
+              "se": "Från skogsbrynet pressar den ryska framryckningen vidare, prövar marken och fiendens beslutsamhet."
+            }
           }
         ]
       },
@@ -410,52 +173,26 @@
         "layout": "2",
         "panels": [
           {
-            "id": "12.1.1",
+            "id": "7.1.1",
             "description": {
-              "en": "Döbeln walks across a dusk-lit battlefield among fallen soldiers and abandoned gear."
+              "en": "Swedish infantry of the Björneborgs regemente fires a disciplined volley through thick gunpowder smoke. The firing line holds steady under command, muskets discharging in near-unison amid the chaos of battle.",
+              "se": "Svenskt infanteri ur Björneborgs regemente avfyrar en disciplinerad salva genom tät krutrök. Eldlinjen står fast under befäl, musköterna brinner av nästan samtidigt mitt i stridens kaos."
             },
             "narration": {
-              "en": "As dusk settles, Döbeln surveys the cost of victory, carrying the weight of every life lost under his command."
-            },
-            "dialogs": []
+              "en": "At Jutas, discipline answers chaos. The Swedish line fires as one.",
+              "se": "Vid Jutas möter disciplinen kaoset. Den svenska linjen avfyrar som en enda kropp."
+            }
           },
           {
-            "id": "12.1.2",
+            "id": "7.1.2",
             "description": {
-              "en": "Field surgeons treat wounded soldiers by dim campfire while Swedish officers confer in the dusk smoke."
+              "en": "Russian infantry advances across the Jutas battlefield with bayonets fixed, moving through drifting smoke and trampled ground. The formation presses forward with determination under heavy fire.",
+              "se": "Ryskt infanteri rycker fram över slagfältet vid Jutas med fästa bajonetter, genom drivande krutrök och upptrampad mark. Formationerna pressar framåt med beslutsamhet under hård eld."
             },
             "narration": {
-              "en": "Surgeons labor through the evening, while officers quietly count the price of the hard-won stand at Jutas."
-            },
-            "dialogs": []
-          }
-        ]
-      },
-      {
-        "layout": "1",
-        "panels": [
-          {
-            "id": "13.1.1",
-            "description": {
-              "en": "Wide modern scene of the Jutas monument exactly as in the provided reference, five meters tall, with a teacher resembling the provided photo and students gathered beneath it among birch trees."
-            },
-            "narration": {
-              "en": "Generations later, the memory of Jutas endures as new voices retell the courage and sacrifice that shaped Finland’s history."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Here, Döbeln’s stand changed the course of the campaign.",
-                  "person": "Teacher"
-                }
-              },
-              {
-                "en": {
-                  "text": "It feels different hearing it here, where it happened.",
-                  "person": "Student"
-                }
-              }
-            ]
+              "en": "The Russian line pushes onward, seeking to break the Swedish defense through sheer momentum.",
+              "se": "Den ryska linjen pressar vidare, i hopp om att bryta det svenska försvaret genom ren kraft och rörelse."
+            }
           }
         ]
       }

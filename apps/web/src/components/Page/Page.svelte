@@ -54,9 +54,7 @@
 
     .layout-3 {
         grid-template-areas:
-            "a"
-            "b"
-            "c"
+            "a b"
     }
 
     .layout-4 {

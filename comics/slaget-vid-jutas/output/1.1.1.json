@@ -1,15 +1,14 @@
 {
-  "id": "1.1",
+  "id": "1.1.1",
   "description": {
     "en": "Georg Carl von Döbeln stands in the left foreground, his black headband clearly visible, calm and resolute. Opposite him, a Russian commander faces him from the right, rigid and formal in dark green uniform with red facings. Behind each man, their armies wait across the open countryside under late-summer light.",
-    "sv": "Georg Carl von Döbeln står i förgrunden till vänster, med sitt svarta pannband tydligt synligt, lugn och beslutsam. Mittemot honom står en rysk befälhavare i förgrunden till höger, stel och formell i mörkgrön uniform med röda uppslag. Bakom dem väntar deras arméer utspridda över det öppna landskapet i sensommarens ljus."
+    "se": "Georg Carl von Döbeln står i förgrunden till vänster, med sitt svarta pannband tydligt synligt, lugn och beslutsam. Mittemot honom står en rysk befälhavare i förgrunden till höger, stel och formell i mörkgrön uniform med röda uppslag. Bakom dem väntar deras arméer utspridda över det öppna landskapet i sensommarens ljus."
   },
   "narration": {
     "en": "After months of retreat, the fate of western Finland will soon be decided.",
-    "sv": "Efter månader av reträtt står västra Finlands öde snart på spel."
+    "se": "Efter månader av reträtt står västra Finlands öde snart på spel."
   },
   "dialogs": [],
-  "quotes": {},
   "info": "Establishing page introducing the opposing commanders and the strategic tension before the Battle of Jutas."
 }
 

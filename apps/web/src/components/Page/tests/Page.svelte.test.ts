@@ -3,8 +3,8 @@ import {renderPageSvelte} from "./utils/renderPage.svelte";
 import {
     PAGE_1_MOCK,
     PAGE_1_PANEL_1_DIALOG_2,
+    PAGE_1_PANEL_1_EN_NARRATION_1,
     PAGE_1_PANEL_1_MOCK,
-    PAGE_1_PANEL_1_NARRATION_1,
     PAGE_2_MOCK,
     PAGE_2_PANEL_1_DIALOG_1,
     PAGE_3_MOCK,
@@ -25,7 +25,7 @@ describe("<Page />", () => {
         test("should show narrations", () => {
             const {getByText} = renderPageSvelte(PAGE_1_MOCK);
 
-            expect(getByText(PAGE_1_PANEL_1_NARRATION_1)).toBeInTheDocument()
+            expect(getByText(PAGE_1_PANEL_1_EN_NARRATION_1)).toBeInTheDocument()
         });
     });
 
@@ -53,7 +53,7 @@ describe("<Page />", () => {
             expect(getAllPanelContainers().at(0)).toHaveClass("panel-a");
         });
 
-        test("split wide", () => {
+        test("LandscapeDiptych", () => {
             const {getPageContainer, getAllPanelContainers} =
                 renderPageSvelte(PAGE_2_MOCK);
 
@@ -63,14 +63,13 @@ describe("<Page />", () => {
             expect(getAllPanelContainers().at(1)).toHaveClass("panel-b");
         });
 
-        test("horizontal triptych", () => {
+        test("VerticalDiptych", () => {
             const {getPageContainer, getAllPanelContainers} =
                 renderPageSvelte(PAGE_3_MOCK);
 
             expect(getPageContainer()).toHaveClass("layout-3");
             expect(getAllPanelContainers().at(0)).toHaveClass("panel-a");
             expect(getAllPanelContainers().at(1)).toHaveClass("panel-b");
-            expect(getAllPanelContainers().at(2)).toHaveClass("panel-c");
         });
 
         test("quad", () => {

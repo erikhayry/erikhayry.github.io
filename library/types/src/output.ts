@@ -24,21 +24,22 @@ export const Language = {
 } as const;
 export const LanguageType = z.enum([
     Language.EN,
+    Language.SE,
 ]);
 export const Text = z.record(LanguageType, z.string())
 export type Text = z.infer<typeof Text>;
 
 export const PageLayout = {
     Hero: "1",
-    SplitWide: "2",
-    HorizontalTriptych: "3",
+    VerticalDiptych: "2",
+    LandscapeDiptych: "3",
     Quad: "4"
 } as const;
 
 export const PageLayoutType = z.enum([
     PageLayout.Hero,
-    PageLayout.SplitWide,
-    PageLayout.HorizontalTriptych,
+    PageLayout.VerticalDiptych,
+    PageLayout.LandscapeDiptych,
     PageLayout.Quad
 ]);
 export type PageLayoutValue = z.infer<typeof PageLayoutType>
