@@ -20,6 +20,7 @@
         flex-direction: column;
         gap: var(--spacing-2x);
 
+
         @media (min-width: 1250px) {
             gap: var(--panel-border);
             padding: var(--panel-border);
@@ -27,7 +28,7 @@
             overflow: hidden;
             width: auto;
             height: 100%;
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 2 / 1;
         }
     }
 

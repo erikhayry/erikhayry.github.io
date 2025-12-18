@@ -1,0 +1,19 @@
+{
+  "id": "10.1.1",
+  "description": {
+    "en": "On the road after the battle, Döbeln rides forward on horseback, raising his hat in acknowledgment as Swedish infantry line the roadside and salute him. To the left, a broken artillery piece and a fallen soldier lie by the ditch, quietly reminding of the cost of victory. Smoke lingers faintly over the fields as calm returns to the landscape.",
+    "se": "På vägen efter striden rider Döbeln fram till häst och höjer sin hatt som hälsning, medan det svenska infanteriet står uppställt längs vägen och salutera honom. Till vänster ligger ett sönderslaget artilleripjäs och en stupad soldat vid diket, en stilla påminnelse om segerns pris. Röken dröjer svagt över fälten när lugnet återvänder."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "This honor belongs to you.",
+        "person": "Georg Carl von Döbeln"
+      },
+      "se": {
+        "text": "Denna ära tillhör er.",
+        "person": "Georg Carl von Döbeln"
+      }
+    }
+  ]
+}
