@@ -1,0 +1,24 @@
+{
+  "id": "9.1.1",
+  "description": {
+    "en": "Russian infantry formations begin to falter as cohesion breaks. Soldiers hesitate mid-step while officers struggle to hold the line amid drifting smoke and churned ground.",
+    "se": "De ryska infanteriformationerna börjar vackla när sammanhållningen bryts. Soldater tvekar i steget medan officerare kämpar för att hålla linjen genom rök och söndertrampad mark."
+  },
+  "narration": {
+    "en": "The Russian attack loses its momentum. Discipline gives way to doubt.",
+    "se": "Det ryska anfallet tappar sitt driv. Disciplinen ger vika för tvivel."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Stand—stand fast!",
+        "person": "Russian officer"
+      },
+      "se": {
+        "text": "Stå — håll fast!",
+        "person": "Rysk officer"
+      }
+    }
+  ],
+  "info": "Page 9 Panel 1 – Russian Withdrawal begins"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "11.1.2",
+  "description": {
+    "en": "Field surgeons work by low firelight, bending over wounded soldiers laid on the ground. Faces are strained and exhausted; bandages, bloodied uniforms, and improvised tools are visible in the dim dusk.",
+    "se": "Fältskärare arbetar i lågt eldsken, böjda över sårade soldater som ligger på marken. Ansiktena är spända och utmattade; förband, blodiga uniformer och improviserade verktyg syns i skymningen."
+  },
+  "narration": {
+    "en": "When the firing ceases, another battle begins — to save those who still cling to life.",
+    "se": "När elden tystnar börjar en annan strid — kampen för att rädda dem som ännu håller sig vid liv."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Easy now—hold still.",
+        "person": "Surgeon"
+      },
+      "se": {
+        "text": "Lugnt nu — ligg stilla.",
+        "person": "Fältskär"
+      }
+    }
+  ],
+  "quotes": {},
+  "info": "Aftermath of the Battle of Jutas, evening of 13 September 1808. Focus on care, exhaustion, and the human cost of victory."
+}

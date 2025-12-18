@@ -8,6 +8,17 @@
     "en": "The first shots are taken—measured, deliberate, and without yet plunging the field into chaos.",
     "se": "De första skotten avlossas – avvägda och kontrollerade, innan slagfältet ännu kastas in i kaos."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "text": "Contact!",
+        "person": "Swedish skirmisher"
+      },
+      "se": {
+        "text": "Kontakt!",
+        "person": "Svensk skytt"
+      }
+    }
+  ],
   "info": "Page 6 Panel 1. Exactly two Swedish soldiers only. No smoke from weapons. Early skirmish phase before battle escalation."
 }

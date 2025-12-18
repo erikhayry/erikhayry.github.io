@@ -7,5 +7,17 @@
   "narration": {
     "en": "Illness halts his body, but not his command.",
     "se": "Sjukdomen hejdar hans kropp, men inte hans befäl."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Then that is where we stop them.",
+        "person": "Georg Carl von Döbeln"
+      },
+      "se": {
+        "text": "Då är det där vi stoppar dem.",
+        "person": "Georg Carl von Döbeln"
+      }
+    }
+  ]
 }

@@ -7,5 +7,17 @@
   "narration": {
     "en": "From the tree line, the Russian advance presses forward, testing the ground and the enemy’s resolve.",
     "se": "Från skogsbrynet pressar den ryska framryckningen vidare, prövar marken och fiendens beslutsamhet."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Advance—steady!",
+        "person": "Russian officer"
+      },
+      "se": {
+        "text": "Framåt — håll linjen!",
+        "person": "Rysk officer"
+      }
+    }
+  ]
 }

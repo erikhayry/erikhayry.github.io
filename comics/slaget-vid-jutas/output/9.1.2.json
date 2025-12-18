@@ -1,0 +1,24 @@
+{
+  "id": "9.1.2",
+  "description": {
+    "en": "Russian infantry retreat into drifting smoke and broken ground on the Jutas battlefield. Soldiers move back in loose, disordered formation through churned earth and shallow ditches, their figures gradually fading into haze.",
+    "se": "Ryskt infanteri drar sig tillbaka in i drivande krutrök och sönderslagen terräng på slagfältet vid Jutas. Soldater rör sig bakåt i oordnade led över upptrampad mark och grunda diken, deras gestalter löses gradvis upp i dimman."
+  },
+  "narration": {
+    "en": "The Russian attack collapses. What moments ago pressed forward now dissolves into smoke and retreat.",
+    "se": "Den ryska attacken bryter samman. Det som nyss pressade framåt löses nu upp i rök och reträtt."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Fall back!",
+        "person": "Russian soldier"
+      },
+      "se": {
+        "text": "Tillbaka!",
+        "person": "Rysk soldat"
+      }
+    }
+  ],
+  "info": "Page 9 Panel 2 – Russian withdrawal at Jutas. No named characters present. Russian infantry only."
+}

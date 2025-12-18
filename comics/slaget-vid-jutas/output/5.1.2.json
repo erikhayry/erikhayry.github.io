@@ -8,6 +8,17 @@
     "en": "Döbeln’s return to the saddle spreads renewed confidence through the ranks.",
     "se": "Döbelns återkomst till sadeln sprider förnyat mod genom leden."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "text": "Forward—today we turn.",
+        "person": "Georg Carl von Döbeln"
+      },
+      "se": {
+        "text": "Framåt — i dag vänder det.",
+        "person": "Georg Carl von Döbeln"
+      }
+    }
+  ],
   "info": "Page 5, Panel 2 — March to Jutas. Morale shift moment. Reference painting: 5.1.2.jpg. Anime (Studio Ghibli–inspired) style."
 }

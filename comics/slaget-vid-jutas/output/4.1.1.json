@@ -7,5 +7,17 @@
   "narration": {
     "en": "In Nykarleby, far from the front line yet bound to it by fate, the commander is struck down by illness.",
     "se": "I Nykarleby, långt från frontlinjen men oskiljaktigt bunden till den, slås befälhavaren ned av sjukdom."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "He has not left the house in days.",
+        "person": "Aide"
+      },
+      "se": {
+        "text": "Han har inte lämnat huset på flera dagar.",
+        "person": "Adjutant"
+      }
+    }
+  ]
 }

@@ -1,0 +1,24 @@
+{
+  "id": "13.1.1",
+  "description": {
+    "en": "A modern-day memorial at Jutas stands tall among trees. In the foreground, a white-haired, bearded teacher gestures calmly as he explains the site to his students. The monument rises behind him, massive and enduring, surrounded by peaceful forest.",
+    "se": "Minnesmonumentet vid Jutas reser sig bland träden i nutid. I förgrunden gestikulerar en vit­hårig och skäggig lärare lugnt medan han berättar för sina elever. Monumentet tornar upp sig bakom honom, massivt och beständigt, omgivet av en stillsam skog."
+  },
+  "narration": {
+    "en": "More than two centuries later, the battle lives on — not in gunfire, but in memory.",
+    "se": "Mer än två sekel senare lever slaget vidare – inte i gevärseld, utan i minnet."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Here, history chose to pause.",
+        "person": "Teacher"
+      },
+      "se": {
+        "text": "Här valde historien att stanna upp.",
+        "person": "Lärare"
+      }
+    }
+  ],
+  "info": "Page 13 – Memory. Modern-day Jutas. Closing reflection panel."
+}

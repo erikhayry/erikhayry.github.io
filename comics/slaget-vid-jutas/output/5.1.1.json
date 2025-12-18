@@ -7,5 +7,17 @@
   "narration": {
     "en": "The road ahead opens toward Jutas.",
     "se": "Vägen framåt öppnar sig mot Jutas."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "The ground favors us ahead.",
+        "person": "Swedish officer"
+      },
+      "se": {
+        "text": "Terrängen gynnar oss längre fram.",
+        "person": "Svensk officer"
+      }
+    }
+  ]
 }

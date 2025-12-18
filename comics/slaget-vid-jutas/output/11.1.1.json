@@ -1,0 +1,24 @@
+{
+  "id": "11.1.1",
+  "description": {
+    "se": "Döbeln vandrar långsamt genom slagfältets efterdyningar. I det avtagande kvällsljuset ligger fallna soldater utspridda på marken, och övergiven utrustning vittnar om stridens våldsamhet. En utmattad häst går tätt intill honom med sänkt huvud. Stillheten efter striden är tung.",
+    "en": "Döbeln walks slowly through the aftermath of the battlefield. In the fading evening light, fallen soldiers lie scattered across the ground, and abandoned equipment bears witness to the violence of the fighting. An exhausted horse walks close beside him, its head lowered. The stillness after the battle is heavy."
+  },
+  "narration": {
+    "se": "Segern var vunnen, men priset låg synligt framför honom.",
+    "en": "The victory was won, but its cost lay plainly before him."
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "So many…",
+        "person": "Georg Carl von Döbeln"
+      },
+      "se": {
+        "text": "Så många…",
+        "person": "Georg Carl von Döbeln"
+      }
+    }
+  ],
+  "info": "Page 11 Panel 1 – Aftermath at Jutas. Reference painting faithfully reconstructed and re-rendered in Anime (Studio Ghibli–inspired) style. No text appears in the image."
+}

@@ -8,7 +8,18 @@
     "en": "After months of retreat, the fate of western Finland will soon be decided.",
     "se": "Efter månader av reträtt står västra Finlands öde snart på spel."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "text": "Here, we stand.",
+        "person": "Georg Carl von Döbeln"
+      },
+      "se": {
+        "text": "Här står vi.",
+        "person": "Georg Carl von Döbeln"
+      }
+    }
+  ],
   "info": "Establishing page introducing the opposing commanders and the strategic tension before the Battle of Jutas."
 }
 

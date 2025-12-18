@@ -7,5 +7,17 @@
   "narration": {
     "en": "The Russian line pushes onward, seeking to break the Swedish defense through sheer momentum.",
     "se": "Den ryska linjen pressar vidare, i hopp om att bryta det svenska försvaret genom ren kraft och rörelse."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Close ranks!",
+        "person": "Russian officer"
+      },
+      "se": {
+        "text": "Slut leden!",
+        "person": "Rysk officer"
+      }
+    }
+  ]
 }

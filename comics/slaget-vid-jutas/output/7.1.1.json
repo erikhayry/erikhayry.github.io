@@ -7,5 +7,17 @@
   "narration": {
     "en": "At Jutas, discipline answers chaos. The Swedish line fires as one.",
     "se": "Vid Jutas möter disciplinen kaoset. Den svenska linjen avfyrar som en enda kropp."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Fire!",
+        "person": "Swedish NCO"
+      },
+      "se": {
+        "text": "Eld!",
+        "person": "Svenskt befäl"
+      }
+    }
+  ]
 }

@@ -7,5 +7,17 @@
   "narration": {
     "en": "Fever and pain confine Döbeln to his bed, yet the weight of command does not leave him.",
     "se": "Feber och smärta binder Döbeln vid sängen, men befälets tyngd lämnar honom inte."
-  }
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Bring the map.",
+        "person": "Georg Carl von Döbeln"
+      },
+      "se": {
+        "text": "Fram med kartan.",
+        "person": "Georg Carl von Döbeln"
+      }
+    }
+  ]
 }

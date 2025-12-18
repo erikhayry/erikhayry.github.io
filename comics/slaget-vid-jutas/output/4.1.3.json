@@ -8,6 +8,17 @@
     "en": "Even as Döbeln lies ill, the machinery of command continues its quiet work.",
     "se": "Även medan Döbeln ligger sjuk fortsätter befälets maskineri sitt stillsamma arbete."
   },
-  "dialogs": [],
+  "dialogs": [
+    {
+      "en": {
+        "text": "They’ll reach Jutas by morning.",
+        "person": "Aide"
+      },
+      "se": {
+        "text": "De når Jutas i gryningen.",
+        "person": "Adjutant"
+      }
+    }
+  ],
   "info": "Page 4, Panel 3 – Döbeln Ill. Focus on staff work and continuity of command. No dialogue, no text in image."
 }
