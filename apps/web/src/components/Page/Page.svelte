@@ -43,6 +43,10 @@
     }
 
     .layout-1 {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         grid-template-areas:
             "a";
     }

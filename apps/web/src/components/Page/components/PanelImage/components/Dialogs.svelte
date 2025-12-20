@@ -14,11 +14,11 @@
         display: flex;
         flex-direction: column;
         gap: var(--spacing);
-        
+
         @media (min-width: 1250px) {
             position: absolute;
             top: var(--spacing);
-            left: var(--spacing);
+            left: calc(var(--click-area) + var(--spacing));
         }
     }
 
@@ -27,6 +27,8 @@
         padding: var(--spacing);
         width: fit-content;
         background-color: white;
+        margin-top: var(--spacing);
+        margin-bottom: var(--spacing);
 
         @media (min-width: 1250px) {
             border: var(--bubble-border);

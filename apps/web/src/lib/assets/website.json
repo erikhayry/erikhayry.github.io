@@ -314,7 +314,7 @@
               {
                 "en": {
                   "text": "Fire!",
-                  "person": "Swedish NCO"
+                  "person": "Swedish Officer"
                 },
                 "se": {
                   "text": "Eld!",
@@ -433,11 +433,11 @@
             "dialogs": [
               {
                 "en": {
-                  "text": "For Finland!",
+                  "text": "Hurrah!",
                   "person": "Swedish soldier"
                 },
                 "se": {
-                  "text": "För Finland!",
+                  "text": "Hurrah!",
                   "person": "Svensk soldat"
                 }
               }

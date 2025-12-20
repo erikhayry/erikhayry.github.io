@@ -38,7 +38,8 @@
             border: var(--bubble-border);
             position: absolute;
             bottom: var(--spacing);
-            left: var(--spacing);
+            left: calc(var(--click-area) + var(--spacing));
+            margin-right: var(--spacing);
         }
     }
 </style>
