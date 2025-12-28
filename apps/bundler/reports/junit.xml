@@ -16,9 +16,9 @@
     </testsuite>
     <testsuite name="src/files/tests/readPath.test.ts" file="src/files/tests/readPath.test.ts" tests="3" assertions="3"
                failures="0" skipped="0" time="0" hostname="MAC-W50QG19PXN">
-        <testcase name="getPaths returns only files of file type json" classname="" time="0.000328"
+        <testcase name="getPathsOfFileType returns only files of file type json" classname="" time="0.000328"
                   file="src/files/tests/readPath.test.ts" line="6" assertions="1"/>
-        <testcase name="getPaths returns only files of file type txt" classname="" time="0.000029"
+        <testcase name="getPathsOfFileType returns only files of file type txt" classname="" time="0.000029"
                   file="src/files/tests/readPath.test.ts" line="12" assertions="1"/>
         <testcase name="reads files content" classname="" time="0.00005" file="src/files/tests/readPath.test.ts"
                   line="7" assertions="1"/>

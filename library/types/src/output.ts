@@ -1,6 +1,5 @@
 import * as z from "zod";
 
-
 export const ComicStyle = {
     BELGIAN_COMIC: 'BE',
     BLUEBERRY: 'BL',
@@ -12,11 +11,22 @@ export const ComicStyle = {
 } as const
 
 export const ComicStyleType = z.enum([
-    ComicStyle.ANIME
+    ComicStyle.ANIME,
+    ComicStyle.BELGIAN_COMIC,
+    ComicStyle.BLUEBERRY,
+    ComicStyle.THE_BLUECOATS,
+    ComicStyle.CLASSIC_DC_COMICS,
+    ComicStyle.MODERN_DC_COMICS,
+    ComicStyle.SIMPLIFIED_LINE_DRAWING,
 ]);
 export type ComicStyleType = z.infer<typeof ComicStyleType>;
 
 export const ComicStyleTypes = z.array(ComicStyleType)
+export const ComicId = z.string().regex(/comic/)
+export type ComicId = z.infer<typeof ComicId>;
+
+export const UNSUPPORTED = 'UNSUPPORTED'
+export type UnsupportedType = z.infer<typeof UNSUPPORTED>;
 
 export const Language = {
     EN: "en",
@@ -65,6 +75,8 @@ export const PanelIdTuple = z.tuple([z.string(), z.string(), z.string()]);
 export type PanelIdTuple = z.infer<typeof PanelIdTuple>;
 export type PanelId = z.infer<typeof PanelId>;
 
+export const DataId = z.union([PageId, PanelId, ComicId])
+export const ImageIds = z.union([PanelId])
 
 export const PanelInfo = z.object({
     id: PanelId,
@@ -100,3 +112,4 @@ export type ComicInfo = z.infer<typeof ComicInfo>;
 
 export type PageOutput = z.infer<typeof PageOutput>;
 export type ComicOutput = z.infer<typeof ComicOutput>;
+

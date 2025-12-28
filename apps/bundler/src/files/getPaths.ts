@@ -1,11 +1,12 @@
-import * as fs from "fs";
-import * as path from "path";
+import fs from "fs";
+import path from "path";
 import {byName} from "../utils/sort.ts";
+import {isFolder} from "./isFolder.ts";
 
-export function getPaths(dir: string, fileType: string): string[] {
+export function getPaths(dir: string): string[] {
     return fs
         .readdirSync(path.join(dir))
-        .filter((file) => file.endsWith(fileType))
         .map((file) => path.join(dir, file))
+        .filter((path) => !isFolder(path))
         .sort(byName);
 }

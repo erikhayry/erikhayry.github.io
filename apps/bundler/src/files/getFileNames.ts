@@ -1,8 +1,9 @@
 import * as path from "path";
-import {getPaths} from "./getPaths.ts";
+import {getPathsOfFileType} from "./getPathsOfFileType.ts";
+
 
 export function getFileNames(dir: string, extension: string): string[] {
-    return getPaths(dir, extension).map((filePath) => path.basename(filePath));
+    return getPathsOfFileType(dir, extension).map((filePath) => path.basename(filePath));
 }
 
 

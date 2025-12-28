@@ -1,6 +1,4 @@
-import { test, expect } from 'bun:test';
-import {readPaths} from "../readPaths.ts";
-import {getPaths} from "../getPaths.ts";
+import {expect, test} from 'bun:test';
 import {DIR} from "./getPaths.test.ts";
 import {readPath} from "../readPath.ts";
 
