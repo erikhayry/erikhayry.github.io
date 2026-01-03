@@ -3,7 +3,8 @@ import {
     type DataFileType,
     type FileType,
     FileVariant,
-    type ImageFileType
+    type ImageFileType,
+    type PageDataFileType
 } from "./getSupportedFolderContentIndex.ts";
 import {
     ComicId,
@@ -13,6 +14,7 @@ import {
     DataId,
     PageId,
     PageInfo,
+    PageLayout,
     PanelId,
     PanelInfo
 } from "@library/types";
@@ -23,15 +25,18 @@ import {ImageVariant, type ImageVariantType} from "../files/getImage.ts";
 export const FILE_VALIDATION = {
     COMIC_DATA_FILE: 'comic data file',
     COMIC_DATA_PORTRAIT_IMAGE_FILE: 'comic portrait image file',
-    COMIC_DATA_LANDSCAPE_IMAGE_FILE: 'comic landscape image file'
+    COMIC_DATA_LANDSCAPE_IMAGE_FILE: 'comic landscape image file',
+    LAYOUT_IMAGE_COUNT: 'layout image count'
 } as const
 export const FILE_VALIDATION_TYPE = z.enum(FILE_VALIDATION)
 type FILE_VALIDATION_TYPE = z.infer<typeof FILE_VALIDATION_TYPE>;
 
+
 export const ErrorMessage = {
     [FILE_VALIDATION.COMIC_DATA_FILE]: 'missing comic.json',
     [FILE_VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE]: 'missing comic portrait image',
-    [FILE_VALIDATION.COMIC_DATA_LANDSCAPE_IMAGE_FILE]: 'missing comic landscape image'
+    [FILE_VALIDATION.COMIC_DATA_LANDSCAPE_IMAGE_FILE]: 'missing comic landscape image',
+    [FILE_VALIDATION.LAYOUT_IMAGE_COUNT]: 'missing panel landscape image',
 }
 
 export const DATA_VALIDATION = {
@@ -42,15 +47,10 @@ export const DATA_VALIDATION = {
 export const DATA_VALIDATION_TYPE = z.enum(DATA_VALIDATION)
 type DATA_VALIDATION_TYPE = z.infer<typeof DATA_VALIDATION_TYPE>;
 
-export const IMAGE_VALIDATION = {
-    LAYOUT_IMAGE_COUNT: 'layout image count'
-} as const
-
 
 export const VALIDATION = {
     DATA_FILE_ID: 'data file id',
     ...FILE_VALIDATION,
-    ...IMAGE_VALIDATION,
     ...DATA_VALIDATION,
 } as const
 
@@ -124,6 +124,7 @@ function validatePanelData(file: DataFileType) {
 
 function validateDataFileContent(file: DataFileType) {
     validateDataFileId(file)
+
     Object.values(DATA_PARSER).forEach(({validator, id}) => {
         if (id.safeParse(file.id).success) {
             validator(file)
@@ -131,12 +132,27 @@ function validateDataFileContent(file: DataFileType) {
     })
 }
 
-function hasDataFile(contentIndex: ContentIndex, id: string) {
-    return contentIndex.some((file) => file.type === FileVariant.DATA && file.id === id)
+
+function isDataFile(file: FileType): file is DataFileType {
+    return file.type === FileVariant.DATA
 }
 
-function getDataFile(contentIndex: ContentIndex, id: string) {
-    return contentIndex.find((file) => file.type === FileVariant.DATA && file.id === id)
+function getComicInfo(contentIndex: ContentIndex): ComicInfo | undefined {
+    const file = contentIndex.filter(isDataFile).find((file) => file.id === 'comic')
+
+    if (file) {
+        return ComicInfo.safeParse(file.data).data
+    }
+
+    return undefined
+}
+
+function isPageInfo(file: DataFileType): file is PageDataFileType {
+    return PageInfo.safeParse(file.data).success
+}
+
+function getPagesInfo(contentIndex: ContentIndex): PageInfo[] {
+    return contentIndex.filter(isDataFile).filter(isPageInfo).map(({data}) => data)
 }
 
 function isImage(file: FileType): file is ImageFileType {
@@ -159,13 +175,14 @@ export function validateContentIndex(contentIndex: ContentIndex) {
         }
     })
 
-    if (!hasDataFile(contentIndex, 'comic')) {
+    const comicInfo = getComicInfo(contentIndex)
+
+    if (!comicInfo) {
         throw (getErrorMessage(FILE_VALIDATION.COMIC_DATA_FILE, ComicStyle.ANIME))
     }
 
-    const comicStyles = ((getDataFile(contentIndex, 'comic') as DataFileType).data as ComicInfo).styles
 
-    comicStyles.forEach((comicStyle) => {
+    comicInfo.styles.forEach((comicStyle) => {
         if (!hasImageFile(contentIndex, 'comic.p', ImageVariant.PORTRAIT, comicStyle)) {
             throw getErrorMessage(FILE_VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE, comicStyle)
         }
@@ -173,6 +190,24 @@ export function validateContentIndex(contentIndex: ContentIndex) {
         if (!hasImageFile(contentIndex, 'comic.l', ImageVariant.LANDSCAPE, comicStyle)) {
             throw getErrorMessage(FILE_VALIDATION.COMIC_DATA_LANDSCAPE_IMAGE_FILE, comicStyle)
         }
+    })
+
+    const pageInfos = getPagesInfo(contentIndex)
+
+    pageInfos.forEach((pageInfo) => {
+        comicInfo.styles.forEach((style) => {
+            if (pageInfo.layout === PageLayout.Hero) {
+                const landscapeImage = contentIndex.filter(isImage).filter((image) => image.style === style && image.variant === ImageVariant.LANDSCAPE).find((imageFile) => {
+                    return imageFile.id.startsWith(pageInfo.id)
+                })
+
+                if (!landscapeImage) {
+                    throw getErrorMessage(FILE_VALIDATION.LAYOUT_IMAGE_COUNT, style)
+                }
+
+            }
+        })
+
     })
 
 
