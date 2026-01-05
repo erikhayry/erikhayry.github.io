@@ -24,9 +24,11 @@ import {ImageVariant, type ImageVariantType} from "../files/getImage.ts";
 
 export const FILE_VALIDATION = {
     COMIC_DATA_FILE: 'comic data file',
+    PANEL_DATA_FILE: 'panel data file',
     COMIC_DATA_PORTRAIT_IMAGE_FILE: 'comic portrait image file',
     COMIC_DATA_LANDSCAPE_IMAGE_FILE: 'comic landscape image file',
-    LAYOUT_IMAGE_COUNT: 'layout image count'
+    LAYOUT_LANDSCAPE_IMAGE_COUNT: 'layout landscape image count',
+    LAYOUT_PORTRAIT_IMAGE_COUNT: 'layout portrait image count'
 } as const
 export const FILE_VALIDATION_TYPE = z.enum(FILE_VALIDATION)
 type FILE_VALIDATION_TYPE = z.infer<typeof FILE_VALIDATION_TYPE>;
@@ -34,9 +36,11 @@ type FILE_VALIDATION_TYPE = z.infer<typeof FILE_VALIDATION_TYPE>;
 
 export const ErrorMessage = {
     [FILE_VALIDATION.COMIC_DATA_FILE]: 'missing comic.json',
+    [FILE_VALIDATION.PANEL_DATA_FILE]: 'missing panel file',
     [FILE_VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE]: 'missing comic portrait image',
     [FILE_VALIDATION.COMIC_DATA_LANDSCAPE_IMAGE_FILE]: 'missing comic landscape image',
-    [FILE_VALIDATION.LAYOUT_IMAGE_COUNT]: 'missing panel landscape image',
+    [FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT]: 'missing panel landscape image',
+    [FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT]: 'missing panel portrait image',
 }
 
 export const DATA_VALIDATION = {
@@ -54,11 +58,12 @@ export const VALIDATION = {
     ...DATA_VALIDATION,
 } as const
 
-function getErrorMessage(type: FILE_VALIDATION_TYPE, comicStyle: ComicStyleType) {
+function getErrorMessage(type: FILE_VALIDATION_TYPE, comicStyle?: ComicStyleType, id?: string) {
     return {
         validation: type,
         comicStyle,
-        message: ErrorMessage[type]
+        message: ErrorMessage[type],
+        id
     }
 }
 
@@ -160,12 +165,79 @@ function isImage(file: FileType): file is ImageFileType {
 }
 
 function hasImageFile(contentIndex: ContentIndex, id: string, variant: ImageVariantType, comicStyle: ComicStyleType) {
-    return contentIndex.filter(isImage).some((file) =>
+    return getImages(contentIndex).some((file) =>
         file.type === FileVariant.IMAGE &&
         file.id === id &&
         file.variant === variant &&
         file.style === comicStyle
     )
+}
+
+function getImages(contentIndex: ContentIndex) {
+    return contentIndex.filter(isImage)
+}
+
+function getDataFiles(contentIndex: ContentIndex) {
+    return contentIndex.filter(isDataFile)
+}
+
+function getPanelFiles(contentIndex: ContentIndex) {
+    return getDataFiles(contentIndex).filter(({id}) => {
+        return PanelId.safeParse(id).success
+    })
+}
+
+
+function getLandscapeImages(contentIndex: ContentIndex) {
+    return getImages(contentIndex).filter((image) => image.variant === ImageVariant.LANDSCAPE)
+}
+
+function getPortraitImages(contentIndex: ContentIndex) {
+    return getImages(contentIndex).filter((image) => image.variant === ImageVariant.PORTRAIT)
+}
+
+
+function validateLayout(pageInfo: PageInfo, contentIndex: ContentIndex, style: ComicStyleType) {
+    const isOfStyle = (image: ImageFileType) => image.style === style
+    const isForPage = (file: ImageFileType | DataFileType) => file.id.startsWith(pageInfo.id)
+
+    if (pageInfo.layout === PageLayout.Hero) {
+        if (getLandscapeImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 1) {
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style)
+        }
+
+        if (getPortraitImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 1) {
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style)
+        }
+
+        if (getPanelFiles(contentIndex).filter(isForPage).length < 1) {
+            throw getErrorMessage(FILE_VALIDATION.PANEL_DATA_FILE, undefined, pageInfo.id)
+        }
+    }
+
+    if (pageInfo.layout === PageLayout.VerticalDiptych || pageInfo.layout === PageLayout.LandscapeDiptych) {
+        if (getLandscapeImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 2) {
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style)
+        }
+
+        if (getPortraitImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 2) {
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style)
+        }
+
+        if (getPanelFiles(contentIndex).filter(isForPage).length < 2) {
+            throw getErrorMessage(FILE_VALIDATION.PANEL_DATA_FILE, undefined, pageInfo.id)
+        }
+    }
+
+    if (pageInfo.layout === PageLayout.Quad) {
+        if (getLandscapeImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 4) {
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style)
+        }
+
+        if (getPortraitImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 4) {
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style)
+        }
+    }
 }
 
 export function validateContentIndex(contentIndex: ContentIndex) {
@@ -192,20 +264,10 @@ export function validateContentIndex(contentIndex: ContentIndex) {
         }
     })
 
-    const pageInfos = getPagesInfo(contentIndex)
 
-    pageInfos.forEach((pageInfo) => {
+    getPagesInfo(contentIndex).forEach((pageInfo) => {
         comicInfo.styles.forEach((style) => {
-            if (pageInfo.layout === PageLayout.Hero) {
-                const landscapeImage = contentIndex.filter(isImage).filter((image) => image.style === style && image.variant === ImageVariant.LANDSCAPE).find((imageFile) => {
-                    return imageFile.id.startsWith(pageInfo.id)
-                })
-
-                if (!landscapeImage) {
-                    throw getErrorMessage(FILE_VALIDATION.LAYOUT_IMAGE_COUNT, style)
-                }
-
-            }
+            validateLayout(pageInfo, contentIndex, style)
         })
 
     })

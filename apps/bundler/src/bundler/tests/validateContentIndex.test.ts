@@ -1,155 +1,36 @@
 import {describe, expect, test} from "bun:test";
 import {ErrorMessage, validateContentIndex, VALIDATION} from "../validateContentIndex.ts";
-import {FileVariant} from "../getSupportedFolderContentIndex.ts";
-import {ImageVariant} from "../../files/getImage.ts";
 import {ComicStyle} from "@library/types";
-
-const VALID_COMIC_DATA_MOCK = {
-    path: 'mocks/comics/output/comic.json',
-    type: FileVariant.DATA,
-    id: 'comic',
-    data: {
-        "styles": [
-            "AN",
-            "BE"
-        ]
-    }
-}
-const BASE_IMAGE = {
-    type: FileVariant.IMAGE,
-}
-const BASE_LANDSCAPE_IMAGE = {
-    ...BASE_IMAGE,
-    height: 1536,
-    width: 1024,
-    variant: ImageVariant.LANDSCAPE,
-}
-const BASE_PORTRAIT_IMAGE = {
-    ...BASE_IMAGE,
-    height: 1024,
-    width: 1536,
-    variant: ImageVariant.PORTRAIT
-    ,
-}
-const BASE_AN_LANDSCAPE_IMAGE = {
-    ...BASE_LANDSCAPE_IMAGE,
-    style: ComicStyle.ANIME
-}
-const BASE_AN_PORTRAIT_IMAGE = {
-    ...BASE_PORTRAIT_IMAGE,
-    style: ComicStyle.ANIME
-}
-const BASE_BE_LANDSCAPE_IMAGE = {
-    ...BASE_LANDSCAPE_IMAGE,
-    style: ComicStyle.BELGIAN_COMIC
-}
-const BASE_BE_PORTRAIT_IMAGE = {
-    ...BASE_PORTRAIT_IMAGE,
-    style: ComicStyle.BELGIAN_COMIC
-}
-
-const VALID_COMIC_AN_LANDSCAPE_IMAGE = {
-    ...BASE_AN_LANDSCAPE_IMAGE,
-    id: "comic.l",
-    path: "mocks/comics/output/panels/AN/comic.l.png",
-}
-const VALID_COMIC_AN_PORTRAIT_IMAGE = {
-    ...BASE_AN_PORTRAIT_IMAGE,
-    id: "comic.p",
-    path: "mocks/comics/output/panels/AN/comic.p.png",
-}
-
-const VALID_COMIC_BE_LANDSCAPE_IMAGE = {
-    ...BASE_BE_LANDSCAPE_IMAGE,
-    id: "comic.l",
-    path: "mocks/comics/output/panels/BE/comic.l.png",
-}
-const VALID_COMIC_BE_PORTRAIT_IMAGE = {
-    ...BASE_BE_PORTRAIT_IMAGE,
-    id: "comic.p",
-    path: "mocks/comics/output/panels/BE/comic.p.png",
-}
-
-const VALID_PAGE_DATA_MOCK = {
-    path: 'mocks/comics/output/1.1.json',
-    type: FileVariant.DATA,
-    id: '1.1',
-    data: {
-        "id": "1.1",
-        "layout": "1"
-    }
-}
-
-const VALID_PAGE_AN_LANDSCAPE_IMAGE = {
-    ...BASE_AN_LANDSCAPE_IMAGE,
-    id: "1.1.1",
-    path: "mocks/comics/output/panels/AN/1.1.1.png",
-
-}
-const VALID_PAGE_AN_PORTRAIT_IMAGE = {
-    ...BASE_AN_PORTRAIT_IMAGE,
-    id: "1.1.1",
-    path: "mocks/comics/output/panels/AN/1.1.1.png",
-}
-
-const VALID_PAGE_BE_LANDSCAPE_IMAGE = {
-    ...BASE_BE_LANDSCAPE_IMAGE,
-    id: "1.1.1",
-    path: "mocks/comics/output/panels/BE/1.1.1.png",
-
-}
-const VALID_PAGE_BE_PORTRAIT_IMAGE = {
-    ...BASE_BE_PORTRAIT_IMAGE,
-    id: "1.1.1",
-    path: "mocks/comics/output/panels/BE/1.1.1.png",
-}
-
-
-const VALID_PANEL_DATA_MOCK = {
-    path: 'mocks/comics/output/1.1.1json',
-    type: FileVariant.DATA,
-    id: '1.1.1',
-    data: {
-        "id": "1.1.1",
-        "description": {
-            "en": "DESCRIPTION EN MOCK",
-            "se": "DESCRIPTION SE MOCK"
-        },
-        "info": "VALID WITH IMAGE",
-        "narration": {
-            "en": "NARRATION_1.1.1_1",
-            "se": "NARRATION_1.1.1_1"
-        }
-    }
-}
-
-const VALID_COMIC_DATA = [
+import {
     VALID_COMIC_AN_LANDSCAPE_IMAGE,
     VALID_COMIC_AN_PORTRAIT_IMAGE,
     VALID_COMIC_BE_LANDSCAPE_IMAGE,
     VALID_COMIC_BE_PORTRAIT_IMAGE,
-    VALID_COMIC_DATA_MOCK
-]
+    VALID_COMIC_DATA,
+    VALID_COMIC_DATA_MOCK,
+    VALID_COMIC_INDEX,
+    VALID_IMAGES_PAGE_LAYOUT_1,
+    VALID_IMAGES_PAGE_LAYOUT_2,
+    VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_1,
+    VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_2,
+    VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_4,
+    VALID_PAGE_AN_LANDSCAPE_IMAGE_1,
+    VALID_PAGE_LAYOUT_1_DATA_MOCK,
+    VALID_PAGE_LAYOUT_2_DATA_MOCK,
+    VALID_PAGE_LAYOUT_3_DATA_MOCK,
+    VALID_PAGE_LAYOUT_4_DATA_MOCK,
+    VALID_PANEL_DATA_MOCK_1
+} from "./mock/data.ts";
 
-const VALID_PAGE_DATA = [
-    VALID_PAGE_AN_LANDSCAPE_IMAGE,
-    VALID_PAGE_AN_PORTRAIT_IMAGE,
-    VALID_PAGE_BE_LANDSCAPE_IMAGE,
-    VALID_PAGE_BE_PORTRAIT_IMAGE,
-    VALID_PAGE_DATA_MOCK
-]
-
-const VALID_COMIC_INDEX = [
-    ...VALID_COMIC_DATA,
-    ...VALID_PAGE_DATA
-]
 
 describe('validateContentIndex', () => {
+    test('should validate', () => {
+        expect(validateContentIndex(VALID_COMIC_INDEX)).toBeTrue()
+    })
+
+
     describe('validate data content', () => {
         describe('comic data', () => {
-            test('should validate page data id', () => {
-                expect(validateContentIndex(VALID_COMIC_INDEX)).toBeTrue()
-            })
 
             test('should throw error on invalid id', () => {
                 try {
@@ -165,7 +46,7 @@ describe('validateContentIndex', () => {
                 }
             })
 
-            test('should throw error on data', () => {
+            test('should throw error on invalid data', () => {
                 try {
                     expect(validateContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_COMIC_DATA_MOCK,
@@ -181,69 +62,61 @@ describe('validateContentIndex', () => {
         })
 
         describe('page data', () => {
-            test('should validate page data id', () => {
-                expect(validateContentIndex([...VALID_COMIC_INDEX, VALID_PAGE_DATA_MOCK])).toBeTrue()
-            })
-
             test('should throw error on invalid id', () => {
                 try {
                     expect(validateContentIndex([...VALID_COMIC_INDEX, {
-                        ...VALID_PAGE_DATA_MOCK,
+                        ...VALID_PAGE_LAYOUT_1_DATA_MOCK,
                         id: 'NOPE'
                     }])).toThrow()
                 } catch (error: any) {
                     expect(error.validation).toEqual(VALIDATION.DATA_FILE_ID)
                     expect(error.id).toEqual('NOPE')
                     expect(error.message).toBeDefined()
-                    expect(error.path).toEqual(VALID_PAGE_DATA_MOCK.path)
+                    expect(error.path).toEqual(VALID_PAGE_LAYOUT_1_DATA_MOCK.path)
                 }
             })
 
-            test('should throw error on data', () => {
+            test('should throw error on invalid data', () => {
                 try {
                     expect(validateContentIndex([...VALID_COMIC_INDEX, {
-                        ...VALID_PAGE_DATA_MOCK,
+                        ...VALID_PAGE_LAYOUT_1_DATA_MOCK,
                         data: {}
                     }])).toThrow()
                 } catch (error: any) {
                     expect(error.validation).toEqual(VALIDATION.PAGE_DATA)
                     expect(error.message).toBeDefined()
-                    expect(error.id).toEqual(VALID_PAGE_DATA_MOCK.id)
-                    expect(error.path).toEqual(VALID_PAGE_DATA_MOCK.path)
+                    expect(error.id).toEqual(VALID_PAGE_LAYOUT_1_DATA_MOCK.id)
+                    expect(error.path).toEqual(VALID_PAGE_LAYOUT_1_DATA_MOCK.path)
                 }
             })
         })
 
         describe('panel data', () => {
-            test('should validate panel data id', () => {
-                expect(validateContentIndex([...VALID_COMIC_INDEX, VALID_PANEL_DATA_MOCK])).toBeTrue()
-            })
-
             test('should throw error on invalid id', () => {
                 try {
                     expect(validateContentIndex([...VALID_COMIC_INDEX, {
-                        ...VALID_PANEL_DATA_MOCK,
+                        ...VALID_PANEL_DATA_MOCK_1,
                         id: 'NOPE'
                     }])).toThrow()
                 } catch (error: any) {
                     expect(error.validation).toEqual(VALIDATION.DATA_FILE_ID)
                     expect(error.id).toEqual('NOPE')
                     expect(error.message).toBeDefined()
-                    expect(error.path).toEqual(VALID_PANEL_DATA_MOCK.path)
+                    expect(error.path).toEqual(VALID_PANEL_DATA_MOCK_1.path)
                 }
             })
 
-            test('should throw error on data', () => {
+            test('should throw error on invalid data', () => {
                 try {
                     expect(validateContentIndex([...VALID_COMIC_INDEX, {
-                        ...VALID_PANEL_DATA_MOCK,
+                        ...VALID_PANEL_DATA_MOCK_1,
                         data: {}
                     }])).toThrow()
                 } catch (error: any) {
                     expect(error.validation).toEqual(VALIDATION.PANEL_DATA)
                     expect(error.message).toBeDefined()
-                    expect(error.id).toEqual(VALID_PANEL_DATA_MOCK.id)
-                    expect(error.path).toEqual(VALID_PANEL_DATA_MOCK.path)
+                    expect(error.id).toEqual(VALID_PANEL_DATA_MOCK_1.id)
+                    expect(error.path).toEqual(VALID_PANEL_DATA_MOCK_1.path)
                 }
             })
         })
@@ -267,7 +140,7 @@ describe('validateContentIndex', () => {
 
             test('should not validate if portrait image is missing for comic style AN', () => {
                 try {
-                    expect(validateContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_LANDSCAPE_IMAGE, VALID_COMIC_BE_PORTRAIT_IMAGE, VALID_COMIC_BE_LANDSCAPE_IMAGE])).toThrow()
+                    expect(validateContentIndex([VALID_COMIC_DATA_MOCK])).toThrow()
                 } catch (error: any) {
                     expect(error.message).toEqual(ErrorMessage[VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE])
                     expect(error.validation).toEqual(VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE)
@@ -307,15 +180,116 @@ describe('validateContentIndex', () => {
         });
 
         describe('page file', () => {
-            test('should not validate if panel is missing for page layout 1', () => {
-                try {
-                    expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_DATA_MOCK])).toThrow()
-                } catch (error: any) {
-                    expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_IMAGE_COUNT])
-                    expect(error.validation).toEqual(VALIDATION.LAYOUT_IMAGE_COUNT)
-                    expect(error.comicStyle).toEqual(ComicStyle.ANIME)
-                }
-            })
+            describe('layout 1', () => {
+                test('should not validate if landscape panel is missing for page layout 1', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+                test('should not validate if portrait panel is missing for page layout 1', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_1])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+            });
+
+            describe('layout 2', () => {
+                test('should not validate if landscape panel is missing for page layout 2', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, VALID_PAGE_AN_LANDSCAPE_IMAGE_1])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+                test('should not validate if portrait panel is missing for page layout 2', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_2])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+            });
+
+            describe('layout 3', () => {
+                test('should not validate if landscape panel is missing for page layout 3', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_3_DATA_MOCK])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+                test('should not validate if portrait panel is missing for page layout 2', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_3_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_2])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+            });
+
+            describe('layout 4', () => {
+                test('should not validate if landscape panel is missing for page layout 4', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_4_DATA_MOCK,])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+
+                test('should not validate if portrait panel is missing for page layout 4', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_4_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_4])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
+                        expect(error.validation).toEqual(VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT)
+                        expect(error.comicStyle).toEqual(ComicStyle.ANIME)
+                    }
+                })
+            });
         });
-    })
+
+        describe('panel file', () => {
+            describe('layout 1', () => {
+                test('should not validate if panel data is missing for page layout 1', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK, ...VALID_IMAGES_PAGE_LAYOUT_1])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.PANEL_DATA_FILE])
+                        expect(error.validation).toEqual(VALIDATION.PANEL_DATA_FILE)
+                        expect(error.id).toEqual(VALID_PAGE_LAYOUT_1_DATA_MOCK.id)
+                    }
+                })
+            })
+
+            describe('layout 2', () => {
+                test('should not validate if panel data is missing for page layout 2', () => {
+                    try {
+                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, ...VALID_IMAGES_PAGE_LAYOUT_2])).toThrow()
+                    } catch (error: any) {
+                        expect(error.message).toEqual(ErrorMessage[VALIDATION.PANEL_DATA_FILE])
+                        expect(error.validation).toEqual(VALIDATION.PANEL_DATA_FILE)
+                        expect(error.id).toEqual(VALID_PAGE_LAYOUT_1_DATA_MOCK.id)
+                    }
+                })
+            });
+        })
+    });
 })
