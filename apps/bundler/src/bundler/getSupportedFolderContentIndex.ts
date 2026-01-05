@@ -5,7 +5,7 @@ import {DATA_EXTENSION, IMAGE_EXTENSION} from "../constants.ts";
 import * as Path from "node:path";
 import {getJSON} from "../files/getJSON.ts";
 import {getImage, type ImageVariantType} from "../files/getImage.ts";
-import {ComicStyleType, type PageInfo, UNSUPPORTED, type UnsupportedType} from "@library/types";
+import {ComicStyleType, type PageInfo, type PanelInfo, UNSUPPORTED, type UnsupportedType} from "@library/types";
 
 export const FileVariant = {
     IMAGE: IMAGE_EXTENSION,
@@ -47,8 +47,11 @@ export interface DataFileType {
 }
 
 export interface PageDataFileType extends DataFileType {
-    type: 'PAGE',
     data: PageInfo
+}
+
+export interface PanelDataFileType extends DataFileType {
+    data: PanelInfo
 }
 
 export type FileType = ImageFileType | DataFileType;

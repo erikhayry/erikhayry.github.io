@@ -3,8 +3,7 @@ import {
     type DataFileType,
     type FileType,
     FileVariant,
-    type ImageFileType,
-    type PageDataFileType
+    type ImageFileType
 } from "./getSupportedFolderContentIndex.ts";
 import {
     ComicId,
@@ -19,7 +18,15 @@ import {
     PanelInfo
 } from "@library/types";
 import {z} from "zod";
-import {ImageVariant, type ImageVariantType} from "../files/getImage.ts";
+import {ImageVariant} from "../files/getImage.ts";
+import {
+    getComicInfo,
+    getLandscapeImages,
+    getPagesInfo,
+    getPanelFiles,
+    getPortraitImages,
+    hasImageFile
+} from "./utils/contentIndexUtils.ts";
 
 
 export const FILE_VALIDATION = {
@@ -60,10 +67,12 @@ export const VALIDATION = {
 
 function getErrorMessage(type: FILE_VALIDATION_TYPE, comicStyle?: ComicStyleType, id?: string) {
     return {
-        validation: type,
-        comicStyle,
-        message: ErrorMessage[type],
-        id
+        message: JSON.stringify({
+            validation: type,
+            comicStyle,
+            message: ErrorMessage[type],
+            id
+        }),
     }
 }
 
@@ -138,76 +147,17 @@ function validateDataFileContent(file: DataFileType) {
 }
 
 
-function isDataFile(file: FileType): file is DataFileType {
-    return file.type === FileVariant.DATA
-}
-
-function getComicInfo(contentIndex: ContentIndex): ComicInfo | undefined {
-    const file = contentIndex.filter(isDataFile).find((file) => file.id === 'comic')
-
-    if (file) {
-        return ComicInfo.safeParse(file.data).data
-    }
-
-    return undefined
-}
-
-function isPageInfo(file: DataFileType): file is PageDataFileType {
-    return PageInfo.safeParse(file.data).success
-}
-
-function getPagesInfo(contentIndex: ContentIndex): PageInfo[] {
-    return contentIndex.filter(isDataFile).filter(isPageInfo).map(({data}) => data)
-}
-
-function isImage(file: FileType): file is ImageFileType {
-    return file.type === FileVariant.IMAGE
-}
-
-function hasImageFile(contentIndex: ContentIndex, id: string, variant: ImageVariantType, comicStyle: ComicStyleType) {
-    return getImages(contentIndex).some((file) =>
-        file.type === FileVariant.IMAGE &&
-        file.id === id &&
-        file.variant === variant &&
-        file.style === comicStyle
-    )
-}
-
-function getImages(contentIndex: ContentIndex) {
-    return contentIndex.filter(isImage)
-}
-
-function getDataFiles(contentIndex: ContentIndex) {
-    return contentIndex.filter(isDataFile)
-}
-
-function getPanelFiles(contentIndex: ContentIndex) {
-    return getDataFiles(contentIndex).filter(({id}) => {
-        return PanelId.safeParse(id).success
-    })
-}
-
-
-function getLandscapeImages(contentIndex: ContentIndex) {
-    return getImages(contentIndex).filter((image) => image.variant === ImageVariant.LANDSCAPE)
-}
-
-function getPortraitImages(contentIndex: ContentIndex) {
-    return getImages(contentIndex).filter((image) => image.variant === ImageVariant.PORTRAIT)
-}
-
-
 function validateLayout(pageInfo: PageInfo, contentIndex: ContentIndex, style: ComicStyleType) {
     const isOfStyle = (image: ImageFileType) => image.style === style
     const isForPage = (file: ImageFileType | DataFileType) => file.id.startsWith(pageInfo.id)
 
     if (pageInfo.layout === PageLayout.Hero) {
         if (getLandscapeImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 1) {
-            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style)
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style, pageInfo.id)
         }
 
         if (getPortraitImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 1) {
-            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style)
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style, pageInfo.id)
         }
 
         if (getPanelFiles(contentIndex).filter(isForPage).length < 1) {
@@ -217,11 +167,11 @@ function validateLayout(pageInfo: PageInfo, contentIndex: ContentIndex, style: C
 
     if (pageInfo.layout === PageLayout.VerticalDiptych || pageInfo.layout === PageLayout.LandscapeDiptych) {
         if (getLandscapeImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 2) {
-            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style)
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style, pageInfo.id)
         }
 
         if (getPortraitImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 2) {
-            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style)
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style, pageInfo.id)
         }
 
         if (getPanelFiles(contentIndex).filter(isForPage).length < 2) {
@@ -231,11 +181,11 @@ function validateLayout(pageInfo: PageInfo, contentIndex: ContentIndex, style: C
 
     if (pageInfo.layout === PageLayout.Quad) {
         if (getLandscapeImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 4) {
-            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style)
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT, style, pageInfo.id)
         }
 
         if (getPortraitImages(contentIndex).filter(isOfStyle).filter(isForPage).length < 4) {
-            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style)
+            throw getErrorMessage(FILE_VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT, style, pageInfo.id)
         }
     }
 }

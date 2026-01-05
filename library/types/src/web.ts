@@ -18,7 +18,7 @@ export const Page = z.object({
 export const Comic = z.object({
     slug: z.string(),
     pages: z.array(Page),
-    styles: z.optional(z.array(ComicStyleType))
+    styles: z.array(ComicStyleType)
 });
 export const Website = z.array(Comic);
 export const Key = z.string()
