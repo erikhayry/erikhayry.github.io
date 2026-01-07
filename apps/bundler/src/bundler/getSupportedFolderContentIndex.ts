@@ -5,7 +5,14 @@ import {DATA_EXTENSION, IMAGE_EXTENSION} from "../constants.ts";
 import * as Path from "node:path";
 import {getJSON} from "../files/getJSON.ts";
 import {getImage, type ImageVariantType} from "../files/getImage.ts";
-import {ComicStyleType, type PageInfo, type PanelInfo, UNSUPPORTED, type UnsupportedType} from "@library/types";
+import {
+    type ComicInfo,
+    ComicStyleType,
+    type PageInfo,
+    type PanelInfo,
+    UNSUPPORTED,
+    type UnsupportedType
+} from "@library/types";
 
 export const FileVariant = {
     IMAGE: IMAGE_EXTENSION,
@@ -39,11 +46,19 @@ export interface ImageFileType {
     style: ComicStyleType | UnsupportedType
 }
 
+export interface ValidImageFileType extends ImageFileType {
+    style: ComicStyleType
+}
+
 export interface DataFileType {
     path: string,
     id: string,
     type: DataVariantType,
     data: Record<string, unknown>
+}
+
+export interface ComicDataFileType extends DataFileType {
+    data: ComicInfo
 }
 
 export interface PageDataFileType extends DataFileType {
@@ -56,6 +71,12 @@ export interface PanelDataFileType extends DataFileType {
 
 export type FileType = ImageFileType | DataFileType;
 export type ContentIndex = FileType[]
+export type ValidatedContentIndex = {
+    comicFile: ComicDataFileType
+    pages: PageDataFileType[]
+    panels: PanelDataFileType[]
+    images: ValidImageFileType[]
+}
 
 
 function toFile(filePath: string): FileInfo {

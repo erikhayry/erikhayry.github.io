@@ -1,24 +1,23 @@
-import type {Comic} from "@library/types";
-import type {ContentIndex} from "./getSupportedFolderContentIndex.ts";
-import {getComicFile, getComicInfo, getPagesInfo, getPanelsInfo} from "./utils/contentIndexUtils.ts";
+import type {Comic, PageInfo, PanelInfo} from "@library/types";
+import type {DataFileType, ValidatedContentIndex} from "./getSupportedFolderContentIndex.ts";
 
-export function getComicFromContentIndex(contentIndex: ContentIndex): Comic {
-    const comicFile = getComicFile(contentIndex);
-    const comicInfo = getComicInfo(contentIndex)
-    const pageInfos = getPagesInfo(contentIndex)
+function byId(a: PageInfo | PanelInfo, b: PageInfo | PanelInfo) {
+    return Number.parseFloat(a.id) - Number.parseFloat(b.id)
+}
 
+function getSlug(file: DataFileType): string {
+    return file.path.split('/')[1] as string
+}
+
+export function getComicFromContentIndex({comicFile, pages, panels}: ValidatedContentIndex): Comic {
     return {
-        slug: comicFile!.path.split('/')![1] as string,
-        pages: pageInfos.sort((pageA, pageB) =>
-            Number.parseFloat(pageA.id) - Number.parseFloat(pageB.id)
-        ).map(({layout, id: pageId}) => ({
+        slug: getSlug(comicFile),
+        pages: pages.map(({data}) => data).sort(byId).map(({layout, id: pageId}) => ({
             layout,
-            panels: getPanelsInfo(contentIndex)
+            panels: panels.map(({data}) => data)
                 .filter((panel) => panel.id.startsWith(pageId))
-                .sort((pageA, pageB) =>
-                    Number.parseFloat(pageA.id) - Number.parseFloat(pageB.id)
-                )
+                .sort(byId)
         })),
-        styles: comicInfo!.styles
+        styles: comicFile.data.styles
     }
 }

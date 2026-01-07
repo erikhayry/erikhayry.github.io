@@ -3,7 +3,8 @@ import {
     type DataFileType,
     type FileType,
     FileVariant,
-    type ImageFileType
+    type ImageFileType,
+    type ValidatedContentIndex
 } from "./getSupportedFolderContentIndex.ts";
 import {
     ComicId,
@@ -18,15 +19,17 @@ import {
     PanelInfo
 } from "@library/types";
 import {z} from "zod";
-import {ImageVariant} from "../files/getImage.ts";
 import {
-    getComicInfo,
+    getComicFile,
     getLandscapeImages,
+    getPageFiles,
     getPagesInfo,
     getPanelFiles,
     getPortraitImages,
+    getValidImages,
     hasImageFile
 } from "./utils/contentIndexUtils.ts";
+import {ImageVariant} from "../files/getImage.ts";
 
 
 export const FILE_VALIDATION = {
@@ -190,21 +193,21 @@ function validateLayout(pageInfo: PageInfo, contentIndex: ContentIndex, style: C
     }
 }
 
-export function validateContentIndex(contentIndex: ContentIndex) {
+export function getValidatedContentIndex(contentIndex: ContentIndex): ValidatedContentIndex {
     contentIndex.forEach((file) => {
         if (file.type === FileVariant.DATA) {
             validateDataFileContent(file as DataFileType) //TODO fix with ts
         }
     })
 
-    const comicInfo = getComicInfo(contentIndex)
+    const comicFile = getComicFile(contentIndex)
 
-    if (!comicInfo) {
+    if (!comicFile?.data) {
         throw (getErrorMessage(FILE_VALIDATION.COMIC_DATA_FILE, ComicStyle.ANIME))
     }
 
 
-    comicInfo.styles.forEach((comicStyle) => {
+    comicFile.data.styles.forEach((comicStyle) => {
         if (!hasImageFile(contentIndex, 'comic.p', ImageVariant.PORTRAIT, comicStyle)) {
             throw getErrorMessage(FILE_VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE, comicStyle)
         }
@@ -216,12 +219,17 @@ export function validateContentIndex(contentIndex: ContentIndex) {
 
 
     getPagesInfo(contentIndex).forEach((pageInfo) => {
-        comicInfo.styles.forEach((style) => {
+        comicFile.data.styles.forEach((style) => {
             validateLayout(pageInfo, contentIndex, style)
         })
 
     })
 
 
-    return true
+    return {
+        comicFile: comicFile,
+        pages: getPageFiles(contentIndex),
+        panels: getPanelFiles(contentIndex),
+        images: getValidImages(contentIndex)
+    }
 }

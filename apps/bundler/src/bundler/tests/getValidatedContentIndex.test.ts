@@ -1,5 +1,5 @@
 import {describe, expect, test} from "bun:test";
-import {ErrorMessage, validateContentIndex, VALIDATION} from "../validateContentIndex.ts";
+import {ErrorMessage, getValidatedContentIndex, VALIDATION} from "../getValidatedContentIndex.ts";
 import {ComicStyle} from "@library/types";
 import {
     VALID_COMIC_AN_LANDSCAPE_IMAGE,
@@ -25,7 +25,12 @@ import {
 
 describe('validateContentIndex', () => {
     test('should validate', () => {
-        expect(validateContentIndex(VALID_COMIC_INDEX)).toBeTrue()
+        const {comicFile, pages, panels, images} = getValidatedContentIndex(VALID_COMIC_INDEX)
+
+        expect(comicFile).toEqual(VALID_COMIC_DATA_MOCK)
+        expect(pages).toHaveLength(4)
+        expect(panels).toHaveLength(9)
+        expect(images).toHaveLength(40)
     })
 
 
@@ -34,7 +39,7 @@ describe('validateContentIndex', () => {
 
             test('should throw error on invalid id', () => {
                 try {
-                    expect(validateContentIndex([...VALID_COMIC_INDEX, {
+                    expect(getValidatedContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_COMIC_DATA_MOCK,
                         id: 'NOPE'
                     }])).toThrow()
@@ -48,7 +53,7 @@ describe('validateContentIndex', () => {
 
             test('should throw error on invalid data', () => {
                 try {
-                    expect(validateContentIndex([...VALID_COMIC_INDEX, {
+                    expect(getValidatedContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_COMIC_DATA_MOCK,
                         data: {}
                     }])).toThrow()
@@ -64,7 +69,7 @@ describe('validateContentIndex', () => {
         describe('page data', () => {
             test('should throw error on invalid id', () => {
                 try {
-                    expect(validateContentIndex([...VALID_COMIC_INDEX, {
+                    expect(getValidatedContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_PAGE_LAYOUT_1_DATA_MOCK,
                         id: 'NOPE'
                     }])).toThrow()
@@ -78,7 +83,7 @@ describe('validateContentIndex', () => {
 
             test('should throw error on invalid data', () => {
                 try {
-                    expect(validateContentIndex([...VALID_COMIC_INDEX, {
+                    expect(getValidatedContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_PAGE_LAYOUT_1_DATA_MOCK,
                         data: {}
                     }])).toThrow()
@@ -94,7 +99,7 @@ describe('validateContentIndex', () => {
         describe('panel data', () => {
             test('should throw error on invalid id', () => {
                 try {
-                    expect(validateContentIndex([...VALID_COMIC_INDEX, {
+                    expect(getValidatedContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_PANEL_DATA_MOCK_1_1,
                         id: 'NOPE'
                     }])).toThrow()
@@ -108,7 +113,7 @@ describe('validateContentIndex', () => {
 
             test('should throw error on invalid data', () => {
                 try {
-                    expect(validateContentIndex([...VALID_COMIC_INDEX, {
+                    expect(getValidatedContentIndex([...VALID_COMIC_INDEX, {
                         ...VALID_PANEL_DATA_MOCK_1_1,
                         data: {}
                     }])).toThrow()
@@ -124,13 +129,9 @@ describe('validateContentIndex', () => {
 
     describe('validate files', () => {
         describe('comic file', () => {
-            test('should validate if exists', () => {
-                expect(validateContentIndex(VALID_COMIC_INDEX)).toBeTrue()
-            });
-
             test('should not validate if missing', () => {
                 try {
-                    expect(validateContentIndex([])).toThrow()
+                    expect(getValidatedContentIndex([])).toThrow()
                 } catch (error: any) {
                     const message = JSON.parse(error.message)
                     expect(message.validation).toEqual(VALIDATION.COMIC_DATA_FILE)
@@ -141,7 +142,7 @@ describe('validateContentIndex', () => {
 
             test('should not validate if portrait image is missing for comic style AN', () => {
                 try {
-                    expect(validateContentIndex([VALID_COMIC_DATA_MOCK])).toThrow()
+                    expect(getValidatedContentIndex([VALID_COMIC_DATA_MOCK])).toThrow()
                 } catch (error: any) {
                     const message = JSON.parse(error.message)
                     expect(message.message).toEqual(ErrorMessage[VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE])
@@ -152,7 +153,7 @@ describe('validateContentIndex', () => {
 
             test('should not validate if landscape image is missing for comic style AN', () => {
                 try {
-                    expect(validateContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_PORTRAIT_IMAGE, VALID_COMIC_BE_PORTRAIT_IMAGE, VALID_COMIC_BE_LANDSCAPE_IMAGE])).toThrow()
+                    expect(getValidatedContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_PORTRAIT_IMAGE, VALID_COMIC_BE_PORTRAIT_IMAGE, VALID_COMIC_BE_LANDSCAPE_IMAGE])).toThrow()
                 } catch (error: any) {
                     const message = JSON.parse(error.message)
                     expect(message.message).toEqual(ErrorMessage[VALIDATION.COMIC_DATA_LANDSCAPE_IMAGE_FILE])
@@ -163,7 +164,7 @@ describe('validateContentIndex', () => {
 
             test('should not validate if portrait image is missing for comic style BE', () => {
                 try {
-                    expect(validateContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_LANDSCAPE_IMAGE, VALID_COMIC_AN_PORTRAIT_IMAGE, VALID_COMIC_BE_LANDSCAPE_IMAGE])).toThrow()
+                    expect(getValidatedContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_LANDSCAPE_IMAGE, VALID_COMIC_AN_PORTRAIT_IMAGE, VALID_COMIC_BE_LANDSCAPE_IMAGE])).toThrow()
                 } catch (error: any) {
                     const message = JSON.parse(error.message)
                     expect(message.message).toEqual(ErrorMessage[VALIDATION.COMIC_DATA_PORTRAIT_IMAGE_FILE])
@@ -174,7 +175,7 @@ describe('validateContentIndex', () => {
 
             test('should not validate if landscape image is missing for comic style BE', () => {
                 try {
-                    expect(validateContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_PORTRAIT_IMAGE, VALID_COMIC_AN_LANDSCAPE_IMAGE, VALID_COMIC_BE_PORTRAIT_IMAGE])).toThrow()
+                    expect(getValidatedContentIndex([VALID_COMIC_DATA_MOCK, VALID_COMIC_AN_PORTRAIT_IMAGE, VALID_COMIC_AN_LANDSCAPE_IMAGE, VALID_COMIC_BE_PORTRAIT_IMAGE])).toThrow()
                 } catch (error: any) {
                     const message = JSON.parse(error.message)
                     expect(message.message).toEqual(ErrorMessage[VALIDATION.COMIC_DATA_LANDSCAPE_IMAGE_FILE])
@@ -188,7 +189,7 @@ describe('validateContentIndex', () => {
             describe('layout 1', () => {
                 test('should not validate if landscape panel is missing for page layout 1', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
@@ -198,7 +199,7 @@ describe('validateContentIndex', () => {
                 })
                 test('should not validate if portrait panel is missing for page layout 1', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_1])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_1])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
@@ -211,7 +212,7 @@ describe('validateContentIndex', () => {
             describe('layout 2', () => {
                 test('should not validate if landscape panel is missing for page layout 2', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
@@ -221,7 +222,7 @@ describe('validateContentIndex', () => {
                 })
                 test('should not validate if portrait panel is missing for page layout 2', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_2])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_2])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
@@ -234,7 +235,7 @@ describe('validateContentIndex', () => {
             describe('layout 3', () => {
                 test('should not validate if landscape panel is missing for page layout 3', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_3_DATA_MOCK])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_3_DATA_MOCK])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
@@ -244,7 +245,7 @@ describe('validateContentIndex', () => {
                 })
                 test('should not validate if portrait panel is missing for page layout 2', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_3_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_3])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_3_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_3])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
@@ -257,7 +258,7 @@ describe('validateContentIndex', () => {
             describe('layout 4', () => {
                 test('should not validate if landscape panel is missing for page layout 4', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_4_DATA_MOCK,])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_4_DATA_MOCK,])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_LANDSCAPE_IMAGE_COUNT])
@@ -268,7 +269,7 @@ describe('validateContentIndex', () => {
 
                 test('should not validate if portrait panel is missing for page layout 4', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_4_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_4])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_4_DATA_MOCK, ...VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_4])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.LAYOUT_PORTRAIT_IMAGE_COUNT])
@@ -283,7 +284,7 @@ describe('validateContentIndex', () => {
             describe('layout 1', () => {
                 test('should not validate if panel data is missing for page layout 1', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK, ...VALID_IMAGES_PAGE_LAYOUT_1])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_1_DATA_MOCK, ...VALID_IMAGES_PAGE_LAYOUT_1])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.PANEL_DATA_FILE])
@@ -296,7 +297,7 @@ describe('validateContentIndex', () => {
             describe('layout 2', () => {
                 test('should not validate if panel data is missing for page layout 2', () => {
                     try {
-                        expect(validateContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, ...VALID_IMAGES_PAGE_LAYOUT_2])).toThrow()
+                        expect(getValidatedContentIndex([...VALID_COMIC_DATA, VALID_PAGE_LAYOUT_2_DATA_MOCK, ...VALID_IMAGES_PAGE_LAYOUT_2])).toThrow()
                     } catch (error: any) {
                         const message = JSON.parse(error.message)
                         expect(message.message).toEqual(ErrorMessage[VALIDATION.PANEL_DATA_FILE])

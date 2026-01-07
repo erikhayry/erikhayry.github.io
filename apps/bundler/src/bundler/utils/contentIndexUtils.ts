@@ -1,12 +1,14 @@
 import {ComicInfo, type ComicStyleType, PageInfo, PanelInfo} from "@library/types";
 import {
+    type ComicDataFileType,
     type ContentIndex,
     type DataFileType,
     type FileType,
     FileVariant,
     type ImageFileType,
     type PageDataFileType,
-    type PanelDataFileType
+    type PanelDataFileType,
+    type ValidImageFileType
 } from "../getSupportedFolderContentIndex.ts";
 import {ImageVariant, type ImageVariantType} from "../../files/getImage.ts";
 
@@ -14,8 +16,12 @@ export function isDataFile(file: FileType): file is DataFileType {
     return file.type === FileVariant.DATA
 }
 
-export function getComicFile(contentIndex: ContentIndex): DataFileType | undefined {
-    return contentIndex.filter(isDataFile).find((file) => file.id === 'comic')
+export function isComicDataFile(file: DataFileType): file is ComicDataFileType {
+    return file.id === 'comic'
+}
+
+export function getComicFile(contentIndex: ContentIndex): ComicDataFileType | undefined {
+    return contentIndex.filter(isDataFile).find(isComicDataFile)
 }
 
 export function getComicInfo(contentIndex: ContentIndex): ComicInfo | undefined {
@@ -40,6 +46,10 @@ export function isImage(file: FileType): file is ImageFileType {
     return file.type === FileVariant.IMAGE
 }
 
+export function isValidImage(file: ImageFileType): file is ValidImageFileType {
+    return file.variant === ImageVariant.PORTRAIT || file.variant === ImageVariant.LANDSCAPE
+}
+
 export function hasImageFile(contentIndex: ContentIndex, id: string, variant: ImageVariantType, comicStyle: ComicStyleType) {
     return getImages(contentIndex).some((file) =>
         file.type === FileVariant.IMAGE &&
@@ -53,6 +63,10 @@ export function getImages(contentIndex: ContentIndex) {
     return contentIndex.filter(isImage)
 }
 
+export function getValidImages(contentIndex: ContentIndex): ValidImageFileType[] {
+    return getImages(contentIndex).filter(isValidImage)
+}
+
 export function getDataFiles(contentIndex: ContentIndex) {
     return contentIndex.filter(isDataFile)
 }
@@ -63,6 +77,10 @@ function isPanelInfo(file: DataFileType): file is PanelDataFileType {
 
 export function getPanelFiles(contentIndex: ContentIndex) {
     return getDataFiles(contentIndex).filter(isPanelInfo)
+}
+
+export function getPageFiles(contentIndex: ContentIndex) {
+    return getDataFiles(contentIndex).filter(isPageInfo)
 }
 
 export function getPanelsInfo(contentIndex: ContentIndex): PanelInfo[] {

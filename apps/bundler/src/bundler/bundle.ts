@@ -1,7 +1,6 @@
-import {getWebsiteFile} from "./getWebsiteFile.ts";
-import {createJSON} from "../files/createJSON.ts";
-import {copyComicImages} from "./utils/copyComicImages.ts";
-import {createPanelOutputSchema, createPanelSchema} from "../files/schemas.ts";
+import {getSupportedFolderContentIndex} from "./getSupportedFolderContentIndex.ts";
+import {getValidatedContentIndex} from "./getValidatedContentIndex.ts";
+import {getComicFromContentIndex} from "./getComicFromContentIndex.ts";
 
 export interface TypeConfig {
     folder: string;
@@ -32,8 +31,14 @@ export function bundle({
                            web,
                            type
                        }: BundleConfig) {
-    createJSON(web.folder, web.file, getWebsiteFile(comics.folder));
-    copyComicImages(comics.folder, web.folder);
-    createPanelSchema(type.folder, type.schemas.panel)
-    createPanelOutputSchema(type.folder, type.schemas.panelOutput)
+    const contentIndex = getSupportedFolderContentIndex(comics.folder)
+    const validatedContentIndex = getValidatedContentIndex(contentIndex)
+    const comic = getComicFromContentIndex(validatedContentIndex)
+    console.log(JSON.stringify(comic))
+
+
+    //createJSON(web.folder, web.file, getWebsiteFile(comics.folder));
+    //copyComicImages(comics.folder, web.folder);
+    //createPanelSchema(type.folder, type.schemas.panel)
+    //createPanelOutputSchema(type.folder, type.schemas.panelOutput)
 }

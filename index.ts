@@ -6,7 +6,7 @@ bundle({
         file: "website.json",
     },
     comics: {
-        folder: "comics"
+        folder: "comics/slaget-vid-jutas/output"
     },
     type: {
         folder: 'library/types/schemas',
