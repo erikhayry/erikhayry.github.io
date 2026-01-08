@@ -1,6 +1,11 @@
 import {getSupportedFolderContentIndex} from "./getSupportedFolderContentIndex.ts";
 import {getValidatedContentIndex} from "./getValidatedContentIndex.ts";
 import {getComicFromContentIndex} from "./getComicFromContentIndex.ts";
+import {createJSON} from "../files/createJSON.ts";
+import {copyComicImages} from "./utils/copyComicImages.ts";
+import {createPanelOutputSchema, createPanelSchema} from "../files/schemas.ts";
+import {getFolders} from "../files/getFolders.ts";
+import {OUTPUT_FOLDER} from "../constants.ts";
 
 export interface TypeConfig {
     folder: string;
@@ -26,19 +31,22 @@ export interface BundleConfig {
     type: TypeConfig
 }
 
+function getComics(comicsFolder: string) {
+    return getFolders(comicsFolder).map((comicFolder) => {
+        const contentIndex = getSupportedFolderContentIndex(`${comicFolder}/${OUTPUT_FOLDER}`)
+        const validatedContentIndex = getValidatedContentIndex(contentIndex)
+        return getComicFromContentIndex(validatedContentIndex)
+    })
+}
+
 export function bundle({
                            comics,
                            web,
                            type
                        }: BundleConfig) {
-    const contentIndex = getSupportedFolderContentIndex(comics.folder)
-    const validatedContentIndex = getValidatedContentIndex(contentIndex)
-    const comic = getComicFromContentIndex(validatedContentIndex)
-    console.log(JSON.stringify(comic))
-
-
-    //createJSON(web.folder, web.file, getWebsiteFile(comics.folder));
-    //copyComicImages(comics.folder, web.folder);
-    //createPanelSchema(type.folder, type.schemas.panel)
-    //createPanelOutputSchema(type.folder, type.schemas.panelOutput)
+    const website = getComics(comics.folder)
+    createJSON(web.folder, web.file, website);
+    copyComicImages(comics.folder, web.folder, website);
+    createPanelSchema(type.folder, type.schemas.panel)
+    createPanelOutputSchema(type.folder, type.schemas.panelOutput)
 }

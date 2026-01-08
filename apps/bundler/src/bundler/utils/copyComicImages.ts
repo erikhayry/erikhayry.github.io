@@ -1,18 +1,24 @@
 import {copyFile} from "../../files/copy.ts";
-import {OUTPUT_FOLDER} from "../../constants.ts";
-import {getWebsiteFile} from "../getWebsiteFile.ts";
-import {getImageName} from "../../utils/image.ts";
-import {ComicStyle} from "@library/types";
+import {IMAGE_EXTENSION, OUTPUT_FOLDER} from "../../constants.ts";
+import {type Website} from "@library/types";
 
-export function copyComicImages(comicsFolder: string, wwwFolder: string): void {
-    getWebsiteFile(comicsFolder).forEach(({slug, pages}) => {
+export function copyComicImages(comicsFolder: string, wwwFolder: string, website: Website): void {
+    website.forEach(({slug, pages, styles}) => {
         pages.forEach(({panels}) => {
             panels.forEach(({id}) => {
-                copyFile(
-                    `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/${getImageName(id, ComicStyle.ANIME)}`,
-                    `${wwwFolder}/${slug}`,
-                );
+                styles.forEach((style) => {
+                    copyFile(
+                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/${id}.l${IMAGE_EXTENSION}`,
+                        `${wwwFolder}/${slug}/images/${style}`,
+                    );
+                    copyFile(
+                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/${id}.p${IMAGE_EXTENSION}`,
+                        `${wwwFolder}/${slug}/images/${style}`,
+                    );
+                })
+
             });
         });
     });
 }
+

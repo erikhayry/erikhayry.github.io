@@ -1,4 +1,4 @@
-import {IMAGE_EXTENSION} from "../constants.ts";
+import {IMAGE_EXTENSION} from "../../../constants.ts";
 import {ComicStyleType} from "@library/types";
 
 export function getImageName(panelId: string, comicStyle: ComicStyleType) {

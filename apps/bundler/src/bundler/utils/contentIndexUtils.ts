@@ -1,4 +1,4 @@
-import {ComicInfo, type ComicStyleType, PageInfo, PanelInfo} from "@library/types";
+import {type ComicStyleType, PageInfo, PanelInfo} from "@library/types";
 import {
     type ComicDataFileType,
     type ContentIndex,
@@ -22,16 +22,6 @@ export function isComicDataFile(file: DataFileType): file is ComicDataFileType {
 
 export function getComicFile(contentIndex: ContentIndex): ComicDataFileType | undefined {
     return contentIndex.filter(isDataFile).find(isComicDataFile)
-}
-
-export function getComicInfo(contentIndex: ContentIndex): ComicInfo | undefined {
-    const file = getComicFile(contentIndex)
-
-    if (file) {
-        return ComicInfo.safeParse(file.data).data
-    }
-
-    return undefined
 }
 
 export function isPageInfo(file: DataFileType): file is PageDataFileType {
@@ -82,11 +72,6 @@ export function getPanelFiles(contentIndex: ContentIndex) {
 export function getPageFiles(contentIndex: ContentIndex) {
     return getDataFiles(contentIndex).filter(isPageInfo)
 }
-
-export function getPanelsInfo(contentIndex: ContentIndex): PanelInfo[] {
-    return getPanelFiles(contentIndex).map(({data}) => data)
-}
-
 
 export function getLandscapeImages(contentIndex: ContentIndex) {
     return getImages(contentIndex).filter((image) => image.variant === ImageVariant.LANDSCAPE)

@@ -4,7 +4,7 @@ import fs from "node:fs";
 import {readPath} from "../../files/readPath.ts";
 import {ComicStyle, Website} from "@library/types";
 import {getImages} from "../../files/getImages.ts";
-import {getImageName} from "../../utils/image.ts";
+import {getImageName} from "./utils/image.ts";
 
 const WWW_FOLDER_DIR = "src/bundler/tests/comicsOutput";
 const IMAGE_FOLDER = "src/bundler/tests/comicsOutput";
