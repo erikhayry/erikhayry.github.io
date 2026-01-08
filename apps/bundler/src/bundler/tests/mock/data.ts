@@ -3,7 +3,8 @@ import {
     FileVariant,
     type ImageFileType,
     type PageDataFileType,
-    type PanelDataFileType
+    type PanelDataFileType,
+    type ValidatedContentIndex
 } from "../../getSupportedFolderContentIndex.ts";
 import {ImageVariant} from "../../../files/getImage.ts";
 
@@ -253,3 +254,10 @@ export const VALID_COMIC_INDEX = [
     ...VALID_COMIC_DATA,
     ...VALID_PAGE_DATA
 ]
+
+export const VALIDATED_CONTENT_INDEX: ValidatedContentIndex = {
+    comicFile: VALID_COMIC_DATA_MOCK,
+    pages: [VALID_PAGE_LAYOUT_1_DATA_MOCK],
+    panels: [VALID_PANEL_DATA_MOCK_1_1],
+    images: []
+}

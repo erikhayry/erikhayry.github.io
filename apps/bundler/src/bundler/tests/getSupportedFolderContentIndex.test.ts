@@ -1,92 +1,72 @@
 import {expect, test} from "bun:test";
 import {FileVariant, getSupportedFolderContentIndex} from "../getSupportedFolderContentIndex.ts";
 import {getJSON} from "../../files/getJSON.ts";
-import {ImageVariant, ValidImageVariant} from "../../files/getImage.ts";
+import {ImageVariant} from "../../files/getImage.ts";
 import {ComicStyle} from "@library/types";
 
 
+const comicFolder = 'src/bundler/tests/mocks/comics/comic-1';
+
 test('should return index', () => {
-    expect(getSupportedFolderContentIndex('mocks/comics')).toEqual([
+    expect(getSupportedFolderContentIndex(comicFolder)).toEqual([
         {
-            path: 'mocks/comics/output/1.1.1.json',
+            path: `${comicFolder}/output/1.1.1.json`,
             type: FileVariant.DATA,
             id: '1.1.1',
-            data: getJSON('mocks/comics/output/1.1.1.json')
+            data: getJSON(`${comicFolder}/output/1.1.1.json`)
         },
         {
-            path: 'mocks/comics/output/1.1.json',
+            path: `${comicFolder}/output/1.1.json`,
             type: FileVariant.DATA,
             id: '1.1',
-            data: getJSON('mocks/comics/output/1.1.json')
+            data: getJSON(`${comicFolder}/output/1.1.json`)
         },
         {
-            path: 'mocks/comics/output/comic.json',
+            path: `${comicFolder}/output/comic.json`,
             type: FileVariant.DATA,
             id: 'comic',
-            data: getJSON('mocks/comics/output/comic.json')
+            data: getJSON(`${comicFolder}/output/comic.json`)
         },
         {
-            path: 'mocks/comics/output/panels/BE/1.1.1.l.png',
+            path: `${comicFolder}/output/panels/AN/1.1.1.l.png`,
             type: FileVariant.IMAGE,
-            style: ComicStyle.BELGIAN_COMIC,
-            id: '1.1.1',
+            style: ComicStyle.ANIME,
+            id: '1.1.1.l',
             width: 1536,
             height: 1024,
-            variant: ValidImageVariant.LANDSCAPE
-
+            variant: ImageVariant.LANDSCAPE
+        },
+        {
+            path: `${comicFolder}/output/panels/AN/1.1.1.p.png`,
+            type: FileVariant.IMAGE,
+            style: ComicStyle.ANIME,
+            id: '1.1.1.p',
+            width: 1024,
+            height: 1536,
+            variant: ImageVariant.PORTRAIT
         },
         {
             id: "comic.l",
-            path: "mocks/comics/output/panels/BE/comic.l.png",
+            path: `${comicFolder}/output/panels/AN/comic.l.png`,
             type: FileVariant.IMAGE,
-            style: ComicStyle.BELGIAN_COMIC,
+            style: ComicStyle.ANIME,
             height: 1024,
             width: 1536,
-            variant: ValidImageVariant.LANDSCAPE
+            variant: ImageVariant.LANDSCAPE
 
         },
         {
             id: "comic.p",
-            path: "mocks/comics/output/panels/BE/comic.p.png",
+            path: `${comicFolder}/output/panels/AN/comic.p.png`,
             type: FileVariant.IMAGE,
-            style: ComicStyle.BELGIAN_COMIC,
-            height: 1536,
+            style: ComicStyle.ANIME,
             width: 1024,
-            variant: ValidImageVariant.PORTRAIT
-        },
-        {
-            path: 'mocks/comics/output/panels/AN/1.1.1.l.png',
-            type: FileVariant.IMAGE,
-            style: ComicStyle.ANIME,
-            id: '1.1.1',
-            width: 1536,
-            height: 1024,
-            variant: ValidImageVariant.LANDSCAPE
-
-        },
-
-        {
-            id: "comic.l",
-            path: "mocks/comics/output/panels/AN/comic.l.png",
-            type: FileVariant.IMAGE,
-            style: ComicStyle.ANIME,
-            height: 1024,
-            width: 1536,
-            variant: ValidImageVariant.LANDSCAPE
-
-        },
-        {
-            id: "comic.p",
-            path: "mocks/comics/output/panels/AN/comic.p.png",
-            type: FileVariant.IMAGE,
-            style: ComicStyle.ANIME,
             height: 1536,
-            width: 1024,
-            variant: ValidImageVariant.PORTRAIT
+            variant: ImageVariant.PORTRAIT
         },
         {
             id: "UNSUPPORTED_IMAGE_FORMAT",
-            path: "mocks/comics/output/panels/AN/UNSUPPORTED_IMAGE_FORMAT.png",
+            path: `${comicFolder}/output/panels/AN/UNSUPPORTED_IMAGE_FORMAT.png`,
             type: FileVariant.IMAGE,
             style: ComicStyle.ANIME,
             height: 413,

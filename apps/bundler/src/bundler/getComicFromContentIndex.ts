@@ -6,7 +6,7 @@ function byId(a: PageInfo | PanelInfo, b: PageInfo | PanelInfo) {
 }
 
 function getSlug(file: DataFileType): string {
-    return file.path.split('/')[1] as string
+    return file.path.split('/').at(-3) as string
 }
 
 export function getComicFromContentIndex({comicFile, pages, panels}: ValidatedContentIndex): Comic {
