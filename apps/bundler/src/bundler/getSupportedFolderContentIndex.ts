@@ -5,14 +5,7 @@ import {DATA_EXTENSION, IMAGE_EXTENSION} from "../constants.ts";
 import * as Path from "node:path";
 import {getJSON} from "../files/getJSON.ts";
 import {getImage, type ImageVariantType} from "../files/getImage.ts";
-import {
-    type ComicInfo,
-    ComicStyleType,
-    type PageInfo,
-    type PanelInfo,
-    UNSUPPORTED,
-    type UnsupportedType
-} from "@library/types";
+import {type ComicInfo, ComicStyleType, type PageInfo, type PanelInfo, type UnsupportedType} from "@library/types";
 
 export const FileVariant = {
     IMAGE: IMAGE_EXTENSION,
@@ -91,13 +84,8 @@ function toFile(filePath: string): FileInfo {
 
 function getStyle(dir: string): ImageFileType['style'] {
     const folder = dir.split("/").pop()
-    const comicStyle = ComicStyleType.safeParse(folder)
 
-    if (comicStyle.success) {
-        return comicStyle.data
-    }
-
-    return UNSUPPORTED
+    return ComicStyleType.parse(folder)
 }
 
 
