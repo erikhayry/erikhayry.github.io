@@ -9,7 +9,6 @@ export const ComicStyle = {
     ANIME: 'AN',
     SIMPLIFIED_LINE_DRAWING: 'SI',
 } as const
-
 export const ComicStyleType = z.enum([
     ComicStyle.ANIME,
     ComicStyle.BELGIAN_COMIC,
@@ -39,6 +38,16 @@ export const LanguageType = z.enum([
 export const Text = z.record(LanguageType, z.string())
 export type Text = z.infer<typeof Text>;
 
+export const ImageVariant = {
+    Landscape: 'l',
+    Portrait: 'p'
+} as const;
+export const ImageVariantType = z.enum([
+    ImageVariant.Landscape,
+    ImageVariant.Portrait,
+]);
+export type ImageVariantType = z.infer<typeof ImageVariantType>
+
 export const PageLayout = {
     Hero: "1",
     VerticalDiptych: "2",
@@ -63,20 +72,15 @@ export const PageId = z.string().regex(/^[1-9]\d*\.[1-9]\d*$/, {
     message:
         "Format must be number.number — no part can be zero (e.g. 1.2)",
 });
-export const PageIdTuple = z.tuple([z.string(), z.string()]);
-export type PageIdTuple = z.infer<typeof PageIdTuple>;
 export type PageId = z.infer<typeof PageId>;
 
 export const PanelId = z.string().regex(/^[1-9]\d*\.[1-9]\d*\.[1-9]\d*$/, {
     message:
         "Format must be number.number.number — no part can be zero (e.g. 1.2.3)",
 });
-export const PanelIdTuple = z.tuple([z.string(), z.string(), z.string()]);
-export type PanelIdTuple = z.infer<typeof PanelIdTuple>;
 export type PanelId = z.infer<typeof PanelId>;
 
 export const DataId = z.union([PageId, PanelId, ComicId])
-export const ImageIds = z.union([PanelId])
 
 export const PanelInfo = z.object({
     id: PanelId,
@@ -95,21 +99,7 @@ export const ComicInfo = z.object({
     styles: ComicStyleTypes
 })
 
-export const PageOutput = z.object({
-    layout: PageLayoutType,
-    panels: z.array(PanelInfo),
-});
-
-export const ComicOutput = z.object({
-    pages: z.array(PageOutput),
-    path: z.string(),
-    styles: ComicStyleTypes
-});
-
 export type PanelInfo = z.infer<typeof PanelInfo>;
 export type PageInfo = z.infer<typeof PageInfo>;
 export type ComicInfo = z.infer<typeof ComicInfo>;
-
-export type PageOutput = z.infer<typeof PageOutput>;
-export type ComicOutput = z.infer<typeof ComicOutput>;
 

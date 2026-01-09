@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type {PageLayoutValue, Panel} from "@library/types";
+    import {type ComicStyleType, ImageVariant, PageLayout, type PageLayoutValue, type Panel} from "@library/types";
     import PanelImage from "./components/PanelImage/PanelImage.svelte";
     import {PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID} from "./constants";
     import {getLayoutClassName} from "./utils/getLayoutClassName";
@@ -8,10 +8,12 @@
         slug: string;
         panels: Panel[]
         layout: PageLayoutValue
+        style: ComicStyleType
     }
 
-    let {panels, slug, layout}: Props = $props();
+    let {panels, slug, layout, style}: Props = $props();
     let classes = $derived(getLayoutClassName(layout))
+    let variant = $derived(layout === PageLayout.LandscapeDiptych ? ImageVariant.Portrait : ImageVariant.Landscape)
 </script>
 
 <style>
@@ -88,7 +90,7 @@
 <div class={`page ${classes.page}`} data-testid={PAGE_CONTAINER_TEST_ID}>
     {#each panels as panel, index (panel)}
         <div class={`panel ${classes.panel[index]}`} data-testid={PANEL_CONTAINER_TEST_ID}>
-            <PanelImage {slug} {panel}/>
+            <PanelImage {slug} {panel} {style} {variant}/>
         </div>
     {/each}
 </div>

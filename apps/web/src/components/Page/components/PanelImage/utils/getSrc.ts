@@ -1,12 +1,13 @@
-import { Key, type PanelId } from "@library/types";
-import { getImages } from "$core/getImages";
+import {type ComicStyleType, type ImageVariantType, Key, type PanelId} from "@library/types";
+import {getImages} from "$core/getImages";
 
-function getKey(slug: string, id: PanelId) {
-  const imageKey = (key: string) => key.includes(`${slug}/${id}`);
+function getKey(slug: string, id: PanelId, comicStyle: ComicStyleType, imageVariant: ImageVariantType) {
+    const imageKey = (key: string) => key.includes(`${slug}/images/${comicStyle}/${id}.${imageVariant}`);
 
-  return Key.parse(Object.keys(getImages()).find(imageKey));
+
+    return Key.parse(Object.keys(getImages()).find(imageKey));
 }
 
-export function getSrc(slug: string, id: PanelId): string {
-  return getImages()[getKey(slug, id)].default;
+export function getSrc(slug: string, id: PanelId, comicStyle: ComicStyleType, imageVariant: ImageVariantType): string {
+    return getImages()[getKey(slug, id, comicStyle, imageVariant)].default;
 }

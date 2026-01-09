@@ -1,16 +1,18 @@
 <script lang="ts">
     import {getSrc} from "./utils/getSrc";
-    import type {Panel} from "@library/types";
+    import {type ComicStyleType, type ImageVariantType, type Panel} from "@library/types";
     import Dialogs from "./components/Dialogs.svelte";
     import {i18n} from "../../../../i18n/i18n";
 
     interface Props {
         slug: string;
         panel: Panel
+        style: ComicStyleType
+        variant: ImageVariantType
     }
 
-    let {slug, panel}: Props = $props();
-    const src = getSrc(slug, panel.id)
+    let {slug, panel, style, variant}: Props = $props();
+    const src = getSrc(slug, panel.id, style, variant)
 </script>
 
 <style>
