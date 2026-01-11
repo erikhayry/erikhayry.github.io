@@ -14,10 +14,8 @@ export function copyComicImages(comicsFolder: string, wwwFolder: string, website
                                 `${wwwFolder}/${slug}/images/${style}`,
                             );
                         })
-
                     })
                 })
-
             });
         });
     });
