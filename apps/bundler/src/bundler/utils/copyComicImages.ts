@@ -8,6 +8,14 @@ export function copyComicImages(comicsFolder: string, wwwFolder: string, website
             panels.forEach(({id}) => {
                 styles.forEach((style) => {
                     copyFile(
+                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/comic.p${IMAGE_EXTENSION}`,
+                        `${wwwFolder}/${slug}/images/${style}`,
+                    );
+                    copyFile(
+                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/comic.l${IMAGE_EXTENSION}`,
+                        `${wwwFolder}/${slug}/images/${style}`,
+                    );
+                    copyFile(
                         `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/${id}.l${IMAGE_EXTENSION}`,
                         `${wwwFolder}/${slug}/images/${style}`,
                     );

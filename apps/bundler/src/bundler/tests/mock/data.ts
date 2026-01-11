@@ -257,7 +257,7 @@ export const VALID_COMIC_INDEX = [
 
 export const VALIDATED_CONTENT_INDEX: ValidatedContentIndex = {
     comicFile: VALID_COMIC_DATA_MOCK,
-    pages: [VALID_PAGE_LAYOUT_1_DATA_MOCK],
-    panels: [VALID_PANEL_DATA_MOCK_1_1],
+    pages: [VALID_PAGE_LAYOUT_2_DATA_MOCK, VALID_PAGE_LAYOUT_1_DATA_MOCK],
+    panels: [VALID_PANEL_DATA_MOCK_1_1, VALID_PANEL_DATA_MOCK_2_1, VALID_PANEL_DATA_MOCK_2_2],
     images: []
 }

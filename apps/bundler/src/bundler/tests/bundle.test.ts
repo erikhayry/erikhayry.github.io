@@ -43,6 +43,8 @@ test("should copy images", () => {
     expect(getImages(`${IMAGE_FOLDER}/comic-1/images/${ComicStyle.ANIME}`)).toEqual([
         `1.1.1.l${IMAGE_EXTENSION}`,
         `1.1.1.p${IMAGE_EXTENSION}`,
+        `comic.l${IMAGE_EXTENSION}`,
+        `comic.p${IMAGE_EXTENSION}`,
     ]);
 });
 
