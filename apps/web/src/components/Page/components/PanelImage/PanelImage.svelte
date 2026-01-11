@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {getSrc} from "./utils/getSrc";
+    import {getImageSrc} from "$core/getImageSrc";
     import {type ComicStyleType, type ImageVariantType, type Panel} from "@library/types";
     import Dialogs from "./components/Dialogs.svelte";
     import {i18n} from "../../../../i18n/i18n";
@@ -12,7 +12,7 @@
     }
 
     let {slug, panel, style, variant}: Props = $props();
-    const src = getSrc(slug, panel.id, style, variant)
+    const src = getImageSrc(slug, panel.id, style, variant)
 </script>
 
 <style>

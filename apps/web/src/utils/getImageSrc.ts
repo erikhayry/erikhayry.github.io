@@ -8,6 +8,6 @@ function getKey(slug: string, id: PanelId, comicStyle: ComicStyleType, imageVari
     return Key.parse(Object.keys(getImages()).find(imageKey));
 }
 
-export function getSrc(slug: string, id: PanelId, comicStyle: ComicStyleType, imageVariant: ImageVariantType): string {
+export function getImageSrc(slug: string, id: PanelId, comicStyle: ComicStyleType, imageVariant: ImageVariantType): string {
     return getImages()[getKey(slug, id, comicStyle, imageVariant)].default;
 }
