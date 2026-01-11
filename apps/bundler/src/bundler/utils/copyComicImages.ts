@@ -5,24 +5,17 @@ import {type Website} from "@library/types";
 export function copyComicImages(comicsFolder: string, wwwFolder: string, website: Website): void {
     website.forEach(({slug, pages, styles}) => {
         pages.forEach(({panels}) => {
-            panels.forEach(({id}) => {
+            panels.forEach(({id: panelId}) => {
                 styles.forEach((style) => {
-                    copyFile(
-                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/comic.p${IMAGE_EXTENSION}`,
-                        `${wwwFolder}/${slug}/images/${style}`,
-                    );
-                    copyFile(
-                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/comic.l${IMAGE_EXTENSION}`,
-                        `${wwwFolder}/${slug}/images/${style}`,
-                    );
-                    copyFile(
-                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/${id}.l${IMAGE_EXTENSION}`,
-                        `${wwwFolder}/${slug}/images/${style}`,
-                    );
-                    copyFile(
-                        `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/${id}.p${IMAGE_EXTENSION}`,
-                        `${wwwFolder}/${slug}/images/${style}`,
-                    );
+                    ['comic', panelId].forEach((image) => {
+                        ['l', 'p'].forEach((variant) => {
+                            copyFile(
+                                `${comicsFolder}/${slug}/${OUTPUT_FOLDER}/panels/${style}/${image}.${variant}${IMAGE_EXTENSION}`,
+                                `${wwwFolder}/${slug}/images/${style}`,
+                            );
+                        })
+
+                    })
                 })
 
             });
