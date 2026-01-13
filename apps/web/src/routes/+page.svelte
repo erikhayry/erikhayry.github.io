@@ -7,14 +7,44 @@
     import {ComicStyle, ImageVariant} from "@library/types";
 </script>
 
+<style>
+    .comic {
+        position: relative;
+
+        &:after {
+            content: attr(aria-label);
+            display: block;
+            position: absolute;
+            bottom: calc(var(--spacing) * 2);
+            left: calc(var(--spacing) * 2);
+            font-size: 5rem;
+            font-weight: bold;
+            opacity: 0.9;
+        }
+    }
+
+    .cover {
+        width: 100%;
+
+        @media (orientation: landscape) {
+            width: 600px;
+            height: auto;
+        }
+    }
+</style>
+
 <h1>{i18n(TEXT.comicsHeading)}</h1>
 
 <ul>
     {#each getComics() as comic (comic)}
         <li>
-            <a href={resolve(`/${comic.slug}/0`)} aria-label={comic.slug}>
-                <img src={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Portrait)} alt=""
-                     width="200" height="auto">
+            <a href={resolve(`/${comic.slug}/0`)} aria-label={comic.slug} class="comic">
+                <picture>
+                    <source srcset={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Portrait)}
+                            media="(orientation: portrait)"/>
+                    <img class="cover" width="100%" height="auto"
+                         src={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Landscape)} alt=""/>
+                </picture>
             </a>
         </li>
     {/each}
