@@ -8,15 +8,15 @@ describe("comics page", () => {
     it("should render list of comics links", async () => {
         render(Page);
 
-        const link = page.getByRole("link", {
-            name: COMIC_MOCK_1.slug,
-            exact: true,
-        });
+        const link = page.getByRole("link");
+        const coverImage = page.getByRole("presentation");
 
+        expect(coverImage.elements()).toHaveLength(1);
         expect(link.elements()).toHaveLength(1);
-
+        
         await expect
             .element(link)
-            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/0`);
+            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/0`)
+
     });
 });

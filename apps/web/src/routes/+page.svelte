@@ -13,10 +13,8 @@
     {#each getComics() as comic (comic)}
         <li>
             <a href={resolve(`/${comic.slug}/0`)} aria-label={comic.slug}>
-                <img width="200" height="auto"
-                     src={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Portrait)} alt="">
-                <br>
-                {comic.slug}
+                <img src={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Portrait)} alt=""
+                     width="200" height="auto">
             </a>
         </li>
     {/each}
