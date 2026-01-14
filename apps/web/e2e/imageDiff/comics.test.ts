@@ -2,9 +2,10 @@ import {expect, type Page, test} from "@playwright/test";
 import type {Comic} from "@library/types";
 import {getComics} from "../../src/utils/getComics.ts";
 import {getPagination} from "../../src/routes/[comic]/[page]/utils/getPagination.ts";
+import {i18n} from "../../src/i18n/i18n.ts";
 
 async function testComic(comic: Comic, page: Page) {
-    await page.getByRole("link", {name: comic.slug, exact: true}).click();
+    await page.getByRole("link", {name: i18n(comic.title), exact: true}).click();
 
     let testedPage = 0;
 

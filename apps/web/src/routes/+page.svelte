@@ -38,7 +38,7 @@
 <ul>
     {#each getComics() as comic (comic)}
         <li>
-            <a href={resolve(`/${comic.slug}/0`)} aria-label={comic.slug} class="comic">
+            <a href={resolve(`/${comic.slug}/0`)} aria-label={i18n(comic.title)} class="comic">
                 <picture>
                     <source srcset={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Portrait)}
                             media="(orientation: portrait)"/>

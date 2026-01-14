@@ -21,6 +21,7 @@ export function getComicFromContentIndex({comicFile, pages, panels}: ValidatedCo
             panels: panels.map(({data}) => data)
                 .filter((panel) => panel.id.startsWith(pageId))
         })),
-        styles: comicFile.data.styles
+        styles: comicFile.data.styles,
+        title: comicFile.data.title
     }
 }

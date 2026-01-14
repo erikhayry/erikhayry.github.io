@@ -2,6 +2,7 @@ import {expect, test} from "bun:test";
 import {getComicFromContentIndex} from "../getComicFromContentIndex.ts";
 import {
     COMIC_STYLES_MOCK,
+    VALID_COMIC_DATA_MOCK,
     VALID_PAGE_LAYOUT_1_DATA_MOCK,
     VALID_PAGE_LAYOUT_2_DATA_MOCK,
     VALID_PANEL_DATA_MOCK_1_1,
@@ -17,6 +18,7 @@ test('comic', () => {
 
 
     expect(comic.slug).toEqual("comics");
+    expect(comic.title).toEqual(VALID_COMIC_DATA_MOCK.data.title);
     expect(comic.pages).toHaveLength(getPagesInfo(VALIDATED_CONTENT_INDEX.pages).length);
     expect(comic.styles).toEqual(COMIC_STYLES_MOCK);
 });
