@@ -1,0 +1,55 @@
+{
+  "name": "The Jutas Project",
+  "short_name": "Jutas",
+  "description": "An illustrated historical comic project depicting the Battle of Jutas (1808), combining narrative, art, and historical accuracy.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1f2a38",
+  "background_color": "#0f1620",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/page-hero.png",
+      "sizes": "1536x1024",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/page-portrait.png",
+      "sizes": "1024x1536",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": [
+    "education",
+    "books",
+    "history",
+    "comics"
+  ],
+  "prefer_related_applications": false
+}
