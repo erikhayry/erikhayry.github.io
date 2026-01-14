@@ -96,7 +96,8 @@ export const PageInfo = z.object({
 });
 
 export const ComicInfo = z.object({
-    styles: ComicStyleTypes
+    styles: ComicStyleTypes,
+    title: Text
 })
 
 export type PanelInfo = z.infer<typeof PanelInfo>;

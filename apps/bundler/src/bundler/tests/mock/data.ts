@@ -77,7 +77,11 @@ export const VALID_COMIC_DATA_MOCK = {
     type: FileVariant.DATA,
     id: 'comic',
     data: {
-        "styles": COMIC_STYLES_MOCK
+        "styles": COMIC_STYLES_MOCK,
+        "title": {
+            "en": "English Title",
+            "se": "Svensk titel"
+        }
     }
 }
 

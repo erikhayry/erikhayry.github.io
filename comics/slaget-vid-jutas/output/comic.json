@@ -1,5 +1,9 @@
 {
   "styles": [
     "AN"
-  ]
+  ],
+  "title": {
+    "en": "Battle of Jutas",
+    "se": "Slaget vid Jutas"
+  }
 }
