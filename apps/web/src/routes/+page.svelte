@@ -3,8 +3,8 @@
     import {getComics} from "$core/getComics";
     import {i18n} from "../i18n/i18n";
     import {TEXT} from "../i18n/ui";
-    import {getImageSrc} from "$core/getImageSrc";
-    import {ComicStyle, ImageVariant} from "@library/types";
+    import {ComicStyle} from "@library/types";
+    import ResponsiveImage from "../components/Page/components/ResponsiveImage.svelte";
 </script>
 
 <style>
@@ -47,6 +47,12 @@
     .comic {
         position: relative;
 
+        :global(img) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         &:after {
             content: attr(aria-label);
             display: block;
@@ -59,11 +65,7 @@
         }
     }
 
-    .image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+
 </style>
 
 <div class="root">
@@ -72,12 +74,7 @@
         {#each getComics() as comic (comic)}
             <li class="comic-item">
                 <a href={resolve(`/${comic.slug}/0`)} aria-label={i18n(comic.title)} class="comic">
-                    <picture>
-                        <source srcset={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Portrait)}
-                                media="(orientation: portrait)"/>
-                        <img class="image" width="100%" height="auto"
-                             src={getImageSrc(comic.slug, 'comic', ComicStyle.ANIME, ImageVariant.Landscape)} alt=""/>
-                    </picture>
+                    <ResponsiveImage class="image" slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
                 </a>
             </li>
         {/each}
