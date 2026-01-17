@@ -4,7 +4,7 @@ type Texts = Record<string, I18N>
 
 export const TEXT: Texts = {
     comicsHeading: {
-        en: 'Comics',
+        en: 'The Jutas Project',
         se: 'TODO'
     },
     paginationLabel: {

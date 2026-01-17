@@ -1,4 +1,8 @@
 :root {
+    --black: #222;
+    --font-size: 1rem;
+    --font-size-s: calc(var(--font-size) * 0.5);
+    --font-size-l: calc(var(--font-size) * 1.5);
     --spacing: 4px;
     --spacing-2x: calc(2 * var(--spacing));
     --panel-border: 12px;
@@ -13,8 +17,12 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background: black;
+    background: var(--black);
     color: white;
+}
+
+h1, h2, h3 {
+    margin: 0;
 }
 
 a:link, a:visited {
