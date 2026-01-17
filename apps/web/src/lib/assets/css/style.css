@@ -3,13 +3,35 @@
     --font-size: 1rem;
     --font-size-s: calc(var(--font-size) * 0.5);
     --font-size-l: calc(var(--font-size) * 1.5);
-    --spacing: 4px;
+    --unit: 0.25rem;
+    --spacing: var(--unit);
     --spacing-2x: calc(2 * var(--spacing));
     --panel-border: 12px;
     --bubble-border: 2px solid black;
-    --click-area: 44px;
+    --click-area: calc(var(--unit) * 11);
 }
 
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 3000ms;
+}
+
+::view-transition-old(root) {
+    animation: 3000ms ease-in both leave;
+}
+
+::view-transition-new(root) {
+    animation: 3000ms ease-in both enter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*) {
+        animation-duration: 0ms;
+    }
+}
 
 html,
 body {
