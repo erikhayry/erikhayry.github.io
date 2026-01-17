@@ -47,12 +47,6 @@
     .comic {
         position: relative;
 
-        :global(img) {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         &:after {
             content: attr(aria-label);
             display: block;
@@ -74,7 +68,7 @@
         {#each getComics() as comic (comic)}
             <li class="comic-item">
                 <a href={resolve(`/${comic.slug}/0`)} aria-label={i18n(comic.title)} class="comic">
-                    <ResponsiveImage class="image" slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
+                    <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
                 </a>
             </li>
         {/each}

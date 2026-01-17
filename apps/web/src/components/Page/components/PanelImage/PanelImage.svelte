@@ -1,53 +1,34 @@
 <script lang="ts">
-    import {getImageSrc} from "$core/getImageSrc";
-    import {type ComicStyleType, type ImageVariantType, type Panel} from "@library/types";
+    import {type ComicStyleType, type Panel} from "@library/types";
     import Dialogs from "./components/Dialogs.svelte";
     import {i18n} from "../../../../i18n/i18n";
+    import ResponsiveImage from "../ResponsiveImage.svelte";
 
     interface Props {
         slug: string;
         panel: Panel
         style: ComicStyleType
-        variant: ImageVariantType
     }
 
-    let {slug, panel, style, variant}: Props = $props();
-    const src = getImageSrc(slug, panel.id, style, variant)
+    let {slug, panel, style}: Props = $props();
 </script>
 
 <style>
-    .panel-image {
-        display: block;
-
-        @media (min-width: 1250px) {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: top;
-        }
-    }
-
     .narration {
+        border: var(--bubble-border);
+        position: absolute;
+        bottom: var(--spacing-2x);
+        right: var(--spacing-2x);
+        left: var(--spacing-2x);
         width: fit-content;
         background-color: white;
-        color: black;
+        color: var(--black);
         padding: var(--spacing);
-        margin-top: var(--spacing);
-        margin-bottom: var(--spacing);
-
-        @media (min-width: 1250px) {
-            border: var(--bubble-border);
-            position: absolute;
-            bottom: var(--spacing);
-            left: calc(var(--click-area) + var(--spacing));
-            margin-right: var(--spacing);
-        }
     }
 </style>
 
 
-<img alt={i18n(panel.description)} class="panel-image" height="auto" {src} width="100%"/>
+<ResponsiveImage alt={i18n(panel.description)} id={panel.id} {slug} {style}/>
 
 {#if panel.narration}
     <p class="narration">{i18n(panel.narration)}</p>

@@ -10,12 +10,7 @@
 
 <style>
     .container {
-        @media (min-width: 1250px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+  
     }
 
 </style>

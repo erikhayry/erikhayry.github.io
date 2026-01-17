@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {type ComicStyleType, ImageVariant, PageLayout, type PageLayoutValue, type Panel} from "@library/types";
+    import {type ComicStyleType, type PageLayoutValue, type Panel} from "@library/types";
     import PanelImage from "./components/PanelImage/PanelImage.svelte";
     import {PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID} from "./constants";
     import {getLayoutClassName} from "./utils/getLayoutClassName";
@@ -13,58 +13,43 @@
 
     let {panels, slug, layout, style}: Props = $props();
     let classes = $derived(getLayoutClassName(layout))
-    let variant = $derived(layout === PageLayout.LandscapeDiptych ? ImageVariant.Portrait : ImageVariant.Landscape)
 </script>
 
 <style>
     .page {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-2x);
-
-
-        @media (min-width: 1250px) {
-            gap: var(--panel-border);
-            padding: var(--panel-border);
-            display: grid;
-            overflow: hidden;
-            width: auto;
-            height: 100%;
-            aspect-ratio: 2 / 1;
-        }
+        position: relative;
+        height: 100dvh;
     }
 
     .panel {
         overflow: hidden;
-
-        @media (min-width: 1250px) {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+        height: 100%;
+        position: relative;
+        margin-bottom: var(--spacing);
     }
 
     .layout-1 {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        height: 100dvh;
+        width: 100dvw;
         grid-template-areas:
             "a";
     }
 
     .layout-2 {
+        height: 95dvh;
         grid-template-areas:
             "a"
             "b"
     }
 
     .layout-3 {
+        height: 95dvh;
         grid-template-areas:
             "a b"
     }
 
     .layout-4 {
+        height: 95dvh;
         grid-template-areas:
             "a b"
             "c d"
@@ -90,7 +75,7 @@
 <div class={`page ${classes.page}`} data-testid={PAGE_CONTAINER_TEST_ID}>
     {#each panels as panel, index (panel)}
         <div class={`panel ${classes.panel[index]}`} data-testid={PANEL_CONTAINER_TEST_ID}>
-            <PanelImage {slug} {panel} {style} {variant}/>
+            <PanelImage {slug} {panel} {style}/>
         </div>
     {/each}
 </div>

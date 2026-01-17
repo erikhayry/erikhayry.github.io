@@ -10,17 +10,11 @@
 <style>
 
     nav {
-        position: sticky;
-        bottom: 0;
+        position: fixed;
+        top: 50%;
+        bottom: unset;
+        z-index: 1;
         width: 100%;
-
-
-        @media (min-width: 1250px) {
-            position: fixed;
-            top: 50%;
-            bottom: unset;
-            z-index: 1;
-        }
     }
 
     ul {
