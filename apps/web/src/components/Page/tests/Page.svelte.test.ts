@@ -10,7 +10,7 @@ import {
     PAGE_3_MOCK,
     PAGE_4_MOCK,
 } from "$mock/data/pageMock";
-import {getDialog} from "../components/PanelImage/components/utils/getDialog";
+import {getDialog} from "../components/PanelImage/utils/getDialog";
 import {i18n} from "../../../i18n/i18n";
 
 describe("<Page />", () => {

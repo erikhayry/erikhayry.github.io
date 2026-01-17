@@ -8,7 +8,6 @@
 </script>
 
 <style>
-
     nav {
         position: fixed;
         top: 50%;
@@ -20,6 +19,9 @@
     ul {
         display: flex;
         justify-content: space-between;
+        padding-right: calc(env(safe-area-inset-right) + var(--spacing));
+        padding-left: calc(env(safe-area-inset-left) + var(--spacing));
+
     }
 
     a {
@@ -31,7 +33,7 @@
         width: var(--click-area);
         height: var(--click-area);
         color: white;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.5);
         padding: var(--spacing-2x);
         border-radius: 50%;
     }

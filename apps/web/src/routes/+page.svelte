@@ -23,7 +23,7 @@
         padding: var(--spacing);
         z-index: 1;
         left: 0;
-        top: calc(var(--spacing-2x) * 2);
+        top: env(safe-area-inset-top);
         background-color: var(--black)
     }
 
@@ -33,15 +33,12 @@
         width: 100%;
         height: 100%;
         gap: var(--spacing-2x);
-        padding: var(--spacing-2x);
     }
 
     .comic-item {
         min-width: 90%;
         height: 100%;
         overflow: hidden;
-        border-radius: 40px;
-        corner-shape: squircle;
     }
 
     .comic {
