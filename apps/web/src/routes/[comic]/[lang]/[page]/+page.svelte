@@ -8,6 +8,10 @@
 
 </script>
 
+<svelte:head>
+    <link as="document" href={pagination.forward.href} rel="prefetch"/>
+</svelte:head>
+
 <style>
     .container {
 
