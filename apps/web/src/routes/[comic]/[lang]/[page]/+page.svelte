@@ -5,23 +5,15 @@
 
     let {data} = $props();
     let {title, page, pagination, slug, style} = $derived(data);
-
 </script>
 
 <svelte:head>
     <link as="document" href={pagination.forward.href} rel="prefetch"/>
 </svelte:head>
 
-<style>
-    .container {
 
-    }
+<h1 class="visually-hidden">{title}</h1>
+<Page layout={page.layout} panels={page.panels} {slug} {style}/>
+<Nav {pagination}/>
 
-</style>
-
-<div class="container">
-    <h1 class="visually-hidden">{title}</h1>
-    <Page layout={page.layout} panels={page.panels} {slug} {style}/>
-    <Nav {pagination}/>
-</div>
 
