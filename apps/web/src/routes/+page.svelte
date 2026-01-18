@@ -22,8 +22,8 @@
         position: fixed;
         padding: var(--spacing);
         z-index: 1;
-        left: 0;
-        top: env(safe-area-inset-top);
+        left: calc(var(--safe-left-unit));
+        top: var(--safe-top-unit);
         background-color: var(--black)
     }
 
@@ -49,7 +49,7 @@
             display: block;
             position: absolute;
             bottom: var(--spacing-2x);
-            left: var(--spacing-2x);
+            left: calc(var(--safe-left-unit) + var(--spacing));
             font-size: 5rem;
             font-weight: bold;
             opacity: 0.9;

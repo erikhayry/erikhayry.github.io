@@ -1,6 +1,7 @@
 <script lang="ts">
     import '$lib/assets/css/normalize.css'
     import '$lib/assets/css/style.css'
+    import '$lib/assets/css/page-transitions.css'
 
     import favicon from '$lib/assets/favicon.png';
     import manifest from '$lib/assets/manifest.webmanifest';

@@ -18,7 +18,34 @@
 <style>
     .page {
         position: relative;
-        height: 100dvh;
+        width: 100dvw;
+        height: calc(100dvh - var(--panel-bottom-space));
+    }
+
+    .layout-1 {
+        --panel-bottom-space: 0dvh;
+        grid-template-areas:
+            "a";
+    }
+
+    .layout-2 {
+        --panel-bottom-space: 5dvh;
+        grid-template-areas:
+            "a"
+            "b"
+    }
+
+    .layout-3 {
+        --panel-bottom-space: 5dvh;
+        grid-template-areas:
+            "a b"
+    }
+
+    .layout-4 {
+        --panel-bottom-space: 5dvh;
+        grid-template-areas:
+            "a b"
+            "c d"
     }
 
     .panel {
@@ -26,33 +53,6 @@
         height: 100%;
         position: relative;
         margin-bottom: var(--spacing);
-    }
-
-    .layout-1 {
-        height: 100dvh;
-        width: 100dvw;
-        grid-template-areas:
-            "a";
-    }
-
-    .layout-2 {
-        height: 95dvh;
-        grid-template-areas:
-            "a"
-            "b"
-    }
-
-    .layout-3 {
-        height: 95dvh;
-        grid-template-areas:
-            "a b"
-    }
-
-    .layout-4 {
-        height: 95dvh;
-        grid-template-areas:
-            "a b"
-            "c d"
     }
 
     .panel-a {
