@@ -1,7 +1,7 @@
 import {page} from "@vitest/browser/context";
 import {describe, expect, it} from "vitest";
 import Page from "../+page.svelte";
-import {renderPage} from "../../../../test/renderPage";
+import {renderPage} from "../../../../../test/renderPage";
 import {load} from "../+page";
 import {COMIC_MOCK_1} from "$mock/data/comicMock";
 

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Page from "../../../components/Page/Page.svelte";
-    import Nav from "../../../components/Nav/Nav.svelte";
+    import Page from "../../../../components/Page/Page.svelte";
+    import Nav from "../../../../components/Nav/Nav.svelte";
 
 
     let {data} = $props();
@@ -10,7 +10,7 @@
 
 <style>
     .container {
-  
+
     }
 
 </style>

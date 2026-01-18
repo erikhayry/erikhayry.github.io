@@ -1,7 +1,7 @@
 <script lang="ts">
     import {resolve} from '$app/paths';
     import {getComics} from "$core/getComics";
-    import {i18n} from "../i18n/i18n";
+    import {CURRENT_LANGUAGE, i18n} from "../i18n/i18n";
     import {TEXT} from "../i18n/ui";
     import {ComicStyle} from "@library/types";
     import ResponsiveImage from "../components/Page/components/ResponsiveImage.svelte";
@@ -55,8 +55,6 @@
             opacity: 0.9;
         }
     }
-
-
 </style>
 
 <div class="root">
@@ -64,7 +62,7 @@
     <ul class="comic-items">
         {#each getComics() as comic (comic)}
             <li class="comic-item">
-                <a href={resolve(`/${comic.slug}/0`)} aria-label={i18n(comic.title)} class="comic">
+                <a href={resolve(`/${comic.slug}/${CURRENT_LANGUAGE}/0`)} aria-label={i18n(comic.title)} class="comic">
                     <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
                 </a>
             </li>

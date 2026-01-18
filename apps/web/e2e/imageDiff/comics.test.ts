@@ -1,7 +1,7 @@
 import {expect, type Page, test} from "@playwright/test";
 import type {Comic} from "@library/types";
 import {getComics} from "../../src/utils/getComics.ts";
-import {getPagination} from "../../src/routes/[comic]/[page]/utils/getPagination.ts";
+import {getPagination} from "../../src/routes/[comic]/[lang]/[page]/utils/getPagination.ts";
 import {i18n} from "../../src/i18n/i18n.ts";
 
 async function testComic(comic: Comic, page: Page) {

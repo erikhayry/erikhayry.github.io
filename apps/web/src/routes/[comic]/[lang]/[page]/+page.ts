@@ -4,9 +4,9 @@ import {ComicStyle, type ComicStyleType, type Page} from "@library/types";
 import {getPagination, type Pagination} from "./utils/getPagination";
 
 export const load = ({
-                         params: {comic: slug, page: pageIndex},
+                         params: {comic: slug, lang: language, page: pageIndex},
                      }: {
-    params: { comic: string; page: string };
+    params: { comic: string; lang: string, page: string };
 }): {
     page: Page;
     slug: string;
@@ -21,7 +21,7 @@ export const load = ({
             title: `${slug} | ${parseInt(pageIndex) + 1}`,
             page,
             slug,
-            pagination: getPagination(slug, Number.parseInt(pageIndex)),
+            pagination: getPagination(slug, language, Number.parseInt(pageIndex)),
             style: ComicStyle.ANIME
         };
     }
