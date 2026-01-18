@@ -1,11 +1,18 @@
 import z from "zod";
 import {getFolderTree} from "../files/getFolderTree.ts";
 import {getPaths} from "../files/getPaths.ts";
-import {DATA_EXTENSION, IMAGE_EXTENSION} from "../constants.ts";
+import {DATA_EXTENSION, IMAGE_EXTENSION, OUTPUT_FOLDER} from "../constants.ts";
 import * as Path from "node:path";
 import {getJSON} from "../files/getJSON.ts";
 import {getImage, type ImageVariantType} from "../files/getImage.ts";
-import {type ComicInfo, ComicStyleType, type PageInfo, type PanelInfo, type UnsupportedType} from "@library/types";
+import {
+    type ComicInfo,
+    ComicStyleType,
+    type PageInfo,
+    type PanelInfo,
+    ReferencePageInfo,
+    type UnsupportedType
+} from "@library/types";
 
 export const FileVariant = {
     IMAGE: IMAGE_EXTENSION,
@@ -62,6 +69,10 @@ export interface PanelDataFileType extends DataFileType {
     data: PanelInfo
 }
 
+export interface ReferenceDataFileType extends DataFileType {
+    data: ReferencePageInfo
+}
+
 export type FileType = ImageFileType | DataFileType;
 export type ContentIndex = FileType[]
 export type ValidatedContentIndex = {
@@ -69,6 +80,7 @@ export type ValidatedContentIndex = {
     pages: PageDataFileType[]
     panels: PanelDataFileType[]
     images: ValidImageFileType[]
+    references: ReferenceDataFileType[]
 }
 
 
@@ -117,7 +129,7 @@ function outUnsupportedFileFormats(fileType: FileType | undefined): fileType is 
 }
 
 export function getSupportedFolderContentIndex(dir: string): ContentIndex {
-    return getFolderTree(dir)
+    return getFolderTree(`${dir}/${OUTPUT_FOLDER}`)
         .map(getPaths)
         .flat()
         .map(toFile)

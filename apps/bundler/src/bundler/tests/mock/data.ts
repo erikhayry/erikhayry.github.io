@@ -4,9 +4,11 @@ import {
     type ImageFileType,
     type PageDataFileType,
     type PanelDataFileType,
+    type ReferenceDataFileType,
     type ValidatedContentIndex
 } from "../../getSupportedFolderContentIndex.ts";
 import {ImageVariant} from "../../../files/getImage.ts";
+import {REFERENCES_FOLDER} from "../../../constants.ts";
 
 export const COMIC_STYLES_MOCK: ComicStyleType[] = [
     "AN",
@@ -40,6 +42,28 @@ function getPanelFile(pageId: number, panelId: number): PanelDataFileType {
             "narration": {
                 "en": `NARRATION_${pageId}.1.${panelId}`,
                 "se": `NARRATION_${pageId}.1.${panelId}`
+            }
+        }
+    }
+}
+
+function getReferenceFile(pageId: number, panelId: number): ReferenceDataFileType {
+    return {
+        path: `mocks/comics/output/${REFERENCES_FOLDER}/${pageId}.1.${panelId}json`,
+        type: FileVariant.DATA,
+        id: `${pageId}.1.${panelId}`,
+        data: {
+            id: `${pageId}.1.${panelId}`,
+            "description": {
+                "en": `DESCRIPTION_${pageId}.1.${panelId}`,
+                "se": `DESCRIPTION_${pageId}.1.${panelId}`
+            },
+            "link": {
+                "url": "https://www.nykarlebyvyer.nu/",
+                "title": {
+                    "en": `LINK_${pageId}.1.${panelId}`,
+                    "se": `LINK_${pageId}.1.${panelId}`
+                }
             }
         }
     }
@@ -156,6 +180,7 @@ export const VALID_PANEL_DATA_MOCK_4_2 = getPanelFile(4, 2)
 export const VALID_PANEL_DATA_MOCK_4_3 = getPanelFile(4, 3)
 export const VALID_PANEL_DATA_MOCK_4_4 = getPanelFile(4, 4)
 
+export const VALID_PANEL_REFERENCE_DATA_MOCK_1_1 = getReferenceFile(1, 1)
 
 export const VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_1 = [
     ...getImageFiles(1, PageLayout.Hero, 'landscape'),
@@ -254,14 +279,18 @@ export const VALID_PAGE_DATA = [
     ...VALID_PAGE_LAYOUT_4
 ]
 
+export const VALID_PANEL_REFERENCE_DATA = [VALID_PANEL_REFERENCE_DATA_MOCK_1_1]
+
 export const VALID_COMIC_INDEX = [
     ...VALID_COMIC_DATA,
-    ...VALID_PAGE_DATA
+    ...VALID_PAGE_DATA,
+    ...VALID_PANEL_REFERENCE_DATA
 ]
 
 export const VALIDATED_CONTENT_INDEX: ValidatedContentIndex = {
     comicFile: VALID_COMIC_DATA_MOCK,
     pages: [VALID_PAGE_LAYOUT_2_DATA_MOCK, VALID_PAGE_LAYOUT_1_DATA_MOCK],
     panels: [VALID_PANEL_DATA_MOCK_1_1, VALID_PANEL_DATA_MOCK_2_1, VALID_PANEL_DATA_MOCK_2_2],
-    images: []
+    images: [],
+    references: [VALID_PANEL_REFERENCE_DATA_MOCK_1_1]
 }

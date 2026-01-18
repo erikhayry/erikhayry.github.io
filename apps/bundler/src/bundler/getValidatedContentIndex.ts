@@ -26,6 +26,7 @@ import {
     getPagesInfo,
     getPanelFiles,
     getPortraitImages,
+    getReferenceFiles,
     getValidImages,
     hasImageFile
 } from "./utils/contentIndexUtils.ts";
@@ -230,6 +231,7 @@ export function getValidatedContentIndex(contentIndex: ContentIndex): ValidatedC
         comicFile: comicFile,
         pages: getPageFiles(contentIndex),
         panels: getPanelFiles(contentIndex),
-        images: getValidImages(contentIndex)
+        images: getValidImages(contentIndex),
+        references: getReferenceFiles(contentIndex)
     }
 }

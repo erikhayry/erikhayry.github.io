@@ -25,12 +25,13 @@ import {
 
 describe('validateContentIndex', () => {
     test('should validate', () => {
-        const {comicFile, pages, panels, images} = getValidatedContentIndex(VALID_COMIC_INDEX)
+        const {comicFile, pages, panels, images, references} = getValidatedContentIndex(VALID_COMIC_INDEX)
 
         expect(comicFile).toEqual(VALID_COMIC_DATA_MOCK)
         expect(pages).toHaveLength(4)
         expect(panels).toHaveLength(9)
         expect(images).toHaveLength(40)
+        expect(references).toHaveLength(1)
     })
 
 

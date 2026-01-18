@@ -1,4 +1,4 @@
-import {type ComicStyleType, PageInfo, PanelInfo} from "@library/types";
+import {type ComicStyleType, PageInfo, PanelInfo, ReferencePageInfo} from "@library/types";
 import {
     type ComicDataFileType,
     type ContentIndex,
@@ -8,6 +8,7 @@ import {
     type ImageFileType,
     type PageDataFileType,
     type PanelDataFileType,
+    type ReferenceDataFileType,
     type ValidImageFileType
 } from "../getSupportedFolderContentIndex.ts";
 import {ImageVariant, type ImageVariantType} from "../../files/getImage.ts";
@@ -62,11 +63,19 @@ export function getDataFiles(contentIndex: ContentIndex) {
 }
 
 function isPanelInfo(file: DataFileType): file is PanelDataFileType {
-    return PanelInfo.safeParse(file.data).success
+    return PanelInfo.safeParse(file.data).success && !isReferencePageInfo(file)
+}
+
+function isReferencePageInfo(file: DataFileType): file is ReferenceDataFileType {
+    return ReferencePageInfo.safeParse(file.data).success
 }
 
 export function getPanelFiles(contentIndex: ContentIndex) {
     return getDataFiles(contentIndex).filter(isPanelInfo)
+}
+
+export function getReferenceFiles(contentIndex: ContentIndex) {
+    return getDataFiles(contentIndex).filter(isReferencePageInfo)
 }
 
 export function getPageFiles(contentIndex: ContentIndex) {

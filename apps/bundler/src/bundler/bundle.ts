@@ -5,7 +5,6 @@ import {createJSON} from "../files/createJSON.ts";
 import {copyComicImages} from "./utils/copyComicImages.ts";
 import {createPanelOutputSchema, createPanelSchema} from "../files/schemas.ts";
 import {getFolders} from "../files/getFolders.ts";
-import {OUTPUT_FOLDER} from "../constants.ts";
 
 export interface TypeConfig {
     folder: string;
@@ -33,7 +32,7 @@ export interface BundleConfig {
 
 function getComics(comicsFolder: string) {
     return getFolders(comicsFolder).map((comicFolder) => {
-        const contentIndex = getSupportedFolderContentIndex(`${comicFolder}/${OUTPUT_FOLDER}`)
+        const contentIndex = getSupportedFolderContentIndex(comicFolder)
         const validatedContentIndex = getValidatedContentIndex(contentIndex)
         return getComicFromContentIndex(validatedContentIndex)
     })

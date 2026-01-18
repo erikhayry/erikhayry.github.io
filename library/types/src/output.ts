@@ -82,10 +82,17 @@ export type PanelId = z.infer<typeof PanelId>;
 
 export const DataId = z.union([PageId, PanelId, ComicId])
 
+export const Texts = z.union([Text, z.array(Text)])
+
+export const Link = z.object({
+    url: z.url(),
+    title: Text
+})
+
 export const PanelInfo = z.object({
     id: PanelId,
     description: Text,
-    narration: z.optional(Text),
+    narration: z.optional(Texts),
     dialogs: z.optional(z.array(DialogInfo)),
     info: z.optional(z.string())
 });
@@ -95,6 +102,12 @@ export const PageInfo = z.object({
     layout: PageLayoutType
 });
 
+export const ReferencePageInfo = z.object({
+    id: PanelId,
+    description: Texts,
+    link: Link
+})
+
 export const ComicInfo = z.object({
     styles: ComicStyleTypes,
     title: Text
@@ -102,5 +115,6 @@ export const ComicInfo = z.object({
 
 export type PanelInfo = z.infer<typeof PanelInfo>;
 export type PageInfo = z.infer<typeof PageInfo>;
+export type ReferencePageInfo = z.infer<typeof ReferencePageInfo>;
 export type ComicInfo = z.infer<typeof ComicInfo>;
 
