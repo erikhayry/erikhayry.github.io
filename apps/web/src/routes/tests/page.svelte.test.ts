@@ -13,10 +13,10 @@ describe("comics page", () => {
 
         expect(coverImage.elements()).toHaveLength(1);
         expect(link.elements()).toHaveLength(1);
-        
+
         await expect
             .element(link)
-            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/0`)
+            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/en/0`)
 
     });
 });
