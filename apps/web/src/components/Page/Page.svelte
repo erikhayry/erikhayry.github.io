@@ -20,32 +20,49 @@
         position: relative;
         width: 100dvw;
         height: calc(100dvh - var(--panel-bottom-space));
+
+        @media only screen and (min-width: 2048px) and (max-aspect-ratio: 1.4) and (orientation: landscape) {
+            display: grid;
+            justify-self: center;
+            align-items: center;
+            gap: var(--spacing);
+        }
     }
 
     .layout-1 {
         --panel-bottom-space: 0dvh;
-        grid-template-areas:
+        @media only screen and (min-width: 2048px) and (max-aspect-ratio: 1.4) and (orientation: landscape) {
+            width: 100dvw;
+            height: 100dvh;
+            grid-template-areas:
             "a";
+        }
     }
 
-    .layout-2 {
+    .layout-3, .layout-2 {
         --panel-bottom-space: 5dvh;
-        grid-template-areas:
-            "a"
-            "b"
-    }
 
-    .layout-3 {
-        --panel-bottom-space: 5dvh;
-        grid-template-areas:
-            "a b"
+        @media only screen and (min-width: 2048px) and (max-aspect-ratio: 1.4) and (orientation: landscape) {
+            aspect-ratio: 1;
+            width: auto;
+            height: 100dvh;
+            grid-template-areas:
+                    "a"
+                    "b"
+        }
+
     }
 
     .layout-4 {
         --panel-bottom-space: 5dvh;
-        grid-template-areas:
+        @media only screen and (min-width: 2048px) and (max-aspect-ratio: 1.4) and (orientation: landscape) {
+            width: 100dvw;
+            height: 100dvh;
+            grid-template-areas:
             "a b"
             "c d"
+        }
+
     }
 
     .panel {

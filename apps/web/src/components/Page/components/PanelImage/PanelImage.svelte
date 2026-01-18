@@ -30,7 +30,7 @@
     .bubble {
         border: var(--bubble-border);
         width: fit-content;
-        background-color: white;
+        background-color: var(--white);
         color: var(--black);
         padding: var(--spacing);
     }
