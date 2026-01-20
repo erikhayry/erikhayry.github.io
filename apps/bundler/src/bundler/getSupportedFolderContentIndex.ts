@@ -96,7 +96,6 @@ function toFile(filePath: string): FileInfo {
 
 function getStyle(dir: string): ImageFileType['style'] {
     const folder = dir.split("/").pop()
-
     return ComicStyleType.parse(folder)
 }
 
