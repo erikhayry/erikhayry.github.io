@@ -44,7 +44,7 @@
     .comic {
         position: relative;
         display: block;
-        overflow: hidden;
+        height: 100%;
 
         &:after {
             content: attr(aria-label);

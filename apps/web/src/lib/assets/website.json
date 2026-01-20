@@ -242,19 +242,7 @@
             "narration": {
               "en": "The road ahead opens toward Jutas.",
               "se": "Vägen framåt öppnar sig mot Jutas."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "The ground favors us ahead.",
-                  "person": "Swedish officer"
-                },
-                "se": {
-                  "text": "Terrängen gynnar oss längre fram.",
-                  "person": "Svensk officer"
-                }
-              }
-            ]
+            }
           },
           {
             "id": "5.1.2",
@@ -324,10 +312,6 @@
             "description": {
               "en": "Swedish skirmishers crouch behind fences and low vegetation, taking cover while carefully observing enemy positions across the open fields.",
               "se": "Svenska förposter hukar bakom gärdsgårdar och låg vegetation, tar skydd och spanar noggrant mot fiendens ställningar över de öppna fälten."
-            },
-            "narration": {
-              "en": "Ahead of the main force, eyes and ears probe the silence. The first moments of battle are measured not in shots, but in restraint.",
-              "se": "Framför huvudstyrkan prövas tystnaden med blickar och lyssnande sinnen. Stridens första ögonblick mäts ännu inte i skott, utan i behärskning."
             },
             "dialogs": [
               {
@@ -400,48 +384,59 @@
         "layout": "3",
         "panels": [
           {
-            "id": "6.1.1",
+            "id": "6.2.1",
             "description": {
-              "en": "Two Swedish infantry soldiers from Björneborgs läns infanteriregemente crouch behind low natural cover at the outskirts of Jutas. One soldier aims a flintlock musket forward with calm focus, while the second stays close beside him, alert and ready. The air is clear with no weapons smoke, and the surrounding late-summer landscape is quiet and tense, marking the very first controlled moments of the battle.",
-              "se": "Två svenska infanterisoldater ur Björneborgs läns infanteriregemente hukar bakom lågt naturligt skydd i utkanten av Jutas. Den ene soldaten siktar framåt med sin flintlåsmusköt med lugn koncentration, medan den andre håller sig tätt intill, vaksam och redo. Luften är klar utan krutrök, och det sena sommarlandskapet är stilla och spänt – stridens allra första, kontrollerade ögonblick."
-            },
-            "narration": {
-              "en": "The first shots are taken—measured, deliberate, and without yet plunging the field into chaos.",
-              "se": "De första skotten avlossas – avvägda och kontrollerade, innan slagfältet ännu kastas in i kaos."
+              "en": "TODO",
+              "se": "TODO"
             },
             "dialogs": [
               {
                 "en": {
-                  "text": "Contact!",
+                  "text": "Fall back! Keep your spacing!",
                   "person": "Swedish skirmisher"
                 },
                 "se": {
-                  "text": "Kontakt!",
-                  "person": "Svensk skytt"
+                  "text": "Fall tillbaka! Håll avstånden!",
+                  "person": "Svensk förpost"
+                }
+              },
+              {
+                "en": {
+                  "text": "Move, move! Through the smoke!",
+                  "person": "Swedish skirmisher"
+                },
+                "se": {
+                  "text": "Rör på er! Genom röken!",
+                  "person": "Svensk förpost"
                 }
               }
-            ],
-            "info": "Page 6 Panel 1. Exactly two Swedish soldiers only. No smoke from weapons. Early skirmish phase before battle escalation."
+            ]
           },
           {
-            "id": "6.1.2",
+            "id": "6.2.2",
             "description": {
-              "en": "Russian infantry vanguard advances cautiously through low wooden fences and dense brush on the outskirts of Jutas. The foremost soldier moves carefully with musket in hand while his backpack carries only standard gear and a rolled greatcoat — no spare weapon attached. Other soldiers follow in loose formation, partially obscured by foliage and light gun smoke, their posture tense and alert as the battle begins.",
-              "se": "Den ryska infanteriförtruppen avancerar försiktigt genom låga trästängsel och tät sly i Jutas utkanter. Den främste soldaten rör sig varsamt med musköten i händerna, medan ryggsäcken endast bär standardutrustning och en rullad rock — inget extra vapen är fäst. Övriga soldater följer i lös formation, delvis skymda av vegetation och lätt krutrök, med spända och vaksamma kroppshållningar när striden tar sin början."
-            },
-            "narration": {
-              "en": "From the tree line, the Russian advance presses forward, testing the ground and the enemy’s resolve.",
-              "se": "Från skogsbrynet pressar den ryska framryckningen vidare, prövar marken och fiendens beslutsamhet."
+              "en": "TODO",
+              "se": "TODO"
             },
             "dialogs": [
               {
                 "en": {
-                  "text": "Advance—steady!",
-                  "person": "Russian officer"
+                  "text": "Fall back! Keep your spacing!",
+                  "person": "Swedish skirmisher"
                 },
                 "se": {
-                  "text": "Framåt — håll linjen!",
-                  "person": "Rysk officer"
+                  "text": "Fall tillbaka! Håll avstånden!",
+                  "person": "Svensk förpost"
+                }
+              },
+              {
+                "en": {
+                  "text": "Move, move! Through the smoke!",
+                  "person": "Swedish skirmisher"
+                },
+                "se": {
+                  "text": "Rör på er! Genom röken!",
+                  "person": "Svensk förpost"
                 }
               }
             ]
@@ -547,6 +542,43 @@
         ]
       },
       {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "7.2.1",
+            "description": {
+              "en": "Dense battlefield smoke obscures the fighting, with only vague silhouettes of Swedish and Russian infantry visible through the haze.",
+              "se": "Tät slagfältsrök skymmer striderna, med endast otydliga silhuetter av svenska och ryska infanterister synliga genom dimman."
+            },
+            "narration": {
+              "en": "Smoke and confusion swallowed the field. No one could see how the battle was turning.",
+              "se": "Rök och förvirring slukade slagfältet. Ingen kunde längre se hur striden utvecklades."
+            }
+          },
+          {
+            "id": "7.2.2",
+            "description": {
+              "en": "Swedish and Russian infantry clash at arm’s length, muskets locked and bayonets straining as dense gunpowder smoke swirls around the fighters.",
+              "se": "Svenskt och ryskt infanteri drabbar samman på armlängds avstånd, musketer låses och bajonetter pressas medan tät krutrök virvlar runt de stridande."
+            }
+          },
+          {
+            "id": "7.2.3",
+            "description": {
+              "en": "A Swedish infantry line begins to waver under pressure, the formation uneven as soldiers hesitate and glance sideways through thick smoke.",
+              "se": "En svensk infanterilinje börjar vackla under trycket, formationen är ojämn när soldater tvekar och kastar blickar åt sidan genom tät rök."
+            }
+          },
+          {
+            "id": "7.2.4",
+            "description": {
+              "en": "Russian infantry press forward aggressively through smoke and broken ground, bayonets fixed as they surge into the fight.",
+              "se": "Ryskt infanteri pressar fram aggressivt genom rök och söndertrampad mark, med fästa bajonetter när de stormar in i striden."
+            }
+          }
+        ]
+      },
+      {
         "layout": "3",
         "panels": [
           {
@@ -602,6 +634,29 @@
         "layout": "3",
         "panels": [
           {
+            "id": "8.2.1",
+            "description": {
+              "en": "Swedish infantry of Björneborgs regemente stand firmly on newly secured ground, maintaining formation as smoke thins and the battlefield opens up.",
+              "se": "Svenskt infanteri ur Björneborgs regemente står stadigt på nyligen säkrad terräng och håller formation medan röken lättar och slagfältet öppnar sig."
+            },
+            "narration": {
+              "en": "The line holds. What moments ago was uncertain ground is now firmly in Swedish hands.",
+              "se": "Linjen håller. Det som nyss var osäker mark är nu fast i svensk hand."
+            }
+          },
+          {
+            "id": "8.2.2",
+            "description": {
+              "en": "Russian infantry formations break apart as resistance collapses, soldiers falling back through smoke and churned ground while Swedish troops press forward in disciplined order.",
+              "se": "Ryska infanteriformationer bryts upp när motståndet kollapsar, soldater faller tillbaka genom rök och upptrampad mark medan svenska trupper pressar fram i disciplinerad ordning."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
             "id": "9.1.1",
             "description": {
               "en": "Russian infantry formations begin to falter as cohesion breaks. Soldiers hesitate mid-step while officers struggle to hold the line amid drifting smoke and churned ground.",
@@ -648,6 +703,18 @@
               }
             ],
             "info": "Page 9 Panel 2 – Russian withdrawal at Jutas. No named characters present. Russian infantry only."
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "9.2.1",
+            "description": {
+              "en": "Swedish infantry run in pursuit, moving in the same direction as the retreating Russian soldiers across open, smoke-filled ground beyond the Jutas battlefield.",
+              "se": "Svenskt infanteri springer i förföljelse, i samma riktning som de retirerande ryska soldaterna över öppen, rökfylld terräng bortom slagfältet vid Jutas."
+            }
           }
         ]
       },
@@ -741,6 +808,25 @@
             "narration": {
               "en": "The battle at Jutas is over. The fields fall silent, and the smoke clears from a hard-won victory.",
               "se": "Slaget vid Jutas är över. Fälten tystnar och röken skingras efter en dyrköpt seger."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "12.2.1",
+            "description": {
+              "en": "A calm present-day view of Nykarleby seen across the river, with modern riverside buildings, a bridge, and a tall water tower rising above green trees under a clear blue sky.",
+              "se": "En lugn nutida vy över Nykarleby sedd över älven, med moderna byggnader vid vattnet, en bro och ett högt vattentorn som reser sig över gröna träd under en klar blå himmel."
+            }
+          },
+          {
+            "id": "12.2.2",
+            "description": {
+              "en": "A modern school bus has stopped beside an open field bordered by dense forest. Teenagers step off the bus onto a dirt path, wearing casual contemporary clothing and backpacks. The atmosphere is calm and reflective, clearly set in the present day countryside.",
+              "se": "En modern skolbuss har stannat vid ett öppet fält som gränsar till tät skog. Tonåringar kliver av bussen ner på en grusad stig, klädda i vardagliga moderna kläder och med ryggsäckar. Stämningen är lugn och eftertänksam, tydligt förlagd till nutida landsbygd."
             }
           }
         ]
