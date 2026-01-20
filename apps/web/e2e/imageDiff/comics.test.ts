@@ -2,17 +2,18 @@ import {expect, type Page, test} from "@playwright/test";
 import type {Comic} from "@library/types";
 import {getComics} from "../../src/utils/getComics.ts";
 import {getPagination} from "../../src/routes/[comic]/[lang]/[page]/utils/getPagination.ts";
-import {i18n} from "../../src/i18n/i18n.ts";
+import {CURRENT_LANGUAGE, i18n} from "../../src/i18n/i18n.ts";
 
 async function testComic(comic: Comic, page: Page) {
-    await page.getByRole("link", {name: i18n(comic.title), exact: true}).click();
+
+    await page.getByLabel(i18n(comic.title)).click();
 
     let testedPage = 0;
 
     while (testedPage < comic.pages.length) {
         await page
             .getByRole("link", {
-                name: getPagination(comic.slug, testedPage).forward.title,
+                name: getPagination(comic.slug, CURRENT_LANGUAGE, testedPage).forward.title,
                 exact: true,
             })
             .click();

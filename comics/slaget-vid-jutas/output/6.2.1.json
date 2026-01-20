@@ -1,0 +1,29 @@
+{
+  "id": "6.2.1",
+  "description": {
+    "en": "TODO",
+    "se": "TODO"
+  },
+  "dialogs": [
+    {
+      "en": {
+        "text": "Fall back! Keep your spacing!",
+        "person": "Swedish skirmisher"
+      },
+      "se": {
+        "text": "Fall tillbaka! Håll avstånden!",
+        "person": "Svensk förpost"
+      }
+    },
+    {
+      "en": {
+        "text": "Move, move! Through the smoke!",
+        "person": "Swedish skirmisher"
+      },
+      "se": {
+        "text": "Rör på er! Genom röken!",
+        "person": "Svensk förpost"
+      }
+    }
+  ]
+}

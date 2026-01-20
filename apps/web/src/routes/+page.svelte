@@ -43,6 +43,8 @@
 
     .comic {
         position: relative;
+        display: block;
+        overflow: hidden;
 
         &:after {
             content: attr(aria-label);

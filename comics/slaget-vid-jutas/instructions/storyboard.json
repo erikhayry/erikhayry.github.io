@@ -1,31 +1,62 @@
 {
   "pages": [
     {
-      "pageNumber": 1,
-      "title": "Opposing Commanders",
-      "description": "In the late summer of 1808, the war between Sweden and the Russian Empire has turned grim for the Swedish forces in Finland. Russian armies have advanced steadily westward after crossing the eastern border earlier in the year, exploiting Sweden’s overstretched defenses and poor coordination. Swedish troops, composed largely of Finnish regiments, have been forced into repeated withdrawals—yielding territory, towns, and supply routes. After a difficult retreat from Vasa, the Swedish field army under Georg Carl von Döbeln has fallen back toward Nykarleby. This small coastal town becomes a temporary anchor point: close enough to the front to influence events, yet defensible enough to regroup, treat the wounded, and restore order. Here, with morale shaken but not broken, Döbeln prepares to halt the Russian advance. The confrontation at Jutas will determine whether the retreat continues—or finally ends.",
-      "location": "Near Jutas, Finland — early September 1808",
+      "pageNumber": 0,
+      "title": "The War in Finland",
       "pageType": "1",
+      "location": "Western Finland, summer 1808",
+      "description": {
+        "en": "A wide battlefield representing the wider war in Finland.",
+        "se": "Ett vidsträckt slagfält som representerar kriget i Finland."
+      },
+      "narration": {
+        "en": "In 1808, war came to Finland. Sweden’s eastern army was stretched thin and forced backward. By late summer, retreat could not continue forever.",
+        "se": "År 1808 nådde kriget Finland. Sveriges östra armé pressades tillbaka steg för steg. Vid sensommaren kunde reträtten inte fortsätta för evigt."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Georg Carl von Döbeln in the left foreground, black headband clearly visible, calm and authoritative. Opposite him in the right foreground stands the main Russian officer, rigid and formal in dark green uniform with red facings. Behind each commander, their respective armies wait in depth across open countryside under late-summer light."
+          "id": "0.1",
+          "description": {
+            "en": "Smoke-covered battlefield with Swedish troops fighting defensively as Russian forces advance.",
+            "se": "Rökfyllt slagfält där svenska trupper strider defensivt medan ryska styrkor avancerar."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 1,
+      "title": "The Road Ahead",
+      "pageType": "1",
+      "location": "Near Jutas, Finland",
+      "description": {
+        "en": "An empty country road cuts through open fields under late-summer light. The landscape is quiet, untouched, and unaware of the battle soon to come.",
+        "se": "En tom landsväg skär genom öppna fält i sensommarljus. Landskapet är stilla, oberört och omedvetet om striden som snart ska komma."
+      },
+      "panels": [
+        {
+          "id": "1.1",
+          "description": {
+            "en": "A deserted road stretching between fields and low vegetation, no soldiers in sight, the calm before the coming conflict.",
+            "se": "En övergiven väg som sträcker sig mellan fält och låg vegetation, inga soldater syns – lugnet före stormen."
+          }
         }
       ]
     },
     {
       "pageNumber": 2,
       "title": "Nykarleby",
-      "description": "Calm before the battle, grounding the geography of the campaign.",
-      "location": "Nykarleby",
       "pageType": "1",
+      "location": "Nykarleby",
+      "description": {
+        "en": "Calm panoramic view of Nykarleby before the battle.",
+        "se": "Lugn panoramavy över Nykarleby före slaget."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Panoramic view of Nykarleby: river bend, wooden town, and surrounding fields. Roads lead south toward Jutas; distant Swedish troops approach under calm late-summer skies.",
-          "referencePainting": {
-            "type": "painting",
-            "source": "2.1.1.jpg"
+          "id": "2.1",
+          "description": {
+            "en": "River, wooden town, and surrounding fields under late-summer skies.",
+            "se": "Älv, trästad och omgivande fält under sensommarhimmel."
           }
         }
       ]
@@ -33,219 +64,508 @@
     {
       "pageNumber": 3,
       "title": "Retreat from Vasa",
-      "description": "The Swedish army withdraws under pressure, worn but intact.",
-      "location": "Roads south of Vasa",
       "pageType": "3",
+      "location": "Roads south of Vasa",
+      "description": {
+        "en": "The Swedish army withdraws, worn but intact.",
+        "se": "Den svenska armén drar sig tillbaka, sliten men samlad."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "A long Swedish column trudges along a muddy road. Wagons creak and exhausted soldiers lean into their march."
+          "id": "3.1",
+          "description": {
+            "en": "A long Swedish column retreats along muddy roads.",
+            "se": "En lång svensk kolonn drar sig tillbaka längs leriga vägar."
+          }
         },
         {
-          "id": "2",
-          "description": "Döbeln rides beside the column, silent and focused, rain-darkened ground beneath the hooves."
+          "id": "3.2",
+          "description": {
+            "en": "Döbeln rides beside the troops, silent and focused.",
+            "se": "Döbeln rider bredvid trupperna, tyst och fokuserad."
+          }
         }
       ]
     },
     {
       "pageNumber": 4,
-      "title": "Döbeln Ill",
-      "description": "Despite illness, command continues.",
+      "title": "Arrival at Nykarleby",
+      "pageType": "2",
       "location": "Nykarleby",
-      "pageType": "4",
+      "description": {
+        "en": "The army reaches Nykarleby and regroups.",
+        "se": "Armén når Nykarleby och samlas."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Exterior view of Döbeln’s house in Nykarleby. A modest wooden house under calm late-summer light, the yard quiet and still.",
-          "referencePainting": {
-            "type": "photo",
-            "source": "2.1.1.jpg"
+          "id": "4.1",
+          "description": {
+            "en": "Quiet town view of Nykarleby in late summer light.",
+            "se": "Stilla vy över Nykarleby i sensommarljus."
           }
         },
         {
-          "id": "2",
-          "description": "Interior of Döbeln’s quarters. Döbeln lies in bed, pale and weakened, head wound evident, soft daylight entering through a small window."
-        },
-        {
-          "id": "3",
-          "description": "An aide stands over a table studying a hand-drawn military map, finger tracing roads and rivers."
-        },
-        {
-          "id": "4",
-          "description": "Döbeln, still weakened, sits upright and issues orders over a map while aides stand close and listen attentively.",
-          "referencePainting": {
-            "type": "painting",
-            "source": "4.1.4.jpg"
+          "id": "4.2",
+          "description": {
+            "en": "Swedish soldiers arrive, watched by townspeople.",
+            "se": "Svenska soldater anländer, betraktade av stadsbor."
           }
         }
       ]
     },
     {
       "pageNumber": 5,
-      "title": "March to Jutas",
-      "description": "Momentum returns as the army moves toward battle.",
-      "location": "Road to Jutas",
-      "pageType": "3",
+      "title": "Döbeln Ill",
+      "pageType": "4",
+      "location": "Nykarleby",
+      "description": {
+        "en": "Despite illness, command continues.",
+        "se": "Trots sjukdom fortsätter befälet."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "The road toward Jutas opens ahead, river and fields visible in the distance.",
-          "referencePainting": {
-            "type": "painting",
-            "source": "5.1.1.jpg"
+          "id": "5.1",
+          "description": {
+            "en": "Exterior of Döbeln’s house.",
+            "se": "Exteriör av Döbelns hus."
           }
         },
         {
-          "id": "2",
-          "description": "Döbeln back on horseback, saluting as soldiers cheer and morale rises.",
-          "referencePainting": {
-            "type": "painting",
-            "source": "5.1.2.jpg"
+          "id": "5.2",
+          "description": {
+            "en": "Döbeln lies ill in bed.",
+            "se": "Döbeln ligger sjuk i sängen."
+          }
+        },
+        {
+          "id": "5.3",
+          "description": {
+            "en": "An aide studies a map.",
+            "se": "En adjutant studerar en karta."
+          }
+        },
+        {
+          "id": "5.4",
+          "description": {
+            "en": "Döbeln issues orders despite weakness.",
+            "se": "Döbeln ger order trots sin svaghet."
           }
         }
       ]
     },
     {
       "pageNumber": 6,
-      "title": "First Shots",
-      "description": "The battle begins with skirmishing and advance.",
-      "location": "Jutas outskirts",
+      "title": "March to Jutas",
       "pageType": "3",
+      "location": "Road to Jutas",
+      "description": {
+        "en": "Momentum returns as the army advances.",
+        "se": "Initiativet återvänder när armén marscherar framåt."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Swedish skirmishers fire from cover; first white smoke curls into the air."
+          "id": "6.1",
+          "description": {
+            "en": "The road toward Jutas opens ahead.",
+            "se": "Vägen mot Jutas öppnar sig."
+          }
         },
         {
-          "id": "2",
-          "description": "Russian vanguard advances cautiously through fences and brush."
+          "id": "6.2",
+          "description": {
+            "en": "Döbeln saluted by cheering soldiers.",
+            "se": "Döbeln hälsas av jublande soldater."
+          }
         }
       ]
     },
     {
       "pageNumber": 7,
-      "title": "Battle at Jutas",
-      "description": "The height of the fighting, chaos and simultaneity.",
-      "location": "Jutas battlefield",
-      "pageType": "4",
+      "title": "Before the Battle",
+      "pageType": "2",
+      "location": "Near Jutas",
+      "description": {
+        "en": "Final preparations before battle.",
+        "se": "Sista förberedelserna före strid."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Swedish infantry fires disciplined volleys through smoke."
+          "id": "7.1",
+          "description": {
+            "en": "Soldiers prepare weapons and equipment.",
+            "se": "Soldater förbereder vapen och utrustning."
+          }
         },
         {
-          "id": "2",
-          "description": "Russian infantry presses forward, bayonets fixed amid drifting smoke."
-        },
-        {
-          "id": "3",
-          "description": "Artillery fires with blast and recoil, earth and smoke erupting."
-        },
-        {
-          "id": "4",
-          "description": "Döbeln on horseback directs the battle amid noise and confusion."
+          "id": "7.2",
+          "description": {
+            "en": "The army waits in tense silence.",
+            "se": "Armén väntar i spänd tystnad."
+          }
         }
       ]
     },
     {
       "pageNumber": 8,
-      "title": "Swedish Push",
-      "description": "The turning point of the battle.",
-      "location": "Jutas battlefield",
+      "title": "Skirmishers Advance",
       "pageType": "2",
+      "location": "Jutas outskirts",
+      "description": {
+        "en": "Swedish skirmishers move forward ahead of the main force.",
+        "se": "Svenska förposter rör sig framåt framför huvudstyrkan."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Döbeln rallies the line, sword raised.",
-          "referencePainting": {
-            "type": "painting",
-            "source": "8.1.1.jpg"
+          "id": "8.1",
+          "description": {
+            "en": "Skirmishers advance through fences and brush.",
+            "se": "Förposter avancerar genom gärden och snår."
           }
         },
         {
-          "id": "2",
-          "description": "Swedish infantry advances with bayonets, shouting as they push forward."
+          "id": "8.2",
+          "description": {
+            "en": "They take cover and observe enemy positions.",
+            "se": "De tar skydd och spanar mot fienden."
+          }
         }
       ]
     },
     {
       "pageNumber": 9,
-      "title": "Russian Withdrawal",
-      "description": "The Russian attack collapses and retreats.",
-      "location": "Jutas battlefield",
+      "title": "First Shots",
       "pageType": "3",
+      "location": "Jutas outskirts",
+      "description": {
+        "en": "The battle begins with the first exchange of fire.",
+        "se": "Striden inleds med den första eldgivningen."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Russian ranks falter as officers struggle to hold formation."
+          "id": "9.1",
+          "description": {
+            "en": "Swedish skirmishers fire; white smoke rises.",
+            "se": "Svenska förposter öppnar eld; vit rök stiger."
+          }
         },
         {
-          "id": "2",
-          "description": "Russian troops retreat into smoke and broken ground."
+          "id": "9.2",
+          "description": {
+            "en": "Russian vanguard advances cautiously.",
+            "se": "Den ryska förtruppen avancerar försiktigt."
+          }
         }
       ]
     },
     {
       "pageNumber": 10,
-      "title": "Victory",
-      "description": "Soldiers salutes Döblen for the Victory",
-      "location": "Jutas battlefield",
-      "pageType": "1",
+      "title": "Skirmishers Fall Back",
+      "pageType": "2",
+      "location": "Jutas outskirts",
+      "description": {
+        "en": "The skirmish phase ends as troops disengage.",
+        "se": "Förpoststriden avslutas när trupperna bryter kontakt."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Döbeln on his horse before the saluting soldiers",
-          "referencePainting": {
-            "type": "painting",
-            "source": "10.1.1.jpg"
+          "id": "10.1",
+          "description": {
+            "en": "Skirmishers withdraw under enemy fire.",
+            "se": "Förposter drar sig tillbaka under fientlig eld."
+          }
+        },
+        {
+          "id": "10.2",
+          "description": {
+            "en": "They pass through the main Swedish line.",
+            "se": "De passerar genom den svenska huvudlinjen."
           }
         }
       ]
     },
     {
       "pageNumber": 11,
-      "title": "Aftermath",
-      "description": "The cost of victory becomes clear.",
-      "location": "Jutas battlefield at dusk",
-      "pageType": "2",
+      "title": "Battle at Jutas",
+      "pageType": "4",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "The main battle erupts in full force.",
+        "se": "Huvudstriden bryter ut med full kraft."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Döbeln walks among fallen soldiers in the fading light.",
-          "referencePainting": {
-            "type": "painting",
-            "source": "11.1.1.jpg"
+          "id": "11.1",
+          "description": {
+            "en": "Swedish infantry fires disciplined volleys.",
+            "se": "Svenskt infanteri avfyrar disciplinerade salvor."
           }
         },
         {
-          "id": "2",
-          "description": "Field surgeons tend the wounded by low firelight."
+          "id": "11.2",
+          "description": {
+            "en": "Russian infantry advances with bayonets fixed.",
+            "se": "Ryskt infanteri avancerar med fästa bajonetter."
+          }
+        },
+        {
+          "id": "11.3",
+          "description": {
+            "en": "Artillery fires, blasting earth and smoke.",
+            "se": "Artilleriet avfyras, jord och rök slungas upp."
+          }
+        },
+        {
+          "id": "11.4",
+          "description": {
+            "en": "Döbeln directs the battle amid chaos.",
+            "se": "Döbeln leder striden mitt i kaoset."
+          }
         }
       ]
     },
     {
       "pageNumber": 12,
-      "title": "After the Victory",
-      "description": "The victory at Jutas halts the Russian advance in western Finland and marks a critical turning point in the campaign. Though limited in scale, the battle restores Swedish confidence after months of retreat and proves that disciplined leadership and terrain can overcome numerical disadvantage. The Russian forces withdraw from the area, allowing the Swedish army time to regroup and stabilize the front. Although the war will ultimately end in the loss of Finland, Jutas becomes a lasting symbol of resistance and resolve.",
-      "location": "Western Finland, autumn 1808",
-      "pageType": "1",
+      "title": "The Struggle at Jutas",
+      "pageType": "4",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "The battle reaches a critical and uncertain phase.",
+        "se": "Striden når ett kritiskt och osäkert skede."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "A quiet battlefield after fighting: smoke dissipates over empty fields, abandoned equipment lies scattered, and distant troops withdraw into the landscape."
+          "id": "12.1",
+          "description": {
+            "en": "Dense smoke obscures the fighting.",
+            "se": "Tät rök skymmer striderna."
+          }
+        },
+        {
+          "id": "12.2",
+          "description": {
+            "en": "Close combat erupts between infantry.",
+            "se": "Närstrid bryter ut mellan infanterister."
+          }
+        },
+        {
+          "id": "12.3",
+          "description": {
+            "en": "A Swedish line wavers under pressure.",
+            "se": "En svensk linje vacklar under tryck."
+          }
+        },
+        {
+          "id": "12.4",
+          "description": {
+            "en": "Russian troops press forward aggressively.",
+            "se": "Ryska trupper pressar fram aggressivt."
+          }
         }
       ]
     },
     {
       "pageNumber": 13,
-      "title": "Memory",
-      "description": "The past remembered in the present.",
-      "location": "Jutas, modern day",
-      "pageType": "1",
+      "title": "Swedish Push",
+      "pageType": "2",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "The Swedish counterattack begins.",
+        "se": "Den svenska motattacken inleds."
+      },
       "panels": [
         {
-          "id": "1",
-          "description": "Modern-day Jutas monument among birch trees. A teacher speaks to students; the same land now peaceful."
+          "id": "13.1",
+          "description": {
+            "en": "Döbeln rallies the line.",
+            "se": "Döbeln samlar linjen."
+          }
+        },
+        {
+          "id": "13.2",
+          "description": {
+            "en": "Swedish infantry advances with bayonets.",
+            "se": "Svenskt infanteri går fram med bajonetter."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 14,
+      "title": "Advantage Gained",
+      "pageType": "2",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "The tide turns decisively.",
+        "se": "Stridens utgång vänder."
+      },
+      "panels": [
+        {
+          "id": "14.1",
+          "description": {
+            "en": "Swedish troops secure ground.",
+            "se": "Svenska trupper säkrar terräng."
+          }
+        },
+        {
+          "id": "14.2",
+          "description": {
+            "en": "Russian resistance collapses.",
+            "se": "Ryskt motstånd kollapsar."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 15,
+      "title": "Russian Withdrawal",
+      "pageType": "3",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "Russian forces retreat.",
+        "se": "Ryska styrkor retirerar."
+      },
+      "panels": [
+        {
+          "id": "15.1",
+          "description": {
+            "en": "Russian ranks falter.",
+            "se": "Ryska led vacklar."
+          }
+        },
+        {
+          "id": "15.2",
+          "description": {
+            "en": "Retreat into smoke and broken ground.",
+            "se": "Reträtt i rök och ojämn terräng."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 16,
+      "title": "The Pursuit",
+      "pageType": "1",
+      "location": "Beyond Jutas battlefield",
+      "description": {
+        "en": "Swedish forces pursue the enemy.",
+        "se": "Svenska styrkor förföljer fienden."
+      },
+      "panels": [
+        {
+          "id": "16.1",
+          "description": {
+            "en": "Swedish soldiers chase retreating Russians.",
+            "se": "Svenska soldater jagar retirerande ryssar."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 17,
+      "title": "Victory",
+      "pageType": "1",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "The battle is won.",
+        "se": "Slaget är vunnet."
+      },
+      "panels": [
+        {
+          "id": "17.1",
+          "description": {
+            "en": "Döbeln saluted by soldiers.",
+            "se": "Döbeln hälsas av soldater."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 18,
+      "title": "Aftermath",
+      "pageType": "2",
+      "location": "Jutas battlefield at dusk",
+      "description": {
+        "en": "The cost of victory.",
+        "se": "Segerns pris."
+      },
+      "panels": [
+        {
+          "id": "18.1",
+          "description": {
+            "en": "Döbeln among the fallen.",
+            "se": "Döbeln bland de stupade."
+          }
+        },
+        {
+          "id": "18.2",
+          "description": {
+            "en": "Surgeons tend the wounded.",
+            "se": "Fältskärer vårdar sårade."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 19,
+      "title": "After the Victory",
+      "pageType": "1",
+      "location": "Jutas battlefield",
+      "description": {
+        "en": "The battlefield grows quiet.",
+        "se": "Slagfältet tystnar."
+      },
+      "panels": [
+        {
+          "id": "19.1",
+          "description": {
+            "en": "Smoke fades over empty fields.",
+            "se": "Röken skingras över tomma fält."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 20,
+      "title": "The Place Today",
+      "pageType": "2",
+      "location": "Nykarleby, present day",
+      "description": {
+        "en": "Return to the present.",
+        "se": "Åter till nutiden."
+      },
+      "panels": [
+        {
+          "id": "20.1",
+          "description": {
+            "en": "Modern Nykarleby.",
+            "se": "Dagens Nykarleby."
+          }
+        },
+        {
+          "id": "20.2",
+          "description": {
+            "en": "Students arrive by bus.",
+            "se": "Elever anländer med buss."
+          }
+        }
+      ]
+    },
+    {
+      "pageNumber": 21,
+      "title": "Memory",
+      "pageType": "1",
+      "location": "Jutas monument, present day",
+      "description": {
+        "en": "The past remembered in the present.",
+        "se": "Det förflutna minns i nutiden."
+      },
+      "panels": [
+        {
+          "id": "21.1",
+          "description": {
+            "en": "A teacher speaks to students at the monument.",
+            "se": "En lärare talar till elever vid minnesmärket."
+          }
         }
       ]
     }

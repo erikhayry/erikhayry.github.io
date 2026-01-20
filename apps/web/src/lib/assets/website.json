@@ -8,26 +8,25 @@
           {
             "id": "1.1.1",
             "description": {
-              "en": "Georg Carl von Döbeln stands in the left foreground, his black headband clearly visible, calm and resolute. Opposite him, a Russian commander faces him from the right, rigid and formal in dark green uniform with red facings. Behind each man, their armies wait across the open countryside under late-summer light.",
-              "se": "Georg Carl von Döbeln står i förgrunden till vänster, med sitt svarta pannband tydligt synligt, lugn och beslutsam. Mittemot honom står en rysk befälhavare i förgrunden till höger, stel och formell i mörkgrön uniform med röda uppslag. Bakom dem väntar deras arméer utspridda över det öppna landskapet i sensommarens ljus."
+              "en": "A smoke-covered battlefield where Swedish infantry fight defensively as Russian forces advance through drifting gunpowder haze across open farmland.",
+              "se": "Ett rökfyllt slagfält där svenskt infanteri strider defensivt medan ryska styrkor avancerar genom drivande krutrök över öppna fält."
             },
             "narration": {
-              "en": "After months of retreat, the fate of western Finland will soon be decided.",
-              "se": "Efter månader av reträtt står västra Finlands öde snart på spel."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Here, we stand.",
-                  "person": "Georg Carl von Döbeln"
-                },
-                "se": {
-                  "text": "Här står vi.",
-                  "person": "Georg Carl von Döbeln"
-                }
-              }
-            ],
-            "info": "Establishing page introducing the opposing commanders and the strategic tension before the Battle of Jutas."
+              "en": "In 1808, war came to Finland. Sweden’s eastern army was stretched thin and forced backward. By late summer, retreat could not continue forever.",
+              "se": "År 1808 nådde kriget Finland. Sveriges östra armé var hårt pressad och tvingades steg för steg tillbaka. Vid sensommaren kunde reträtten inte fortsätta för evigt."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "1.2.1",
+            "description": {
+              "en": "A deserted country road near Jutas in a vertical composition, stretching from the foreground toward the distant horizon. The road winds gently through open late-summer fields with low grasses, wildflowers, and sparse shrubs. Soft daylight and a calm sky emphasize silence and emptiness, with no people, animals, buildings, or signs of conflict visible.",
+              "se": "En övergiven landsväg nära Jutas i en vertikal komposition, som sträcker sig från förgrunden mot horisonten i fjärran. Vägen slingrar sig mjukt genom öppna sensommarfält med lågt gräs, vilda blommor och glesa buskar. Mjukt dagsljus och en lugn himmel förstärker stillheten och tomheten, utan människor, djur, byggnader eller tecken på konflikt."
+            }
           }
         ]
       },
@@ -46,6 +45,20 @@
             },
             "dialogs": [],
             "info": "Establishing geography and calm before the Swedish army arrives. Late summer 1808."
+          },
+          {
+            "id": "2.1.1",
+            "description": {
+              "en": "Ref en",
+              "se": "Ref se"
+            },
+            "link": {
+              "url": "",
+              "title": {
+                "en": "Read more about...",
+                "se": "Läs mer om..."
+              }
+            }
           }
         ]
       },
@@ -97,6 +110,25 @@
                 }
               }
             ]
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "3.2.1",
+            "description": {
+              "en": "A quiet, empty view of Nykarleby’s town square in late-summer light. Wooden buildings stand still around the open square, the town calm and undisturbed before the army’s arrival.",
+              "se": "En stilla och tom vy över Nykarlebys torg i sensommarljus. Trähusen står tysta runt den öppna platsen, staden lugn och orörd innan arméns ankomst."
+            }
+          },
+          {
+            "id": "3.2.2",
+            "description": {
+              "en": "A column of Swedish soldiers marches through a narrow village street. Wooden houses rise on both sides, framing the scene vertically. Townspeople stand close to the road—an elderly man, a mother with children, and other villagers—quietly watching the troops pass. The soldiers look disciplined and weary, their blue uniforms contrasting with the warm tones of the town.",
+              "se": "En kolonn svenska soldater marscherar genom en smal bygata. Trähus reser sig på båda sidor och ramar in scenen vertikalt. Stadsbor står tätt intill vägen – en äldre man, en mor med barn och andra invånare – och betraktar tyst trupperna när de passerar. Soldaterna ser disciplinerade och trötta ut, deras blå uniformer kontrasterar mot stadens varma färger."
+            }
           }
         ]
       },
@@ -247,6 +279,120 @@
               }
             ],
             "info": "Page 5, Panel 2 — March to Jutas. Morale shift moment. Reference painting: 5.1.2.jpg. Anime (Studio Ghibli–inspired) style."
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "5.2.1",
+            "description": {
+              "en": "Swedish infantry soldiers prepare their weapons and equipment before battle. Men from Björneborgs regemente check flintlock muskets, tighten leather crossbelts, adjust cartridge boxes, and fix bayonets. Their movements are calm and deliberate, faces focused and serious. The scene takes place near Jutas in the late-summer countryside, with low grass, sparse brush, and soft northern daylight. The mood is tense and anticipatory, emphasizing preparation rather than action.",
+              "se": "Svenska infanterisoldater förbereder sina vapen och sin utrustning inför striden. Män ur Björneborgs regemente kontrollerar flintlåsgevär, spänner lädergehäng, justerar patronväskor och fäster bajonetter. Rörelserna är lugna och metodiska, ansiktena koncentrerade och allvarsamma. Scenen utspelar sig nära Jutas i det sensommarlika landskapet, med låg vegetation, glesa buskage och mjukt nordiskt ljus. Stämningen är spänd och förväntansfull, med fokus på förberedelser snarare än strid."
+            }
+          },
+          {
+            "id": "5.2.2",
+            "description": {
+              "en": "Swedish infantry stands motionless in formation, muskets held steady, waiting in tense silence before the battle.",
+              "se": "Svenskt infanteri står orörligt i formation, med musköterna stadigt hållna, och väntar i spänd tystnad före striden."
+            },
+            "narration": {
+              "en": "For a moment, nothing moves. Breath, steel, and resolve are held in check.",
+              "se": "För ett ögonblick rör sig ingenting. Andetag, stål och beslutsamhet hålls tillbaka."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "5.3.1",
+            "description": {
+              "en": "Swedish skirmishers advance cautiously through wooden fences and dense brush on the outskirts of Jutas, scanning the terrain ahead.",
+              "se": "Svenska förposter avancerar försiktigt genom trästängsel och täta snår i utkanten av Jutas, medan de spanar av terrängen framför sig."
+            },
+            "narration": {
+              "en": "Ahead of the main force, the skirmishers moved silently, probing the ground where the battle would soon begin.",
+              "se": "Framför huvudstyrkan rörde sig förposterna ljudlöst och sonderade terrängen där striden snart skulle börja."
+            }
+          },
+          {
+            "id": "5.3.2",
+            "description": {
+              "en": "Swedish skirmishers crouch behind fences and low vegetation, taking cover while carefully observing enemy positions across the open fields.",
+              "se": "Svenska förposter hukar bakom gärdsgårdar och låg vegetation, tar skydd och spanar noggrant mot fiendens ställningar över de öppna fälten."
+            },
+            "narration": {
+              "en": "Ahead of the main force, eyes and ears probe the silence. The first moments of battle are measured not in shots, but in restraint.",
+              "se": "Framför huvudstyrkan prövas tystnaden med blickar och lyssnande sinnen. Stridens första ögonblick mäts ännu inte i skott, utan i behärskning."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Movement… there, by the trees. I can see them.",
+                  "person": "Swedish skirmisher"
+                },
+                "se": {
+                  "text": "Rörelse… där, vid träden. Jag ser dem.",
+                  "person": "Svensk förpost"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "6.1.1",
+            "description": {
+              "en": "Two Swedish infantry soldiers from Björneborgs läns infanteriregemente crouch behind low natural cover at the outskirts of Jutas. One soldier aims a flintlock musket forward with calm focus, while the second stays close beside him, alert and ready. The air is clear with no weapons smoke, and the surrounding late-summer landscape is quiet and tense, marking the very first controlled moments of the battle.",
+              "se": "Två svenska infanterisoldater ur Björneborgs läns infanteriregemente hukar bakom lågt naturligt skydd i utkanten av Jutas. Den ene soldaten siktar framåt med sin flintlåsmusköt med lugn koncentration, medan den andre håller sig tätt intill, vaksam och redo. Luften är klar utan krutrök, och det sena sommarlandskapet är stilla och spänt – stridens allra första, kontrollerade ögonblick."
+            },
+            "narration": {
+              "en": "The first shots are taken—measured, deliberate, and without yet plunging the field into chaos.",
+              "se": "De första skotten avlossas – avvägda och kontrollerade, innan slagfältet ännu kastas in i kaos."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Contact!",
+                  "person": "Swedish skirmisher"
+                },
+                "se": {
+                  "text": "Kontakt!",
+                  "person": "Svensk skytt"
+                }
+              }
+            ],
+            "info": "Page 6 Panel 1. Exactly two Swedish soldiers only. No smoke from weapons. Early skirmish phase before battle escalation."
+          },
+          {
+            "id": "6.1.2",
+            "description": {
+              "en": "Russian infantry vanguard advances cautiously through low wooden fences and dense brush on the outskirts of Jutas. The foremost soldier moves carefully with musket in hand while his backpack carries only standard gear and a rolled greatcoat — no spare weapon attached. Other soldiers follow in loose formation, partially obscured by foliage and light gun smoke, their posture tense and alert as the battle begins.",
+              "se": "Den ryska infanteriförtruppen avancerar försiktigt genom låga trästängsel och tät sly i Jutas utkanter. Den främste soldaten rör sig varsamt med musköten i händerna, medan ryggsäcken endast bär standardutrustning och en rullad rock — inget extra vapen är fäst. Övriga soldater följer i lös formation, delvis skymda av vegetation och lätt krutrök, med spända och vaksamma kroppshållningar när striden tar sin början."
+            },
+            "narration": {
+              "en": "From the tree line, the Russian advance presses forward, testing the ground and the enemy’s resolve.",
+              "se": "Från skogsbrynet pressar den ryska framryckningen vidare, prövar marken och fiendens beslutsamhet."
+            },
+            "dialogs": [
+              {
+                "en": {
+                  "text": "Advance—steady!",
+                  "person": "Russian officer"
+                },
+                "se": {
+                  "text": "Framåt — håll linjen!",
+                  "person": "Rysk officer"
+                }
+              }
+            ]
           }
         ]
       },
