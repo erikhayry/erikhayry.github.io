@@ -45,20 +45,6 @@
             },
             "dialogs": [],
             "info": "Establishing geography and calm before the Swedish army arrives. Late summer 1808."
-          },
-          {
-            "id": "2.1.1",
-            "description": {
-              "en": "Ref en",
-              "se": "Ref se"
-            },
-            "link": {
-              "url": "",
-              "title": {
-                "en": "Read more about...",
-                "se": "Läs mer om..."
-              }
-            }
           }
         ]
       },
