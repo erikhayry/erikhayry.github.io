@@ -4,15 +4,11 @@
     "en": "Swedish infantry of the Björneborgs regemente fires a disciplined volley through thick gunpowder smoke. The firing line holds steady under command, muskets discharging in near-unison amid the chaos of battle.",
     "se": "Svenskt infanteri ur Björneborgs regemente avfyrar en disciplinerad salva genom tät krutrök. Eldlinjen står fast under befäl, musköterna brinner av nästan samtidigt mitt i stridens kaos."
   },
-  "narration": {
-    "en": "At Jutas, discipline answers chaos. The Swedish line fires as one.",
-    "se": "Vid Jutas möter disciplinen kaoset. Den svenska linjen avfyrar som en enda kropp."
-  },
   "dialogs": [
     {
       "en": {
         "text": "Fire!",
-        "person": "Swedish NCO"
+        "person": "Swedish officer"
       },
       "se": {
         "text": "Eld!",

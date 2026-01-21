@@ -7,16 +7,6 @@
   "dialogs": [
     {
       "en": {
-        "text": "Fall back! Keep your spacing!",
-        "person": "Swedish skirmisher"
-      },
-      "se": {
-        "text": "Fall tillbaka! Håll avstånden!",
-        "person": "Svensk förpost"
-      }
-    },
-    {
-      "en": {
         "text": "Move, move! Through the smoke!",
         "person": "Swedish skirmisher"
       },

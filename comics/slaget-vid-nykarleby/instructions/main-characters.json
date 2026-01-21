@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "purpose": "Ensure visual and behavioural consistency for all recurring characters throughout the entire comic project.",
+    "rules": {
+      "alwaysAskBeforeImageCreation": true,
+      "respectCurrentStyle": true,
+      "neverChangeRecognizableFeatures": true,
+      "uniformsMustFollowSoldierJson": true,
+      "noAddedPropsUnlessScripted": true,
+      "ageConsistency": true,
+      "injuryContinuity": true
+    }
+  },
+  "characters": {
+    "Georg Carl von Döbeln": {
+      "role": "Swedish commander",
+      "alignment": "Sweden",
+      "storyUsage": "Appears throughout most battle-related pages, leading troops and giving orders.",
+      "visualIdentity": {
+        "face": {
+          "shape": "Long, angular face",
+          "age": "40+",
+          "eyes": "Sharp dark eyes, intense expression",
+          "eyebrows": "High and pronounced, slightly arched",
+          "mustache": "no mustache",
+          "hair": "Dark hair, tied back; slightly unkempt during battle"
+        },
+        "iconicFeatures": {
+          "headband": "Black headband tied around the forehead; mandatory in all scenes where he is active or commanding.",
+          "injury": "Head wound—bandage visible when bedridden.",
+          "expression": "Determined, stern, rarely fully smiling."
+        },
+        "body": {
+          "posture": "Upright, authoritative, even when ill",
+          "age": "Late 40s"
+        },
+        "clothing": {
+          "uniform": "Swedish officer uniform (follow Swedish uniform rules from soldier.json)",
+          "cape": "Dark riding cape optional in outdoor scenes",
+          "horse": "Often mounted on a dark brown or black horse, never swap color mid-story"
+        }
+      }
+    },
+    "Johan Fredrik Eek": {
+      "role": "Swedish officer",
+      "alignment": "Sweden",
+      "visualIdentity": {
+        "face": {
+          "shape": "Oval face",
+          "eyes": "Focused and calm",
+          "hair": "Light brown, short, neat"
+        },
+        "clothing": {
+          "uniform": "Standard Swedish officer uniform from soldier.json",
+          "details": "Always clean and formal in early pages; progressively more mud and smoke after page 6"
+        },
+        "body": {
+          "build": "Medium, slightly lean"
+        }
+      }
+    },
+    "Enoch Furuhjelm": {
+      "role": "Swedish officer",
+      "alignment": "Sweden",
+      "visualIdentity": {
+        "face": {
+          "shape": "Square jaw",
+          "beard": "Short trimmed beard or stubble",
+          "hair": "Dark blond to light brown"
+        },
+        "body": {
+          "build": "Broad-shouldered"
+        },
+        "clothing": {
+          "uniform": "Swedish officer uniform; slightly more worn than Eek’s",
+          "accessories": "Spyglass sometimes carried (only when scripted)"
+        }
+      }
+    },
+    "Anders Gyllenbögel": {
+      "role": "Swedish officer",
+      "alignment": "Sweden",
+      "visualIdentity": {
+        "face": {
+          "shape": "Narrow face",
+          "eyes": "Alert, intelligent",
+          "hair": "Dark brown, slightly curled at ears"
+        },
+        "body": {
+          "build": "Tall and slim"
+        },
+        "clothing": {
+          "uniform": "Swedish officer uniform (clean, well-kept)",
+          "notes": "Carries map case when appropriate for page context"
+        }
+      }
+    },
+    "Johan Petter Hesselius": {
+      "role": "Swedish officer",
+      "alignment": "Sweden",
+      "visualIdentity": {
+        "face": {
+          "shape": "Rounder face",
+          "hair": "Dark hair, parted",
+          "eyes": "Soft, thoughtful"
+        },
+        "clothing": {
+          "uniform": "Standard Swedish uniform",
+          "notes": "Least battle-worn of officers early on"
+        }
+      }
+    },
+    "Björneborgs regemente": {
+      "role": "Swedish infantry unit",
+      "alignment": "Sweden",
+      "groupIdentity": {
+        "uniform": "Follow Swedish infantry uniform from soldier.json",
+        "iconicFeatures": [
+          "Dark blue coats",
+          "Yellow facings",
+          "White trousers",
+          "Black shako with yellow band"
+        ],
+        "consistencyRules": {
+          "neverChangeUniformColors": true,
+          "mudProgression": "Becomes heavier from page 3–10 according to weather rules",
+          "battleSmoke": "Faces gradually darken from gunpowder residue"
+        }
+      }
+    },
+    "Nikolaj Kamenskij": {
+      "role": "Russian commander",
+      "alignment": "Russian Empire",
+      "visualIdentity": {
+        "face": {
+          "shape": "Angular, stern",
+          "beard": "Short dark beard",
+          "eyes": "Cold, calculating"
+        },
+        "clothing": {
+          "uniform": "High-ranking Russian officer uniform; dark green with red facings per soldier.json",
+          "notes": "Uniform should always look more formal than infantry"
+        },
+        "body": {
+          "posture": "Rigid, commanding"
+        }
+      }
+    },
+    "Kirill Kazatjkovskij": {
+      "role": "Russian officer leading infantry",
+      "alignment": "Russian Empire",
+      "visualIdentity": {
+        "face": {
+          "shape": "Long nose, sharp cheekbones",
+          "hair": "Dark, short"
+        },
+        "body": {
+          "build": "Lean, wiry"
+        },
+        "clothing": {
+          "uniform": "Russian officer uniform with red facings",
+          "notes": "Slightly more rugged look; dust and march-wear appear early"
+        }
+      }
+    },
+    "Russian Infantry Detachment": {
+      "role": "Russian infantry",
+      "alignment": "Russian Empire",
+      "groupIdentity": {
+        "uniform": "Follow Russian infantry uniform from soldier.json",
+        "iconicFeatures": [
+          "Dark green tunic",
+          "Red facings",
+          "White/light grey trousers",
+          "Black kiwer shako"
+        ],
+        "consistencyRules": {
+          "ruggednessLevel": "Higher than Swedish; supply-worn look",
+          "smokeAndMud": "Visible from page 6 onwards",
+          "bayonetPosition": "Always fixed during attacks"
+        }
+      }
+    }
+  }
+}

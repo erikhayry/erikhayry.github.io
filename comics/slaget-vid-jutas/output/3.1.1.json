@@ -6,18 +6,6 @@
   },
   "narration": {
     "en": "After weeks of pressure, the Swedish army retreats south from Vasa—worn, but not yet broken.",
-    "se": "Efter veckor av hårt tryck drar den svenska armén sig tillbaka söderut från Vasa – sliten, men ännu inte bruten."
-  },
-  "dialogs": [
-    {
-      "en": {
-        "text": "Another mile… just another mile.",
-        "person": "Swedish soldier"
-      },
-      "se": {
-        "text": "En mil till… bara en mil till.",
-        "person": "Svensk soldat"
-      }
-    }
-  ]
+    "se": "Efter veckor av hårt tryck drar den svenska armén sig tillbaka norrut från Vasa – sliten, men ännu inte bruten."
+  }
 }

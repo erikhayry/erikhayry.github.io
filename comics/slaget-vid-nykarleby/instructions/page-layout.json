@@ -1,0 +1,102 @@
+{
+  "PageLayoutInstructions": {
+    "meta": {
+      "baseLandscape": {
+        "width": 1536,
+        "height": 1024,
+        "aspectRatio": "3:2"
+      },
+      "basePortrait": {
+        "width": 1024,
+        "height": 1536,
+        "aspectRatio": "2:3"
+      },
+      "globalRules": [
+        "Images must be generated either as 1536×1024 (landscape) or 1024×1536 (portrait).",
+        "All important characters and story information must be clearly visible in the final image.",
+        "No gutters, borders, or margins are ever allowed."
+      ]
+    },
+    "layouts": {
+      "1": {
+        "name": "Hero",
+        "orientation": "landscape",
+        "description": "Single full-page panel for establishing shots or iconic moments.",
+        "canvas": {
+          "width": 1536,
+          "height": 1024
+        }
+      },
+      "2": {
+        "name": "VerticalDiptych",
+        "orientation": "portrait",
+        "description": "Two stacked portrait panels. Suitable for dialogue, reaction, or progression.",
+        "canvas": {
+          "width": 1536,
+          "height": 1024
+        },
+        "panels": [
+          {
+            "width": 1536,
+            "height": 768
+          },
+          {
+            "width": 1536,
+            "height": 768
+          }
+        ]
+      },
+      "3": {
+        "name": "LandscapeDiptych",
+        "orientation": "landscape",
+        "description": "Two equal panels side-by-side. Useful for opposing forces or cause/effect.",
+        "canvas": {
+          "width": 1024,
+          "height": 1536
+        },
+        "panels": [
+          {
+            "width": 512,
+            "height": 1024
+          },
+          {
+            "width": 512,
+            "height": 1024
+          }
+        ]
+      },
+      "3": {
+        "name": "Quad",
+        "orientation": "landscape",
+        "description": "Four-panel grid (2×2) for rapid beats or multiple viewpoints.",
+        "canvas": {
+          "width": 1536,
+          "height": 1024
+        },
+        "panels": [
+          {
+            "width": 768,
+            "height": 512
+          },
+          {
+            "width": 768,
+            "height": 512
+          },
+          {
+            "width": 768,
+            "height": 512
+          },
+          {
+            "width": 768,
+            "height": 512
+          }
+        ]
+      }
+    },
+    "compositionChecklist": [
+      "Are all characters clearly visible within the panel?",
+      "Are faces, gestures, and interactions readable at panel size?",
+      "Does the layout choice serve the narrative purpose of the page?"
+    ]
+  }
+}

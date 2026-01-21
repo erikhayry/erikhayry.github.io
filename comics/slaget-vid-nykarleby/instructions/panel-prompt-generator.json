@@ -1,0 +1,173 @@
+{
+  "panelPromptGenerator": {
+    "version": "3.4",
+    "purpose": "Generate production-ready image prompts for the Slaget vid Jutas comic project. Enforces strict layout geometry, character continuity, historical accuracy, style consistency, and mandatory reference-image attachment.",
+    "trigger": "When the user says: 'Generate prompt for Page X, Panel Y'.",
+    "dataSources": {
+      "storyboard": {
+        "file": "storyboard.json",
+        "usage": "Authoritative source for page order, panels, scenes, characters present, actions, and optional reference assets."
+      },
+      "pageLayout": {
+        "file": "page-layout.json",
+        "usage": "Authoritative source for layout type, canvas size, panel geometry, and no-gutter rules."
+      },
+      "mainCharacters": {
+        "file": "main-characters.json",
+        "usage": "Authoritative source for character identity, facial features, posture, iconic elements, and continuity."
+      },
+      "soldierData": {
+        "file": "soldier.json",
+        "usage": "Authoritative source for uniforms, equipment, colors, and historical appearance."
+      },
+      "currentStyle": {
+        "file": "current-style.json",
+        "usage": "Defines the single active rendering style for the entire project."
+      },
+      "comicStyles": {
+        "file": "comic-styles.json",
+        "usage": "Provides detailed AI rendering constraints for each supported style."
+      }
+    },
+    "globalRules": [
+      "All images must exactly match the canvas size defined by the selected layout.",
+      "All named characters from the storyboard panel must appear in the image.",
+      "Uniforms, equipment, and appearance must strictly follow soldier.json.",
+      "Character faces, bodies, and iconic features must strictly follow main-characters.json.",
+      "Rendering style must strictly follow current-style.json and comic-styles.json.",
+      "Do not add props, characters, scenery, symbols, or actions not specified by the storyboard.",
+      "Do not add text, captions, speech bubbles, borders, gutters, frames, labels, plaques, signatures, watermarks, or UI elements.",
+      "Never reproduce or imitate any text, lettering, inscriptions, borders, frames, margins, signatures, or decorative elements originating from a reference image."
+    ],
+    "referenceImageEnforcement": {
+      "rule": "If a panel defines a referencePainting or referenceImage, the image file MUST be attached to the image generation request.",
+      "attachmentMechanism": "Use referenced_image_ids with the exact filename listed in storyboard.json.",
+      "hardFailureIfMissing": true,
+      "failureMessage": "Reference image declared but not attached. Abort generation.",
+      "notes": [
+        "Project files alone are not visible to the image model.",
+        "The image must be explicitly passed as pixels at generation time.",
+        "Textual description is insufficient for near-exact composition matching."
+      ]
+    },
+    "referenceImageRules": {
+      "activationCondition": "The current panel in storyboard.json contains a referencePainting or referenceImage field.",
+      "referenceFieldContract": {
+        "location": "storyboard.json → pages[].panels[].referencePainting",
+        "requiredFields": [
+          "type",
+          "source"
+        ],
+        "allowedTypes": [
+          "painting",
+          "photo"
+        ],
+        "sourceConstraint": "source must reference a resolvable image file within the project assets."
+      },
+      "sharedRules": {
+        "priorityOrder": [
+          "storyboard.json",
+          "main-characters.json",
+          "soldier.json",
+          "current-style.json + comic-styles.json",
+          "reference image asset"
+        ],
+        "absoluteProhibitions": [
+          "Never copy or recreate any text, inscriptions, captions, dates, signatures, or lettering from the reference",
+          "Never copy borders, frames, canvas edges, mounting artifacts, or decorative margins",
+          "Never override character identity, uniforms, equipment, or story events defined by project files",
+          "Never mix rendering styles or imitate painterly techniques incompatible with the active comic style"
+        ]
+      },
+      "paintingSpecificRules": {
+        "appliesWhen": "referencePainting.type === 'painting'",
+        "intent": "Near-exact visual translation",
+        "requiredBehavior": [
+          "Recreate the composition as closely as possible: camera angle, horizon, framing, and spatial balance",
+          "Match relative placement of figures, formations, and major environmental elements",
+          "Match lighting direction, contrast hierarchy, time of day, and atmosphere",
+          "Match environmental structure such as terrain layout, roads, rivers, buildings, and vegetation",
+          "Rebuild the scene from scratch without tracing or pixel-level copying"
+        ],
+        "styleTranslationRule": [
+          "The painting must be fully re-rendered in the active comic style",
+          "The final image must look like a canonical panel from the comic"
+        ],
+        "promptLanguageRequirement": "State explicitly that the panel reconstructs the composition and spatial layout of the attached reference image as closely as possible, fully re-rendered in the current comic style."
+      },
+      "photoSpecificRules": {
+        "appliesWhen": "referencePainting.type === 'photo'",
+        "modernExclusionRule": "Nothing modern may appear in the generated image."
+      }
+    },
+    "generationSteps": [
+      {
+        "id": 0,
+        "name": "Reset Context",
+        "instructions": [
+          "Ignore all prior conversational context.",
+          "Rebuild the prompt exclusively from the authoritative project files and these instructions."
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Load Panel",
+        "instructions": [
+          "Locate the requested page and panel in storyboard.json.",
+          "Extract scene description, characters present, environment, and referencePainting field if present."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Load Layout",
+        "instructions": [
+          "Load the page layout from page-layout.json using pageType.",
+          "Apply exact canvas size and panel geometry."
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Load Characters and Uniforms",
+        "instructions": [
+          "Load all named characters from main-characters.json.",
+          "Apply mandatory facial features, posture, and iconic elements.",
+          "Apply uniforms and equipment from soldier.json."
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Load Style",
+        "instructions": [
+          "Load the active style from current-style.json.",
+          "Apply all constraints from comic-styles.json without dilution."
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Apply Reference Image (Mandatory Upload)",
+        "condition": "panel.referencePainting exists",
+        "instructions": [
+          "Verify that the referenced image file exists in project assets.",
+          "Attach the image to the generation call using referenced_image_ids.",
+          "If the image is not attached, abort generation immediately.",
+          "Apply painting or photo rules depending on reference type."
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Assemble Image Prompt",
+        "instructions": [
+          "Assemble the final image prompt including scene, composition, reference note, style enforcement, and hard constraints."
+        ]
+      }
+    ],
+    "failureConditions": [
+      "Reference image declared but not attached",
+      "Composition deviates significantly from a reference painting when one is provided",
+      "Any text or border appears in the image",
+      "Canvas size does not match layout",
+      "Modern elements appear in a historically reconstructed scene"
+    ],
+    "designPrinciple": "Reference images define HOW a scene is staged. Project files define WHAT the scene is."
+  }
+}

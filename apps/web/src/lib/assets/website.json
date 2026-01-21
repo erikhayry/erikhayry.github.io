@@ -73,30 +73,14 @@
             },
             "narration": {
               "en": "After weeks of pressure, the Swedish army retreats south from Vasa—worn, but not yet broken.",
-              "se": "Efter veckor av hårt tryck drar den svenska armén sig tillbaka söderut från Vasa – sliten, men ännu inte bruten."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Another mile… just another mile.",
-                  "person": "Swedish soldier"
-                },
-                "se": {
-                  "text": "En mil till… bara en mil till.",
-                  "person": "Svensk soldat"
-                }
-              }
-            ]
+              "se": "Efter veckor av hårt tryck drar den svenska armén sig tillbaka norrut från Vasa – sliten, men ännu inte bruten."
+            }
           },
           {
             "id": "3.1.2",
             "description": {
               "en": "Döbeln rides alongside the retreating column, his posture firm despite exhaustion. Horses and men move together over rain-darkened ground.",
               "se": "Döbeln rider längs den retirerande kolonnen, med fast hållning trots utmattningen. Hästar och män rör sig tillsammans över regnmörk mark."
-            },
-            "narration": {
-              "en": "Beside his men, Döbeln maintains the discipline of the retreat, turning withdrawal into resolve.",
-              "se": "Vid sina män upprätthåller Döbeln ordningen under reträtten och förvandlar tillbakagång till beslutsamhet."
             },
             "dialogs": [
               {
@@ -187,10 +171,6 @@
               "en": "Inside a modest wooden house in Nykarleby, a Swedish aide stands bent over a rough table, studying a hand-drawn military map. His finger traces the roads and rivers with focused precision as soft daylight falls across the room.",
               "se": "Inne i ett anspråkslöst trähus i Nykarleby står en svensk adjutant böjd över ett grovt träbord och studerar en handritad militärkarta. Med koncentrerad noggrannhet följer hans finger vägar och vattendrag medan mjukt dagsljus faller in i rummet."
             },
-            "narration": {
-              "en": "Even as Döbeln lies ill, the machinery of command continues its quiet work.",
-              "se": "Även medan Döbeln ligger sjuk fortsätter befälets maskineri sitt stillsamma arbete."
-            },
             "dialogs": [
               {
                 "en": {
@@ -210,10 +190,6 @@
             "description": {
               "en": "Döbeln, still weakened, sits upright and issues orders over a map while aides stand close and listen attentively.",
               "se": "Döbeln, fortfarande försvagad, sitter upprätt och ger order över en karta medan adjutanter står nära och lyssnar uppmärksamt."
-            },
-            "narration": {
-              "en": "Illness halts his body, but not his command.",
-              "se": "Sjukdomen hejdar hans kropp, men inte hans befäl."
             },
             "dialogs": [
               {
@@ -249,10 +225,6 @@
             "description": {
               "en": "Georg Carl von Döbeln rides forward on horseback, saluting his soldiers as they line the road to Jutas. Swedish infantry of the Björneborgs regemente stand in formation with bayonets raised, cheering as morale visibly rises.",
               "se": "Georg Carl von Döbeln rider fram till häst och hälsar sina soldater längs vägen mot Jutas. Svenska infanterister ur Björneborgs regemente står uppställda med höjda bajonetter och jublar när moralen tydligt stärks."
-            },
-            "narration": {
-              "en": "Döbeln’s return to the saddle spreads renewed confidence through the ranks.",
-              "se": "Döbelns återkomst till sadeln sprider förnyat mod genom leden."
             },
             "dialogs": [
               {
@@ -337,10 +309,6 @@
               "en": "Two Swedish infantry soldiers from Björneborgs läns infanteriregemente crouch behind low natural cover at the outskirts of Jutas. One soldier aims a flintlock musket forward with calm focus, while the second stays close beside him, alert and ready. The air is clear with no weapons smoke, and the surrounding late-summer landscape is quiet and tense, marking the very first controlled moments of the battle.",
               "se": "Två svenska infanterisoldater ur Björneborgs läns infanteriregemente hukar bakom lågt naturligt skydd i utkanten av Jutas. Den ene soldaten siktar framåt med sin flintlåsmusköt med lugn koncentration, medan den andre håller sig tätt intill, vaksam och redo. Luften är klar utan krutrök, och det sena sommarlandskapet är stilla och spänt – stridens allra första, kontrollerade ögonblick."
             },
-            "narration": {
-              "en": "The first shots are taken—measured, deliberate, and without yet plunging the field into chaos.",
-              "se": "De första skotten avlossas – avvägda och kontrollerade, innan slagfältet ännu kastas in i kaos."
-            },
             "dialogs": [
               {
                 "en": {
@@ -364,19 +332,7 @@
             "narration": {
               "en": "From the tree line, the Russian advance presses forward, testing the ground and the enemy’s resolve.",
               "se": "Från skogsbrynet pressar den ryska framryckningen vidare, prövar marken och fiendens beslutsamhet."
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Advance—steady!",
-                  "person": "Russian officer"
-                },
-                "se": {
-                  "text": "Framåt — håll linjen!",
-                  "person": "Rysk officer"
-                }
-              }
-            ]
+            }
           }
         ]
       },
@@ -390,16 +346,6 @@
               "se": "TODO"
             },
             "dialogs": [
-              {
-                "en": {
-                  "text": "Fall back! Keep your spacing!",
-                  "person": "Swedish skirmisher"
-                },
-                "se": {
-                  "text": "Fall tillbaka! Håll avstånden!",
-                  "person": "Svensk förpost"
-                }
-              },
               {
                 "en": {
                   "text": "Move, move! Through the smoke!",
@@ -417,29 +363,7 @@
             "description": {
               "en": "TODO",
               "se": "TODO"
-            },
-            "dialogs": [
-              {
-                "en": {
-                  "text": "Fall back! Keep your spacing!",
-                  "person": "Swedish skirmisher"
-                },
-                "se": {
-                  "text": "Fall tillbaka! Håll avstånden!",
-                  "person": "Svensk förpost"
-                }
-              },
-              {
-                "en": {
-                  "text": "Move, move! Through the smoke!",
-                  "person": "Swedish skirmisher"
-                },
-                "se": {
-                  "text": "Rör på er! Genom röken!",
-                  "person": "Svensk förpost"
-                }
-              }
-            ]
+            }
           }
         ]
       },
@@ -452,15 +376,11 @@
               "en": "Swedish infantry of the Björneborgs regemente fires a disciplined volley through thick gunpowder smoke. The firing line holds steady under command, muskets discharging in near-unison amid the chaos of battle.",
               "se": "Svenskt infanteri ur Björneborgs regemente avfyrar en disciplinerad salva genom tät krutrök. Eldlinjen står fast under befäl, musköterna brinner av nästan samtidigt mitt i stridens kaos."
             },
-            "narration": {
-              "en": "At Jutas, discipline answers chaos. The Swedish line fires as one.",
-              "se": "Vid Jutas möter disciplinen kaoset. Den svenska linjen avfyrar som en enda kropp."
-            },
             "dialogs": [
               {
                 "en": {
                   "text": "Fire!",
-                  "person": "Swedish NCO"
+                  "person": "Swedish officer"
                 },
                 "se": {
                   "text": "Eld!",
@@ -587,10 +507,6 @@
               "en": "Georg Carl von Döbeln rallies the Swedish line at the decisive moment of the battle. Mounted on a dark horse, he raises his sword high, urging the infantry forward as they cluster behind him with fixed bayonets. The scene captures momentum and command at the turning point of the fighting at Jutas.",
               "se": "Georg Carl von Döbeln samlar den svenska linjen i stridens avgörande ögonblick. Från sin mörka häst höjer han värjan och manar infanteriet framåt, tätt samlat bakom honom med fästa bajonetter. Scenen fångar rörelse och befäl i vändpunkten vid Jutas."
             },
-            "narration": {
-              "en": "At Döbeln’s signal, the Swedish line surges forward. What had been resistance now becomes resolve.",
-              "se": "På Döbelns tecken går den svenska linjen fram. Motståndet förvandlas till beslutsamhet."
-            },
             "dialogs": [
               {
                 "en": {
@@ -611,10 +527,6 @@
               "en": "Swedish infantry from the Björneborgs regiment advances in a unified push across the Jutas battlefield, bayonets fixed and voices raised as they drive forward. The line moves with discipline and momentum through drifting powder smoke, signaling the decisive turning point of the battle.",
               "se": "Svenskt infanteri ur Björneborgs regemente rycker fram i ett samlat anfall över slagfältet vid Jutas, med fästa bajonetter och rop som ekar när de pressar framåt. Linjen rör sig disciplinerat och med kraft genom drivande krutrök, ett tydligt tecken på stridens avgörande vändpunkt."
             },
-            "narration": {
-              "en": "Now the Swedish line surges forward. What began as resistance becomes an advance, and the balance of the battle shifts.",
-              "se": "Nu går den svenska linjen till anfall. Det som började som motstånd blir till framryckning, och stridens tyngdpunkt förskjuts."
-            },
             "dialogs": [
               {
                 "en": {
@@ -627,29 +539,6 @@
                 }
               }
             ]
-          }
-        ]
-      },
-      {
-        "layout": "3",
-        "panels": [
-          {
-            "id": "8.2.1",
-            "description": {
-              "en": "Swedish infantry of Björneborgs regemente stand firmly on newly secured ground, maintaining formation as smoke thins and the battlefield opens up.",
-              "se": "Svenskt infanteri ur Björneborgs regemente står stadigt på nyligen säkrad terräng och håller formation medan röken lättar och slagfältet öppnar sig."
-            },
-            "narration": {
-              "en": "The line holds. What moments ago was uncertain ground is now firmly in Swedish hands.",
-              "se": "Linjen håller. Det som nyss var osäker mark är nu fast i svensk hand."
-            }
-          },
-          {
-            "id": "8.2.2",
-            "description": {
-              "en": "Russian infantry formations break apart as resistance collapses, soldiers falling back through smoke and churned ground while Swedish troops press forward in disciplined order.",
-              "se": "Ryska infanteriformationer bryts upp när motståndet kollapsar, soldater faller tillbaka genom rök och upptrampad mark medan svenska trupper pressar fram i disciplinerad ordning."
-            }
           }
         ]
       },
@@ -685,10 +574,6 @@
             "description": {
               "en": "Russian infantry retreat into drifting smoke and broken ground on the Jutas battlefield. Soldiers move back in loose, disordered formation through churned earth and shallow ditches, their figures gradually fading into haze.",
               "se": "Ryskt infanteri drar sig tillbaka in i drivande krutrök och sönderslagen terräng på slagfältet vid Jutas. Soldater rör sig bakåt i oordnade led över upptrampad mark och grunda diken, deras gestalter löses gradvis upp i dimman."
-            },
-            "narration": {
-              "en": "The Russian attack collapses. What moments ago pressed forward now dissolves into smoke and retreat.",
-              "se": "Den ryska attacken bryter samman. Det som nyss pressade framåt löses nu upp i rök och reträtt."
             },
             "dialogs": [
               {
@@ -750,10 +635,6 @@
             "description": {
               "se": "Döbeln vandrar långsamt genom slagfältets efterdyningar. I det avtagande kvällsljuset ligger fallna soldater utspridda på marken, och övergiven utrustning vittnar om stridens våldsamhet. En utmattad häst går tätt intill honom med sänkt huvud. Stillheten efter striden är tung.",
               "en": "Döbeln walks slowly through the aftermath of the battlefield. In the fading evening light, fallen soldiers lie scattered across the ground, and abandoned equipment bears witness to the violence of the fighting. An exhausted horse walks close beside him, its head lowered. The stillness after the battle is heavy."
-            },
-            "narration": {
-              "se": "Segern var vunnen, men priset låg synligt framför honom.",
-              "en": "The victory was won, but its cost lay plainly before him."
             },
             "dialogs": [
               {
@@ -838,7 +719,7 @@
             "id": "13.1.1",
             "description": {
               "en": "A modern-day memorial at Jutas stands tall among trees. In the foreground, a white-haired, bearded teacher gestures calmly as he explains the site to his students. The monument rises behind him, massive and enduring, surrounded by peaceful forest.",
-              "se": "Minnesmonumentet vid Jutas reser sig bland träden i nutid. I förgrunden gestikulerar en vit­hårig och skäggig lärare lugnt medan han berättar för sina elever. Monumentet tornar upp sig bakom honom, massivt och beständigt, omgivet av en stillsam skog."
+              "se": "Minnesmonumentet vid Jutas reser sig bland träden i nutid. I förgrunden gestikulerar en vithårig och skäggig lärare lugnt medan han berättar för sina elever. Monumentet tornar upp sig bakom honom, massivt och beständigt, omgivet av en stillsam skog."
             },
             "narration": {
               "en": "More than two centuries later, the battle lives on — not in gunfire, but in memory.",
@@ -867,6 +748,163 @@
     "title": {
       "en": "Battle of Jutas",
       "se": "Slaget vid Jutas"
+    }
+  },
+  {
+    "slug": "slaget-vid-nykarleby",
+    "pages": [
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "1.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "2.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "2.1.2",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "3.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "4.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "4.1.2",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "2",
+        "panels": [
+          {
+            "id": "5.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "5.1.2",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "4",
+        "panels": [
+          {
+            "id": "6.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "6.1.2",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "6.1.3",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "6.1.4",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "3",
+        "panels": [
+          {
+            "id": "7.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          },
+          {
+            "id": "7.1.2",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "8.1.1",
+            "description": {
+              "en": "TODO",
+              "se": "TODO"
+            }
+          }
+        ]
+      }
+    ],
+    "styles": [
+      "AN"
+    ],
+    "title": {
+      "en": "Battle of Nykarleby",
+      "se": "Slaget vid Nykarleby"
     }
   }
 ]
