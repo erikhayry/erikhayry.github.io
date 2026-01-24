@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "purpose": "Ensure visual and behavioural consistency for all recurring characters throughout the entire comic project.",
+    "rules": {
+      "alwaysAskBeforeImageCreation": true,
+      "respectCurrentStyle": true,
+      "neverChangeRecognizableFeatures": true,
+      "uniformsMustFollowSoldierJson": true,
+      "noAddedPropsUnlessScripted": true,
+      "ageConsistency": true,
+      "injuryContinuity": true
+    }
+  },
+  "characters": {
+    "Wilhelm von Schwerin": {
+      "role": "Young soldier / cadet",
+      "alignment": "Sweden",
+      "age": 15,
+      "rank": "Volunteer / youth attendant",
+      "appearance": {
+        "ageRead": "Clearly adolescent; must never appear adult",
+        "build": "Slim, slight, underdeveloped musculature typical of a 15-year-old boy",
+        "height": "Noticeably shorter than adult soldiers around him",
+        "face": {
+          "structure": "Soft, youthful facial structure with rounded cheeks",
+          "jawline": "Unformed and gentle, lacking sharp angles or adult definition",
+          "skin": "Smooth, unlined skin with no beard shadow or facial hair",
+          "expressionBaseline": "Alert, earnest, slightly tense, with a hint of youthful vulnerability"
+        },
+        "hair": {
+          "color": "Light to medium brown",
+          "style": "Naturally worn and slightly tousled, with soft strands framing the forehead",
+          "length": "Medium length, reaching just to the ears and forehead, not cropped short like a seasoned soldier",
+          "notes": "Hair must always read as youthful and unstyled; never slicked back, severe, or groomed in an adult military fashion"
+        }
+      },
+      "uniform": {
+        "base": "Follow Swedish infantry uniform from soldier.json",
+        "fitRules": [
+          "Uniform must appear slightly oversized or ill-fitted",
+          "Sleeves or tunic may appear a bit long on the arms",
+          "Belts, straps, and equipment should look heavy relative to his body"
+        ],
+        "headgear": {
+          "rule": "If wearing shako or cap, it must sit slightly awkwardly and must not mature or harden his silhouette"
+        }
+      },
+      "postureAndBodyLanguage": {
+        "defaultPosture": "Straight-backed but slightly stiff, as if consciously trying to behave like an adult",
+        "movement": "Less confident and less economical than trained adult soldiers",
+        "emotionalRead": "Courage mixed with uncertainty and alertness"
+      },
+      "consistencyRules": {
+        "neverAgeUp": true,
+        "neverAddFacialHair": true,
+        "neverGiveAdultPhysique": true,
+        "alwaysReadAsMinor": true
+      },
+      "styleConstraints": {
+        "animeStyle": "Must follow the same Studio Ghibli–inspired facial model as all other characters, scaled to adolescent proportions",
+        "expressionRange": "Restrained, natural, and emotionally grounded; no exaggerated anime tropes"
+      }
+    },
+    "Björneborgs regemente": {
+      "role": "Swedish infantry unit",
+      "alignment": "Sweden",
+      "groupIdentity": {
+        "uniform": "Follow Swedish infantry uniform from soldier.json",
+        "iconicFeatures": [
+          "Dark blue coats",
+          "Yellow facings",
+          "White trousers",
+          "Black shako with yellow band"
+        ],
+        "consistencyRules": {
+          "neverChangeUniformColors": true,
+          "mudProgression": "Becomes heavier from page 3–10 according to weather rules",
+          "battleSmoke": "Faces gradually darken from gunpowder residue"
+        }
+      }
+    },
+    "Russian Infantry Detachment": {
+      "role": "Russian infantry",
+      "alignment": "Russian Empire",
+      "groupIdentity": {
+        "uniform": "Follow Russian infantry uniform from soldier.json",
+        "iconicFeatures": [
+          "Dark green tunic",
+          "Red facings",
+          "White/light grey trousers",
+          "Black kiwer shako"
+        ],
+        "consistencyRules": {
+          "ruggednessLevel": "Higher than Swedish; supply-worn look",
+          "smokeAndMud": "Visible from page 6 onwards",
+          "bayonetPosition": "Always fixed during attacks"
+        }
+      }
+    }
+  }
+}

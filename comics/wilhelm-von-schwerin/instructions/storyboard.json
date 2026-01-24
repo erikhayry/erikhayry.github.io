@@ -1,0 +1,398 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Ett tomt rum med ett enkelt skrivbord. Ett ofullbordat brev ligger framme.",
+          "narration": "Sedan Grisslehamn har jag inte haft någon möjlighet att skriva.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "pageType": "VerticalDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Havet med ett fartyg i fjärran.",
+          "narration": "Vi lämnade Grisslehamn den 16 juli och satte kurs norrut.",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Soldater ombord på fartyg i hårt väder.",
+          "narration": "Ända fram till slutet av augusti drev vi omkring till sjöss.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Landstigning i Kristinestad. Soldater och artilleri förs i land.",
+          "narration": "Till slut fick vi gå i land i Kristinestad.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "pageType": "Quad",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Kanoner och utrustning lossas från fartygen.",
+          "narration": "Hela landstigningen genomfördes på en enda dag.",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Nattmarsch med trötta soldater.",
+          "narration": "Redan samma natt marscherade vi en mil mot Lappfjärd.",
+          "dialog": []
+        },
+        {
+          "panel": 3,
+          "description": "Soldater vandrar i mörker.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 4,
+          "description": "Skylt eller vy som markerar Lappfjärd.",
+          "narration": "",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "pageType": "VerticalDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Sovande soldater på golv och halm.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Trummor slås, soldater väcks i panik.",
+          "narration": "Vi sov som bäst när larmet plötsligt gick.",
+          "dialog": [
+            "Till vapen!"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Strid i gryning med rök och muskötsalvor.",
+          "narration": "Striden varade i fem till sex timmar.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "pageType": "LandscapeDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Ryska trupper i reträtt.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Svenska trupper förföljer fienden.",
+          "narration": "Ryssarna slogs tillbaka och förföljdes ända till Ömossa.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "pageType": "VerticalDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Överstelöjtnant Drufva ger order.",
+          "narration": "",
+          "dialog": [
+            "Ni stannar här. Ni håller ställningarna till sista man."
+          ]
+        },
+        {
+          "panel": 2,
+          "description": "Liten isolerad styrka med två kanoner i öppet landskap.",
+          "narration": "Situationen var dyster.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "pageType": "Quad",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Hällregn över soldater i fält.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Nattlig fältvakt.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 3,
+          "description": "Utmattade soldaters ansikten.",
+          "narration": "I nio dygn låg vi utan avlösning på fältvakt.",
+          "dialog": []
+        },
+        {
+          "panel": 4,
+          "description": "Befälhavaren delar mat och mynt.",
+          "narration": "Jag gjorde allt jag kunde för att hålla modet uppe.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Gryning. Fienden anfaller med kraft.",
+          "narration": "På morgonen den nionde dagen anföll fienden med full styrka.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "pageType": "Quad",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Soldater ser kulor vina.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Rädsla sprider sig.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 3,
+          "description": "Soldater flyr bakåt.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 4,
+          "description": "Befälhavaren ensam vid kanonen.",
+          "narration": "Mina män var i strid för första gången.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Han laddar och avfyrar kanonen ensam.",
+          "narration": "Jag fick sköta kanonen ensam och arbeta som fem man.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "pageType": "VerticalDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Han tillrättavisar sina soldater.",
+          "narration": "",
+          "dialog": [
+            "Skäms! Ska det här vara svenskt mod?"
+          ]
+        },
+        {
+          "panel": 2,
+          "description": "Soldater rusar tillbaka till sina poster.",
+          "narration": "",
+          "dialog": [
+            "Framåt! Tillbaka till kanonerna!"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Kosacker stormar mot kanonerna. Druvhagel avfyras.",
+          "narration": "De anföll tre gånger. Varje gång slog vi tillbaka dem med druvhagel.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Drufva omfamnar befälhavaren efter striden.",
+          "narration": "",
+          "dialog": [
+            "Ni räddade oss.",
+            "Hurra!"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Slaget vid Oravais i full skala.",
+          "narration": "Detta blev den längsta och blodigaste striden i hela kriget.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "pageType": "VerticalDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Han såras under elden.",
+          "narration": "Jag blev sårad men vägrade lämna platsen.",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Han sätter sig på en kanonhäst och leder anfallet.",
+          "narration": "",
+          "dialog": [
+            "Kamrater! Följ mig!"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Genombrott genom fienden med fällda bajonetter.",
+          "narration": "Vi slog oss rakt igenom fiendens linjer.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "pageType": "Quad",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Kula slår genom mössan.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Han faller till marken.",
+          "narration": "",
+          "dialog": []
+        },
+        {
+          "panel": 3,
+          "description": "Han skjuter en fiende bakom en sten.",
+          "narration": "Trots allt fortsatte striden.",
+          "dialog": []
+        },
+        {
+          "panel": 4,
+          "description": "Sårad bärs han bort.",
+          "narration": "",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "General Aminoff tar emot den sårade befälhavaren.",
+          "narration": "Vi förlorade omkring två tusen man. Själv överlevde jag, svårt prövad men vid liv.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "pageType": "VerticalDiptych",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "En sårad officer transporteras på bår genom höstlandskap mot Kalajoki.",
+          "narration": "Efter striderna fördes jag till Kalajoki.",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "En enkel sjukstuga. Han ligger blek i sängen, omgiven av läkare och ordonnanser.",
+          "narration": "Där vårdades jag länge för mina skador.",
+          "dialog": [
+            "Hans feber går inte ner.",
+            "Skadorna har tagit hårt."
+          ]
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Stillbild i sjukrummet. Ett täcke över kroppen. Ett ljus brinner. I förgrunden ett brev.",
+          "narration": "Läkarna konstaterade rödsot och ett brustet blodkärl i näsan. Den 27 september 1808 avled jag. En tid senare fick mina föräldrar ett brev, skrivet den 17 september – tio dagar innan jag dog.",
+          "dialog": []
+        }
+      ]
+    }
+  ]
+}
