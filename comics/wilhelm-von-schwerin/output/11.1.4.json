@@ -1,7 +1,11 @@
 {
   "id": "11.1.4",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Wilhelm von Schwerin ensam vid kanonen.",
+    "en": "Wilhelm von Schwerin alone at the cannon."
+  },
+  "narration": {
+    "se": "Jag kunde inte springa efter...",
+    "en": "I could not run after them..."
   }
 }

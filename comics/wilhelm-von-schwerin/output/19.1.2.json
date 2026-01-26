@@ -1,7 +1,11 @@
 {
   "id": "19.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Wilhelm von Schwerin faller till marken.",
+    "en": "Wilhelm von Schwerin falls to the ground."
+  },
+  "narration": {
+    "se": "...varav jag föll omkull.",
+    "en": "...from which I fell to the ground."
   }
 }

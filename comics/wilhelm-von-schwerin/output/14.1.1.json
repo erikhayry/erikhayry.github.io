@@ -1,7 +1,11 @@
 {
   "id": "14.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Kosacker stormar mot kanonerna. Druvhagel avfyras.",
+    "en": "Cossacks charge the cannons. Grapeshot is fired."
+  },
+  "narration": {
+    "se": "Här stupade folk som gräs. Nu gällde det. Kosackerna gjorde 3 gånger chock på mina blottade kanoner, kastade sina pikar, men jag mötte dem med druvhagel, och de retirerade.",
+    "en": "TODO"
   }
 }

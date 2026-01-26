@@ -1,7 +1,11 @@
 {
   "id": "4.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Nattmarsch med trötta soldater.",
+    "en": "A night march with exhausted soldiers."
+  },
+  "narration": {
+    "se": "På natten marscherade vi en mil till Lappfjärd",
+    "en": "During the night we marched one Swedish mile to Lappfjärd."
   }
 }

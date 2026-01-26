@@ -1,7 +1,11 @@
 {
   "id": "3.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Landstigning i Kristinestad. Soldater och artilleri förs i land.",
+    "en": "Landing at Kristinestad. Soldiers and artillery are brought ashore."
+  },
+  "narration": {
+    "se": "...fingo vid äntligen debarkera i Kristinestad",
+    "en": "...we were finally allowed to disembark at Kristinestad"
   }
 }

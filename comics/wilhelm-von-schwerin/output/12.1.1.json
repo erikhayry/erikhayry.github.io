@@ -1,7 +1,11 @@
 {
   "id": "12.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Wilhelm von Schwerin laddar och avfyrar kanonen ensam.",
+    "en": "Wilhelm von Schwerin loads and fires the cannon alone."
+  },
+  "narration": {
+    "se": "...utan gjorde själv 5 mans tjänst vid kanonen.",
+    "en": "...but instead performed the work of five men at the cannon."
   }
 }

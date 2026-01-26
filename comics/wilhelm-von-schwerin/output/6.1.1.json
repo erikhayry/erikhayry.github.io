@@ -1,7 +1,11 @@
 {
   "id": "6.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Strid i gryning med rök och muskötsalvor.",
+    "en": "Battle at dawn with smoke and musket fire."
+  },
+  "narration": {
+    "se": "Affären påstod 5 a' 6 timmar",
+    "en": "The engagement lasted five to six hours."
   }
 }

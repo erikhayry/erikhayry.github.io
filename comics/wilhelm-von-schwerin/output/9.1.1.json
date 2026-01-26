@@ -1,7 +1,11 @@
 {
   "id": "9.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Hällregn över soldater i fält.",
+    "en": "Torrential rain over soldiers in the field."
+  },
+  "narration": {
+    "se": "Här var en jämmerlig belägenhet!",
+    "en": "This was a miserable situation!"
   }
 }

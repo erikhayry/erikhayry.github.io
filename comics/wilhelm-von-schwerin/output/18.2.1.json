@@ -1,7 +1,11 @@
 {
   "id": "18.2.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Wilhelm von Schwerin får kulor genom genom kappan",
+    "en": "Wilhelm von Schwerin has bullets pass through his coat."
+  },
+  "narration": {
+    "se": "Jag fick 3 kulor uti kappan...",
+    "en": "I received three bullets through my coat..."
   }
 }

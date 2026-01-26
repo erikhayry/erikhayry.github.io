@@ -1,7 +1,11 @@
 {
   "id": "10.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Gryning. Fienden anfaller med kraft.",
+    "en": "Dawn. The enemy attacks with force."
+  },
+  "narration": {
+    "se": "9:de dygnet om morgonen blevo vi häftigt attackerade.",
+    "en": "On the ninth day in the morning we were violently attacked."
   }
 }

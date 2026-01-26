@@ -1,7 +1,11 @@
 {
   "id": "18.2.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Svenska soldater blir skadade av bajonetter",
+    "en": "Swedish soldiers are wounded by bayonets."
+  },
+  "narration": {
+    "se": "...många av mitt folk blevo stuckna",
+    "en": "...many of my men were stabbed."
   }
 }

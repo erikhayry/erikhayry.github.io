@@ -1,7 +1,11 @@
 {
   "id": "15.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Drufva omfamnar Wilhelm von Schwerin efter striden.",
+    "en": "Drufva embraces Wilhelm von Schwerin after the battle."
+  },
+  "narration": {
+    "se": "Drufvan med hela officerskåren, omfamnade mig, tackade mig att jag frälst dem. Folket hurrade och önskade mig en beständig välfärd.",
+    "en": "TODO DrufvaN?"
   }
 }

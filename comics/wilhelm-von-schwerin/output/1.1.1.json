@@ -1,7 +1,11 @@
 {
   "id": "1.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Ett tomt rum med ett enkelt skrivbord. Ett ofullbordat brev ligger framme.",
+    "en": "An empty room with a simple desk. An unfinished letter lies open."
+  },
+  "narration": {
+    "se": "Mina älskade föräldrar!",
+    "en": "My beloved parents!"
   }
 }

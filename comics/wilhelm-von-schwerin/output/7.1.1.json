@@ -1,7 +1,11 @@
 {
   "id": "7.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Ryska trupper i reträtt.",
+    "en": "Russian troops in retreat."
+  },
+  "narration": {
+    "se": "Ryssarna blevo slagna...",
+    "en": "The Russians were defeated..."
   }
 }

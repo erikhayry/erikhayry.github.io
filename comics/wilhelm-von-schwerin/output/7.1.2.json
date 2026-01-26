@@ -1,7 +1,11 @@
 {
   "id": "7.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Svenska trupper förföljer fienden.",
+    "en": "Swedish troops pursue the enemy."
+  },
+  "narration": {
+    "se": "...och vi förföljde dem ända till Ömossa, två mil från Lappfjärd.",
+    "en": "...and we pursued them all the way to Ömossa, two miles from Lappfjärd."
   }
 }

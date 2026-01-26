@@ -1,7 +1,11 @@
 {
   "id": "18.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Genombrott genom fienden med fällda bajonetter.",
+    "en": "Breakthrough through the enemy with lowered bayonets."
+  },
+  "narration": {
+    "se": "Jag kommenderade marsch, marsch och slog mig igenom fienden, som tog emot mig med fälld bajonett.",
+    "en": "TODO"
   }
 }

@@ -1,7 +1,11 @@
 {
   "id": "5.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Trummor slås, soldater väcks i panik.",
+    "en": "Drums beat, soldiers are awakened in panic."
+  },
+  "narration": {
+    "se": "...då larm slogs och jag fick lämna min sköna bädd",
+    "en": "...when the alarm was sounded and I had to leave my pleasant bed"
   }
 }

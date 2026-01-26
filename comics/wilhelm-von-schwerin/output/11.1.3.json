@@ -1,7 +1,11 @@
 {
   "id": "11.1.3",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Soldater flyr bakåt.",
+    "en": "Soldiers flee backward."
+  },
+  "narration": {
+    "se": "...de sågo efter kulorna och sprungo bakom just i den mest avgörande stunden.",
+    "en": "...they watched the bullets and ran back at the most decisive moment."
   }
 }

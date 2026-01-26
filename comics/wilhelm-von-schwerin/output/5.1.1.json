@@ -1,7 +1,11 @@
 {
   "id": "5.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Sovande soldater på golv och halm.",
+    "en": "Sleeping soldiers on floors and straw."
+  },
+  "narration": {
+    "se": "Vi lågo och sovo som bäst...",
+    "en": "We were sleeping as soundly as could be..."
   }
 }

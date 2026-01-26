@@ -1,0 +1,19 @@
+{
+  "id": "21.2.1",
+  "description": {
+    "se": "En enkel sjukstuga. Han ligger blek i sängen, omgiven av läkare och ordonnanser.",
+    "en": "A simple infirmary. He lies pale in bed, surrounded by doctors and orderlies."
+  },
+  "dialogs": [
+    {
+      "se": {
+        "text": "Hans feber går inte ner.",
+        "person": "Läkare"
+      },
+      "en": {
+        "text": "His fever is not subsiding.",
+        "person": "Doctor"
+      }
+    }
+  ]
+}

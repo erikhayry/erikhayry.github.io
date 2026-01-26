@@ -1,7 +1,11 @@
 {
   "id": "11.1.1",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Soldater ser kulor vina.",
+    "en": "Soldiers watch bullets whiz past."
+  },
+  "narration": {
+    "se": "Jag skulle nu själv för första gången gå i elden, jag skulle föra mitt folk för första gången dit, och jag skulle med 2 kanoner försvara platsen mot fiendens oändligt många både haubitsar och kanoner.",
+    "en": "TODO"
   }
 }

@@ -1,7 +1,11 @@
 {
   "id": "2.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Soldater ombord på fartyg i hårt väder.",
+    "en": "Soldiers aboard a ship in rough weather."
+  },
+  "narration": {
+    "se": "Sedan vi ända till augusti månads slut gått och drivit på sjön...",
+    "en": "After we had sailed and drifted at sea until the end of August..."
   }
 }

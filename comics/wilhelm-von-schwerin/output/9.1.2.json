@@ -1,7 +1,11 @@
 {
   "id": "9.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Nattlig fältvakt.",
+    "en": "Night field watch."
+  },
+  "narration": {
+    "se": "Mitt folk ledsnade, de sågo upplänningarna lösas av var afton, men fingo själva i nio dygn oupphörligt ligga på fältvakt...",
+    "en": "My men grew weary; they saw the Uppland troops relieved every evening, but themselves had to remain on field watch for nine days without interruption..."
   }
 }

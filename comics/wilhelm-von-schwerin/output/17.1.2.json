@@ -1,7 +1,11 @@
 {
   "id": "17.1.2",
   "description": {
-    "en": "TODO",
-    "se": "TODO"
+    "se": "Wilhelm von Schwerin sätter sig på en kanonhäst och leder anfallet.",
+    "en": "Wilhelm von Schwerin mounts a cannon horse and leads the attack."
+  },
+  "narration": {
+    "se": "Jag repade mig, satte mig på en kanonhäst, ty min egen var skjuten, lät folket hurra, satte mig främst i spetsen, ropade kamrater, följ mig",
+    "en": "TODO"
   }
 }
