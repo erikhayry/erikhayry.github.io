@@ -23,7 +23,7 @@
         },
         {
           "panel": 2,
-          "description": "Soldater ombord på fartyg i hårt väder.",
+          "description": "Wilhelm von Schwerin ombord på fartyg i hårt väder.",
           "narration": "Sedan vi ända till augusti månads slut gått och drivit på sjön...",
           "dialog": []
         }
@@ -35,7 +35,7 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Landstigning i Kristinestad. Soldater och artilleri förs i land.",
+          "description": "Wilhelm von Schwerin går av ett fartyg",
           "narration": "...fingo vid äntligen debarkera i Kristinestad",
           "dialog": []
         }
@@ -47,7 +47,7 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Kanoner och utrustning lossas från fartygen.",
+          "description": "Wilhelm von Schwerin står brevid kanoner och utrustning",
           "narration": "Debarkeringen gick på en dag.",
           "dialog": []
         },
@@ -77,13 +77,13 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Sovande soldater på golv och halm.",
+          "description": "Wilhelm von Schwerin och sovande soldater på golv och halm.",
           "narration": "Vi lågo och sovo som bäst...",
           "dialog": []
         },
         {
           "panel": 2,
-          "description": "Trummor slås, soldater väcks i panik.",
+          "description": "Wilhelm von Schwerin och soldater väcks i panik.",
           "narration": "...då larm slogs och jag fick lämna min sköna bädd",
           "dialog": []
         }
@@ -125,7 +125,7 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Överstelöjtnant Drufva ger order.",
+          "description": "Överstelöjtnant Dufva ger order.",
           "narration": "",
           "dialog": [
             "Där gjordes halt, och överstelöjtnant Drufva detacherades med 500 man samt 2 kanoner under mitt befäl..."
@@ -133,7 +133,7 @@
         },
         {
           "panel": 2,
-          "description": "Liten isolerad styrka med två kanoner i öppet landskap.",
+          "description": "Wilhelm von Schwerin står med sina soldater vid en kanon placerad på en stenbro vid en skogsväg.",
           "narration": "...för att här kvarblifva med order att slåss till sista man.",
           "dialog": []
         }
@@ -175,7 +175,7 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Gryning. Fienden anfaller med kraft.",
+          "description": "Gryning. Fienden kommer stromande fram på skogsvägen.",
           "narration": "9:de dygnet om morgonen blevo vi häftigt attackerade.",
           "dialog": []
         }
@@ -443,12 +443,50 @@
     },
     {
       "page": 26,
+      "id": "22.1",
       "pageType": "Hero",
       "panels": [
         {
           "panel": 1,
           "description": "Stillbild i sjukrummet. Ett täcke över kroppen. Ett ljus brinner. I förgrunden ett brev.",
           "narration": "Farväl, älskade och dyrkade föräldrar och syskon! Leven alltid väl, önskar eder beständigt tillgivne son, bror och vän.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "id": "22.1",
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Stillbild på stugan utifrån."
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "id": "22.1",
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Stillbild i sjukrummet. Ett täcke över kroppen. Ett ljus brinner. I förgrunden ett brev.",
+          "narration": "Farväl, älskade och dyrkade föräldrar och syskon! Leven alltid väl, önskar eder beständigt tillgivne son, bror och vän.",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "id": "23.1",
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Bild på Wilhelm von Schwerins gravsten. ",
+          "narration": "Det var, när Oravais' blodiga dag Till sorg gick opp, När segern själv blev ett nederlag, Som bröt vårt hopp. Då, säger man, strålade klarast hans mod, Då träffade säkrast hans vingade lod, Då eldades varmast kanonen, När han stänkte den röd med sitt blod. Johan Ludvig Runeberg - Fänrik Ståls sägner",
           "dialog": []
         }
       ]

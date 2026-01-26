@@ -929,8 +929,8 @@
           {
             "id": "2.1.2",
             "description": {
-              "se": "Soldater ombord på fartyg i hårt väder.",
-              "en": "Soldiers aboard a ship in rough weather."
+              "se": "Wilhelm von Schwerin ombord på ett fartyg i hårt väder. Han står på däck och håller sig fast vid riggen medan höga vågor slår mot skeppet och vinden piskar regn över honom.",
+              "en": "Wilhelm von Schwerin stands on the deck of a ship in heavy weather, gripping the rigging as high waves crash against the vessel and wind-driven rain lashes across the deck."
             },
             "narration": {
               "se": "Sedan vi ända till augusti månads slut gått och drivit på sjön...",
@@ -945,8 +945,8 @@
           {
             "id": "3.1.1",
             "description": {
-              "se": "Landstigning i Kristinestad. Soldater och artilleri förs i land.",
-              "en": "Landing at Kristinestad. Soldiers and artillery are brought ashore."
+              "en": "The adolescent Swedish cadet Wilhelm von Schwerin steps ashore at Kristinestad, wearing a slightly oversized dark blue uniform and a tall, straight-sided cylindrical black shako.",
+              "se": "Den unge svenske kadetten Wilhelm von Schwerin stiger i land i Kristinestad, iklädd en något för stor mörkblå uniform och en hög, rak, cylindrisk svart schako."
             },
             "narration": {
               "se": "...fingo vid äntligen debarkera i Kristinestad",
@@ -961,8 +961,8 @@
           {
             "id": "4.1.1",
             "description": {
-              "se": "Kanoner och utrustning lossas från fartygen.",
-              "en": "Cannons and equipment are unloaded from the ships."
+              "en": "Wilhelm von Schwerin stands beside field cannons and stacked military equipment at the debarkation site.",
+              "se": "Wilhelm von Schwerin står bredvid fältkanoner och staplad militär utrustning vid debarkeringen."
             },
             "narration": {
               "se": "Debarkeringen gick på en dag.",
@@ -1002,8 +1002,8 @@
           {
             "id": "5.1.1",
             "description": {
-              "se": "Sovande soldater på golv och halm.",
-              "en": "Sleeping soldiers on floors and straw."
+              "en": "Wilhelm von Schwerin lies asleep on straw together with other Swedish soldiers inside a dim barn. Weapons and packs rest beside them. All soldiers are clean-shaven. The atmosphere is quiet and exhausted.",
+              "se": "Wilhelm von Schwerin ligger och sover på halm tillsammans med andra svenska soldater inne i en dunkelt upplyst lada. Vapen och packning ligger bredvid dem. Alla soldater är renrakade. Stämningen är stilla och utmattad."
             },
             "narration": {
               "se": "Vi lågo och sovo som bäst...",
@@ -1013,8 +1013,8 @@
           {
             "id": "5.1.2",
             "description": {
-              "se": "Trummor slås, soldater väcks i panik.",
-              "en": "Drums beat, soldiers are awakened in panic."
+              "en": "Wilhelm von Schwerin and Swedish soldiers are jolted awake in panic inside a dim barn, scrambling from straw bedding as the alarm is raised.",
+              "se": "Wilhelm von Schwerin och svenska soldater väcks i panik i en mörk lada och kastar sig upp från halmbäddarna när larmet slås."
             },
             "narration": {
               "se": "...då larm slogs och jag fick lämna min sköna bädd",
@@ -1083,7 +1083,7 @@
           {
             "id": "8.1.2",
             "description": {
-              "se": "Liten isolerad styrka med två kanoner i öppet landskap.",
+              "se": "Liten isolerad styrka med en kanon i öppet landskap.",
               "en": "A small isolated force with two cannons in open terrain."
             },
             "narration": {
@@ -1550,6 +1550,22 @@
             "narration": {
               "se": "Farväl, älskade och dyrkade föräldrar och syskon! Leven alltid väl, önskar eder beständigt tillgivne son, bror och vän.",
               "en": "Farewell, beloved and cherished parents and siblings! Live always well, wishes you your ever devoted son, brother, and friend."
+            }
+          }
+        ]
+      },
+      {
+        "layout": "1",
+        "panels": [
+          {
+            "id": "23.1.1",
+            "description": {
+              "en": "A wide, tranquil view of Wilhelm von Schwerin’s gravestone in a quiet Nordic cemetery. The dark, rough-hewn stone stands centered in a calm landscape of grass and trees, rendered in a soft, Studio-Ghibli–inspired anime style. The gravestone bears a simple carved inscription and is surrounded by stillness and natural light, conveying finality and remembrance.",
+              "se": "En vid och stillsam vy av Wilhelm von Schwerins gravsten på en lugn nordisk kyrkogård. Den mörka, råhuggna stenen står centralt i ett fridfullt landskap av gräs och träd, återgiven i en mjuk, Studio-Ghibli-inspirerad animestil. Gravstenen har en enkel inhuggen inskription och omges av tystnad och naturligt ljus, vilket förmedlar avslut och hågkomst."
+            },
+            "narration": {
+              "se": "Det var, när Oravais' blodiga dag\nTill sorg gick opp,\nNär segern själv blev ett nederlag,\nSom bröt vårt hopp.\nDå, säger man, strålade klarast hans mod,\nDå träffade säkrast hans vingade lod,\nDå eldades varmast kanonen,\nNär han stänkte den röd med sitt blod.\n\nJohan Ludvig Runeberg – Fänrik Ståls sägner",
+              "en": "Det var, när Oravais' blodiga dag\nTill sorg gick opp,\nNär segern själv blev ett nederlag,\nSom bröt vårt hopp.\nDå, säger man, strålade klarast hans mod,\nDå träffade säkrast hans vingade lod,\nDå eldades varmast kanonen,\nNär han stänkte den röd med sitt blod.\n\nJohan Ludvig Runeberg – Fänrik Ståls sägner"
             }
           }
         ]
