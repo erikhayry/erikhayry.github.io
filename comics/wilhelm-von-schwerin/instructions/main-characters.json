@@ -15,7 +15,7 @@
     "Wilhelm von Schwerin": {
       "role": "Young soldier / cadet",
       "alignment": "Sweden",
-      "age": 15,
+      "age": 16,
       "rank": "Volunteer / youth attendant",
       "appearance": {
         "ageRead": "Clearly adolescent; must never appear adult",
@@ -28,7 +28,7 @@
           "expressionBaseline": "Alert, earnest, slightly tense, with a hint of youthful vulnerability"
         },
         "hair": {
-          "color": "Light to medium brown",
+          "color": "Black",
           "style": "Naturally worn and slightly tousled, with soft strands framing the forehead",
           "length": "Medium length, reaching just to the ears and forehead, not cropped short like a seasoned soldier",
           "notes": "Hair must always read as youthful and unstyled; never slicked back, severe, or groomed in an adult military fashion"

@@ -7,8 +7,10 @@
         {
           "panel": 1,
           "description": "Ett tomt rum med ett enkelt skrivbord. Ett ofullbordat brev ligger framme.",
-          "narration": "Sedan Grisslehamn har jag inte haft någon möjlighet att skriva.",
-          "dialog": []
+          "narration": "Högkvarteret Kronoby 17 september 1808",
+          "dialog": [
+            "Mina älskade föräldrar!"
+          ]
         }
       ]
     },
@@ -19,13 +21,13 @@
         {
           "panel": 1,
           "description": "Havet med ett fartyg i fjärran.",
-          "narration": "Vi lämnade Grisslehamn den 16 juli och satte kurs norrut.",
+          "narration": "Jag har ej allt sedan Grisslehamn funnit något ställe, som jag kunnat skriva från, ty postkontoret följer alltid högkvarteret, som är vida skilt ifrån armén.",
           "dialog": []
         },
         {
           "panel": 2,
           "description": "Soldater ombord på fartyg i hårt väder.",
-          "narration": "Ända fram till slutet av augusti drev vi omkring till sjöss.",
+          "narration": "Sedan vi ända till augusti månads slut gått och drivit på sjön...",
           "dialog": []
         }
       ]
@@ -37,7 +39,7 @@
         {
           "panel": 1,
           "description": "Landstigning i Kristinestad. Soldater och artilleri förs i land.",
-          "narration": "Till slut fick vi gå i land i Kristinestad.",
+          "narration": "...fingo vid äntligen debarkera i Kristinestad",
           "dialog": []
         }
       ]
@@ -49,13 +51,13 @@
         {
           "panel": 1,
           "description": "Kanoner och utrustning lossas från fartygen.",
-          "narration": "Hela landstigningen genomfördes på en enda dag.",
+          "narration": "Debarkeringen gick på en dag.",
           "dialog": []
         },
         {
           "panel": 2,
           "description": "Nattmarsch med trötta soldater.",
-          "narration": "Redan samma natt marscherade vi en mil mot Lappfjärd.",
+          "narration": "På natten marscherade vi en mil till Lappfjärd",
           "dialog": []
         },
         {
@@ -79,16 +81,14 @@
         {
           "panel": 1,
           "description": "Sovande soldater på golv och halm.",
-          "narration": "",
+          "narration": "Vi lågo och sovo som bäst...",
           "dialog": []
         },
         {
           "panel": 2,
           "description": "Trummor slås, soldater väcks i panik.",
-          "narration": "Vi sov som bäst när larmet plötsligt gick.",
-          "dialog": [
-            "Till vapen!"
-          ]
+          "narration": "...då larm slogs och jag fick lämna min sköna bädd",
+          "dialog": []
         }
       ]
     },
@@ -99,7 +99,7 @@
         {
           "panel": 1,
           "description": "Strid i gryning med rök och muskötsalvor.",
-          "narration": "Striden varade i fem till sex timmar.",
+          "narration": "Affären påstod 5 a' 6 timmar",
           "dialog": []
         }
       ]
@@ -111,13 +111,13 @@
         {
           "panel": 1,
           "description": "Ryska trupper i reträtt.",
-          "narration": "",
+          "narration": "Ryssarna blevo slagna...",
           "dialog": []
         },
         {
           "panel": 2,
           "description": "Svenska trupper förföljer fienden.",
-          "narration": "Ryssarna slogs tillbaka och förföljdes ända till Ömossa.",
+          "narration": "...och vi förföljde dem ända till Ömossa, två mil från Lappfjärd.",
           "dialog": []
         }
       ]
@@ -131,13 +131,13 @@
           "description": "Överstelöjtnant Drufva ger order.",
           "narration": "",
           "dialog": [
-            "Ni stannar här. Ni håller ställningarna till sista man."
+            "Där gjordes halt, och överstelöjtnant Drufva detacherades med 500 man samt 2 kanoner under mitt befäl..."
           ]
         },
         {
           "panel": 2,
           "description": "Liten isolerad styrka med två kanoner i öppet landskap.",
-          "narration": "Situationen var dyster.",
+          "narration": "...för att här kvarblifva med order att slåss till sista man.",
           "dialog": []
         }
       ]
@@ -149,25 +149,25 @@
         {
           "panel": 1,
           "description": "Hällregn över soldater i fält.",
-          "narration": "",
+          "narration": "Här var en jämmerlig belägenhet!",
           "dialog": []
         },
         {
           "panel": 2,
           "description": "Nattlig fältvakt.",
-          "narration": "",
+          "narration": "Mitt folk ledsnade, de sågo upplänningarna lösas av var afton, men fingo själva i nio dygn oupphörligt ligga på fältvakt...",
           "dialog": []
         },
         {
           "panel": 3,
           "description": "Utmattade soldaters ansikten.",
-          "narration": "I nio dygn låg vi utan avlösning på fältvakt.",
+          "narration": "...och blevo tillika med mig många nätter och dagar genomblöta av hällregn.",
           "dialog": []
         },
         {
           "panel": 4,
-          "description": "Befälhavaren delar mat och mynt.",
-          "narration": "Jag gjorde allt jag kunde för att hålla modet uppe.",
+          "description": "Wilhelm von Schwerin delar mat och mynt.",
+          "narration": "Intet annat än min ömma vård över dem kunde avhålla dem från att klaga, jag använder alltid och gärna mina överflödiga pengar av mitt traktamente till deras bästa.",
           "dialog": []
         }
       ]
@@ -179,7 +179,7 @@
         {
           "panel": 1,
           "description": "Gryning. Fienden anfaller med kraft.",
-          "narration": "På morgonen den nionde dagen anföll fienden med full styrka.",
+          "narration": "9:de dygnet om morgonen blevo vi häftigt attackerade.",
           "dialog": []
         }
       ]
@@ -191,25 +191,25 @@
         {
           "panel": 1,
           "description": "Soldater ser kulor vina.",
-          "narration": "",
+          "narration": "Jag skulle nu själv för första gången gå i elden, jag skulle föra mitt folk för första gången dit, och jag skulle med 2 kanoner försvara platsen mot fiendens oändligt många både haubitsar och kanoner.",
           "dialog": []
         },
         {
           "panel": 2,
           "description": "Rädsla sprider sig.",
-          "narration": "",
+          "narration": "Mitt folk var första gången i elden...",
           "dialog": []
         },
         {
           "panel": 3,
           "description": "Soldater flyr bakåt.",
-          "narration": "",
+          "narration": "...de sågo efter kulorna och sprungo bakom just i den mest avgörande stunden.",
           "dialog": []
         },
         {
           "panel": 4,
-          "description": "Befälhavaren ensam vid kanonen.",
-          "narration": "Mina män var i strid för första gången.",
+          "description": "Wilhelm von Schwerin ensam vid kanonen.",
+          "narration": "Jag kunde inte springa efter...",
           "dialog": []
         }
       ]
@@ -220,8 +220,8 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Han laddar och avfyrar kanonen ensam.",
-          "narration": "Jag fick sköta kanonen ensam och arbeta som fem man.",
+          "description": "Wilhelm von Schwerin laddar och avfyrar kanonen ensam.",
+          "narration": "...utan gjorde själv 5 mans tjänst vid kanonen.",
           "dialog": []
         }
       ]
@@ -232,19 +232,15 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Han tillrättavisar sina soldater.",
-          "narration": "",
-          "dialog": [
-            "Skäms! Ska det här vara svenskt mod?"
-          ]
+          "description": "Wilhelm von Schwerin tillrättavisar sina soldater.",
+          "narration": "Då affären hade saktat sig något, gick jag fastän nästan avdånad av trötthet efter dem, föreställde dem deras feghet...",
+          "dialog": []
         },
         {
           "panel": 2,
           "description": "Soldater rusar tillbaka till sina poster.",
-          "narration": "",
-          "dialog": [
-            "Framåt! Tillbaka till kanonerna!"
-          ]
+          "narration": "... då sprungo de alla fram som tända ljus var och en på sina ställen.",
+          "dialog": []
         }
       ]
     },
@@ -255,7 +251,7 @@
         {
           "panel": 1,
           "description": "Kosacker stormar mot kanonerna. Druvhagel avfyras.",
-          "narration": "De anföll tre gånger. Varje gång slog vi tillbaka dem med druvhagel.",
+          "narration": "Här stupade folk som gräs. Nu gällde det. Kosackerna gjorde 3 gånger chock på mina blottade kanoner, kastade sina pikar, men jag mötte dem med druvhagel, och de retirerade.",
           "dialog": []
         }
       ]
@@ -266,12 +262,9 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Drufva omfamnar befälhavaren efter striden.",
-          "narration": "",
-          "dialog": [
-            "Ni räddade oss.",
-            "Hurra!"
-          ]
+          "description": "Drufva omfamnar Wilhelm von Schwerin efter striden.",
+          "narration": "Drufvan med hela officerskåren, omfamnade mig, tackade mig att jag frälst dem. Folket hurrade och önskade mig en beständig välfärd.",
+          "dialog": []
         }
       ]
     },
@@ -282,7 +275,7 @@
         {
           "panel": 1,
           "description": "Slaget vid Oravais i full skala.",
-          "narration": "Detta blev den längsta och blodigaste striden i hela kriget.",
+          "narration": "Snart fingo vi en batalj, den långvarigaste och blodigaste här varit i detta krig. Denna stod vid Oravais och varade från kl. 6 på morgonen till kl. 11 på aftonen.",
           "dialog": []
         }
       ]
@@ -293,17 +286,15 @@
       "panels": [
         {
           "panel": 1,
-          "description": "Han såras under elden.",
-          "narration": "Jag blev sårad men vägrade lämna platsen.",
+          "description": "Wilhelm von Schwerin såras.",
+          "narration": "Jag underhöll ensammen ända till middagen elden med mina kanoner, då jag vid denna tid blev blesserad.",
           "dialog": []
         },
         {
           "panel": 2,
-          "description": "Han sätter sig på en kanonhäst och leder anfallet.",
-          "narration": "",
-          "dialog": [
-            "Kamrater! Följ mig!"
-          ]
+          "description": "Wilhelm von Schwerin sätter sig på en kanonhäst och leder anfallet.",
+          "narration": "Jag repade mig, satte mig på en kanonhäst, ty min egen var skjuten, lät folket hurra, satte mig främst i spetsen, ropade kamrater, följ mig",
+          "dialog": []
         }
       ]
     },
@@ -314,37 +305,25 @@
         {
           "panel": 1,
           "description": "Genombrott genom fienden med fällda bajonetter.",
-          "narration": "Vi slog oss rakt igenom fiendens linjer.",
+          "narration": "Jag kommenderade marsch, marsch och slog mig igenom fienden, som tog emot mig med fälld bajonett.",
           "dialog": []
         }
       ]
     },
     {
       "page": 19,
-      "pageType": "Quad",
+      "pageType": "VerticalDiptych",
       "panels": [
         {
           "panel": 1,
-          "description": "Kula slår genom mössan.",
-          "narration": "",
+          "description": "Wilhelm von Schwerin får kulor genom genom kappan",
+          "narration": "Jag fick 3 kulor uti kappan...",
           "dialog": []
         },
         {
           "panel": 2,
-          "description": "Han faller till marken.",
-          "narration": "",
-          "dialog": []
-        },
-        {
-          "panel": 3,
-          "description": "Han skjuter en fiende bakom en sten.",
-          "narration": "Trots allt fortsatte striden.",
-          "dialog": []
-        },
-        {
-          "panel": 4,
-          "description": "Sårad bärs han bort.",
-          "narration": "",
+          "description": "Svenska soldater blir skadade av bajonetter",
+          "narration": "...många av mitt folk blevo stuckna",
           "dialog": []
         }
       ]
@@ -355,20 +334,92 @@
       "panels": [
         {
           "panel": 1,
-          "description": "General Aminoff tar emot den sårade befälhavaren.",
-          "narration": "Vi förlorade omkring två tusen man. Själv överlevde jag, svårt prövad men vid liv.",
+          "description": "Generalerna Adlercreutz och Vegesack tackar Wilhelm von Schwerin",
+          "narration": "Generalerna Adlercreutz och Vegesack tackade mig på det högsta.",
           "dialog": []
         }
       ]
     },
     {
       "page": 21,
-      "pageType": "VerticalDiptych",
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Wilhelm von Schwerin går försiktigt fram i gryningen.",
+          "narration": "Om morgonen skulle jag gå ut och rekognocera...",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "pageType": "Quad",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "En kula går genom Wilhelm von Schwerins mössa.",
+          "narration": "då jag fick en kula genom mössan",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Wilhelm von Schwerin faller till marken.",
+          "narration": "...varav jag föll omkull.",
+          "dialog": []
+        },
+        {
+          "panel": 3,
+          "description": "En rysk soldat bakom en sten siktar mot Wilhelm von Schwerin.",
+          "narration": "Jag upptäckte fan bakom en sten...",
+          "dialog": []
+        },
+        {
+          "panel": 4,
+          "description": "Wilhelm von Schwerin tar geväret av en soldat och sköt honom",
+          "narration": "...tog geväret av en soldat och sköt honom",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "pageType": "Quad",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "Wilhelm von Schwerin såras igen under striden.",
+          "narration": "Om aftonen mot skymningen fick jag en ny blessyr...",
+          "dialog": []
+        },
+        {
+          "panel": 2,
+          "description": "Soldater släpar den sårade Wilhelm von Schwerin bort från stridsfältet.",
+          "narration": "...de släpade mig till närmaste by...",
+          "dialog": []
+        },
+        {
+          "panel": 3,
+          "description": "Wilhelm von Schwerin ligger gömd i en stuga.",
+          "narration": "...där jag låg till dess fiendens kulor kommo in genom fönstren",
+          "dialog": []
+        },
+        {
+          "panel": 4,
+          "description": "Wilhelm von Schwerin flyr på en officers rygg.",
+          "narration": "Jag hade blivit kvar, om inte en ädel officer som jag ännu ej lärt känna kastade mig på sin rygg och vi kommo lyckligen undan. ",
+          "dialog": []
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "pageType": "Hero",
       "panels": [
         {
           "panel": 1,
           "description": "En sårad officer transporteras på bår genom höstlandskap mot Kalajoki.",
-          "narration": "Efter striderna fördes jag till Kalajoki.",
+          "narration": "Generalen Aminoff, den ädelmodige mannen, tog upp mig, och nu mår jag tämligen väl",
           "dialog": []
         },
         {
@@ -383,13 +434,26 @@
       ]
     },
     {
-      "page": 22,
+      "page": 25,
+      "pageType": "Hero",
+      "panels": [
+        {
+          "panel": 1,
+          "description": "En enkel sjukstuga. Han ligger blek i sängen, omgiven av läkare och ordonnanser.",
+          "dialog": [
+            "Hans feber går inte ner."
+          ]
+        }
+      ]
+    },
+    {
+      "page": 26,
       "pageType": "Hero",
       "panels": [
         {
           "panel": 1,
           "description": "Stillbild i sjukrummet. Ett täcke över kroppen. Ett ljus brinner. I förgrunden ett brev.",
-          "narration": "Läkarna konstaterade rödsot och ett brustet blodkärl i näsan. Den 27 september 1808 avled jag. En tid senare fick mina föräldrar ett brev, skrivet den 17 september – tio dagar innan jag dog.",
+          "narration": "Farväl, älskade och dyrkade föräldrar och syskon! Leven alltid väl, önskar eder beständigt tillgivne son, bror och vän.",
           "dialog": []
         }
       ]
