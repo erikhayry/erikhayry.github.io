@@ -3,7 +3,6 @@ import {FileVariant, getSupportedFolderContentIndex} from "../getSupportedFolder
 import {getJSON} from "../../files/getJSON.ts";
 import {ImageVariant} from "../../files/getImage.ts";
 import {ComicStyle} from "@library/types";
-import {DATA_EXTENSION} from "../../constants.ts";
 
 
 const comicFolder = 'src/bundler/tests/mocks/comics/comic-1';
@@ -27,12 +26,6 @@ test('should return index', () => {
             type: FileVariant.DATA,
             id: 'comic',
             data: getJSON(`${comicFolder}/output/comic.json`)
-        },
-        {
-            path: `${comicFolder}/output/references/1.1.1.json`,
-            data: getJSON(`${comicFolder}/output/references/1.1.1.json`),
-            id: "1.1.1",
-            type: DATA_EXTENSION,
         },
         {
             path: `${comicFolder}/output/panels/AN/1.1.1.l.png`,
