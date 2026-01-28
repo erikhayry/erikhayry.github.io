@@ -13,10 +13,14 @@ describe("comics page", () => {
         const coverImage = page.getByRole("presentation");
 
         expect(coverImage.elements()).toHaveLength(1);
-        expect(link.elements()).toHaveLength(1);
+        expect(link.elements()).toHaveLength(2);
 
         await expect
-            .element(link)
-            .toHaveAttribute("href", `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}/0`)
+            .element(link.nth(0))
+            .toHaveAttribute("href", `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}`)
+
+        await expect
+            .element(link.nth(1))
+            .toHaveAttribute("href", `/`);
     });
 });
