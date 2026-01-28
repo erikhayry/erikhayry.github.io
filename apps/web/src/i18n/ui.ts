@@ -7,8 +7,20 @@ export const TEXT: Texts = {
         en: 'The Jutas Project',
         se: 'Projektet Jutas'
     },
+    changeLanguageLabel: {
+        en: 'Change Language',
+        se: 'Byt språk'
+    },
     paginationLabel: {
         en: 'Pagination',
         se: 'Paginering'
+    },
+    changeLanguageTitle: {
+        en: 'Change the language of the website',
+        se: 'Byt språk på webbplatsen'
+    },
+    language: {
+        en: 'English',
+        se: 'Svenska'
     }
 }

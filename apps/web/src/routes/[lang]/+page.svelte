@@ -3,7 +3,7 @@
     import {getComics} from "$core/getComics";
     import {i18n} from "../../i18n/i18n";
     import {TEXT} from "../../i18n/ui";
-    import {ComicStyle} from "@library/types";
+    import {ComicStyle, Language} from "@library/types";
     import ResponsiveImage from "../../components/Page/components/ResponsiveImage.svelte";
     import {DEFAULT_LANGUAGE} from "$lib/stores/lang.store";
 </script>
@@ -16,16 +16,23 @@
         background-color: var(--black);
     }
 
-    .title {
+    .sticky-text {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: var(--font-size-s);
         position: fixed;
         padding: var(--spacing);
         z-index: 1;
-        left: calc(var(--safe-left-unit));
         top: var(--safe-top-unit);
         background-color: var(--black)
+    }
+
+    .title {
+        left: calc(var(--safe-left-unit));
+    }
+
+    .language-link {
+        right: calc(var(--safe-right-unit));
     }
 
     .comic-items {
@@ -61,7 +68,7 @@
 </style>
 
 <div class="root">
-    <h1 class="title">{i18n(TEXT.comicsHeading)}</h1>
+    <h1 class="sticky-text title">{i18n(TEXT.comicsHeading)}</h1>
     <ul class="comic-items">
         {#each getComics() as comic (comic)}
             <li class="comic-item">
@@ -71,4 +78,5 @@
             </li>
         {/each}
     </ul>
+    <a class="sticky-text language-link" href={resolve("/")}>{i18n(TEXT.changeLanguageLabel, Language.EN)}</a>
 </div>
