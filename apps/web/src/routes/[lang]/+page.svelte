@@ -72,7 +72,7 @@
     <ul class="comic-items">
         {#each getComics() as comic (comic)}
             <li class="comic-item">
-                <a href={resolve(`/${DEFAULT_LANGUAGE}/${comic.slug}/0`)} aria-label={i18n(comic.title)} class="comic">
+                <a href={resolve(`/${DEFAULT_LANGUAGE}/${comic.slug}`)} aria-label={i18n(comic.title)} class="comic">
                     <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
                 </a>
             </li>

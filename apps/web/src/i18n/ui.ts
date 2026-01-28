@@ -22,5 +22,13 @@ export const TEXT: Texts = {
     language: {
         en: 'English',
         se: 'Svenska'
+    },
+    backToComics: {
+        en: 'Back to Comics',
+        se: 'Tillbaka till serier'
+    },
+    startReading: {
+        en: 'Start Reading',
+        se: 'Börja läsa'
     }
 }
