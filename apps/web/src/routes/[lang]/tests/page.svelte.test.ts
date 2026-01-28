@@ -3,6 +3,7 @@ import {describe, expect, it} from "vitest";
 import {render} from "vitest-browser-svelte";
 import Page from "../+page.svelte";
 import {COMIC_MOCK_1} from "$mock/data/comicMock";
+import {DEFAULT_LANGUAGE} from "$lib/stores/lang.store";
 
 describe("comics page", () => {
     it("should render list of comics links", async () => {
@@ -16,7 +17,6 @@ describe("comics page", () => {
 
         await expect
             .element(link)
-            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/se/0`)
-
+            .toHaveAttribute("href", `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}/0`)
     });
 });

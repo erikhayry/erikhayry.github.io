@@ -35,6 +35,7 @@ export const LanguageType = z.enum([
     Language.EN,
     Language.SE,
 ]);
+export type LanguageType = z.infer<typeof LanguageType>;
 export const Text = z.record(LanguageType, z.string())
 export type Text = z.infer<typeof Text>;
 

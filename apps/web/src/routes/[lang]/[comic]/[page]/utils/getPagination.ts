@@ -1,4 +1,3 @@
-import {resolve} from "$app/paths";
 import {getPagesLength} from "./getPagesLength";
 
 interface PaginationLink {
@@ -12,11 +11,7 @@ export interface Pagination {
 }
 
 function getResolvedHref(comic: string, language: string, page: string) {
-    return resolve("/[comic]/[language]/[page]", {
-        comic,
-        language,
-        page,
-    });
+    return `/` + [language, comic, page].map(encodeURIComponent).join(`/`);
 }
 
 const BACK_TO_ROOT_LINK = {
