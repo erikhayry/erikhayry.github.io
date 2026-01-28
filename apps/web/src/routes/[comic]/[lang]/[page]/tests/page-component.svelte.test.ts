@@ -7,19 +7,19 @@ import {COMIC_MOCK_1} from "$mock/data/comicMock";
 
 describe("Comic page", () => {
     it("should render comic page", async () => {
-        const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'en', page: "0"}});
+        const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'se', page: "0"}});
         renderPage(Page, data);
 
         const heading = page.getByRole("heading", {name: data.title, level: 1});
         await expect.element(heading).toBeInTheDocument();
 
-        const image = page.getByRole("img", {name: data.page.panels[0].description.en});
+        const image = page.getByRole("img", {name: data.page.panels[0].description.se});
         await expect.element(image).toBeInTheDocument();
     });
 
     describe("pagination", () => {
         it("should render page 1 (first)", async () => {
-            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'en', page: "0"}});
+            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'se', page: "0"}});
             renderPage(Page, data);
 
             const backLink = page.getByRole("link", {name: "Back"});
@@ -28,12 +28,12 @@ describe("Comic page", () => {
             const forwardLink = page.getByRole("link", {name: "Page 2"});
             expect(forwardLink.element()).toHaveAttribute(
                 "href",
-                `/${COMIC_MOCK_1.slug}/en/1`,
+                `/${COMIC_MOCK_1.slug}/se/1`,
             );
         });
 
         it("should render page 1 (first)", async () => {
-            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'en', page: "0"}});
+            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'se', page: "0"}});
             renderPage(Page, data);
 
             const backLink = page.getByRole("link", {name: "Back"});
@@ -42,35 +42,35 @@ describe("Comic page", () => {
             const forwardLink = page.getByRole("link", {name: "Page 2"});
             expect(forwardLink.element()).toHaveAttribute(
                 "href",
-                `/${COMIC_MOCK_1.slug}/en/1`,
+                `/${COMIC_MOCK_1.slug}/se/1`,
             );
         });
 
         it("should render page 2", async () => {
-            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'en', page: "1"}});
+            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'se', page: "1"}});
             renderPage(Page, data);
 
             const backLink = page.getByRole("link", {name: "Page 1"});
             expect(backLink.element()).toHaveAttribute(
                 "href",
-                `/${COMIC_MOCK_1.slug}/en/0`,
+                `/${COMIC_MOCK_1.slug}/se/0`,
             );
 
             const forwardLink = page.getByRole("link", {name: "Page 3"});
             expect(forwardLink.element()).toHaveAttribute(
                 "href",
-                `/${COMIC_MOCK_1.slug}/en/2`,
+                `/${COMIC_MOCK_1.slug}/se/2`,
             );
         });
 
         it("should render page 3 (last)", async () => {
-            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'en', page: "2"}});
+            const data = load({params: {comic: COMIC_MOCK_1.slug, lang: 'se', page: "2"}});
             renderPage(Page, data);
 
             const backLink = page.getByRole("link", {name: "Page 2"});
             expect(backLink.element()).toHaveAttribute(
                 "href",
-                `/${COMIC_MOCK_1.slug}/en/1`,
+                `/${COMIC_MOCK_1.slug}/se/1`,
             );
 
             const forwardLink = page.getByRole("link", {name: "Back"});

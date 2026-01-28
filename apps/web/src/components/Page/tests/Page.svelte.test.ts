@@ -3,8 +3,8 @@ import {renderPageSvelte} from "./utils/renderPage.svelte";
 import {
     PAGE_1_MOCK,
     PAGE_1_PANEL_1_DIALOG_2,
-    PAGE_1_PANEL_1_EN_NARRATION_1,
     PAGE_1_PANEL_1_MOCK,
+    PAGE_1_PANEL_1_SE_NARRATION_1,
     PAGE_2_MOCK,
     PAGE_2_PANEL_1_DIALOG_1,
     PAGE_3_MOCK,
@@ -25,7 +25,7 @@ describe("<Page />", () => {
         test("should show narrations", () => {
             const {getByText} = renderPageSvelte(PAGE_1_MOCK);
 
-            expect(getByText(PAGE_1_PANEL_1_EN_NARRATION_1)).toBeInTheDocument()
+            expect(getByText(PAGE_1_PANEL_1_SE_NARRATION_1)).toBeInTheDocument()
         });
     });
 

@@ -16,7 +16,7 @@ describe("comics page", () => {
 
         await expect
             .element(link)
-            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/en/0`)
+            .toHaveAttribute("href", `/${COMIC_MOCK_1.slug}/se/0`)
 
     });
 });
