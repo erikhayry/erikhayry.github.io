@@ -77,10 +77,7 @@ export type FileType = ImageFileType | DataFileType;
 export type ContentIndex = FileType[]
 export type ValidatedContentIndex = {
     comicFile: ComicDataFileType
-    pages: PageDataFileType[]
-    panels: PanelDataFileType[]
     images: ValidImageFileType[]
-    references: ReferenceDataFileType[]
 }
 
 

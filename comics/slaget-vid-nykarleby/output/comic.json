@@ -1,9 +1,157 @@
 {
+  "slug": "slaget-vid-nykarleby",
   "styles": [
     "AN"
   ],
   "title": {
     "en": "Battle of Nykarleby",
     "se": "Slaget vid Nykarleby"
-  }
+  },
+  "pages": [
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "1.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "2.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "2.1.2",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "3.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "4.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "4.1.2",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "5.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "5.1.2",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "4",
+      "panels": [
+        {
+          "id": "6.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "6.1.2",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "6.1.3",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "6.1.4",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "3",
+      "panels": [
+        {
+          "id": "7.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        },
+        {
+          "id": "7.1.2",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "8.1.1",
+          "description": {
+            "en": "TODO",
+            "se": "TODO"
+          }
+        }
+      ]
+    }
+  ]
 }

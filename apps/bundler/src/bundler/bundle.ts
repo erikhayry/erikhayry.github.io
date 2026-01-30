@@ -1,6 +1,5 @@
 import {getSupportedFolderContentIndex} from "./getSupportedFolderContentIndex.ts";
 import {getValidatedContentIndex} from "./getValidatedContentIndex.ts";
-import {getComicFromContentIndex} from "./getComicFromContentIndex.ts";
 import {createJSON} from "../files/createJSON.ts";
 import {copyComicImages} from "./utils/copyComicImages.ts";
 import {createPanelOutputSchema, createPanelSchema} from "../files/schemas.ts";
@@ -34,7 +33,8 @@ function getComics(comicsFolder: string) {
     return getFolders(comicsFolder).map((comicFolder) => {
         const contentIndex = getSupportedFolderContentIndex(comicFolder)
         const validatedContentIndex = getValidatedContentIndex(contentIndex)
-        return getComicFromContentIndex(validatedContentIndex)
+
+        return validatedContentIndex.comicFile.data
     })
 }
 

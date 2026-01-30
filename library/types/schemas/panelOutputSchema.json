@@ -20,37 +20,17 @@
       }
     },
     "narration": {
-      "anyOf": [
-        {
-          "type": "object",
-          "propertyNames": {
-            "type": "string",
-            "enum": [
-              "en",
-              "se"
-            ]
-          },
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "propertyNames": {
-              "type": "string",
-              "enum": [
-                "en",
-                "se"
-              ]
-            },
-            "additionalProperties": {
-              "type": "string"
-            }
-          }
-        }
-      ]
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "en",
+          "se"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "dialogs": {
       "type": "array",
@@ -80,9 +60,6 @@
           "additionalProperties": false
         }
       }
-    },
-    "info": {
-      "type": "string"
     }
   },
   "required": [

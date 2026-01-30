@@ -33,7 +33,6 @@ function getVariant(width: number, height: number): ImageVariantType {
 }
 
 export function getImage(path: string) {
-    console.log(path)
     const buffer = readFileSync(path)
     const {width, height} = imageSize(buffer)
 

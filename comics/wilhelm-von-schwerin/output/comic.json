@@ -1,9 +1,686 @@
 {
+  "slug": "wilhelm-von-schwerin",
   "styles": [
     "AN"
   ],
   "title": {
     "en": "Wilhelm von Schwerin",
     "se": "Wilhelm von Schwerin"
-  }
+  },
+  "pages": [
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "1.1.1",
+          "description": {
+            "se": "Ett tomt rum med ett enkelt skrivbord. Ett ofullbordat brev ligger framme.",
+            "en": "An empty room with a simple desk. An unfinished letter lies open."
+          },
+          "narration": {
+            "se": "Mina älskade föräldrar!",
+            "en": "My beloved parents!"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "2.1.1",
+          "description": {
+            "se": "Havet med ett fartyg i fjärran.",
+            "en": "The sea with a ship in the distance."
+          },
+          "narration": {
+            "se": "Jag har ej allt sedan Grisslehamn funnit något ställe, som jag kunnat skriva från, ty postkontoret följer alltid högkvarteret, som är vida skilt ifrån armén.",
+            "en": "Since Grisslehamn I have found no place from which I could write, for the post office always follows headquarters, which is far removed from the army."
+          }
+        },
+        {
+          "id": "2.1.2",
+          "description": {
+            "se": "Wilhelm von Schwerin ombord på ett fartyg i hårt väder. Han står på däck och håller sig fast vid riggen medan höga vågor slår mot skeppet och vinden piskar regn över honom.",
+            "en": "Wilhelm von Schwerin stands on the deck of a ship in heavy weather, gripping the rigging as high waves crash against the vessel and wind-driven rain lashes across the deck."
+          },
+          "narration": {
+            "se": "Sedan vi ända till augusti månads slut gått och drivit på sjön...",
+            "en": "After we had sailed and drifted at sea until the end of August..."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "3.1.1",
+          "description": {
+            "en": "The adolescent Swedish cadet Wilhelm von Schwerin steps ashore at Kristinestad, wearing a slightly oversized dark blue uniform and a tall, straight-sided cylindrical black shako.",
+            "se": "Den unge svenske kadetten Wilhelm von Schwerin stiger i land i Kristinestad, iklädd en något för stor mörkblå uniform och en hög, rak, cylindrisk svart schako."
+          },
+          "narration": {
+            "se": "...fingo vid äntligen debarkera i Kristinestad",
+            "en": "...we were finally allowed to disembark at Kristinestad"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "4",
+      "panels": [
+        {
+          "id": "4.1.1",
+          "description": {
+            "en": "Wilhelm von Schwerin stands beside field cannons and stacked military equipment at the debarkation site.",
+            "se": "Wilhelm von Schwerin står bredvid fältkanoner och staplad militär utrustning vid debarkeringen."
+          },
+          "narration": {
+            "se": "Debarkeringen gick på en dag.",
+            "en": "The disembarkation was completed in one day."
+          }
+        },
+        {
+          "id": "4.1.2",
+          "description": {
+            "se": "Nattmarsch med trötta soldater.",
+            "en": "A night march with exhausted soldiers."
+          },
+          "narration": {
+            "se": "På natten marscherade vi en mil till Lappfjärd",
+            "en": "During the night we marched one Swedish mile to Lappfjärd."
+          }
+        },
+        {
+          "id": "4.1.3",
+          "description": {
+            "se": "Soldater vandrar i mörker.",
+            "en": "Soldiers march through the darkness."
+          }
+        },
+        {
+          "id": "4.1.4",
+          "description": {
+            "se": "Skylt eller vy som markerar Lappfjärd.",
+            "en": "A sign or view marking Lappfjärd."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "3",
+      "panels": [
+        {
+          "id": "5.1.1",
+          "description": {
+            "en": "Wilhelm von Schwerin lies asleep on straw together with other Swedish soldiers inside a dim barn. Weapons and packs rest beside them. All soldiers are clean-shaven. The atmosphere is quiet and exhausted.",
+            "se": "Wilhelm von Schwerin ligger och sover på halm tillsammans med andra svenska soldater inne i en dunkelt upplyst lada. Vapen och packning ligger bredvid dem. Alla soldater är renrakade. Stämningen är stilla och utmattad."
+          },
+          "narration": {
+            "se": "Vi lågo och sovo som bäst...",
+            "en": "We were sleeping as soundly as could be..."
+          }
+        },
+        {
+          "id": "5.1.2",
+          "description": {
+            "en": "Wilhelm von Schwerin and Swedish soldiers are jolted awake in panic inside a dim barn, scrambling from straw bedding as the alarm is raised.",
+            "se": "Wilhelm von Schwerin och svenska soldater väcks i panik i en mörk lada och kastar sig upp från halmbäddarna när larmet slås."
+          },
+          "narration": {
+            "se": "...då larm slogs och jag fick lämna min sköna bädd",
+            "en": "...when the alarm was sounded and I had to leave my pleasant bed"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "6.1.1",
+          "description": {
+            "se": "Strid i gryning med rök och muskötsalvor.",
+            "en": "Battle at dawn with smoke and musket fire."
+          },
+          "narration": {
+            "se": "Affären påstod 5 a' 6 timmar",
+            "en": "The engagement lasted five to six hours."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "7.1.1",
+          "description": {
+            "se": "Ryska trupper i reträtt.",
+            "en": "Russian troops in retreat."
+          },
+          "narration": {
+            "se": "Ryssarna blevo slagna...",
+            "en": "The Russians were defeated..."
+          }
+        },
+        {
+          "id": "7.1.2",
+          "description": {
+            "se": "Svenska trupper förföljer fienden.",
+            "en": "Swedish troops pursue the enemy."
+          },
+          "narration": {
+            "se": "...och vi förföljde dem ända till Ömossa, två mil från Lappfjärd.",
+            "en": "...and we pursued them all the way to Ömossa, two miles from Lappfjärd."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "8.1.1",
+          "description": {
+            "se": "Överstelöjtnant Drufva ger order.",
+            "en": "Lieutenant Colonel Drufva gives orders."
+          },
+          "narration": {
+            "se": "Där gjordes halt, och överstelöjtnant Drufva detacherades med 500 man samt 2 kanoner under mitt befäl...",
+            "en": "There we halted, and Lieutenant Colonel Drufva was detached with 500 men and two cannons under my command..."
+          }
+        },
+        {
+          "id": "8.1.2",
+          "description": {
+            "se": "Liten isolerad styrka med en kanon i öppet landskap.",
+            "en": "A small isolated force with two cannons in open terrain."
+          },
+          "narration": {
+            "se": "...för att här kvarblifva med order att slåss till sista man.",
+            "en": "...to remain here with orders to fight to the last man."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "4",
+      "panels": [
+        {
+          "id": "9.1.1",
+          "description": {
+            "se": "Hällregn över soldater i fält.",
+            "en": "Torrential rain over soldiers in the field."
+          },
+          "narration": {
+            "se": "Här var en jämmerlig belägenhet!",
+            "en": "This was a miserable situation!"
+          }
+        },
+        {
+          "id": "9.1.2",
+          "description": {
+            "se": "Nattlig fältvakt.",
+            "en": "Night field watch."
+          },
+          "narration": {
+            "se": "Mitt folk ledsnade, de sågo upplänningarna lösas av var afton, men fingo själva i nio dygn oupphörligt ligga på fältvakt...",
+            "en": "My men grew weary; they saw the Uppland troops relieved every evening, but themselves had to remain on field watch for nine days without interruption..."
+          }
+        },
+        {
+          "id": "9.1.3",
+          "description": {
+            "se": "Utmattade soldaters ansikten.",
+            "en": "Faces of exhausted soldiers."
+          },
+          "narration": {
+            "se": "...och blevo tillika med mig många nätter och dagar genomblöta av hällregn.",
+            "en": "...and together with me were soaked night and day by torrential rain."
+          }
+        },
+        {
+          "id": "9.1.4",
+          "description": {
+            "se": "Wilhelm von Schwerin delar mat och mynt.",
+            "en": "Wilhelm von Schwerin shares food and coins."
+          },
+          "narration": {
+            "se": "Intet annat än min ömma vård över dem kunde avhålla dem från att klaga, jag använder alltid och gärna mina överflödiga pengar av mitt traktamente till deras bästa.",
+            "en": "Nothing but my tender care for them could keep them from complaining; I always and gladly used my surplus allowance money for their benefit."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "10.1.1",
+          "description": {
+            "se": "Gryning. Fienden anfaller med kraft.",
+            "en": "Dawn. The enemy attacks with force."
+          },
+          "narration": {
+            "se": "9:de dygnet om morgonen blevo vi häftigt attackerade.",
+            "en": "On the ninth day in the morning we were violently attacked."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "4",
+      "panels": [
+        {
+          "id": "11.1.1",
+          "description": {
+            "se": "Soldater ser kulor vina.",
+            "en": "Soldiers watch bullets whiz past."
+          },
+          "narration": {
+            "se": "Jag skulle nu själv för första gången gå i elden, jag skulle föra mitt folk för första gången dit, och jag skulle med 2 kanoner försvara platsen mot fiendens oändligt många både haubitsar och kanoner.",
+            "en": "TODO"
+          }
+        },
+        {
+          "id": "11.1.2",
+          "description": {
+            "se": "Rädsla sprider sig.",
+            "en": "Fear spreads."
+          },
+          "narration": {
+            "se": "Mitt folk var första gången i elden...",
+            "en": "My men were in battle for the first time..."
+          }
+        },
+        {
+          "id": "11.1.3",
+          "description": {
+            "se": "Soldater flyr bakåt.",
+            "en": "Soldiers flee backward."
+          },
+          "narration": {
+            "se": "...de sågo efter kulorna och sprungo bakom just i den mest avgörande stunden.",
+            "en": "...they watched the bullets and ran back at the most decisive moment."
+          }
+        },
+        {
+          "id": "11.1.4",
+          "description": {
+            "se": "Wilhelm von Schwerin ensam vid kanonen.",
+            "en": "Wilhelm von Schwerin alone at the cannon."
+          },
+          "narration": {
+            "se": "Jag kunde inte springa efter...",
+            "en": "I could not run after them..."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "12.1.1",
+          "description": {
+            "se": "Wilhelm von Schwerin laddar och avfyrar kanonen ensam.",
+            "en": "Wilhelm von Schwerin loads and fires the cannon alone."
+          },
+          "narration": {
+            "se": "...utan gjorde själv 5 mans tjänst vid kanonen.",
+            "en": "...but instead performed the work of five men at the cannon."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "3",
+      "panels": [
+        {
+          "id": "13.1.1",
+          "description": {
+            "se": "Wilhelm von Schwerin tillrättavisar sina soldater.",
+            "en": "Wilhelm von Schwerin reprimands his soldiers."
+          },
+          "narration": {
+            "se": "Då affären hade saktat sig något, gick jag fastän nästan avdånad av trötthet efter dem, föreställde dem deras feghet...",
+            "en": "TODO"
+          }
+        },
+        {
+          "id": "13.1.2",
+          "description": {
+            "se": "Soldater rusar tillbaka till sina poster.",
+            "en": "Soldiers rush back to their positions."
+          },
+          "narration": {
+            "se": "...då sprungo de alla fram som tända ljus var och en på sina ställen.",
+            "en": "...then they all rushed forward like lit candles, each to his post."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "14.1.1",
+          "description": {
+            "se": "Kosacker stormar mot kanonerna. Druvhagel avfyras.",
+            "en": "Cossacks charge the cannons. Grapeshot is fired."
+          },
+          "narration": {
+            "se": "Här stupade folk som gräs. Nu gällde det. Kosackerna gjorde 3 gånger chock på mina blottade kanoner, kastade sina pikar, men jag mötte dem med druvhagel, och de retirerade.",
+            "en": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "15.1.1",
+          "description": {
+            "se": "Drufva omfamnar Wilhelm von Schwerin efter striden.",
+            "en": "Drufva embraces Wilhelm von Schwerin after the battle."
+          },
+          "narration": {
+            "se": "Drufvan med hela officerskåren, omfamnade mig, tackade mig att jag frälst dem. Folket hurrade och önskade mig en beständig välfärd.",
+            "en": "TODO DrufvaN?"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "16.1.1",
+          "description": {
+            "se": "TODO",
+            "en": "TODO"
+          },
+          "narration": {
+            "se": "Snart fingo vi en batalj, den långvarigaste och blodigaste här varit i detta krig. Denna stod vid Oravais och varade från kl. 6 på morgonen till kl. 11 på aftonen.",
+            "en": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "17.1.1",
+          "description": {
+            "se": "Wilhelm von Schwerin såras under elden.",
+            "en": "Wilhelm von Schwerin is wounded under fire."
+          },
+          "narration": {
+            "se": "Jag underhöll ensammen ända till middagen elden med mina kanoner, då jag vid denna tid blev blesserad.",
+            "en": "TODO"
+          }
+        },
+        {
+          "id": "17.1.2",
+          "description": {
+            "se": "Wilhelm von Schwerin sätter sig på en kanonhäst och leder anfallet.",
+            "en": "Wilhelm von Schwerin mounts a cannon horse and leads the attack."
+          },
+          "narration": {
+            "se": "Jag repade mig, satte mig på en kanonhäst, ty min egen var skjuten, lät folket hurra, satte mig främst i spetsen, ropade kamrater, följ mig",
+            "en": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "18.1.1",
+          "description": {
+            "se": "Genombrott genom fienden med fällda bajonetter.",
+            "en": "Breakthrough through the enemy with lowered bayonets."
+          },
+          "narration": {
+            "se": "Jag kommenderade marsch, marsch och slog mig igenom fienden, som tog emot mig med fälld bajonett.",
+            "en": "TODO"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "2",
+      "panels": [
+        {
+          "id": "18.2.1",
+          "description": {
+            "se": "Wilhelm von Schwerin får kulor genom genom kappan",
+            "en": "Wilhelm von Schwerin has bullets pass through his coat."
+          },
+          "narration": {
+            "se": "Jag fick 3 kulor uti kappan...",
+            "en": "I received three bullets through my coat..."
+          }
+        },
+        {
+          "id": "18.2.2",
+          "description": {
+            "se": "Svenska soldater blir skadade av bajonetter",
+            "en": "Swedish soldiers are wounded by bayonets."
+          },
+          "narration": {
+            "se": "...många av mitt folk blevo stuckna",
+            "en": "...many of my men were stabbed."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "18.3.1",
+          "description": {
+            "se": "Generalerna Adlercreutz och Vegesack tackar Wilhelm von Schwerin",
+            "en": "Generals Adlercreutz and Vegesack thank Wilhelm von Schwerin."
+          },
+          "narration": {
+            "se": "Generalerna Adlercreutz och Vegesack tackade mig på det högsta.",
+            "en": "Generals Adlercreutz and Vegesack thanked me in the highest terms."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "18.4.1",
+          "description": {
+            "se": "Wilhelm von Schwerin går försiktigt fram i gryningen.",
+            "en": "Wilhelm von Schwerin advances cautiously at dawn."
+          },
+          "narration": {
+            "se": "Om morgonen skulle jag gå ut och rekognocera...",
+            "en": "TODO?"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "4",
+      "panels": [
+        {
+          "id": "19.1.1",
+          "description": {
+            "se": "En kula går genom Wilhelm von Schwerins mössa.",
+            "en": "A bullet passes through Wilhelm von Schwerin’s cap."
+          },
+          "narration": {
+            "se": "...då jag fick en kula genom mössan",
+            "en": "...when I received a bullet through my cap"
+          }
+        },
+        {
+          "id": "19.1.2",
+          "description": {
+            "se": "Wilhelm von Schwerin faller till marken.",
+            "en": "Wilhelm von Schwerin falls to the ground."
+          },
+          "narration": {
+            "se": "...varav jag föll omkull.",
+            "en": "...from which I fell to the ground."
+          }
+        },
+        {
+          "id": "19.1.3",
+          "description": {
+            "se": "En rysk soldat bakom en sten siktar mot Wilhelm von Schwerin.",
+            "en": "A Russian soldier behind a stone aims at Wilhelm von Schwerin."
+          },
+          "narration": {
+            "se": "Jag upptäckte fan bakom en sten...",
+            "en": "I discovered the scoundrel behind a stone..."
+          }
+        },
+        {
+          "id": "19.1.4",
+          "description": {
+            "se": "Wilhelm von Schwerin tar geväret av en soldat och sköt honom",
+            "en": "Wilhelm von Schwerin takes a rifle from a soldier and shoots him."
+          },
+          "narration": {
+            "se": "...tog geväret av en soldat och sköt honom",
+            "en": "...took a rifle from a soldier and shot him."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "4",
+      "panels": [
+        {
+          "id": "20.1.1",
+          "description": {
+            "se": "Wilhelm von Schwerin såras igen under striden.",
+            "en": "Wilhelm von Schwerin is wounded again during the battle."
+          },
+          "narration": {
+            "se": "Om aftonen mot skymningen fick jag en ny blessyr...",
+            "en": "In the evening toward dusk I received a new wound..."
+          }
+        },
+        {
+          "id": "20.1.2",
+          "description": {
+            "se": "Soldater släpar den sårade Wilhelm von Schwerin bort från stridsfältet.",
+            "en": "Soldiers drag the wounded Wilhelm von Schwerin away from the battlefield."
+          },
+          "narration": {
+            "se": "...de släpade mig till närmaste by...",
+            "en": "...they dragged me to the nearest village..."
+          }
+        },
+        {
+          "id": "20.1.3",
+          "description": {
+            "se": "Wilhelm von Schwerin ligger gömd i en stuga.",
+            "en": "Wilhelm von Schwerin lies hidden in a cottage."
+          },
+          "narration": {
+            "se": "...där jag låg till dess fiendens kulor kommo in genom fönstren",
+            "en": "...where I lay until enemy bullets came through the windows"
+          }
+        },
+        {
+          "id": "20.1.4",
+          "description": {
+            "se": "Wilhelm von Schwerin flyr på en officers rygg.",
+            "en": "Wilhelm von Schwerin escapes on an officer’s back."
+          },
+          "narration": {
+            "se": "Jag hade blivit kvar, om inte en ädel officer som jag ännu ej lärt känna kastade mig på sin rygg och vi kommo lyckligen undan.",
+            "en": "I would have been left behind, had not a noble officer..."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "21.1.1",
+          "description": {
+            "se": "En sårad officer transporteras på bår genom höstlandskap mot Kalajoki.",
+            "en": "A wounded officer is carried on a stretcher through autumn landscape toward Kalajoki."
+          },
+          "narration": {
+            "se": "Generalen Aminoff, den ädelmodige mannen, tog upp mig, och nu mår jag tämligen väl",
+            "en": "General Aminoff, the noble man, took me in, and now I am fairly well."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "21.2.1",
+          "description": {
+            "se": "En enkel sjukstuga. Han ligger blek i sängen, omgiven av läkare och ordonnanser.",
+            "en": "A simple infirmary. He lies pale in bed, surrounded by doctors and orderlies."
+          },
+          "dialogs": [
+            {
+              "se": {
+                "text": "Hans feber går inte ner.",
+                "person": "Läkare"
+              },
+              "en": {
+                "text": "His fever is not subsiding.",
+                "person": "Doctor"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "22.1.1",
+          "description": {
+            "se": "Stillbild i sjukrummet. Ett täcke över kroppen. Ett ljus brinner. I förgrunden ett brev.",
+            "en": "A still image in the sickroom. A blanket covers the body. A candle burns. In the foreground, a letter."
+          },
+          "narration": {
+            "se": "Farväl, älskade och dyrkade föräldrar och syskon! Leven alltid väl, önskar eder beständigt tillgivne son, bror och vän.",
+            "en": "Farewell, beloved and cherished parents and siblings! Live always well, wishes you your ever devoted son, brother, and friend."
+          }
+        }
+      ]
+    },
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "23.1.1",
+          "description": {
+            "en": "A wide, tranquil view of Wilhelm von Schwerin’s gravestone in a quiet Nordic cemetery. The dark, rough-hewn stone stands centered in a calm landscape of grass and trees, rendered in a soft, Studio-Ghibli–inspired anime style. The gravestone bears a simple carved inscription and is surrounded by stillness and natural light, conveying finality and remembrance.",
+            "se": "En vid och stillsam vy av Wilhelm von Schwerins gravsten på en lugn nordisk kyrkogård. Den mörka, råhuggna stenen står centralt i ett fridfullt landskap av gräs och träd, återgiven i en mjuk, Studio-Ghibli-inspirerad animestil. Gravstenen har en enkel inhuggen inskription och omges av tystnad och naturligt ljus, vilket förmedlar avslut och hågkomst."
+          },
+          "narration": {
+            "se": "Det var, när Oravais' blodiga dag\nTill sorg gick opp,\nNär segern själv blev ett nederlag,\nSom bröt vårt hopp.\nDå, säger man, strålade klarast hans mod,\nDå träffade säkrast hans vingade lod,\nDå eldades varmast kanonen,\nNär han stänkte den röd med sitt blod.\n\nJohan Ludvig Runeberg – Fänrik Ståls sägner",
+            "en": "Det var, när Oravais' blodiga dag\nTill sorg gick opp,\nNär segern själv blev ett nederlag,\nSom bröt vårt hopp.\nDå, säger man, strålade klarast hans mod,\nDå träffade säkrast hans vingade lod,\nDå eldades varmast kanonen,\nNär han stänkte den röd med sitt blod.\n\nJohan Ludvig Runeberg – Fänrik Ståls sägner"
+          }
+        }
+      ]
+    }
+  ]
 }

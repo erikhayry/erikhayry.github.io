@@ -10,18 +10,6 @@ const comicFolder = 'src/bundler/tests/mocks/comics/comic-1';
 test('should return index', () => {
     expect(getSupportedFolderContentIndex(comicFolder)).toEqual([
         {
-            path: `${comicFolder}/output/1.1.1.json`,
-            type: FileVariant.DATA,
-            id: '1.1.1',
-            data: getJSON(`${comicFolder}/output/1.1.1.json`)
-        },
-        {
-            path: `${comicFolder}/output/1.1.json`,
-            type: FileVariant.DATA,
-            id: '1.1',
-            data: getJSON(`${comicFolder}/output/1.1.json`)
-        },
-        {
             path: `${comicFolder}/output/comic.json`,
             type: FileVariant.DATA,
             id: 'comic',

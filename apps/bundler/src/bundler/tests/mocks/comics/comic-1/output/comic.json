@@ -1,4 +1,24 @@
 {
+  "slug": "comic-1",
+  "pages": [
+    {
+      "layout": "1",
+      "panels": [
+        {
+          "id": "1.1.1",
+          "description": {
+            "en": "DESCRIPTION EN MOCK",
+            "se": "DESCRIPTION SE MOCK"
+          },
+          "info": "VALID WITH IMAGE",
+          "narration": {
+            "en": "NARRATION_1.1.1_1",
+            "se": "NARRATION_1.1.1_1"
+          }
+        }
+      ]
+    }
+  ],
   "styles": [
     "AN"
   ],

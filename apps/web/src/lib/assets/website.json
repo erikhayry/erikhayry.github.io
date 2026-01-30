@@ -1,6 +1,13 @@
 [
   {
     "slug": "slaget-vid-jutas",
+    "styles": [
+      "AN"
+    ],
+    "title": {
+      "en": "Battle of Jutas",
+      "se": "Slaget vid Jutas"
+    },
     "pages": [
       {
         "layout": "1",
@@ -727,17 +734,17 @@
           }
         ]
       }
-    ],
+    ]
+  },
+  {
+    "slug": "slaget-vid-nykarleby",
     "styles": [
       "AN"
     ],
     "title": {
-      "en": "Battle of Jutas",
-      "se": "Slaget vid Jutas"
-    }
-  },
-  {
-    "slug": "slaget-vid-nykarleby",
+      "en": "Battle of Nykarleby",
+      "se": "Slaget vid Nykarleby"
+    },
     "pages": [
       {
         "layout": "1",
@@ -884,17 +891,17 @@
           }
         ]
       }
-    ],
+    ]
+  },
+  {
+    "slug": "wilhelm-von-schwerin",
     "styles": [
       "AN"
     ],
     "title": {
-      "en": "Battle of Nykarleby",
-      "se": "Slaget vid Nykarleby"
-    }
-  },
-  {
-    "slug": "wilhelm-von-schwerin",
+      "en": "Wilhelm von Schwerin",
+      "se": "Wilhelm von Schwerin"
+    },
     "pages": [
       {
         "layout": "1",
@@ -1570,13 +1577,6 @@
           }
         ]
       }
-    ],
-    "styles": [
-      "AN"
-    ],
-    "title": {
-      "en": "Wilhelm von Schwerin",
-      "se": "Wilhelm von Schwerin"
-    }
+    ]
   }
 ]

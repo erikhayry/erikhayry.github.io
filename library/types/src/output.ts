@@ -93,14 +93,13 @@ export const Link = z.object({
 export const PanelInfo = z.object({
     id: PanelId,
     description: Text,
-    narration: z.optional(Texts),
+    narration: z.optional(Text),
     dialogs: z.optional(z.array(DialogInfo)),
-    info: z.optional(z.string())
 });
 
 export const PageInfo = z.object({
-    id: PageId,
-    layout: PageLayoutType
+    layout: PageLayoutType,
+    panels: z.array(PanelInfo),
 });
 
 export const ReferencePageInfo = z.object({
@@ -110,9 +109,11 @@ export const ReferencePageInfo = z.object({
 })
 
 export const ComicInfo = z.object({
+    slug: z.string(),
+    pages: z.array(PageInfo),
     styles: ComicStyleTypes,
     title: Text
-})
+});
 
 export type PanelInfo = z.infer<typeof PanelInfo>;
 export type PageInfo = z.infer<typeof PageInfo>;

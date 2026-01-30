@@ -1,73 +1,10 @@
 import {ComicStyle, type ComicStyleType, PageLayout, type PageLayoutValue} from "@library/types";
-import {
-    FileVariant,
-    type ImageFileType,
-    type PageDataFileType,
-    type PanelDataFileType,
-    type ReferenceDataFileType,
-    type ValidatedContentIndex
-} from "../../getSupportedFolderContentIndex.ts";
+import {FileVariant, type ImageFileType, type ValidatedContentIndex} from "../../getSupportedFolderContentIndex.ts";
 import {ImageVariant} from "../../../files/getImage.ts";
-import {REFERENCES_FOLDER} from "../../../constants.ts";
 
 export const COMIC_STYLES_MOCK: ComicStyleType[] = [
     "AN",
-    "BE"
 ]
-
-function getPageFile(id: number, layout: PageLayoutValue): PageDataFileType {
-    return {
-        path: `mocks/comics/output/${id}.1.json`,
-        type: FileVariant.DATA,
-        id: `${id}.1`,
-        data: {
-            id: `${id}.1`,
-            layout
-        }
-    }
-}
-
-function getPanelFile(pageId: number, panelId: number): PanelDataFileType {
-    return {
-        path: `mocks/comics/output/${pageId}.1.${panelId}json`,
-        type: FileVariant.DATA,
-        id: `${pageId}.1.${panelId}`,
-        data: {
-            id: `${pageId}.1.${panelId}`,
-            "description": {
-                "en": `DESCRIPTION_${pageId}.1.${panelId}`,
-                "se": `DESCRIPTION_${pageId}.1.${panelId}`
-            },
-            "info": "VALID WITH IMAGE",
-            "narration": {
-                "en": `NARRATION_${pageId}.1.${panelId}`,
-                "se": `NARRATION_${pageId}.1.${panelId}`
-            }
-        }
-    }
-}
-
-function getReferenceFile(pageId: number, panelId: number): ReferenceDataFileType {
-    return {
-        path: `mocks/comics/output/${REFERENCES_FOLDER}/${pageId}.1.${panelId}json`,
-        type: FileVariant.DATA,
-        id: `${pageId}.1.${panelId}`,
-        data: {
-            id: `${pageId}.1.${panelId}`,
-            "description": {
-                "en": `DESCRIPTION_${pageId}.1.${panelId}`,
-                "se": `DESCRIPTION_${pageId}.1.${panelId}`
-            },
-            "link": {
-                "url": "https://www.nykarlebyvyer.nu/",
-                "title": {
-                    "en": `LINK_${pageId}.1.${panelId}`,
-                    "se": `LINK_${pageId}.1.${panelId}`
-                }
-            }
-        }
-    }
-}
 
 function getNumberOfImages(layout: PageLayoutValue) {
     switch (layout) {
@@ -85,15 +22,46 @@ function getImageFiles(pageId: number, layout: PageLayoutValue, format: 'landsca
     return Array.from({length: getNumberOfImages(layout)}, (_, index) => index).map((index) => [
         {
             ...(format === 'landscape' ? BASE_AN_LANDSCAPE_IMAGE : BASE_AN_PORTRAIT_IMAGE),
-            id: `${pageId}.1.${index}`,
-            path: `mocks/comics/output/panels/AN/${pageId}.1.${index}.png`,
+            id: `${pageId}.1.${index + 1}.${format === 'landscape' ? 'l' : 'p'}`,
+            path: `mocks/comics/output/panels/AN/${pageId}.1.${index + 1}.png`,
         },
         {
             ...(format === 'landscape' ? BASE_BE_LANDSCAPE_IMAGE : BASE_BE_PORTRAIT_IMAGE),
-            id: `${pageId}.1.${index}`,
-            path: `mocks/comics/output/panels/AN/${pageId}.1.${index}.png`,
+            id: `${pageId}.1.${index + 1}.${format === 'landscape' ? 'l' : 'p'}`,
+            path: `mocks/comics/output/panels/AN/${pageId}.1.${index + 1}.png`,
         },
     ]).flat()
+}
+
+function getPageLayout(id: string) {
+    return {
+        "id": id,
+        "description": {
+            "en": "DESCRIPTION EN MOCK",
+            "se": "DESCRIPTION SE MOCK"
+        },
+        "info": "VALID WITH IMAGE",
+        "narration": {
+            "en": "NARRATION_1.1.1_1",
+            "se": "NARRATION_1.1.1_1"
+        }
+    }
+}
+
+
+export const HERO_LAYOUT = {
+    "layout": PageLayout.Hero,
+    "panels": [getPageLayout('1.1.1')],
+}
+
+export const VERTICAL_DIPTYCH_LAYOUT = {
+    "layout": PageLayout.VerticalDiptych,
+    "panels": [getPageLayout('1.1.1'), getPageLayout('1.1.2')],
+}
+
+export const QUAD_LAYOUT = {
+    "layout": PageLayout.Quad,
+    "panels": [getPageLayout('1.1.1'), getPageLayout('1.1.2'), getPageLayout('1.1.3'), getPageLayout('1.1.3')],
 }
 
 export const VALID_COMIC_DATA_MOCK = {
@@ -102,6 +70,8 @@ export const VALID_COMIC_DATA_MOCK = {
     id: 'comic',
     data: {
         "styles": COMIC_STYLES_MOCK,
+        "slug": "comic-1",
+        "pages": [HERO_LAYOUT],
         "title": {
             "en": "English Title",
             "se": "Svensk titel"
@@ -161,26 +131,6 @@ export const VALID_COMIC_BE_PORTRAIT_IMAGE = {
     id: "comic.p",
     path: "mocks/comics/output/panels/BE/comic.p.png",
 }
-
-export const VALID_PAGE_LAYOUT_1_DATA_MOCK = getPageFile(1, PageLayout.Hero)
-export const VALID_PAGE_LAYOUT_2_DATA_MOCK = getPageFile(2, PageLayout.VerticalDiptych)
-export const VALID_PAGE_LAYOUT_3_DATA_MOCK = getPageFile(3, PageLayout.LandscapeDiptych)
-export const VALID_PAGE_LAYOUT_4_DATA_MOCK = getPageFile(4, PageLayout.Quad)
-
-export const VALID_PANEL_DATA_MOCK_1_1 = getPanelFile(1, 1)
-
-export const VALID_PANEL_DATA_MOCK_2_1 = getPanelFile(2, 1)
-export const VALID_PANEL_DATA_MOCK_2_2 = getPanelFile(2, 2)
-
-export const VALID_PANEL_DATA_MOCK_3_1 = getPanelFile(3, 1)
-export const VALID_PANEL_DATA_MOCK_3_2 = getPanelFile(3, 2)
-
-export const VALID_PANEL_DATA_MOCK_4_1 = getPanelFile(4, 1)
-export const VALID_PANEL_DATA_MOCK_4_2 = getPanelFile(4, 2)
-export const VALID_PANEL_DATA_MOCK_4_3 = getPanelFile(4, 3)
-export const VALID_PANEL_DATA_MOCK_4_4 = getPanelFile(4, 4)
-
-export const VALID_PANEL_REFERENCE_DATA_MOCK_1_1 = getReferenceFile(1, 1)
 
 export const VALID_LANDSCAPE_IMAGES_PAGE_LAYOUT_1 = [
     ...getImageFiles(1, PageLayout.Hero, 'landscape'),
@@ -245,31 +195,18 @@ export const VALID_COMIC_DATA = [
 
 export const VALID_PAGE_LAYOUT_1 = [
     ...VALID_IMAGES_PAGE_LAYOUT_1,
-    VALID_PAGE_LAYOUT_1_DATA_MOCK,
-    VALID_PANEL_DATA_MOCK_1_1,
 ]
 
 export const VALID_PAGE_LAYOUT_2 = [
     ...VALID_IMAGES_PAGE_LAYOUT_2,
-    VALID_PAGE_LAYOUT_2_DATA_MOCK,
-    VALID_PANEL_DATA_MOCK_2_1,
-    VALID_PANEL_DATA_MOCK_2_2,
 ]
 
 export const VALID_PAGE_LAYOUT_3 = [
     ...VALID_IMAGES_PAGE_LAYOUT_3,
-    VALID_PAGE_LAYOUT_3_DATA_MOCK,
-    VALID_PANEL_DATA_MOCK_3_1,
-    VALID_PANEL_DATA_MOCK_3_2,
 ]
 
 export const VALID_PAGE_LAYOUT_4 = [
     ...VALID_IMAGES_PAGE_LAYOUT_4,
-    VALID_PAGE_LAYOUT_4_DATA_MOCK,
-    VALID_PANEL_DATA_MOCK_4_1,
-    VALID_PANEL_DATA_MOCK_4_2,
-    VALID_PANEL_DATA_MOCK_4_3,
-    VALID_PANEL_DATA_MOCK_4_4,
 ]
 
 export const VALID_PAGE_DATA = [
@@ -279,18 +216,12 @@ export const VALID_PAGE_DATA = [
     ...VALID_PAGE_LAYOUT_4
 ]
 
-export const VALID_PANEL_REFERENCE_DATA = [VALID_PANEL_REFERENCE_DATA_MOCK_1_1]
-
 export const VALID_COMIC_INDEX = [
     ...VALID_COMIC_DATA,
     ...VALID_PAGE_DATA,
-    ...VALID_PANEL_REFERENCE_DATA
 ]
 
 export const VALIDATED_CONTENT_INDEX: ValidatedContentIndex = {
     comicFile: VALID_COMIC_DATA_MOCK,
-    pages: [VALID_PAGE_LAYOUT_2_DATA_MOCK, VALID_PAGE_LAYOUT_1_DATA_MOCK],
-    panels: [VALID_PANEL_DATA_MOCK_1_1, VALID_PANEL_DATA_MOCK_2_1, VALID_PANEL_DATA_MOCK_2_2],
     images: [],
-    references: [VALID_PANEL_REFERENCE_DATA_MOCK_1_1]
 }
