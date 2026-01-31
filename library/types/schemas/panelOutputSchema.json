@@ -60,6 +60,114 @@
           "additionalProperties": false
         }
       }
+    },
+    "reference": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "boolean"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "se"
+                ]
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string",
+                  "enum": [
+                    "en",
+                    "se"
+                  ]
+                },
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "link": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "title": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "se"
+                ]
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "url",
+            "title"
+          ],
+          "additionalProperties": false
+        },
+        "place": {
+          "type": "object",
+          "properties": {
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "lat": {
+                  "type": "number"
+                },
+                "lon": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "lat",
+                "lon"
+              ],
+              "additionalProperties": false
+            },
+            "name": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "se"
+                ]
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "coordinates",
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [

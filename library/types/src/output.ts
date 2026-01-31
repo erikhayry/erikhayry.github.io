@@ -81,8 +81,6 @@ export const PanelId = z.string().regex(/^[1-9]\d*\.[1-9]\d*\.[1-9]\d*$/, {
 });
 export type PanelId = z.infer<typeof PanelId>;
 
-export const DataId = z.union([PageId, PanelId, ComicId])
-
 export const Texts = z.union([Text, z.array(Text)])
 
 export const Link = z.object({
@@ -90,11 +88,26 @@ export const Link = z.object({
     title: Text
 })
 
+export const ReferenceInfo = z.object({
+    image: z.optional(z.object({
+        included: z.boolean(),
+        link: z.optional(Link),
+    })),
+    link: z.optional(Link),
+    description: z.optional(Texts),
+    place: z.optional(z.object({
+        coordinates: z.object({lat: z.number(), lon: z.number()}),
+        name: Text,
+    }))
+})
+
+
 export const PanelInfo = z.object({
     id: PanelId,
     description: Text,
     narration: z.optional(Text),
     dialogs: z.optional(z.array(DialogInfo)),
+    reference: z.optional(ReferenceInfo),
 });
 
 export const PageInfo = z.object({
@@ -102,11 +115,6 @@ export const PageInfo = z.object({
     panels: z.array(PanelInfo),
 });
 
-export const ReferencePageInfo = z.object({
-    id: PanelId,
-    description: Texts,
-    link: Link
-})
 
 export const ComicInfo = z.object({
     slug: z.string(),
@@ -117,6 +125,6 @@ export const ComicInfo = z.object({
 
 export type PanelInfo = z.infer<typeof PanelInfo>;
 export type PageInfo = z.infer<typeof PageInfo>;
-export type ReferencePageInfo = z.infer<typeof ReferencePageInfo>;
+export type ReferenceInfo = z.infer<typeof ReferenceInfo>;
 export type ComicInfo = z.infer<typeof ComicInfo>;
 

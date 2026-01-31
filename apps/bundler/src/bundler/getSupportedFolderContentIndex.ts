@@ -10,7 +10,7 @@ import {
     ComicStyleType,
     type PageInfo,
     type PanelInfo,
-    ReferencePageInfo,
+    ReferenceInfo,
     type UnsupportedType
 } from "@library/types";
 
@@ -70,7 +70,7 @@ export interface PanelDataFileType extends DataFileType {
 }
 
 export interface ReferenceDataFileType extends DataFileType {
-    data: ReferencePageInfo
+    data: ReferenceInfo
 }
 
 export type FileType = ImageFileType | DataFileType;

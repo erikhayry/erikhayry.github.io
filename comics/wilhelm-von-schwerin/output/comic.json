@@ -20,6 +20,15 @@
           "narration": {
             "se": "Mina älskade föräldrar!",
             "en": "My beloved parents!"
+          },
+          "reference": {
+            "link": {
+              "title": {
+                "se": "Wilhelm von Schwerins brev",
+                "en": "Wilhelm von Schwerin's letter"
+              },
+              "url": "https://sv.wikisource.org/wiki/Brev_fran_Wilhelm_von_Schwerin_till_hans_foraldrar_1808"
+            }
           }
         }
       ]
@@ -63,6 +72,18 @@
           "narration": {
             "se": "...fingo vid äntligen debarkera i Kristinestad",
             "en": "...we were finally allowed to disembark at Kristinestad"
+          },
+          "reference": {
+            "place": {
+              "coordinates": {
+                "lat": 62.2413,
+                "lon": 21.3858
+              },
+              "name": {
+                "se": "Kristinestad",
+                "en": "Kristinestad"
+              }
+            }
           }
         }
       ]
@@ -104,6 +125,18 @@
           "description": {
             "se": "Skylt eller vy som markerar Lappfjärd.",
             "en": "A sign or view marking Lappfjärd."
+          },
+          "reference": {
+            "place": {
+              "coordinates": {
+                "lat": 62.2496965,
+                "lon": 21.4393984
+              },
+              "name": {
+                "se": "Lappfjärd",
+                "en": "Lappfjärd"
+              }
+            }
           }
         }
       ]
@@ -174,6 +207,18 @@
           "narration": {
             "se": "...och vi förföljde dem ända till Ömossa, två mil från Lappfjärd.",
             "en": "...and we pursued them all the way to Ömossa, two miles from Lappfjärd."
+          },
+          "reference": {
+            "place": {
+              "coordinates": {
+                "lat": 62.0711032,
+                "lon": 21.5135011
+              },
+              "name": {
+                "se": "Ömossa",
+                "en": "Ömossa"
+              }
+            }
           }
         }
       ]
@@ -281,7 +326,7 @@
           },
           "narration": {
             "se": "Jag skulle nu själv för första gången gå i elden, jag skulle föra mitt folk för första gången dit, och jag skulle med 2 kanoner försvara platsen mot fiendens oändligt många både haubitsar och kanoner.",
-            "en": "TODO"
+            "en": "I myself was now to go into battle for the first time, I was to lead my men there for the first time, and I was to defend the position with two cannons against the enemy's infinitely many howitzers and cannons."
           }
         },
         {
@@ -346,7 +391,7 @@
           },
           "narration": {
             "se": "Då affären hade saktat sig något, gick jag fastän nästan avdånad av trötthet efter dem, föreställde dem deras feghet...",
-            "en": "TODO"
+            "en": "When the engagement had slowed somewhat, I went after them, though almost exhausted from fatigue, reprimanding them for their cowardice..."
           }
         },
         {
@@ -373,7 +418,7 @@
           },
           "narration": {
             "se": "Här stupade folk som gräs. Nu gällde det. Kosackerna gjorde 3 gånger chock på mina blottade kanoner, kastade sina pikar, men jag mötte dem med druvhagel, och de retirerade.",
-            "en": "TODO"
+            "en": "Here men fell like grass. Now it was critical. The Cossacks made three charges on my exposed cannons, throwing their pikes, but I met them with grapeshot, and they retreated."
           }
         }
       ]
@@ -388,8 +433,8 @@
             "en": "Drufva embraces Wilhelm von Schwerin after the battle."
           },
           "narration": {
-            "se": "Drufvan med hela officerskåren, omfamnade mig, tackade mig att jag frälst dem. Folket hurrade och önskade mig en beständig välfärd.",
-            "en": "TODO DrufvaN?"
+            "se": "Drufva med hela officerskåren, omfamnade mig, tackade mig att jag frälst dem. Folket hurrade och önskade mig en beständig välfärd.",
+            "en": "Drufva, along with the entire officer corps, embraced me, thanking me for saving them. The men cheered and wished me lasting prosperity."
           }
         }
       ]
@@ -400,12 +445,24 @@
         {
           "id": "16.1.1",
           "description": {
-            "se": "TODO",
-            "en": "TODO"
+            "se": "Oravais slagfält i gryningen.",
+            "en": "Oravais battlefield at dawn."
           },
           "narration": {
             "se": "Snart fingo vi en batalj, den långvarigaste och blodigaste här varit i detta krig. Denna stod vid Oravais och varade från kl. 6 på morgonen till kl. 11 på aftonen.",
-            "en": "TODO"
+            "en": "Soon we had a battle, the longest and bloodiest in this war. It took place at Oravais and lasted from 6 in the morning until 11 in the evening."
+          },
+          "reference": {
+            "place": {
+              "coordinates": {
+                "lat": 63.284684,
+                "lon": 22.3742844
+              },
+              "name": {
+                "se": "Oravais slagfält",
+                "en": "Oravais battlefield"
+              }
+            }
           }
         }
       ]
@@ -421,7 +478,7 @@
           },
           "narration": {
             "se": "Jag underhöll ensammen ända till middagen elden med mina kanoner, då jag vid denna tid blev blesserad.",
-            "en": "TODO"
+            "en": "I alone maintained the fire with my cannons until midday, when at that time I was wounded."
           }
         },
         {
@@ -432,7 +489,7 @@
           },
           "narration": {
             "se": "Jag repade mig, satte mig på en kanonhäst, ty min egen var skjuten, lät folket hurra, satte mig främst i spetsen, ropade kamrater, följ mig",
-            "en": "TODO"
+            "en": "I recovered, mounted a cannon horse, for my own had been shot, had the men cheer, placed myself at the forefront, shouting comrades, follow me"
           }
         }
       ]
@@ -448,7 +505,7 @@
           },
           "narration": {
             "se": "Jag kommenderade marsch, marsch och slog mig igenom fienden, som tog emot mig med fälld bajonett.",
-            "en": "TODO"
+            "en": "I commanded march, march and broke through the enemy, who met me with lowered bayonets."
           }
         }
       ]
@@ -507,7 +564,7 @@
           },
           "narration": {
             "se": "Om morgonen skulle jag gå ut och rekognocera...",
-            "en": "TODO?"
+            "en": "In the morning I was to go out and reconnoiter..."
           }
         }
       ]
@@ -622,6 +679,18 @@
           "narration": {
             "se": "Generalen Aminoff, den ädelmodige mannen, tog upp mig, och nu mår jag tämligen väl",
             "en": "General Aminoff, the noble man, took me in, and now I am fairly well."
+          },
+          "reference": {
+            "place": {
+              "coordinates": {
+                "lat": 64.2550788,
+                "lon": 23.9434526
+              },
+              "name": {
+                "se": "Kalajoki",
+                "en": "Kalajoki"
+              }
+            }
           }
         }
       ]
@@ -678,6 +747,15 @@
           "narration": {
             "se": "Det var, när Oravais' blodiga dag\nTill sorg gick opp,\nNär segern själv blev ett nederlag,\nSom bröt vårt hopp.\nDå, säger man, strålade klarast hans mod,\nDå träffade säkrast hans vingade lod,\nDå eldades varmast kanonen,\nNär han stänkte den röd med sitt blod.\n\nJohan Ludvig Runeberg – Fänrik Ståls sägner",
             "en": "Det var, när Oravais' blodiga dag\nTill sorg gick opp,\nNär segern själv blev ett nederlag,\nSom bröt vårt hopp.\nDå, säger man, strålade klarast hans mod,\nDå träffade säkrast hans vingade lod,\nDå eldades varmast kanonen,\nNär han stänkte den röd med sitt blod.\n\nJohan Ludvig Runeberg – Fänrik Ståls sägner"
+          },
+          "reference": {
+            "link": {
+              "title": {
+                "se": "Fänrik Ståls sägner",
+                "en": "The Tales of Ensign Stål"
+              },
+              "url": "https://sv.wikisource.org/wiki/F%C3%A4nrik_St%C3%A5ls_s%C3%A4gner"
+            }
           }
         }
       ]
