@@ -118,6 +118,9 @@ export const PageInfo = z.object({
 
 export const ComicInfo = z.object({
     slug: z.string(),
+    cover: z.optional(z.object({
+        reference: ReferenceInfo,
+    })),
     pages: z.array(PageInfo),
     styles: ComicStyleTypes,
     title: Text

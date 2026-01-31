@@ -3,6 +3,20 @@
   "styles": [
     "AN"
   ],
+  "cover": {
+    "reference": {
+      "image": {
+        "included": true,
+        "link": {
+          "url": "https://sv.wikipedia.org/wiki/Georg_Carl_von_Döbeln#/media/Fil:Jutas_1808.jpg",
+          "title": {
+            "se": "Läs mer om målningen på Wikimedia Commons",
+            "en": "Read more about the painting at Wikimedia Commons"
+          }
+        }
+      }
+    }
+  },
   "title": {
     "en": "Battle of Jutas",
     "se": "Slaget vid Jutas"
@@ -55,7 +69,7 @@
               "included": true,
               "link": {
                 "url": "https://www.nykarlebyvyer.nu/sidor/nykarleb/ny-carle.htm",
-                "text": {
+                "title": {
                   "se": "Läs mer om målningen på Nykarleby vyer",
                   "en": "Read more about the painting at Nykarleby vyer"
                 }
@@ -143,7 +157,19 @@
                 "person": "Adjutant"
               }
             }
-          ]
+          ],
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://www.nykarlebyvyer.nu/sidor/kortindi/LR/LR_E/LRE----S.HTM",
+                "title": {
+                  "se": "Läs mer om Rådhuset och \"Döbelns hus\" på Nykarleby vyer",
+                  "en": "Read more about the Town Hall and \"Döbeln's House\" at Nykarleby vyer"
+                }
+              }
+            }
+          }
         },
         {
           "id": "4.1.2",
@@ -205,7 +231,19 @@
                 "person": "Georg Carl von Döbeln"
               }
             }
-          ]
+          ],
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://commons.wikimedia.org/wiki/File:Georg_Carl_von_Döbeln_i_sjuksängen.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -221,6 +259,18 @@
           "narration": {
             "en": "The road ahead opens toward Jutas.",
             "se": "Vägen framåt öppnar sig mot Jutas."
+          },
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://www.nykarlebyvyer.nu/sidor/illustra/ffitjuth.htm",
+                "title": {
+                  "se": "Läs mer om målningen på Nykarleby vyer",
+                  "en": "Read more about the painting at Nykarleby vyer"
+                }
+              }
+            }
           }
         },
         {
@@ -241,7 +291,18 @@
               }
             }
           ],
-          "info": "Page 5, Panel 2 — March to Jutas. Morale shift moment. Reference painting: 5.1.2.jpg. Anime (Studio Ghibli–inspired) style."
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://da.wikipedia.org/wiki/Fil:Döbeln_vid_Jutas_-_teckning_av_Albert_Edelfelt.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -522,6 +583,18 @@
               }
             }
           ],
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://commons.wikimedia.org/wiki/File:Döbeln_vid_Jutas2.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
+          },
           "info": "Canvas: landscape 3:2 (1536×1024)"
         },
         {
@@ -626,7 +699,19 @@
                 "person": "Georg Carl von Döbeln"
               }
             }
-          ]
+          ],
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://commons.wikimedia.org/wiki/File:Seger_i_Slaget_vid_Jutas.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -651,7 +736,18 @@
               }
             }
           ],
-          "info": "Page 11 Panel 1 – Aftermath at Jutas. Reference painting faithfully reconstructed and re-rendered in Anime (Studio Ghibli–inspired) style. No text appears in the image."
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://commons.wikimedia.org/wiki/File:Georg_Carl_von_Döbeln_efter_slaget_vid_Jutas.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
+          }
         },
         {
           "id": "11.1.2",

@@ -1,0 +1,112 @@
+# Test Writing Rules
+
+## Core Principles
+- Write clear, readable tests that serve as documentation
+- Test behavior, not implementation details
+- Keep tests simple and focused on a single concern
+
+## Test Structure
+- Use the Arrange-Act-Assert (AAA) pattern
+- Arrange: Set up test data and preconditions
+- Act: Execute the code under test
+- Assert: Verify the expected outcome
+
+## Test Organization
+- Use `describe` blocks to group related tests by feature or component
+- Use `it` or `test` for individual test cases
+- Nest `describe` blocks for logical grouping
+- One assertion per test when possible for clarity
+
+## Naming Conventions
+- Test files: `*.test.ts` or `*.spec.ts`
+- Test descriptions: "should [expected behavior] when [condition]"
+- Use descriptive names that explain what is being tested
+
+## What to Test
+- Happy path scenarios
+- Edge cases and boundary conditions
+- Error conditions and exception handling
+- Async operations with proper `async/await` syntax
+- Different input types and values
+
+
+## Feature Implementation Process
+- Generate minimal implementation code to make the test pass
+- Never modify the failing test to make it pass
+- The test defines the contract - implementation must satisfy it
+
+### Code Generation Goals
+- Primary goal: Make the existing failing test green
+- Write only enough code to satisfy the test requirements
+- Do not add features or logic not covered by the test
+- If test is unclear, ask for clarification instead of changing it
+
+### Test Integrity Rules
+- **Never modify a failing test to make it pass**
+- If a test seems wrong, discuss it with the developer first
+- Tests are the specification - they define correct behavior
+- Implementation must adapt to tests, not vice versa
+
+### When Generating Features
+1. Run the test to confirm it fails for the right reason
+2. Write the minimal code to make the test pass
+3. Run the test again to verify it passes
+4. Only then consider refactoring
+
+# Prompt Generator for implementation
+
+## Quick Prompt Format
+When the developer writes: **"make the test [test name] green"**
+
+Follow this workflow:
+
+1. Identify the failing test by its description
+2. Analyze what the test expects
+3. Propose the minimal implementation approach
+4. **Ask for explicit confirmation before generating code**
+5. Only after confirmation, generate the minimal code to satisfy the test assertions
+6. Do not modify the test itself
+7. Do not add extra functionality beyond what the test requires
+
+---
+
+## Example Usage
+
+Developer writes:
+
+make the test "should calculate sum of two numbers" green
+
+Copilot should:
+
+- Locate the test with that description
+- Read the test's expectations (arrange, act, assert)
+- Explain the minimal logic needed
+- **Ask for confirmation to proceed**
+- Generate only the function/method needed to pass that specific test
+- Ensure the implementation matches the test's contract exactly
+
+---
+
+## Response Format
+
+### Step 1 — Analysis (always first)
+- Briefly explain what the test expects
+- Describe the minimal implementation strategy
+
+### Step 2 — Confirmation (required)
+Ask:
+
+> Should I generate the minimal implementation now?
+
+### Step 3 — Implementation (only after confirmation)
+- Provide the minimal implementation in a single code block
+- Indicate where the code should be placed
+- Do not suggest test modifications
+
+---
+
+## Important
+- This prompt pattern is the primary way to request feature implementation
+- Always prefer minimal changes (TDD style)
+- Never generate code before explicit confirmation
+- Keep solutions small, focused, and test-driven

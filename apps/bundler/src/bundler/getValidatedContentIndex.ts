@@ -17,9 +17,7 @@ export function getValidatedContentIndex(contentIndex: ContentIndex): ValidatedC
         throw new Error(ERROR.MISSING_COMIC_FILE)
     }
 
-    if (!ComicInfo.safeParse(comicFile.data).success) {
-        throw new Error(ERROR.MALFORMED_COMIC_FILE)
-    }
+    ComicInfo.parse(comicFile.data)
 
     return {
         comicFile: comicFile,
