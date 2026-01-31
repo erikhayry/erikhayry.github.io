@@ -97,6 +97,18 @@
           "description": {
             "en": "TODO",
             "se": "TODO"
+          },
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://commons.wikimedia.org/wiki/File:Nykarleby_1808.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
           }
         },
         {
