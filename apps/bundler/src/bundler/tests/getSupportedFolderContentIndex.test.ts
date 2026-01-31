@@ -34,6 +34,15 @@ test('should return index', () => {
             variant: ImageVariant.PORTRAIT
         },
         {
+            path: `${comicFolder}/output/panels/AN/1.1.1.r.png`,
+            type: FileVariant.IMAGE,
+            style: ComicStyle.ANIME,
+            id: '1.1.1.r',
+            width: 1536,
+            height: 1024,
+            variant: ImageVariant.LANDSCAPE
+        },
+        {
             id: "comic.l",
             path: `${comicFolder}/output/panels/AN/comic.l.png`,
             type: FileVariant.IMAGE,

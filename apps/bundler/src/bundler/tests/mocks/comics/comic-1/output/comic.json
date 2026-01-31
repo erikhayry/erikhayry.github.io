@@ -14,6 +14,18 @@
           "narration": {
             "en": "NARRATION_1.1.1_1",
             "se": "NARRATION_1.1.1_1"
+          },
+          "reference": {
+            "image": {
+              "included": true,
+              "link": {
+                "url": "https://sv.wikipedia.org/wiki/Georg_Carl_von_Döbeln#/media/Fil:Jutas_1808.jpg",
+                "title": {
+                  "se": "Läs mer om målningen på Wikimedia Commons",
+                  "en": "Read more about the painting at Wikimedia Commons"
+                }
+              }
+            }
           }
         }
       ]
