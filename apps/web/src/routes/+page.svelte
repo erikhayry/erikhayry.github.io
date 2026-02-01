@@ -3,11 +3,10 @@
     import {i18n} from "../i18n/i18n";
     import {TEXT} from "../i18n/ui";
     import {ComicStyle, Language} from "@library/types";
-    import {getComics} from "$core/getComics";
     import ResponsiveImage from "../components/Page/components/ResponsiveImage.svelte";
 
     let {data} = $props();
-    let {title} = $derived(data);
+    let {title, backgroundImages} = $derived(data);
 </script>
 
 <style>
@@ -21,6 +20,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        height: 100%;
+        filter: blur(10px);
+        opacity: 0.3;
     }
 </style>
 
@@ -34,9 +36,9 @@
     </div>
 </div>
 <div class="fullscreen-container fullscreen-container-background">
-    {#each getComics() as comic (comic)}
-        <div class="comic-item">
-            <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
+    {#each backgroundImages as image (image)}
+        <div class="comic-item" style:clip-path={image.clipPath}>
+            <ResponsiveImage slug={image.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
         </div>
     {/each}
 </div>

@@ -4,6 +4,7 @@ import Page from "../+page.svelte";
 import {TEXT} from "../../i18n/ui";
 import {renderPage} from "../../test/renderPage";
 import {load} from "../+page";
+import {getComics} from "$core/getComics";
 
 describe("language page", () => {
     it("should render languages", async () => {
@@ -21,5 +22,13 @@ describe("language page", () => {
 
         expect(link.nth(1)).toHaveTextContent("English");
         expect(link.nth(1)).toHaveAttribute("href", "/en");
+    });
+
+    it('should render background image', async () => {
+        const data = load();
+        renderPage(Page, data);
+
+        const backgroundImages = page.getByRole('presentation');
+        expect(backgroundImages.elements()).toHaveLength(getComics().length);
     });
 });

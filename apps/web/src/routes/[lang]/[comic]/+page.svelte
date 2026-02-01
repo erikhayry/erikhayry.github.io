@@ -9,18 +9,26 @@
     let {comic, lang} = $derived(data);
 </script>
 
+<style>
+    .title {
+        left: calc(var(--safe-left-unit));
+    }
+
+    .background {
+        clip-path: polygon(0% 0, 100% 0%, 0% 100%, 0 100%);
+    }
+</style>
+
 <div class="content">
+    <h1 class="sticky-text title">{i18n(comic.title)}</h1>
     <div class="inner-content">
-        <h1>{i18n(comic.title)}</h1>
-
         <p>Sidor: {comic.pages.length}</p>
-
-        <a href={resolve(`/${lang}/${comic.slug}/0`)}>{i18n(TEXT.startReading)}</a>
-
+        <a href={resolve(`/${lang}/${comic.slug}/0`)}>{i18n(TEXT.startReadingPageByPage)}</a>
+        <a href={resolve(`/${lang}/${comic.slug}/flow`)}>{i18n(TEXT.startReadingFlowVersion)}</a>
         <a href={resolve(`/${lang}`)}>{i18n(TEXT.backToComics)}</a>
     </div>
 </div>
-<div class="fullscreen-container fullscreen-container-background">
+<div class="fullscreen-container fullscreen-container-background background">
     <ResponsiveImage alt="" id="comic" slug={comic.slug} style={ComicStyle.ANIME}/>
 </div>
 

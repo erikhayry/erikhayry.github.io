@@ -10,17 +10,6 @@
 </script>
 
 <style>
-    .sticky-text {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: var(--font-size-s);
-        position: fixed;
-        padding: var(--spacing);
-        z-index: 1;
-        top: var(--safe-top-unit);
-        background-color: var(--black)
-    }
-
     .title {
         left: calc(var(--safe-left-unit));
     }

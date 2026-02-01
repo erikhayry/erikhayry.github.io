@@ -15,7 +15,7 @@ describe("Comic page", () => {
         const heading = page.getByRole("heading", {name: data.comic.title[DEFAULT_LANGUAGE], level: 1});
         await expect.element(heading).toBeInTheDocument();
 
-        const startReadingLink = page.getByRole("link", {name: TEXT.startReading[DEFAULT_LANGUAGE]});
+        const startReadingLink = page.getByRole("link", {name: TEXT.startReadingPageByPage[DEFAULT_LANGUAGE]});
         await expect
             .element(startReadingLink)
             .toHaveAttribute("href", `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}/0`);

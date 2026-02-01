@@ -20,12 +20,16 @@ export const TEXT = {
         se: 'Svenska'
     },
     backToComics: {
-        en: 'Back to Comics',
+        en: 'Back to comics',
         se: 'Tillbaka till serier'
     },
-    startReading: {
-        en: 'Start Reading',
-        se: 'Börja läsa'
+    startReadingPageByPage: {
+        en: 'Start reading page by page',
+        se: 'Börja läsa sida per sida'
+    },
+    startReadingFlowVersion: {
+        en: 'Start reading flow version',
+        se: 'Börja läsa flödesversion'
     },
     paginationBack: {
         en: 'Comic page',
