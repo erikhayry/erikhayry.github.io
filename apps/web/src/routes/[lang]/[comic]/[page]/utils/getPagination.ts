@@ -1,4 +1,6 @@
 import {getPagesLength} from "./getPagesLength";
+import {i18n} from "../../../../../i18n/i18n";
+import {TEXT} from "../../../../../i18n/ui";
 
 interface PaginationLink {
     href: string;
@@ -14,18 +16,24 @@ function getResolvedHref(comic: string, language: string, page: string) {
     return `/` + [language, comic, page].map(encodeURIComponent).join(`/`);
 }
 
-const BACK_TO_ROOT_LINK = {
-    title: "Back",
-    href: "/",
+export const BACK_TO_ROOT_LINK = {
+    title: i18n(TEXT.paginationBack),
 };
 
 function getTitle(pageNumber: number) {
-    return `Page ${pageNumber}`;
+    return `${i18n(TEXT.paginationForward)} ${pageNumber}`;
+}
+
+function getComicUrl(slug: string, language: string) {
+    return {
+        href: `/${language}/${slug}`,
+        title: BACK_TO_ROOT_LINK.title,
+    };
 }
 
 function getBackLink(slug: string, language: string, pageIndex: number) {
     if (pageIndex === 0) {
-        return BACK_TO_ROOT_LINK;
+        return getComicUrl(slug, language);
     }
     return {
         title: getTitle(pageIndex),
@@ -35,7 +43,7 @@ function getBackLink(slug: string, language: string, pageIndex: number) {
 
 function getForwardLink(slug: string, language: string, pageIndex: number) {
     if (pageIndex === getPagesLength(slug) - 1) {
-        return BACK_TO_ROOT_LINK;
+        return getComicUrl(slug, language);
     }
 
     return {

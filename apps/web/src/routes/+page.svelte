@@ -8,9 +8,20 @@
     let {title} = $derived(data);
 </script>
 
-<h1>{title}</h1>
+<style>
+    .language-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-touch-safe);
+    }
 
-<ol>
-    <li><a href="{resolve('/se')}">{i18n(TEXT.language, Language.SE)}</a></li>
-    <li><a href="{resolve('/en')}">{i18n(TEXT.language, Language.EN)}</a></li>
-</ol>
+</style>
+
+<div class="content">
+    <h1>{title}</h1>
+
+    <ol class="language-list">
+        <li><a href="{resolve('/se')}">{i18n(TEXT.language, Language.SE)}</a></li>
+        <li><a href="{resolve('/en')}">{i18n(TEXT.language, Language.EN)}</a></li>
+    </ol>
+</div>

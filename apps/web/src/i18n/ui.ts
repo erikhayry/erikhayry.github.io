@@ -1,8 +1,4 @@
-import type {I18N} from "./i18n";
-
-type Texts = Record<string, I18N>
-
-export const TEXT: Texts = {
+export const TEXT = {
     comicsHeading: {
         en: 'The Jutas Project',
         se: 'Projektet Jutas'
@@ -16,8 +12,8 @@ export const TEXT: Texts = {
         se: 'Paginering'
     },
     changeLanguageTitle: {
-        en: 'Change the language of the website',
-        se: 'Byt språk på webbplatsen'
+        en: 'Choose the language of the website',
+        se: 'Välj språk på webbplatsen'
     },
     language: {
         en: 'English',
@@ -30,5 +26,13 @@ export const TEXT: Texts = {
     startReading: {
         en: 'Start Reading',
         se: 'Börja läsa'
+    },
+    paginationBack: {
+        en: 'Comic page',
+        se: 'Seriens sida'
+    },
+    paginationForward: {
+        en: 'Page',
+        se: 'Sida'
     }
 }

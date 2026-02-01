@@ -5,7 +5,8 @@
     import {TEXT} from "../../i18n/ui";
     import {ComicStyle, Language} from "@library/types";
     import ResponsiveImage from "../../components/Page/components/ResponsiveImage.svelte";
-    import {DEFAULT_LANGUAGE} from "$lib/stores/lang.store";
+    import {langStore} from "$lib/stores/lang.store";
+    import {get} from 'svelte/store';
 </script>
 
 <style>
@@ -72,7 +73,7 @@
     <ul class="comic-items">
         {#each getComics() as comic (comic)}
             <li class="comic-item">
-                <a href={resolve(`/${DEFAULT_LANGUAGE}/${comic.slug}`)} aria-label={i18n(comic.title)} class="comic">
+                <a href={resolve(`/${get(langStore)}/${comic.slug}`)} aria-label={i18n(comic.title)} class="comic">
                     <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
                 </a>
             </li>

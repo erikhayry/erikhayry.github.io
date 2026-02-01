@@ -7,6 +7,8 @@
     --unit: 0.25rem;
     --spacing: var(--unit);
     --spacing-2x: calc(2 * var(--spacing));
+    --spacing-4x: calc(4 * var(--spacing));
+    --spacing-touch-safe: calc(4 * var(--spacing));
     --panel-border: 12px;
     --bubble-border: 2px solid black;
     --click-area: calc(var(--unit) * 11);
@@ -26,6 +28,16 @@ body {
     background: var(--black);
     color: var(--white);
     padding-bottom: calc(env(safe-area-inset-bottom) * -1);
+}
+
+.content {
+    padding: var(--safe-top-unit) var(--safe-right-unit) var(--safe-bottom-unit) var(--safe-left-unit);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4x);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 h1, h2, h3 {
