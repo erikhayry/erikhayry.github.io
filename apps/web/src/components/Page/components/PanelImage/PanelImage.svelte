@@ -68,7 +68,8 @@
         {#if panel.dialogs}
             <div class="dialogs">
                 {#each panel.dialogs as dialog (dialog)}
-                    <p class="bubble">{getDialog(dialog)}</p>
+                    <p class="bubble"><span
+                            class="visually-hidden">{getDialog(dialog).person} </span>{getDialog(dialog).text}</p>
                 {/each}
             </div>
         {/if}
