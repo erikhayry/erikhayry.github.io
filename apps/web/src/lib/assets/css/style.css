@@ -34,10 +34,35 @@ body {
     padding: var(--safe-top-unit) var(--safe-right-unit) var(--safe-bottom-unit) var(--safe-left-unit);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4x);
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+.inner-content {
+    max-width: calc(var(--unit) * 150);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-4x);
+    background-color: var(--white);
+    padding: var(--spacing-4x);
+    color: var(--black);
+    opacity: 0.9;
+}
+
+.inner-content a:link,
+.inner-content a:visited {
+    color: var(--black);
+}
+
+
+.fullscreen-container {
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background-color: var(--black);
 }
 
 h1, h2, h3 {

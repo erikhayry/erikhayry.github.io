@@ -10,13 +10,6 @@
 </script>
 
 <style>
-    .root {
-        height: 100dvh;
-        width: 100dvw;
-        overflow: hidden;
-        background-color: var(--black);
-    }
-
     .sticky-text {
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -68,7 +61,7 @@
     }
 </style>
 
-<div class="root">
+<div class="fullscreen-container">
     <h1 class="sticky-text title">{i18n(TEXT.comicsHeading)}</h1>
     <ul class="comic-items">
         {#each getComics() as comic (comic)}
