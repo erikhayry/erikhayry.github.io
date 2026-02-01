@@ -11,29 +11,20 @@
 </script>
 
 <style>
-    .languages {
-        position: relative;
-        z-index: 1;
-    }
-
     .language-list {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-touch-safe);
     }
 
-    .background {
+    .comic-item {
         position: absolute;
         top: 0;
-        filter: blur(10px);
-        opacity: 0.3;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        left: 0;
     }
-
 </style>
 
-<div class="content languages">
+<div class="content">
     <div class="inner-content">
         <h1>{title}</h1>
         <ol class="language-list">
@@ -42,8 +33,10 @@
         </ol>
     </div>
 </div>
-<div class="fullscreen-container background">
+<div class="fullscreen-container fullscreen-container-background">
     {#each getComics() as comic (comic)}
-        <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
+        <div class="comic-item">
+            <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
+        </div>
     {/each}
 </div>

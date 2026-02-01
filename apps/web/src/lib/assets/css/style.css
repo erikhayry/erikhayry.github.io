@@ -37,6 +37,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
+    z-index: 1;
 }
 
 .inner-content {
@@ -63,6 +65,16 @@ body {
     width: 100dvw;
     overflow: hidden;
     background-color: var(--black);
+}
+
+.fullscreen-container-background {
+    position: absolute;
+    top: 0;
+/ / filter: blur(10 px);
+/ / opacity: 0.3;
+/ / display: grid;
+/ / grid-template-columns: repeat(auto-fit, minmax(200 px, 1 fr));
+    z-index: 0;
 }
 
 h1, h2, h3 {
