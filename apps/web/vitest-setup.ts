@@ -1,16 +1,18 @@
-import { vi } from "vitest";
-import { WEBSITE_MOCK } from "./src/mock/data/websiteMock.ts";
-
-vi.mock("$core/getImages", () => ({
-  getImages: () =>
-    import.meta.glob("$mock/assets/**/*.png", {
-      eager: true,
-      query: {
-        enhanced: true,
-      },
-    }),
-}));
+import {vi} from "vitest";
+import {WEBSITE_MOCK} from "./src/mock/data/websiteMock.ts";
 
 vi.mock("$core/getComics", () => ({
-  getComics: () => WEBSITE_MOCK,
+    getComics: () => WEBSITE_MOCK,
 }));
+
+
+vi.mock("$core/getImages", () => ({
+    getImages: () =>
+        import.meta.glob("$mock/assets/**/*.png", {
+            eager: true,
+            query: {
+                enhanced: true,
+            },
+        }),
+}));
+

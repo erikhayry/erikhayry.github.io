@@ -1,8 +1,19 @@
-import type {LayoutLoad} from './$types';
 import type {LanguageType} from "@library/types";
 
-export const load: LayoutLoad = ({params}): { lang: LanguageType } => {
+interface Props {
+    params: {
+        lang: LanguageType;
+    }
+}
+
+type Load = ({params}: Props) => { lang: LanguageType }
+
+interface Data {
+    lang: LanguageType;
+}
+
+export const load: Load = ({params}: Props): Data => {
     return {
-        lang: params.lang
+        lang: params.lang,
     };
 };

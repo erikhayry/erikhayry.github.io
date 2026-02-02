@@ -6,7 +6,7 @@
     import ResponsiveImage from "../../../components/Page/components/ResponsiveImage.svelte";
 
     let {data} = $props();
-    let {comic, lang} = $derived(data);
+    let {comic, lang, numberOfPages} = $derived(data);
 </script>
 
 <style>
@@ -22,7 +22,7 @@
 <div class="content">
     <h1 class="sticky-text title">{i18n(comic.title)}</h1>
     <div class="inner-content">
-        <p>Sidor: {comic.pages.length}</p>
+        <p>{numberOfPages}</p>
         <a href={resolve(`/${lang}/${comic.slug}/0`)}>{i18n(TEXT.startReadingPageByPage)}</a>
         <a href={resolve(`/${lang}/${comic.slug}/flow`)}>{i18n(TEXT.startReadingFlowVersion)}</a>
         <a href={resolve(`/${lang}`)}>{i18n(TEXT.backToComics)}</a>

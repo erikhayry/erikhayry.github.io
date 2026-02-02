@@ -38,5 +38,9 @@ export const TEXT = {
     paginationForward: {
         en: 'Page',
         se: 'Sida'
+    },
+    pages: {
+        en: 'Pages',
+        se: 'Sidor'
     }
 }

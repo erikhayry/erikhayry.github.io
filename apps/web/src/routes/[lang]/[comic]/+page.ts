@@ -1,6 +1,8 @@
 import {error} from "@sveltejs/kit";
 import {type Comic} from "@library/types";
 import {getComic} from "$core/getComic";
+import {i18n} from "../../../i18n/i18n";
+import {TEXT} from "../../../i18n/ui";
 
 interface Props {
     params: {
@@ -12,15 +14,17 @@ interface Props {
 interface Data {
     comic: Comic;
     lang: string;
+    numberOfPages: string
 }
 
-export function load({params: {comic: slug, lang}}: Props): Data {
-    const comic = getComic(slug)
+export function load({params}: Props): Data {
+    const comic = getComic(params.comic)
 
     if (comic) {
         return {
             comic,
-            lang
+            lang: params.lang,
+            numberOfPages: `${i18n(TEXT.pages)}: ${comic.pages.length}`
         };
     }
 
