@@ -10,8 +10,8 @@ import {
     PAGE_3_MOCK,
     PAGE_4_MOCK,
 } from "$mock/data/pageMock";
-import {getDialog} from "../components/PanelImage/utils/getDialog";
 import {i18n} from "../../../i18n/i18n";
+import {getDialog} from "../components/PanelImage/utils/getDialog";
 
 describe("<Page />", () => {
     test("should render panel images", () => {
@@ -31,10 +31,10 @@ describe("<Page />", () => {
 
     describe("dialogs", () => {
         test("should show dialog", () => {
-            const {getByText} = renderPageSvelte(PAGE_2_MOCK);
+            const {getDialogBubbles} = renderPageSvelte(PAGE_2_MOCK);
 
-            expect(getByText(getDialog(PAGE_2_PANEL_1_DIALOG_1))).toBeInTheDocument()
-            expect(getByText(getDialog(PAGE_1_PANEL_1_DIALOG_2))).toBeInTheDocument()
+            expect(getDialogBubbles().at(0)).toHaveTextContent(`${getDialog(PAGE_2_PANEL_1_DIALOG_1).person} ${getDialog(PAGE_2_PANEL_1_DIALOG_1).text}`)
+            expect(getDialogBubbles().at(1)).toHaveTextContent(`${getDialog(PAGE_1_PANEL_1_DIALOG_2).person} ${getDialog(PAGE_1_PANEL_1_DIALOG_2).text}`)
         });
 
         test("should not show dialogs", () => {

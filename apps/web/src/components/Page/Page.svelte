@@ -17,6 +17,7 @@
 
 <style>
     .page {
+        --panel-bottom-space: 0dvh;
         position: relative;
         width: 100dvw;
         height: calc(100dvh - var(--panel-bottom-space));

@@ -3,6 +3,8 @@
     import {i18n} from "../../../../i18n/i18n";
     import ResponsiveImage from "../ResponsiveImage.svelte";
     import {getDialog} from "./utils/getDialog";
+    import {DIALOG_BUBBLE_TEST_ID} from "../../constants";
+
 
     interface Props {
         slug: string;
@@ -20,6 +22,7 @@
     }
 
     :global(.panel:not(:first-of-type)) .text {
+        color: red;
         --bubble-top: max(calc(var(--safe-top-unit) + var(--spacing) - var(--panel-bottom-space)), var(--spacing-2x))
     }
 
@@ -65,11 +68,11 @@
 
 {#if panel.dialogs || panel.narration}
     <div class="text">
-        {#if panel.dialogs}
+        {#if panel.dialogs?.length}
             <div class="dialogs">
                 {#each panel.dialogs as dialog (dialog)}
-                    <p class="bubble"><span
-                            class="visually-hidden">{getDialog(dialog).person} </span>{getDialog(dialog).text}</p>
+                    <p class="bubble" data-testid={DIALOG_BUBBLE_TEST_ID}><span
+                            class="visually-hidden">{`${getDialog(dialog).person} `}</span>{getDialog(dialog).text}</p>
                 {/each}
             </div>
         {/if}

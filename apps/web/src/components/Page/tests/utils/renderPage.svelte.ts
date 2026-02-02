@@ -3,7 +3,7 @@ import {PAGE_1_MOCK} from "$mock/data/pageMock";
 import {ComicStyle, type ComicStyleType, PageLayout, type PageLayoutValue, type Panel} from "@library/types";
 import {COMIC_SLUG_MOCK_1} from "$mock/data/comicMock";
 import Page from "../../Page.svelte";
-import {PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID,} from "../../constants";
+import {DIALOG_BUBBLE_TEST_ID, PAGE_CONTAINER_TEST_ID, PANEL_CONTAINER_TEST_ID,} from "../../constants";
 
 export function renderPageSvelte({
                                      layout,
@@ -24,6 +24,7 @@ export function renderPageSvelte({
         getImages: () => renderResult.getByRole("img").all(),
         getPageContainer: () => renderResult.getByTestId(PAGE_CONTAINER_TEST_ID),
         getAllPanelContainers,
-        getByText: renderResult.getByText
+        getByText: renderResult.getByText,
+        getDialogBubbles: () => renderResult.getByTestId(DIALOG_BUBBLE_TEST_ID).all(),
     };
 }

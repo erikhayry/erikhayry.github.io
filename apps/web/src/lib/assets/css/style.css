@@ -17,6 +17,8 @@
     --safe-right-unit: calc(env(safe-area-inset-right) + var(--unit));
     --safe-bottom-unit: calc(env(safe-area-inset-bottom) + var(--unit));
     --safe-left-unit: calc(env(safe-area-inset-left) + var(--unit));
+
+    --panel-bottom-space: 0dvh;
 }
 
 html,

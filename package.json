@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "test:bundler": "cd apps/bundler && bun run test",
-    "test:web": "cd apps/web && bun run test",
+    "test:web": "cd apps/web && bun run test:unit",
     "test": "bun run test:bundler && bun run test:web",
     "bundle": "bun run index.ts",
     "prepare": "husky",
