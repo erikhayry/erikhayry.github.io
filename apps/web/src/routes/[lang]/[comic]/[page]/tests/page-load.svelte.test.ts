@@ -1,4 +1,4 @@
-import {describe, expect, it, vi} from "vitest";
+import {describe, expect, it} from "vitest";
 import {load} from "../+page";
 import {PAGE_1_MOCK} from "$mock/data/pageMock";
 import {COMIC_MOCK_1} from "$mock/data/comicMock";
@@ -6,15 +6,6 @@ import {ComicStyle} from "@library/types";
 import {DEFAULT_LANGUAGE} from "$lib/stores/lang.store";
 import {BACK_TO_ROOT_LINK} from "../utils/getPagination";
 import {TEXT} from "../../../../../i18n/ui";
-import {WEBSITE_MOCK} from "$mock/data/websiteMock";
-
-vi.mock("$core/getComics", () => ({
-    getComics: () => WEBSITE_MOCK,
-}));
-
-vi.mock("$core/getComic", () => ({
-    getComic: () => WEBSITE_MOCK[0]
-}));
 
 
 describe("Comic page load", () => {
