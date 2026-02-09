@@ -1,18 +1,23 @@
 <script lang="ts">
-    import {type ComicStyleType, type Panel} from "@library/types";
+    import {type ComicStyleType, type LanguageType, type Panel} from "@library/types";
     import {i18n} from "../../../../i18n/i18n";
     import ResponsiveImage from "../ResponsiveImage.svelte";
     import {getDialog} from "./utils/getDialog";
     import {DIALOG_BUBBLE_TEST_ID} from "../../constants";
+    import {TEXT} from "../../../../i18n/ui";
+    import {resolve} from "$app/paths";
+    import {COMIC_MOCK_1 as comic} from "$mock/data/comicMock";
 
 
     interface Props {
         slug: string;
+        pageNumber: string;
         panel: Panel
         style: ComicStyleType
+        lang: LanguageType
     }
 
-    let {slug, panel, style}: Props = $props();
+    let {slug, panel, style, lang, pageNumber}: Props = $props();
 </script>
 
 <style>
@@ -22,7 +27,6 @@
     }
 
     :global(.panel:not(:first-of-type)) .text {
-        color: red;
         --bubble-top: max(calc(var(--safe-top-unit) + var(--spacing) - var(--panel-bottom-space)), var(--spacing-2x))
     }
 
@@ -63,8 +67,15 @@
     }
 </style>
 
+<figure>
+    <ResponsiveImage alt={i18n(panel.description)} id={panel.id} {slug} {style}/>
 
-<ResponsiveImage alt={i18n(panel.description)} id={panel.id} {slug} {style}/>
+    {#if panel.reference}
+        <figcaption>
+            <a href={resolve(`/${lang}/${comic.slug}/${pageNumber}/${panel.id}`)}>{i18n(TEXT.reference)}</a>
+        </figcaption>
+    {/if}
+</figure>
 
 {#if panel.dialogs || panel.narration}
     <div class="text">

@@ -12,6 +12,9 @@ import {
 } from "$mock/data/pageMock";
 import {i18n} from "../../../i18n/i18n";
 import {getDialog} from "../components/PanelImage/utils/getDialog";
+import {DEFAULT_LANGUAGE} from "$lib/stores/lang.store";
+import {COMIC_MOCK_1} from "$mock/data/comicMock";
+import {TEXT} from "../../../i18n/ui";
 
 describe("<Page />", () => {
     test("should render panel images", () => {
@@ -43,6 +46,20 @@ describe("<Page />", () => {
             expect(getImages().at(1)).not.toHaveAccessibleDescription();
         });
     });
+
+    describe('references', () => {
+        test('should not render caption when no reference', () => {
+            const {getFigCaption} = renderPageSvelte(PAGE_1_MOCK);
+
+            expect(getFigCaption()).not.toBeInTheDocument();
+        })
+
+        test('should show reference link', () => {
+            const {getReferenceLink} = renderPageSvelte(PAGE_2_MOCK);
+
+            expect(getReferenceLink(i18n(TEXT.reference))).toHaveAttribute('href', `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}/${0}/${PAGE_2_MOCK.panels[0].id}`);
+        })
+    })
 
     describe("layouts", () => {
         test("hero", () => {

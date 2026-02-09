@@ -42,5 +42,9 @@ export const TEXT = {
     pages: {
         en: 'Pages',
         se: 'Sidor'
+    },
+    reference: {
+        en: 'Read more about the image',
+        se: 'Läs mer om bilden'
     }
 }

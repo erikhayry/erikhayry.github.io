@@ -18,19 +18,23 @@ interface Data {
     title: string;
     pagination: Pagination;
     style: ComicStyleType
+    pageNumber: string
+    language: LanguageType
 }
 
 export function load({params: {comic: slug, lang: language, page: pageIndex}}: Props): Data {
     const page = getPage(slug, Number.parseInt(pageIndex));
     const comic = getComic(slug)
 
-    if (page) {
+    if (comic && page) {
         return {
             title: `${comic.title[language]} | ${Number.parseInt(pageIndex) + 1}`,
             page,
             slug,
             pagination: getPagination(slug, language, Number.parseInt(pageIndex)),
-            style: ComicStyle.ANIME
+            style: ComicStyle.ANIME,
+            pageNumber: pageIndex,
+            language,
         };
     }
 

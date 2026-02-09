@@ -11,7 +11,9 @@ import {TEXT} from "../../../../../i18n/ui";
 describe("Comic page load", () => {
     it("should load comic page if available", async () => {
         expect(load({params: {comic: COMIC_MOCK_1.slug, lang: DEFAULT_LANGUAGE, page: "0"}})).toEqual({
+            language: DEFAULT_LANGUAGE,
             page: PAGE_1_MOCK,
+            pageNumber: "0",
             slug: COMIC_MOCK_1.slug,
             style: ComicStyle.ANIME,
             title: `${COMIC_MOCK_1.title[DEFAULT_LANGUAGE]} | ${1}`,

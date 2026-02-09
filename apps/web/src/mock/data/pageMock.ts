@@ -35,10 +35,19 @@ export const PAGE_1_PANEL_1_DIALOG_2: Dialog = {
     }
 };
 
-export const PAGE_2_PANEL_1_MOCK: Panel = {
+export const PAGE_2_PANEL_1_WITH_REFERENCE_MOCK: Panel = {
     id: "1.1.1",
     dialogs: [PAGE_2_PANEL_1_DIALOG_1, PAGE_1_PANEL_1_DIALOG_2],
-    description: {[Language.EN]: 'PAGE_2_PANEL_1_EN_DESCRIPTION', [Language.SE]: 'PAGE_2_PANEL_1_SE_DESCRIPTION'}
+    description: {[Language.EN]: 'PAGE_2_PANEL_1_EN_DESCRIPTION', [Language.SE]: 'PAGE_2_PANEL_1_SE_DESCRIPTION'},
+    reference: {
+        link: {
+            url: "https://www.example.com",
+            title: {
+                [Language.EN]: "REFERENCE LINK EN MOCK 1",
+                [Language.SE]: "REFERENCE LINK SE MOCK 1"
+            }
+        },
+    }
 }
 export const PAGE_2_PANEL_2_MOCK: Panel = {
     id: "1.1.2",
@@ -47,7 +56,7 @@ export const PAGE_2_PANEL_2_MOCK: Panel = {
 export const PAGE_2_MOCK: Page = {
     layout: PageLayout.VerticalDiptych,
     panels: [
-        PAGE_2_PANEL_1_MOCK,
+        PAGE_2_PANEL_1_WITH_REFERENCE_MOCK,
         PAGE_2_PANEL_2_MOCK,
     ],
 };

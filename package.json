@@ -24,6 +24,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@testing-library/dom": "10.4.1",
     "zod": "^4.1.12"
   }
 }
