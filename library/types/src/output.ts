@@ -41,11 +41,13 @@ export type Text = z.infer<typeof Text>;
 
 export const ImageVariant = {
     Landscape: 'l',
-    Portrait: 'p'
+    Portrait: 'p',
+    Reference: 'r'
 } as const;
 export const ImageVariantType = z.enum([
     ImageVariant.Landscape,
     ImageVariant.Portrait,
+    ImageVariant.Reference,
 ]);
 export type ImageVariantType = z.infer<typeof ImageVariantType>
 

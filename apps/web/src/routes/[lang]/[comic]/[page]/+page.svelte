@@ -4,7 +4,7 @@
 
 
     let {data} = $props();
-    let {title, page, pagination, slug, style, pageNumber, lang} = $derived(data);
+    let {title, page, pagination, slug, style, lang} = $derived(data);
 </script>
 
 <svelte:head>
@@ -13,7 +13,7 @@
 </svelte:head>
 
 <h1 class="visually-hidden">{title}</h1>
-<Page {lang} layout={page.layout} {pageNumber} panels={page.panels} {slug} {style}/>
+<Page {lang} layout={page.layout} panels={page.panels} {slug} {style}/>
 <Nav {pagination}/>
 
 

@@ -18,7 +18,6 @@ interface Data {
     title: string;
     pagination: Pagination;
     style: ComicStyleType
-    pageNumber: string
     language: LanguageType
 }
 
@@ -33,7 +32,6 @@ export function load({params: {comic: slug, lang: language, page: pageIndex}}: P
             slug,
             pagination: getPagination(slug, language, Number.parseInt(pageIndex)),
             style: ComicStyle.ANIME,
-            pageNumber: pageIndex,
             language,
         };
     }

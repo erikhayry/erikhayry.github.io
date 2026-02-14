@@ -6,18 +6,16 @@
     import {DIALOG_BUBBLE_TEST_ID} from "../../constants";
     import {TEXT} from "../../../../i18n/ui";
     import {resolve} from "$app/paths";
-    import {COMIC_MOCK_1 as comic} from "$mock/data/comicMock";
 
 
     interface Props {
         slug: string;
-        pageNumber: string;
         panel: Panel
         style: ComicStyleType
         lang: LanguageType
     }
 
-    let {slug, panel, style, lang, pageNumber}: Props = $props();
+    let {slug, panel, style, lang}: Props = $props();
 </script>
 
 <style>
@@ -77,7 +75,7 @@
 
     {#if panel.reference}
         <figcaption>
-            <a href={resolve(`/${lang}/${comic.slug}/${pageNumber}/${panel.id}`)}>{i18n(TEXT.reference)}</a>
+            <a href={resolve(`/${lang}/${slug}/references`)}>{i18n(TEXT.reference)}</a>
         </figcaption>
     {/if}
 </figure>

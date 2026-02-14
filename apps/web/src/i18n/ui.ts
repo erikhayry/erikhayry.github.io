@@ -46,5 +46,9 @@ export const TEXT = {
     reference: {
         en: 'Read more about the image',
         se: 'Läs mer om bilden'
-    }
+    },
+    referenceLabel: {
+        en: 'References',
+        se: 'Referenser'
+    },
 }

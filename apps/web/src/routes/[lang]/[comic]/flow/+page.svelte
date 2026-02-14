@@ -29,7 +29,7 @@
     {#each pages as page(page)}
         {#each page.panels as panel(panel)}
             <div class="panel">
-                <PanelImage {slug} {panel} {style}/>
+                <PanelImage {slug} {panel} {style} {lang}/>
             </div>
         {/each}
     {/each}
