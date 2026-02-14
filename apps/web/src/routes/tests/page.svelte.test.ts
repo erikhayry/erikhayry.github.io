@@ -12,7 +12,7 @@ describe("language page", () => {
         renderPage(Page, data);
 
         const heading = page.getByRole("heading", {level: 1});
-        expect(heading).toHaveTextContent(`${TEXT.changeLanguageTitle.en} / ${TEXT.changeLanguageTitle.se}`);
+        expect(heading).toHaveTextContent(`${TEXT.changeLanguageTitle.en} ${TEXT.changeLanguageTitle.se}`);
 
         const link = page.getByRole("link");
         expect(link.elements()).toHaveLength(2);

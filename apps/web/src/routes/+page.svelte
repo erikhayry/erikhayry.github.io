@@ -29,7 +29,7 @@
     <div class="inner-content">
         <h1>
             {#each titles as title (title)}
-                <div>{title}</div>
+                <div>{title + ' '}</div>
             {/each}
         </h1>
         <ol class="language-list">
