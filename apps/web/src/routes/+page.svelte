@@ -6,7 +6,7 @@
     import ResponsiveImage from "../components/Page/components/ResponsiveImage.svelte";
 
     let {data} = $props();
-    let {title, backgroundImages} = $derived(data);
+    let {titles, backgroundImages} = $derived(data);
 </script>
 
 <style>
@@ -21,14 +21,17 @@
         top: 0;
         left: 0;
         height: 100%;
-        filter: blur(10px);
-        opacity: 0.3;
+        width: 100%;
     }
 </style>
 
 <div class="content">
     <div class="inner-content">
-        <h1>{title}</h1>
+        <h1>
+            {#each titles as title (title)}
+                <div>{title}</div>
+            {/each}
+        </h1>
         <ol class="language-list">
             <li><a href="{resolve('/se')}">{i18n(TEXT.language, Language.SE)}</a></li>
             <li><a href="{resolve('/en')}">{i18n(TEXT.language, Language.EN)}</a></li>

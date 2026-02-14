@@ -13,11 +13,12 @@
     .title {
         left: calc(var(--safe-left-unit));
     }
-
-    .background {
-        clip-path: polygon(0% 0, 100% 0%, 0% 100%, 0 100%);
-    }
 </style>
+
+<svelte:head>
+    <title>{i18n(comic.title)}</title>
+</svelte:head>
+
 
 <div class="content">
     <h1 class="sticky-text title">{i18n(comic.title)}</h1>

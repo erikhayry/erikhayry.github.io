@@ -5,7 +5,7 @@ import {getComics} from "$core/getComics";
 import {getClipPath} from "./utils/getClipPath";
 
 interface Data {
-    title: string;
+    titles: string[];
     backgroundImages: {
         slug: string;
         clipPath: string;
@@ -14,7 +14,7 @@ interface Data {
 
 export function load(): Data {
     return {
-        title: Object.values(Language).map((lang) => i18n(TEXT.changeLanguageTitle, lang)).join(' / '),
+        titles: Object.values(Language).map((lang) => i18n(TEXT.changeLanguageTitle, lang)),
         backgroundImages: getComics().map(({slug}, index, arr) => {
             return {
                 slug,

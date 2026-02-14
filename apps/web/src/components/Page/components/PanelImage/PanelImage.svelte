@@ -21,9 +21,14 @@
 </script>
 
 <style>
+    figure {
+        width: 100%;
+        height: 100%;
+    }
+
     .text {
-        --bubble-top: calc(var(--safe-top-unit) + var(--spacing));
-        --bubble-bottom: calc(var(--safe-bottom-unit) + var(--spacing))
+        --bubble-top: var(--safe-top-unit-4x);
+        --bubble-bottom: var(--safe-bottom-unit-4x);
     }
 
     :global(.panel:not(:first-of-type)) .text {
@@ -45,8 +50,8 @@
     .narration.bubble {
         position: absolute;
         top: var(--bubble-top);
-        left: var(--safe-left-unit);
-        right: var(--safe-right-unit);
+        left: var(--safe-left-unit-4x);
+        right: var(--safe-right-unit-4x);
 
         &:only-child {
             top: unset;
@@ -61,8 +66,8 @@
         gap: var(--spacing);
         position: absolute;
         bottom: var(--bubble-bottom);
-        left: var(--safe-left-unit);
-        right: var(--safe-right-unit);
+        left: var(--safe-left-unit-4x);
+        right: var(--safe-right-unit-4x);
         transform-origin: bottom;
     }
 </style>

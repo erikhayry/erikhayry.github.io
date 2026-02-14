@@ -45,10 +45,15 @@
             left: calc(var(--safe-left-unit) + var(--spacing));
             font-size: 5rem;
             font-weight: bold;
-            opacity: 0.9;
+            opacity: 1;
+            word-break: break-all;
         }
     }
 </style>
+
+<svelte:head>
+    <title>{i18n(TEXT.comicsHeading)}</title>
+</svelte:head>
 
 <div class="fullscreen-container">
     <h1 class="sticky-text title">{i18n(TEXT.comicsHeading)}</h1>

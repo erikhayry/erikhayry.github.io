@@ -9,6 +9,7 @@
 
 <svelte:head>
     <link as="document" href={pagination.forward.href} rel="prefetch"/>
+    <title>{title}</title>
 </svelte:head>
 
 <h1 class="visually-hidden">{title}</h1>
