@@ -14,8 +14,6 @@
 
     let {panels, slug, layout, style, lang}: Props = $props();
     let classes = $derived(getLayoutClassName(layout))
-
-    console.log(slug)
 </script>
 
 <style>

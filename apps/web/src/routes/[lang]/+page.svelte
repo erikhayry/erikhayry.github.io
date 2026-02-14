@@ -11,11 +11,11 @@
 
 <style>
     .title {
-        left: calc(var(--safe-left-unit));
+        left: var(--safe-left-unit);
     }
 
     .language-link {
-        right: calc(var(--safe-right-unit));
+        right: var(--safe-right-unit);
     }
 
     .comic-items {
