@@ -18,6 +18,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://sv.wikipedia.org/wiki/Georg_Carl_von_Döbeln#/media/Fil:Jutas_1808.jpg",
                 "title": {
