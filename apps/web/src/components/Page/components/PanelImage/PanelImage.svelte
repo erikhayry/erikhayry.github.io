@@ -57,10 +57,12 @@
         width: fit-content;
         background-color: var(--white);
         color: var(--black);
-        padding: var(--spacing);
+        padding: var(--spacing-2x);
+        font-style: italic;
     }
 
     .narration.bubble {
+        font-style: normal;
         position: absolute;
         top: var(--bubble-top);
         left: var(--safe-left-unit-4x);
@@ -104,7 +106,7 @@
                 <div class="dialogs">
                     {#each panel.dialogs as dialog (dialog)}
                         <p class="bubble" data-testid={DIALOG_BUBBLE_TEST_ID}><span
-                                class="visually-hidden">{`${getDialog(dialog).person} `}</span>{getDialog(dialog).text}
+                                class="visually-hidden">{`${getDialog(dialog).person} `}</span><span aria-hidden="true"> - </span>{getDialog(dialog).text}
                         </p>
                     {/each}
                 </div>
