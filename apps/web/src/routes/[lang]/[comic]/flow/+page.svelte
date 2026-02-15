@@ -28,7 +28,7 @@
 <div>
     {#each pages as page(page)}
         {#each page.panels as panel(panel)}
-            <div class="panel">
+            <div id={panel.id} class="panel">
                 <PanelImage {slug} {panel} {style} {lang}/>
             </div>
         {/each}

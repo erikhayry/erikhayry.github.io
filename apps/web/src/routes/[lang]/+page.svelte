@@ -57,7 +57,7 @@
     <ul class="comic-items">
         {#each getComics() as comic (comic)}
             <li class="comic-item">
-                <a href={resolve(`/${get(langStore)}/${comic.slug}`)} aria-label={i18n(comic.title)} class="comic">
+                <a href={resolve(`/${get(langStore)}/${comic.slug}/flow`)} aria-label={i18n(comic.title)} class="comic">
                     <ResponsiveImage slug={comic.slug} id="comic" style={ComicStyle.ANIME} alt=""/>
                 </a>
             </li>

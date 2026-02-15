@@ -23,6 +23,10 @@ export const TEXT = {
         en: 'Back to comics',
         se: 'Tillbaka till serier'
     },
+    backToPanel: {
+        en: 'Back to panel',
+        se: 'Tillbaka till rutan'
+    },
     startReadingPageByPage: {
         en: 'Start reading page by page',
         se: 'Börja läsa sida per sida'

@@ -2,10 +2,14 @@
     import {i18n} from "../../../../i18n/i18n";
     import {TEXT} from "../../../../i18n/ui";
     import ReferenceImage from "./components/ReferenceImage.svelte";
+    import {resolve} from "$app/paths";
+    import {get} from "svelte/store";
+    import {langStore} from "$lib/stores/lang.store";
 
     let {data} = $props();
     let {indexedPanelsInfoWithReference, slug, style, title} = $derived(data);
 </script>
+
 <svelte:head>
     <title>{i18n(TEXT.referenceLabel)} - {i18n(title)}</title>
 </svelte:head>
@@ -54,6 +58,8 @@
                 <p>{i18n(panel.reference.place.name)}</p>
                 <p>{panel.reference.place.coordinates.lat} - {panel.reference.place.coordinates.lon}</p>
             {/if}
+
+            <a href={resolve(`/${get(langStore)}/${slug}/flow#${panel.id}`)}>{i18n(TEXT.backToPanel)}</a>
         {/each}
     </div>
 
