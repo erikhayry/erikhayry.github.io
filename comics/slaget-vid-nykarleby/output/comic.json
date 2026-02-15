@@ -101,6 +101,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://commons.wikimedia.org/wiki/File:Nykarleby_1808.jpg",
                 "title": {

@@ -3,12 +3,15 @@ import {load} from "../+page";
 import {COMIC_MOCK_1} from "$mock/data/comicMock";
 import {DEFAULT_LANGUAGE} from "$lib/stores/lang.store";
 import {PAGE_2_PANEL_1_WITH_REFERENCE_MOCK} from "$mock/data/pageMock";
+import {ComicStyle} from "@library/types";
 
 
 describe("Comic page load", () => {
     it("should load comic page if available", async () => {
         expect(load({params: {comic: COMIC_MOCK_1.slug, lang: DEFAULT_LANGUAGE,}})).toEqual({
-            panels: [PAGE_2_PANEL_1_WITH_REFERENCE_MOCK]
+            panels: [PAGE_2_PANEL_1_WITH_REFERENCE_MOCK],
+            slug: COMIC_MOCK_1.slug,
+            style: ComicStyle.ANIME
         });
     });
 

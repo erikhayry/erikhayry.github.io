@@ -67,6 +67,19 @@
         "image": {
           "type": "object",
           "properties": {
+            "description": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "se"
+                ]
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
             "included": {
               "type": "boolean"
             },
@@ -99,6 +112,7 @@
             }
           },
           "required": [
+            "description",
             "included"
           ],
           "additionalProperties": false
@@ -131,37 +145,17 @@
           "additionalProperties": false
         },
         "description": {
-          "anyOf": [
-            {
-              "type": "object",
-              "propertyNames": {
-                "type": "string",
-                "enum": [
-                  "en",
-                  "se"
-                ]
-              },
-              "additionalProperties": {
-                "type": "string"
-              }
-            },
-            {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "propertyNames": {
-                  "type": "string",
-                  "enum": [
-                    "en",
-                    "se"
-                  ]
-                },
-                "additionalProperties": {
-                  "type": "string"
-                }
-              }
-            }
-          ]
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "en",
+              "se"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
         },
         "place": {
           "type": "object",

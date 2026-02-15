@@ -90,13 +90,17 @@ export const Link = z.object({
     title: Text
 })
 
-export const ReferenceInfo = z.object({
-    image: z.optional(z.object({
-        included: z.boolean(),
-        link: z.optional(Link),
-    })),
+export const ReferenceImage = z.object({
+    description: Text,
+    included: z.boolean(),
     link: z.optional(Link),
-    description: z.optional(Texts),
+})
+export type ReferenceImage = z.infer<typeof ReferenceImage>;
+
+export const ReferenceInfo = z.object({
+    image: z.optional(ReferenceImage),
+    link: z.optional(Link),
+    description: z.optional(Text),
     place: z.optional(z.object({
         coordinates: z.object({lat: z.number(), lon: z.number()}),
         name: Text,
@@ -110,6 +114,10 @@ export const PanelInfo = z.object({
     narration: z.optional(Text),
     dialogs: z.optional(z.array(DialogInfo)),
     reference: z.optional(ReferenceInfo),
+});
+
+export const PanelInfoWithReference = PanelInfo.extend({
+    reference: ReferenceInfo,
 });
 
 export const PageInfo = z.object({
@@ -129,6 +137,7 @@ export const ComicInfo = z.object({
 });
 
 export type PanelInfo = z.infer<typeof PanelInfo>;
+export type PanelInfoWithReference = z.infer<typeof PanelInfoWithReference>;
 export type PageInfo = z.infer<typeof PageInfo>;
 export type ReferenceInfo = z.infer<typeof ReferenceInfo>;
 export type ComicInfo = z.infer<typeof ComicInfo>;

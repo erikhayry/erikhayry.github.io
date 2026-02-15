@@ -7,6 +7,10 @@
     "reference": {
       "image": {
         "included": true,
+        "description": {
+          "se": "TODO",
+          "en": "TODO"
+        },
         "link": {
           "url": "https://sv.wikipedia.org/wiki/Georg_Carl_von_Döbeln#/media/Fil:Jutas_1808.jpg",
           "title": {
@@ -67,6 +71,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://www.nykarlebyvyer.nu/sidor/nykarleb/ny-carle.htm",
                 "title": {
@@ -161,6 +169,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://www.nykarlebyvyer.nu/sidor/kortindi/LR/LR_E/LRE----S.HTM",
                 "title": {
@@ -235,6 +247,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://commons.wikimedia.org/wiki/File:Georg_Carl_von_Döbeln_i_sjuksängen.jpg",
                 "title": {
@@ -263,6 +279,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://www.nykarlebyvyer.nu/sidor/illustra/ffitjuth.htm",
                 "title": {
@@ -294,6 +314,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://da.wikipedia.org/wiki/Fil:Döbeln_vid_Jutas_-_teckning_av_Albert_Edelfelt.jpg",
                 "title": {
@@ -586,6 +610,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://commons.wikimedia.org/wiki/File:Döbeln_vid_Jutas2.jpg",
                 "title": {
@@ -703,6 +731,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://commons.wikimedia.org/wiki/File:Seger_i_Slaget_vid_Jutas.jpg",
                 "title": {
@@ -739,6 +771,10 @@
           "reference": {
             "image": {
               "included": true,
+              "description": {
+                "se": "TODO",
+                "en": "TODO"
+              },
               "link": {
                 "url": "https://commons.wikimedia.org/wiki/File:Georg_Carl_von_Döbeln_efter_slaget_vid_Jutas.jpg",
                 "title": {

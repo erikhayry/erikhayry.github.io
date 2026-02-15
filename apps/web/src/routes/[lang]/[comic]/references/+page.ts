@@ -1,5 +1,11 @@
 import {error} from "@sveltejs/kit";
-import {ComicStyle, type ComicStyleType, type LanguageType, type PanelInfo} from "@library/types";
+import {
+    ComicStyle,
+    type ComicStyleType,
+    type LanguageType,
+    type PanelInfo,
+    PanelInfoWithReference
+} from "@library/types";
 import {getComic} from "$core/getComic";
 
 interface Props {
@@ -10,23 +16,24 @@ interface Props {
 }
 
 interface Data {
-    panels: PanelInfo[];
+    panels: PanelInfoWithReference[];
     slug: string;
     style: ComicStyleType;
 }
 
 
+function isPanelInfoWithReference(panel: PanelInfo): panel is PanelInfoWithReference {
+    return PanelInfoWithReference.safeParse(panel).success;
+}
+
 export function load({params: {comic: slug}}: Props): Data {
     const comic = getComic(slug)
 
-
     if (comic) {
-
-
         return {
             slug,
             style: ComicStyle.ANIME,
-            panels: comic.pages.map(page => page.panels).flat().filter(panel => panel.reference !== undefined)
+            panels: comic.pages.flatMap(page => page.panels).filter(isPanelInfoWithReference)
         };
     }
 

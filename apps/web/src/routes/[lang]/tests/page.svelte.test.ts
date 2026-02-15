@@ -15,6 +15,7 @@ describe("comics page", () => {
         expect(coverImage.elements()).toHaveLength(1);
         expect(link.elements()).toHaveLength(2);
 
+        
         await expect
             .element(link.nth(0))
             .toHaveAttribute("href", `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}`)

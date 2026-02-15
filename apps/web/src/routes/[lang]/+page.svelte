@@ -51,9 +51,6 @@
     }
 </style>
 
-<svelte:head>
-    <title>{i18n(TEXT.comicsHeading)}</title>
-</svelte:head>
 
 <div class="fullscreen-container">
     <h1 class="sticky-text title">{i18n(TEXT.comicsHeading)}</h1>

@@ -40,12 +40,40 @@ export const PAGE_2_PANEL_1_WITH_REFERENCE_MOCK: Panel = {
     dialogs: [PAGE_2_PANEL_1_DIALOG_1, PAGE_1_PANEL_1_DIALOG_2],
     description: {[Language.EN]: 'PAGE_2_PANEL_1_EN_DESCRIPTION', [Language.SE]: 'PAGE_2_PANEL_1_SE_DESCRIPTION'},
     reference: {
-        link: {
-            url: "https://www.example.com",
-            title: {
-                [Language.EN]: "REFERENCE LINK EN MOCK 1",
-                [Language.SE]: "REFERENCE LINK SE MOCK 1"
+        image: {
+            included: true,
+            description: {
+                [Language.EN]: "REFERENCE IMAGE EN MOCK 1",
+                [Language.SE]: "REFERENCE IMAGE SE MOCK 1"
+            },
+            link: {
+                url: "https://www.example.com/1",
+                title: {
+                    [Language.EN]: "REFERENCE LINK EN MOCK 1",
+                    [Language.SE]: "REFERENCE LINK SE MOCK 1"
+                }
             }
+        },
+        place: {
+            coordinates: {
+                lat: 59.3293,
+                lon: 18.0686
+            },
+            name: {
+                [Language.EN]: "REFERENCE PLACE EN MOCK 1",
+                [Language.SE]: "REFERENCE PLACE SE MOCK 1"
+            }
+        },
+        link: {
+            url: "https://www.example.com/2",
+            title: {
+                [Language.EN]: "REFERENCE LINK EN MOCK 2",
+                [Language.SE]: "REFERENCE LINK SE MOCK 2"
+            }
+        },
+        description: {
+            [Language.EN]: 'REFERENCE DESCRIPTION EN MOCK 3',
+            [Language.SE]: 'REFERENCE DESCRIPTION SE MOCK 3'
         },
     }
 }

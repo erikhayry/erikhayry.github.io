@@ -57,7 +57,7 @@ describe("<Page />", () => {
         test('should show reference link', () => {
             const {getReferenceLink} = renderPageSvelte(PAGE_2_MOCK);
 
-            expect(getReferenceLink(i18n(TEXT.reference))).toHaveAttribute('href', `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}/${0}/${PAGE_2_MOCK.panels[0].id}`);
+            expect(getReferenceLink(i18n(TEXT.reference))).toHaveAttribute('href', `/${DEFAULT_LANGUAGE}/${COMIC_MOCK_1.slug}/references`);
         })
     })
 
