@@ -85,8 +85,6 @@ body {
 h1, h2, h3 {
     margin: 0;
     font-size: var(--font-size-s);
-)
-
 }
 
 .sticky-text {
@@ -114,6 +112,8 @@ ul, ol {
 }
 
 img {
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 

@@ -92,7 +92,7 @@
 
         {#if panel.reference}
             <figcaption>
-                <a href={resolve(`/${lang}/${slug}/references`)}><span
+                <a href={resolve(`/${lang}/${slug}/references#${panel.id}`)}><span
                         class="visually-hidden">{i18n(TEXT.reference)}</span></a>
             </figcaption>
         {/if}

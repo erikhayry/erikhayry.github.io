@@ -4,7 +4,8 @@ import {
     type ComicStyleType,
     type LanguageType,
     type PanelInfo,
-    PanelInfoWithReference
+    PanelInfoWithReference,
+    type Text
 } from "@library/types";
 import {getComic} from "$core/getComic";
 
@@ -15,15 +16,24 @@ interface Props {
     };
 }
 
+interface IndexedPanelInfoWithReference {
+    panel: PanelInfoWithReference;
+    index: number;
+}
+
 interface Data {
-    panels: PanelInfoWithReference[];
+    indexedPanelsInfoWithReference: IndexedPanelInfoWithReference[];
     slug: string;
     style: ComicStyleType;
+    title: Text;
 }
 
 
-function isPanelInfoWithReference(panel: PanelInfo): panel is PanelInfoWithReference {
-    return PanelInfoWithReference.safeParse(panel).success;
+function isPanelInfoWithReference(indexedPanelInfo: {
+    panel: PanelInfo;
+    index: number;
+}): indexedPanelInfo is IndexedPanelInfoWithReference {
+    return PanelInfoWithReference.safeParse(indexedPanelInfo.panel).success;
 }
 
 export function load({params: {comic: slug}}: Props): Data {
@@ -31,9 +41,13 @@ export function load({params: {comic: slug}}: Props): Data {
 
     if (comic) {
         return {
+            title: comic.title,
             slug,
             style: ComicStyle.ANIME,
-            panels: comic.pages.flatMap(page => page.panels).filter(isPanelInfoWithReference)
+            indexedPanelsInfoWithReference: comic.pages.flatMap(page => page.panels).map((panel, index) => ({
+                panel,
+                index: index + 1
+            })).filter(isPanelInfoWithReference)
         };
     }
 
